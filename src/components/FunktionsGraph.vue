@@ -143,6 +143,11 @@ function reset(): void {
   Object.assign(values, fixedValues(), startValues(props.regler));
   emit("change", { ...values });
 }
+/** A table value: two decimals for amounts of 100 and more (money), else as fmt. */
+const cell = (n: number) => {
+  const text = fmt(n);
+  return Math.abs(n) >= 100 && /,\d$/.test(text) ? `${text}0` : text;
+};
 const inputValue = (s: Slider) => values[s.key] ?? s.start;
 function set(s: Slider, event: Event): void {
   values[s.key] = Number((event.target as HTMLInputElement).value);
@@ -214,9 +219,9 @@ function set(s: Slider, event: Event): void {
         <tbody>
           <tr v-for="(r, i) in rows" :key="r.x">
             <td>{{ tabelleLabels?.[i] ?? fmt(r.x) }}</td>
-            <td>{{ r.y === undefined ? labels.undefinedValue : fmt(r.y) }}</td>
+            <td>{{ r.y === undefined ? labels.undefinedValue : cell(r.y) }}</td>
             <td v-if="vergleich">
-              {{ compareRows[i]?.y === undefined ? labels.undefinedValue : fmt(compareRows[i]?.y ?? 0) }}
+              {{ compareRows[i]?.y === undefined ? labels.undefinedValue : cell(compareRows[i]?.y ?? 0) }}
             </td>
           </tr>
         </tbody>

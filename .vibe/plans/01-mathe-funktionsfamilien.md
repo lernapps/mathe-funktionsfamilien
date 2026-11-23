@@ -232,7 +232,8 @@ Nicht umgesetzt / Laufzeit (Funde): rohe Kennungen „mathematik/lineare-funktio
 Offen: Start-Selbsteinschätzung (33 Aufgaben) nicht durchgespielt; Tutor-Knöpfe nicht bedient; Zielparabel-Aufgabe vom Prüfer nicht gelöst.
 
 ### Änderungen nach dem letzten Prüferlauf (nicht erneut geprüft, solange nicht unten vermerkt)
-Alle unter „Umgesetzt“ der zweiten Hälfte der Lernenden-Befunde (Beispiel Ergänzung, Glossar, Wahr/Falsch, Optionsreihenfolge, Legende, Sätze). Ein zweiter, gezielter Lauf auf diesen Änderungen folgt vor „Veröffentlichen“ (Ergebnis unten).
+Zweiter gezielter Lauf (fachlich und Lernende) auf den Änderungen der ersten Runde: fachlich 3 Fehler (Grammatik nach „Exponent“, nojs-Bereich des Reglers, fehlende geschützte Leerzeichen), 5 Ungenauigkeiten (Mittelterm, b ≠ 1, Amplitude, „ganzer“ Exponent, Dezimalkomma in Formeln: Temml setzt `0,5` als eine Zahl, kein Befund); alle behoben. Lernende: roh sichtbare Formeln keine mehr in den Texten; offen aus dem Lauf: Rückmeldung der Zielparabel-Aufgabe nach „Prüfen“ (Prüfer sah keine Meldung, im ersten Lauf kam „Richtig!“; Laufzeit), Kurztest-Legende (W41), Kennungen im Recap-Kopf (W37).
+Nach dem zweiten Lauf nochmals geändert (inhaltlich, nicht erneut geprüft): Beispielschritte der quadratischen Ergänzung benannt; Verweis „Stelle oben die Regler …“ begründet (Scheitelform, ausmultiplizierte Form), Regler d bis 4; Probe-Aufgabe der Scheitelform auf x² − 4x + 7; Periode vor der Tabelle auf der Sinus-Seite erklärt; Hinweis zu Winkeln über 90°; Frage „kleinster Faktor“ bei den Konten; Tabelle „Zwei Arten zu wachsen“ zweispaltig mit Formeln darunter; Glossar um Sinus, Kosinus, Lösungsformel, Exponentieller Zerfall erweitert; Tabellenwerte ab 100 mit zwei Dezimalstellen; Spaltenname „Wert der Funktion“; Beschriftung im Einheitskreis größer; Text im Ergänzungsbild nicht mehr abgeschnitten.
 
 ## Code
 
@@ -268,7 +269,7 @@ Alle unter „Umgesetzt“ der zweiten Hälfte der Lernenden-Befunde (Beispiel E
 - [x] Kapitel 3: Recap, zinseszins, exponentialfunktionen, logarithmen mit Datenfile wachstum; Push
 - [x] Kapitel 4: Recap, sinus-kosinus, periodische-vorgaenge mit Datenfile messreihen; Push
 - [x] App-Ebene: Start-/Intro-Text, Glossar, Medienübersicht, Selbsteinschätzung (Skill lernapps-explainer-self-assessment), Inhaltsleitfaden app-content
-- [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review, Änderungen danach erneut prüfen; lernapps check ohne Fehler
+- [x] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review, Änderungen danach erneut prüfen; lernapps check ohne Fehler
 <!-- tasks: pages (6 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.

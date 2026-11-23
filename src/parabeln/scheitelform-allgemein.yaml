@@ -50,7 +50,7 @@ blocks:
       - type: text
         text: |
           **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Stelle die Regler so ein, dass die
-          ausgerechnete Form am Ende $x^2 - 6x + 11$ heißt. Welche Werte haben $d$ und $e$?
+          ausgerechnete Form am Ende $x^2 - 4x + 7$ heißt. Welche Werte haben $d$ und $e$?
   - type: section
     id: beispiel
     title: Hin und zurück rechnen

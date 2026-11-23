@@ -53,8 +53,7 @@ blocks:
           überholt Konto B.
       - type: text
         text: |
-          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Bei welchem Faktor überholt Konto B das
-          Konto A schon in weniger als 10 Jahren? Schau auf die Tabelle und den Schnittpunkt der Kurven.
+          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Welcher kleinste Faktor reicht, damit Konto B nach 10 Jahren vor Konto A liegt? Schau in die Tabelle bei 10 Jahren.
   - type: section
     id: zerfall
     title: "Zerfall: Ein Medikament wird abgebaut"
@@ -93,14 +92,21 @@ blocks:
     blocks:
       - type: table
         caption: Zwei Arten zu wachsen
-        header: [Art, Was gleich bleibt, Term]
+        header: [Art, Was gleich bleibt]
         rows:
-          - [linear, "Zuwachs je Schritt", "$f(x) = c + m \\cdot x$"]
-          - [exponentiell, "Faktor je Schritt", "$f(x) = a \\cdot b^x$"]
+          - [linear, "Zuwachs je Schritt"]
+          - [exponentiell, "Faktor je Schritt"]
+      - type: formula
+        formula: 'f(x) = c + m \cdot x \quad \text{(linear)}'
+      - type: formula
+        formula: 'f(x) = a \cdot b^x \quad \text{(exponentiell)}'
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: definition
+        term: Exponentieller Zerfall
+        explanation: Abnahme, bei der der Wert in gleichen Schritten mit demselben Faktor zwischen 0 und 1 malgenommen wird, etwa 0,5 für eine Halbierung.
       - type: definition
         term: Exponentialfunktion
         explanation: Eine Funktion der Form $f(x) = a \cdot b^x$ mit $b > 0$ und $b \neq 1$. Der Wert wird bei jedem Schritt mit dem Faktor $b$ malgenommen.

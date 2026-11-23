@@ -41,7 +41,7 @@ blocks:
       - type: text
         text: |
           **Probiere es aus** (mit Regler, dafür brauchst du JavaScript). Drehe den Winkel langsam von 0° bis 360° und
-          beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist.
+          beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist. Für Winkel über 90° stellst du den Winkel mit dem Regler ein und liest die Höhe oder den Abstand ab.
       - type: text
         text: |
           Der waagerechte Abstand des Punkts von der senkrechten Achse, rechts positiv und links negativ, ist der **Kosinus**. Seine Kurve beginnt oben bei 1, denn
@@ -75,11 +75,17 @@ blocks:
           - [Wert bei x = 0, "0", "1"]
           - [Nullstellen, "$0$, $\\pi$, $2\\pi$, …", "$\\frac{\\pi}{2}, \\frac{3\\pi}{2}$"]
       - type: text
-        text: Beide Kurven sehen gleich aus. Die Kosinuskurve ist die Sinuskurve, um $\frac{\pi}{2}$ nach links verschoben.
+        text: Die **Periode** ist die Länge, nach der sich eine Kurve wiederholt. Beide Kurven sehen gleich aus. Die Kosinuskurve ist die Sinuskurve, um $\frac{\pi}{2}$ nach links verschoben.
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: definition
+        term: Sinus
+        explanation: Die Höhe eines Punkts auf dem Einheitskreis über der waagerechten Achse, als Funktion des Winkels. Bei 90° ist der Sinus 1.
+      - type: definition
+        term: Kosinus
+        explanation: Der waagerechte Abstand des Punkts von der senkrechten Achse, rechts positiv, links negativ. Bei 0° ist der Kosinus 1.
       - type: definition
         term: Einheitskreis
         explanation: Der Kreis mit Radius 1 um den Ursprung des Koordinatensystems. Ein Punkt auf ihm hat die Koordinaten (Kosinus | Sinus) seines Winkels.

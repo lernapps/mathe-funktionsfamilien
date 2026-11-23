@@ -140,7 +140,7 @@ const marks = [0, 90, 180, 270, 360];
 
 .ek-labels text {
   fill: var(--page-muted);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .ek-read {

@@ -27,7 +27,7 @@ blocks:
           fest:
             - { key: a, value: 1 }
           regler:
-            - { key: d, label: "d: nach rechts oder links", min: -3, max: 3, step: 1, start: 2 }
+            - { key: d, label: "d: nach rechts oder links", min: -4, max: 4, step: 1, start: 2 }
             - { key: e, label: "e: nach oben oder unten", min: -5, max: 5, step: 1, start: -1 }
           fenster: { xmin: -6, xmax: 6, ymin: -6, ymax: 10 }
           tabelleX: [-3, -2, -1, 0, 1, 2, 3]
@@ -68,6 +68,8 @@ blocks:
       - type: example
         title: x² + 6x − 7 = 0 mit quadratischer Ergänzung
         blocks:
+          - type: text
+            text: "Die Schritte: 7 auf beide Seiten addieren, das Quadrat der halben Zahl ergänzen, die binomische Formel rückwärts anwenden, die Wurzel ziehen, nach x auflösen."
           - type: formula
             formula: "x^2 + 6x = 7"
           - type: formula
@@ -94,6 +96,9 @@ blocks:
           Der Term unter der Wurzel heißt **Diskriminante** $D = (\frac{p}{2})^2 - q$. Ist $D > 0$, gibt es zwei
           Lösungen, bei $D = 0$ eine und bei $D < 0$ keine, denn aus einer negativen Zahl kannst du keine Wurzel ziehen.
       - type: definition
+        term: Lösungsformel
+        explanation: Die Formel, die für $x^2 + px + q = 0$ die Lösungen liefert. Sie heißt auch p-q-Formel.
+      - type: definition
         term: Diskriminante
         explanation: Der Term unter der Wurzel der Lösungsformel. Sein Vorzeichen entscheidet, ob es zwei, eine oder keine Lösung gibt.
   - type: section
@@ -104,7 +109,7 @@ blocks:
         title: x² − 6x + 5 = 0
         blocks:
           - type: text
-            text: "**Grafisch:** Stelle oben die Regler auf $d = 3$ und $e = −4$. Dann gehört der Graph zu $x^2 - 6x + 5$ und schneidet die x-Achse bei $x = 1$ und $x = 5$."
+            text: "**Grafisch:** Stelle im ersten Abschnitt oben die Regler auf $d = 3$ und $e = −4$. Das ist die Scheitelform $(x - 3)^2 - 4$, ausmultipliziert $x^2 - 6x + 5$. Der Graph schneidet die x-Achse bei $x = 1$ und $x = 5$."
           - type: table
             caption: "Numerisch: Wertetabelle von f(x) = x² − 6x + 5"
             header: [x, f(x)]

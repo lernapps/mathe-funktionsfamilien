@@ -39,7 +39,7 @@ blocks:
             reset: Regler zurücksetzen
             grundform: Vergleich
             x: Stunden
-            y: Wasserstand
+            y: Wert der Funktion
             undefinedValue: nicht definiert
             punkte: Messpunkte
         nojs: |
