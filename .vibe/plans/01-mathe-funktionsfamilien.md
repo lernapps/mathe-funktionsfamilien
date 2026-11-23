@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: code
+phase: commit
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 1
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -37,6 +37,8 @@ Lernende der Klassen 9-10 erkunden Funktionsfamilien mit Schiebereglern (Parabel
 - Kapitelschnitt wie im Auftrag; zwei bis vier Seiten je Kapitel plus ein Recap am Kapitelanfang (guess).
 
 ## Notes
+
+**Ganze-App-Check (Lernenden-Prüfer) und Korrekturen:** siehe „Review“ (zwei Läufe, alle Befunde dort mit Umsetzung).
 
 **Strang:** `mathematik/algebra`. Alle zehn Bausteine liegen in diesem Strang (Karte `mathematik.json` geöffnet).
 
@@ -271,11 +273,11 @@ Nach dem zweiten Lauf nochmals geändert (inhaltlich, nicht erneut geprüft): Be
 - [x] App-Ebene: Start-/Intro-Text, Glossar, Medienübersicht, Selbsteinschätzung (Skill lernapps-explainer-self-assessment), Inhaltsleitfaden app-content
 - [x] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review, Änderungen danach erneut prüfen; lernapps check ohne Fehler
 <!-- tasks: pages (6 added): the other pages or screens, after the pattern -->
-- [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
-- [ ] Run `npx --no -- lernapps check` until it passes.
-- [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
+- [x] Update the content guide so that it describes the app as built (`app-content-matches`).
+- [x] Run `npx --no -- lernapps check` until it passes.
+- [x] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
       Compare each with its sketch.
-- [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
+- [x] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
       fixed.
 
 ## Commit
@@ -288,9 +290,9 @@ Nach dem zweiten Lauf nochmals geändert (inhaltlich, nicht erneut geprüft): Be
 
 ### Tasks
 
-- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+- [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
-- [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
+- [x] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
 - [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
 - [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask

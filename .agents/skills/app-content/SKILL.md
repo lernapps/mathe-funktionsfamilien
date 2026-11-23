@@ -79,6 +79,8 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 
 ## Figures
 
+- Komponenten in `src/components/`: `FunktionsGraph` (Regler, Term, Tabelle, Graph; Familien quadratic, quadraticGeneral, power, reciprocal, root, exponential, sine, linear), `FunktionsGraphAufgabe` (Regler auf Zielparabel einstellen, mit `hints` je Regler), `Einheitskreis` (Sinus/Kosinus am Kreis), `Kurztest` (Kopie aus dem Epic, Optionen deterministisch gemischt, W42 enthalten).
+
 - Graphen entstehen in der Komponente als SVG (Textalternative: Term, Scheitel/Eigenschaften, drei Beispielpunkte).
   Kurve voll, Grundform gestrichelt (zweites Merkmal neben der Farbe); Farben nur über die Variablen der Laufzeit
   (`--page-*`). Achsen mit Beschriftung `x` und `f(x)`; Fenster pro Block in `fenster`.
