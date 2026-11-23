@@ -1,5 +1,5 @@
 import { expect, test } from "vite-plus/test";
-import { describeGraph, fmt, pieces, startValues, table, term, value } from "./FunktionsGraph.ts";
+import { describeGraph, fmt, generalTerm, pieces, startValues, table, term, value } from "./FunktionsGraph.ts";
 
 test("the numbers are written with comma and true minus", () => {
   expect(fmt(2.5)).toBe("2,5");
@@ -50,4 +50,10 @@ test("the reciprocal curve breaks at the pole", () => {
   const w = { xmin: -4, xmax: 4, ymin: -6, ymax: 6 };
   expect(pieces("reciprocal", { a: 1, d: 0, e: 0 }, w).length).toBeGreaterThanOrEqual(2);
   expect(pieces("quadratic", { a: 1, d: 0, e: 0 }, w).length).toBe(1);
+});
+
+test("the Scheitelform written out as ax² + bx + c", () => {
+  expect(generalTerm({ a: 1, d: 2, e: 1 })).toBe("f(x) = x² − 4 · x + 5");
+  expect(generalTerm({ a: 2, d: -1, e: 0 })).toBe("f(x) = 2 · x² + 4 · x + 2");
+  expect(generalTerm({ a: 1, d: 0, e: 0 })).toBe("f(x) = x²");
 });

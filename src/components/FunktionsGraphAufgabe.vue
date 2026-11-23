@@ -24,6 +24,7 @@ const props = defineProps<{
     x: string;
     y: string;
     undefinedValue: string;
+    allgemein?: string;
   };
   /** The task number, which the explainer gives. */
   seed: number;

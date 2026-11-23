@@ -3,7 +3,7 @@
 // native range inputs (arrow keys, Home and End work; the value stands beside each); the term is announced politely
 // when it changes. Its logic is in FunktionsGraph.ts. Without JavaScript the page shows the nojs text of the block.
 import { computed, reactive, useId } from "vue";
-import { describeGraph, fmt, pieces, startValues, table, term } from "./FunktionsGraph.ts";
+import { describeGraph, fmt, generalTerm, pieces, startValues, table, term } from "./FunktionsGraph.ts";
 import type { Slider } from "./FunktionsGraph.ts";
 
 const props = defineProps<{
@@ -17,6 +17,8 @@ const props = defineProps<{
   tabelleX: number[];
   /** The parameters of the basic form, drawn dashed for comparison; none: no comparison. */
   grundform?: { key: string; value: number }[];
+  /** Show the term written out as ax² + bx + c below the term (for quadratic only). */
+  allgemein?: boolean;
   /** The texts: the graph, the table, the reset button, the basic form and the two table headers. */
   labels: {
     graph: string;
@@ -26,6 +28,7 @@ const props = defineProps<{
     x: string;
     y: string;
     undefinedValue: string;
+    allgemein?: string;
   };
 }>();
 
@@ -72,6 +75,7 @@ const baseCurve = computed(() =>
   props.grundform?.length ? path(pieces(props.family, base.value, props.fenster)) : "",
 );
 const termText = computed(() => term(props.family, { ...values }));
+const generalText = computed(() => generalTerm({ ...values }));
 const rows = computed(() => table(props.family, { ...values }, props.tabelleX));
 const alt = computed(() => {
   const own = describeGraph(props.family, { ...values }, props.fenster);
@@ -96,6 +100,7 @@ function set(s: Slider, event: Event): void {
 <template>
   <div class="fg">
     <p class="fg-term" aria-live="polite">{{ termText }}</p>
+    <p v-if="allgemein" class="fg-general" aria-live="polite">{{ labels.allgemein ?? "" }} {{ generalText }}</p>
     <div class="fg-view">
       <svg :viewBox="`0 0 ${W} ${H}`" role="img" :aria-label="`${labels.graph}: ${alt}`" class="fg-svg">
         <defs>
@@ -178,6 +183,11 @@ function set(s: Slider, event: Event): void {
   margin: 0 0 0.5rem;
   font-size: 1.15rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.fg-general {
+  margin: 0 0 0.5rem;
   overflow-wrap: anywhere;
 }
 

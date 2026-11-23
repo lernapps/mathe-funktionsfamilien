@@ -178,3 +178,11 @@ export function describeGraph(family: Family, v: Values, w: Window): string {
 export function startValues(sliders: readonly Slider[]): Values {
   return Object.fromEntries(sliders.map((s) => [s.key, s.start]));
 }
+
+/** The term of a quadratic function in Scheitelform written as ax² + bx + c: b = −2ad, c = ad² + e. */
+export function generalTerm(v: Values): string {
+  const a = v["a"] ?? 1;
+  const d = v["d"] ?? 0;
+  const e = v["e"] ?? 0;
+  return term("quadraticGeneral", { a, b: -2 * a * d, c: a * d * d + e });
+}
