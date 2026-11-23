@@ -223,9 +223,9 @@ Zahlen: Komma, `−`, `·`, `:`; Brüche in Rückmeldungen `a/b` (W28), im Text 
 
 ### Tasks
 
-- [ ] Load skill `lernapps-cli`. Create the app as its section "Create" says:
+- [x] Load skill `lernapps-cli`. Create the app as its section "Create" says:
       `npx --no -- lernapps create --archetype explainer`.
-- [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
+- [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
 - [ ] Load skill `lernapps-explainer`.
 - [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:

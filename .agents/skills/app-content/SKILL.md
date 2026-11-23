@@ -5,59 +5,100 @@ description: Use for any content work in this app - researching, writing, extend
 
 # Content guide of this app
 
-<!--
-Skeleton. Delete this comment when you fill the guide.
-- When: after the plan is confirmed, before any content. Replace every placeholder comment below; none may remain
-  (`lernapps check`, rule app-content-guide, fails once the plan is in Commit).
-- Keep the headings.
-- Concrete, for an agent without your conversation: files, ids, data files, one example.
-  - No: "Use varied exercises with figures where they help."
-  - Yes: "Every page ends with section `uebung`: one `generated` exercise of pattern 'Ohmsches Gesetz' from
-    `src/data/widerstaende.yaml`, one `matching` of symbols and parts."
-- Content decision changes → update this file in the same commit.
-- Public: no personal data, no goals of one learner.
--->
+Explainer „Funktionsfamilien mit Schiebereglern“ (Mathematik, Klasse 9-10, Strang `mathematik/algebra`, nur Deutsch).
+Er gehört zum Mathe-Epic lernapps/apps#402 (Auftrag #396). Die gemeinsamen Regeln des Epics gelten (Schreibweisen,
+Aufgaben, Quellen, Sammel-Wiederholung); die wichtigsten stehen unten.
 
 ## Curriculum
 
-<!-- FILL IN: Land, Schulform, Jahrgang; orientation (Lehrplan: document, issuer, year, address, page and unit per
-part; welcome, not required); where the creator's material differs, and which one the app follows. -->
+- Jahrgang 9-10, Gymnasium; Orientierung allein die Lernlandkarte Mathematik (`https://lernapps.net/apps/map/mathematik.json`),
+  die die Reihenfolge gibt. Hessischer Lehrplan und KMK-Standards wurden nicht geöffnet (nicht geprüft); der Inhalt
+  stammt aus eigenen Herleitungen und eigenen Aufgaben.
+- Voraussetzungen aus anderen Explainern stehen in Sammel-Wiederholungen, nie als Link in deren Apps.
 
 ## Competencies
 
-<!-- FILL IN: every competency as "Ich kann …", grouped by chapter; per competency: page or round (file, id),
-exercise ids. -->
+Alle zehn Bausteine des Strangs `algebra`, Id und Seite (Datei in `src/<kapitel>/<seite>.yaml`):
+
+- Kapitel 1 `parabeln`
+  - `quadratische-funktionen` — „Ich kann quadratische Funktionen und ihre Parabeln beschreiben und zeichnen.“ — `normalparabel`, `scheitelform-allgemein`
+  - `potenzfunktionen` — „Ich kann einfache Potenz- und Wurzelfunktionen mit ihren Graphen beschreiben.“ — `potenzfunktionen`
+- Kapitel 2 `gleichungen`
+  - `quadratische-gleichungen-einfach` — `einfache-gleichungen`
+  - `quadratische-gleichungen` — `drei-wege`
+  - `quadratische-funktionen-anwenden` — `anwendungen`
+- Kapitel 3 `wachstum`
+  - `zinseszins` — `zinseszins`
+  - `exponentialfunktionen` — `exponentialfunktionen`
+  - `logarithmen` — `logarithmen`
+- Kapitel 4 `sinus`
+  - `sinusfunktion` — `sinus-kosinus`
+  - `periodische-vorgaenge` — `periodische-vorgaenge`
+
+Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare-funktionen`, `klammern-binome`,
+`potenzgesetze`, `funktionen-darstellung`; K2 `klammern-binome`, `quadratwurzeln`, `lineare-gleichungen`; K3
+`zinsrechnung`, `prozent-veraenderung`, `potenzgesetze`, `funktionen-darstellung`; K4 `bogenmass`,
+`funktionen-darstellung`. Mindestens drei Aufgaben je Baustein, steigend (erkennen, anwenden, neue Lage).
 
 ## Content structure
 
-<!-- FILL IN: how a chapter, page or round is built: sections or question groups in order, ids or titles, what
-each holds; length. -->
+- Eine Seite = eine Kompetenz. Abschnitte mit festen Ids: `einstieg` (Ziel in Lernerworten, erste leichte Aufgabe),
+  `modell` (die Darstellung in Worten, vor der ersten Aufgabe), `beispiel`, `uebung`. Höchstens 350 Wörter, höchstens
+  vier Textblöcke in Folge, nach vier Blöcken etwas zum Ansehen oder Tun.
+- Die tragende Darstellung ist die Dreifachansicht Term – Tabelle – Graph mit Reglern (`FunktionsGraph`): Der Term
+  zeigt die Reglerwerte, die Tabelle die Funktionswerte, der Graph (SVG) mit der gestrichelten Grundform zum Vergleich.
+- Recap-Seiten (`recap:`): Kopf „Das brauchst du für dieses Kapitel“, je Baustein ein Abschnitt (Überschrift = Name
+  des Bausteins der Karte), Begriffe fett, Beispielkasten, ein `Kurztest` (nicht zu leicht, Hinweis zeigt den Weg),
+  Satz mit der Kartenseite `https://lernapps.net/apps/map/mathematik/c/<id>/`; Schluss „Du bist bereit, wenn du …“.
+  Das Schema erlaubt dort keine Aufgaben, deshalb die Komponente `Kurztest`.
+- Keine `links:` an Aufgaben (Regeln Abschnitt 9). Keine Seite verweist in andere Apps.
 
 ## Terminology
 
-<!-- FILL IN: terms used and avoided (why); units, notation; how learners are addressed; glossary terms with
-wording. -->
+- Namen der Karte gelten: Quadratische Funktionen, Scheitelform, allgemeine Form, Potenz- und Wurzelfunktionen,
+  Zinseszins, Wachstumsfaktor, Exponentialfunktion, Logarithmus, Sinus- und Kosinusfunktion, Amplitude, Periode.
+- Schreibweisen: Dezimalkomma; Minus `−` (U+2212); Malpunkt `·`, Doppelpunkt `:`; Prozent `15 %` mit geschütztem
+  Leerzeichen; Einheiten `3 cm` mit geschütztem Leerzeichen; vierstellige Zahlen ohne Lücke, ab fünf Stellen
+  Dreiergruppen mit schmalem geschütztem Leerzeichen; Variablen kursiv (`$x$`); Brüche gesetzt (`\frac`), nur in
+  Rückmeldungen von Komponenten und `mistakes` als `a/b` (Laufzeitgrenze W28, im Plan gezählt). Titel ohne
+  geschützte Leerzeichen und ohne gruppierte Zahlen (W16). Kein `\angle`, `\ldots`, `\overline`.
+- Anrede „du“, kurze Sätze, kein „man“ in Arbeitsaufträgen. Einstiegsüberschrift: „Was du hier lernst“.
+- Glossar: jeder Begriff aus einem anderen Explainer, der hier vorausgesetzt wird, einmal als `definition`
+  (W34: danach nur fett).
 
 ## Exercise patterns
 
-<!-- FILL IN: per pattern: name, competency, archetype form (block or question type, fixed parts, what varies),
-one example (file, id), data file. -->
+- *Ablesen/Deuten*: Graph und Regler gegeben, Wert oder Aussage gefragt (`single-choice`, `number`).
+- *Passend einstellen*: Exercise-Komponente `FunktionsGraphAufgabe` (Seed gibt die Zielwerte, Regler einstellen,
+  „Prüfen“ prüft mit Toleranz; Rückmeldung nennt den Fehlertyp, nie die Lösung).
+- *Rechnen*: `generated` mit `mistakes` (Vorzeichen der Verschiebung, Zinssatz statt Faktor, + statt ·, falsche
+  Wurzel, −b statt b in der Formel); Zahlen mit Rechenprobe im Build.
+- *Begründen*: `true-false`/`multiple-choice` mit Grund in `info` jeder Option.
+- Rückmeldung immer inhaltlich: richtig/nicht richtig, warum, Hinweis auf den Fehlertyp. Nach dem zweiten Fehlversuch
+  der Lösungsweg (`steps`); Aufgaben wiederholbar mit neuen Zahlen. Kein Punktestand, kein Zeitdruck.
 
 ## Figures
 
-<!-- FILL IN: figure kinds and images, for what; conventions (colours, labels, units, orientation, sizes); alt
-texts and captions; image origin and licence. -->
+- Graphen entstehen in der Komponente als SVG (Textalternative: Term, Scheitel/Eigenschaften, drei Beispielpunkte).
+  Kurve voll, Grundform gestrichelt (zweites Merkmal neben der Farbe); Farben nur über die Variablen der Laufzeit
+  (`--page-*`). Achsen mit Beschriftung `x` und `f(x)`; Fenster pro Block in `fenster`.
+- Statische Bilder liegen in `src/images/` (eigene Zeichnung, `source: eigene Zeichnung`, `licence: CC0-1.0`),
+  Textalternative und Bildunterschrift je Bild.
+- Zinseszins-/Medikamenten-Szenen sind frei erfundene Fälle ohne Marken und reale Personen.
 
 ## Sources
 
-<!-- FILL IN: sources linked or relied on (Lehrplan, second explanations, videos, articles), how verified, what
-is left out; the creator's material stays local, never committed. -->
+- Lernlandkarte Mathematik (geöffnet), eigene Herleitungen und eigene Aufgaben. Keine Schulbuchtexte, keine
+  Dritt-Inhalte (`thirdParty: none`), keine Videos. Nachgeschlagenes wird selbst nachgerechnet und nicht übernommen.
+- Fachlicher Prüfer rechnet alle Aufgaben nach (Plan, „Review“).
 
 ## Adding a chapter or round
 
-<!-- FILL IN: the steps for a new chapter (explainer) or round (quiz), in order, with the files: competencies,
-content, exercises from the patterns, entry topics, check, commit. -->
-
-## Rules learned from mistakes
-
-<!-- FILL IN: one line per rule with the mistake it came from. "None yet." until the first. -->
+1. Ids der Karte prüfen (`mathematik.json`), Kompetenz und Voraussetzungen (`requires`) lesen.
+2. Ordner `src/<kapitel>/`, `chapter.yaml` mit `title`, `summary`, `pages`; Kapitel in `src/app.yaml` unter `chapters`.
+3. Seite `recap` für Voraussetzungen von außen (Komponente `Kurztest`), dann je Kompetenz eine Seite mit den
+   Abschnitten `einstieg`, `modell`, `beispiel`, `uebung`.
+4. Regler: `FunktionsGraph` mit `family`, `regler`, `fenster`, `tabelleX`, `labels`, `nojs`; neue Familie in
+   `src/components/FunktionsGraph.ts` (Funktion, Termtext, Beschreibung) samt Test ergänzen.
+5. Aufgaben aus den Mustern oben; `generated` nur mit Rechenprobe; `npx vp check --fix`, `npx vp build`,
+   `npx --no -- lernapps check`, Commit.
