@@ -19,6 +19,9 @@ blocks:
         source: eigene Zeichnung
         licence: CC0-1.0
       - type: definition
+        term: Parabel
+        explanation: Die gebogene Kurve, die der Graph einer quadratischen Funktion ist. Sie ist symmetrisch und hat einen höchsten oder tiefsten Punkt, den Scheitel.
+      - type: definition
         term: Normalparabel
         explanation: Der Graph der Funktion $f(x) = x^2$. Sie ist nach oben geöffnet und hat ihren Scheitel im Ursprung.
       - type: definition
@@ -114,6 +117,9 @@ blocks:
         id: richtung-erkennen
         text: Wohin schiebt der Term $f(x) = (x - 3)^2$ die Normalparabel?
         options:
+          - text: Um 3 nach unten
+            correct: false
+            info: Nach unten schiebt eine Zahl, die außerhalb der Klammer abgezogen wird, zum Beispiel $x^2 - 3$.
           - text: Um 3 nach rechts
             correct: true
             info: Die Klammer ist null für $x = 3$. Dort liegt der Scheitel.
@@ -123,9 +129,6 @@ blocks:
           - text: Um 3 nach oben
             correct: false
             info: Nach oben schiebt eine Zahl, die außerhalb der Klammer addiert wird, zum Beispiel $x^2 + 3$.
-          - text: Um 3 nach unten
-            correct: false
-            info: Nach unten schiebt eine Zahl, die außerhalb der Klammer abgezogen wird, zum Beispiel $x^2 - 3$.
         explanation: Eine Zahl in der Klammer verschiebt waagerecht, aber mit umgekehrtem Vorzeichen. Eine Zahl außerhalb der Klammer verschiebt senkrecht.
       - type: vue-component
         id: parabel-einstellen
@@ -225,6 +228,6 @@ blocks:
           - "Plus {{r.e}}: ${{r.m}} + {{r.e}} = {{r.w}}$"
       - type: true-false
         id: spiegeln
-        text: Bei $f(x) = −2 \cdot x^2$ ist die Parabel nach unten geöffnet und steiler als die Normalparabel.
-        answer: true
-        explanation: Das Minuszeichen in $a = −2$ spiegelt an der x-Achse, der Betrag 2 macht die Kurve steiler.
+        text: Bei $f(x) = −2 \cdot x^2$ ist die Parabel nach unten geöffnet und flacher als die Normalparabel.
+        answer: false
+        explanation: Das Minuszeichen in $a = −2$ spiegelt an der x-Achse, das stimmt. Aber der Betrag 2 macht die Kurve steiler, nicht flacher.

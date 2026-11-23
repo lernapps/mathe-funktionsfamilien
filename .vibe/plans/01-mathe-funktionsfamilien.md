@@ -221,8 +221,18 @@ Offen: Zielparabel hat keine Textalternative im Graph (Aufgabe ist sehbasiert; `
 Noch nicht geprüft: Screenreader, Touch.
 Nach dem Prüferlauf geändert (nicht erneut geprüft): Textalternative der Zielkurve im `aria-label` des Graphen (Scheitel, Öffnung, Faktor a, drei Werte; Wunsch des Orchestrators, regeln.md 3.7), gilt für alle Aufgaben mit Zielkurve.
 
-### Fachlicher Prüfer
-Offen (läuft vor „Veröffentlichen“).
+### Fachlicher Prüfer, alle Seiten (Unteragent, unabhängig)
+Befunde: 2 Fehler (Wertetabelle im nojs der Wurfbahn; falsche Begründung „Schwerkraft“), 16 Ungenauigkeiten, Schreibweisen (keine geschützten Leerzeichen, negative Platzhalter mit Bindestrich, `a/b` außerhalb der Ausnahme), 7 Websuchen auf wörtliche Übernahmen ohne Treffer, alle `generated`-Aufgaben mit allen Datensätzen nachgerechnet (227 Kombinationen), je Baustein mindestens 4 Aufgaben.
+Umgesetzt: beide Fehler; Zwischenfaktoren im Zinseszins (nicht mehr gerundet gezeigt); Hinweis ohne Lösung (`kehrwert-rechnen`); „natürliche Zahl n“; x⁴ nicht „breite Parabel“; Quadrant; binomische Formeln (dritte genannt); Normalform; „reell“ gestrichen; Zaun-Scheitel und Wurzelziehen-Schritte begründet; lg erklärt; Frage zur Überholung; Quadrat-Beschreibung mit Vorzeichen; geschützte Leerzeichen (95 Stellen); negative Platzhalter in Formeln; Kurztest-Reihenfolge im Bauteil gemischt (fester Zufall je Frage); y-Ticks (7000-Fenster).
+Nicht umgesetzt: Tageslänge nicht angepasst (nur Wasserstand); `a ≠ 1` und Herleitung der Lösungsformel nur genannt; Fehlerwerte mancher `generated` fallen bei einzelnen Datensätzen zusammen (`formel-anwenden`, `wert-berechnen`: erste Meldung gilt); Wasserrakete mit 25 m Höhe (a=1, s=5); achsenname y bleibt „f(x)“.
+
+### Lernenden-Prüfer, ganze App (Unteragent, Klasse 9-10)
+Befunde und Umsetzung: rohes LaTeX in `sinus-wert`/`kosinus-wert` (Bogenmaß wieder als `π/6` Text, zählt als `a/b` außerhalb der Ausnahme: 2 Aufgaben, Daten in `sinuswerte`, `kosinuswerte`); Sternchen in einer Tabellenüberschrift entfernt; „Grafisch“ verweist jetzt auf die Regler oben; Beispiel zur quadratischen Ergänzung vor der Ordnen-Aufgabe, Widerspruch „ziehst du wieder ab“ behoben; `a ≠ 1` vermerkt; „Exponent“ statt „Hochzahl“; b als Mittelterm erklärt; fehlende Glossarbegriffe (Parabel, Mittelterm, Quadratische Ergänzung, Einheitskreis, Amplitude, Periode, Zinseszins, Exponentialfunktion); Wahr/Falsch ausgewogen (vier der zehn jetzt „stimmt nicht“); Antwortoptionen der Übungen gemischt (Reihenfolge im YAML gedreht); Legende für beide Kurven; Tabelle der Verdopplung ab Jahr 6; Tabellenüberschrift der Messreihe („nicht die Messwerte“); Regler Amplitude nur positiv; Hinweise auf Zinssatz p, Mittelterm, „definiert“, negative Quadrate.
+Nicht umgesetzt / Laufzeit (Funde): rohe Kennungen „mathematik/lineare-funktionen“ im Kopf der Recap-Seiten (W37); `Kurztest`-Legende quer über dem Rahmen (W41); Geldantwort „3.247,3 €“ statt Komma und zwei Stellen (W17); „x=3“ und „1/4“ im Zahlfeld → „Antworte zuerst“ (W6/W18); Standardrückmeldung bei „stimmt nicht“ (W13); „Prüfen“ der Komponente grau ohne Hinweis; Aufgabennummern springen (W12).
+Offen: Start-Selbsteinschätzung (33 Aufgaben) nicht durchgespielt; Tutor-Knöpfe nicht bedient; Zielparabel-Aufgabe vom Prüfer nicht gelöst.
+
+### Änderungen nach dem letzten Prüferlauf (nicht erneut geprüft, solange nicht unten vermerkt)
+Alle unter „Umgesetzt“ der zweiten Hälfte der Lernenden-Befunde (Beispiel Ergänzung, Glossar, Wahr/Falsch, Optionsreihenfolge, Legende, Sätze). Ein zweiter, gezielter Lauf auf diesen Änderungen folgt vor „Veröffentlichen“ (Ergebnis unten).
 
 ## Code
 

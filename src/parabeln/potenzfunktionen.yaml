@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Du kannst danach sagen, wie die Graphen von $x^3$, $x^4$, $1 : x$ und $\sqrt{x}$ aussehen und für welche
-          $x$ sie definiert sind. Die Normalparabel $x^2$ kennst du schon. Sie ist die Potenzfunktion mit Exponent 2.
+          $x$ sie definiert sind. **Definiert** heißt: Du kannst den Funktionswert ausrechnen. Die Normalparabel $x^2$ kennst du schon. Sie ist die Potenzfunktion mit Exponent 2.
           Jetzt bewegst du den Exponenten selbst.
   - type: section
     id: modell
@@ -118,9 +118,6 @@ blocks:
         id: ungerade-potenz
         text: Welche Aussage über $f(x) = x^3$ stimmt?
         options:
-          - text: f(−2) = −8
-            correct: true
-            info: Bei ungeradem Exponenten bleibt das Vorzeichen, $(−2)^3 = −8$. Die Kurve liegt links der y-Achse unten.
           - text: f(−2) = 8
             correct: false
             info: Das gilt für gerade Exponenten wie bei $x^2$ oder $x^4$. Bei $x^3$ wird ein Produkt aus drei negativen Faktoren negativ.
@@ -130,6 +127,9 @@ blocks:
           - text: f(−2) ist nicht definiert
             correct: false
             info: Die Potenzfunktion mit natürlichem Exponenten $n \ge 1$ ist für alle $x$ definiert.
+          - text: f(−2) = −8
+            correct: true
+            info: Bei ungeradem Exponenten bleibt das Vorzeichen, $(−2)^3 = −8$. Die Kurve liegt links der y-Achse unten.
         explanation: Gerade Exponenten ergeben nie negative Werte, ungerade Exponenten behalten das Vorzeichen von $x$.
       - type: generated
         id: ungerade-potenz-rechnen
@@ -190,16 +190,16 @@ blocks:
         id: luecken
         text: Welche Funktionen sind nicht für alle Zahlen $x$ definiert? Wähle alle richtigen.
         options:
-          - text: "f(x) = 1 : x"
-            correct: true
-            info: Durch null darf man nicht teilen, $x = 0$ ist ausgeschlossen.
-          - text: f(x) = √x
-            correct: true
-            info: Unter der Wurzel darf keine negative Zahl stehen, es muss $x \ge 0$ sein.
           - text: f(x) = x³
             correct: false
             info: Potenzen mit ganzem Exponenten kannst du für jede Zahl ausrechnen.
           - text: f(x) = x⁴
             correct: false
             info: Auch negative $x$ gehen, denn $(−2)^4 = 16$.
+          - text: "f(x) = 1 : x"
+            correct: true
+            info: Durch null darf man nicht teilen, $x = 0$ ist ausgeschlossen.
+          - text: f(x) = √x
+            correct: true
+            info: Unter der Wurzel darf keine negative Zahl stehen, es muss $x \ge 0$ sein.
         explanation: Ein Ausschluss entsteht beim Teilen durch null und beim Wurzelziehen aus negativen Zahlen.

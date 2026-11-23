@@ -23,7 +23,7 @@ blocks:
         text: |
           Der Graph zeigt $f(x) = x^2 + e$. Mit dem Regler $e$ schiebst du die Parabel nach oben und unten. Die
           Gleichung $x^2 + e = 0$ ist gelöst, wo die Kurve die x-Achse berührt oder schneidet. Es können zwei, eine
-          oder keine Stellen sein.
+          oder keine Stellen sein. Ein Quadrat ist nie negativ: Zu $x^2 = −4$ gibt es keine Lösung.
       - type: vue-component
         id: regler-nullstellen
         component: FunktionsGraph
@@ -85,15 +85,15 @@ blocks:
         id: weg-waehlen
         text: Welcher Weg löst $x^2 - 7x = 0$ am schnellsten?
         options:
+          - text: Beide Seiten durch x teilen
+            correct: false
+            info: "Dabei geht die Lösung $x = 0$ verloren. Durch x darfst du nur teilen, wenn x nicht null sein kann."
           - text: Ausklammern von x
             correct: true
             info: Beide Summanden enthalten x. Aus $x \cdot (x - 7) = 0$ folgt $x = 0$ oder $x = 7$.
           - text: Wurzelziehen
             correct: false
             info: "Wurzelziehen geht nur, wenn die Gleichung die Form $x^2 = c$ hat. Hier steht noch ein $7x$ dabei."
-          - text: Beide Seiten durch x teilen
-            correct: false
-            info: "Dabei geht die Lösung $x = 0$ verloren. Durch x darfst du nur teilen, wenn x nicht null sein kann."
         explanation: Wenn alle Summanden ein x enthalten, klammerst du es aus und nutzt, dass ein Produkt null ist, wenn ein Faktor null ist.
       - type: generated
         id: wurzelziehen
@@ -156,16 +156,16 @@ blocks:
         id: zwei-loesungen
         text: "Welche Gleichungen haben genau zwei Lösungen? Wähle alle richtigen."
         options:
-          - text: "x² = 25"
-            correct: true
-            info: Die Lösungen sind 5 und −5.
-          - text: "(x − 1)(x + 1) = 0"
-            correct: true
-            info: Die Faktoren sind null für x = 1 und x = −1.
           - text: "x² = 0"
             correct: false
             info: Nur die Lösung 0. Die Parabel berührt die x-Achse in einem Punkt.
           - text: "x² = −9"
             correct: false
             info: Das Quadrat einer Zahl ist nie negativ, es gibt keine Lösung.
+          - text: "x² = 25"
+            correct: true
+            info: Die Lösungen sind 5 und −5.
+          - text: "(x − 1)(x + 1) = 0"
+            correct: true
+            info: Die Faktoren sind null für x = 1 und x = −1.
         explanation: Zwei Lösungen heißen zwei Schnittpunkte der Parabel mit der x-Achse.

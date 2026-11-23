@@ -28,14 +28,14 @@ blocks:
         props:
           family: sine
           regler:
-            - { key: a, label: "a: Amplitude in m (negativ spiegelt)", min: -3, max: 3, step: 0.5, start: 1 }
+            - { key: a, label: "a: Amplitude in m", min: 0.5, max: 3, step: 0.5, start: 1 }
             - { key: b, label: "b: bestimmt die Periode", min: 0.1, max: 2, step: 0.1, start: 1 }
           punkte: { data: gezeiten }
           fenster: { xmin: 0, xmax: 24, ymin: -3, ymax: 3 }
           tabelleX: [0, 3, 6, 9, 12]
           labels:
             graph: Wasserstand über die Stunden mit Messpunkten
-            tabelle: Wasserstand in Metern
+            tabelle: Werte der Funktion in Metern, nicht die Messwerte
             reset: Regler zurücksetzen
             grundform: Vergleich
             x: Stunden
@@ -72,6 +72,12 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: definition
+        term: Amplitude
+        explanation: Die größte Abweichung einer Schwingung von der Mitte. Bei $a \cdot \sin(b \cdot x)$ ist es $a$.
+      - type: definition
+        term: Periode
+        explanation: Die Länge, nach der sich der Verlauf einer Schwingung wiederholt. Bei $a \cdot \sin(b \cdot x)$ ist sie $\frac{2\pi}{b}$.
       - type: generated
         id: amplitude-riesenrad
         given:
@@ -108,9 +114,6 @@ blocks:
         id: b-groesser
         text: Der Regler b wird größer gestellt. Was passiert mit der Kurve $a \cdot \sin(b \cdot x)$?
         options:
-          - text: Die Kurve wird enger, die Periode kürzer.
-            correct: true
-            info: "Die Periode ist 2π geteilt durch b. Ein größeres b macht sie kleiner, die Welle wiederholt sich schneller."
           - text: Die Kurve wird höher.
             correct: false
             info: Die Höhe bestimmt die Amplitude a, nicht b.
@@ -120,6 +123,9 @@ blocks:
           - text: Die Kurve wird nach rechts verschoben.
             correct: false
             info: Eine Verschiebung käme von einer Zahl in der Klammer (x − d). Hier gibt es sie nicht.
+          - text: Die Kurve wird enger, die Periode kürzer.
+            correct: true
+            info: "Die Periode ist 2π geteilt durch b. Ein größeres b macht sie kleiner, die Welle wiederholt sich schneller."
         explanation: b stellt ein, wie schnell sich der Vorgang wiederholt. Die Periode ist 2π geteilt durch b.
       - type: true-false
         id: amplitude-hoehe
@@ -133,5 +139,4 @@ blocks:
       - type: text
         text: |
           Du hast gesehen, wie ein Punkt auf dem Einheitskreis zur Sinuskurve wird, und wie Amplitude und Periode einen
-          wiederkehrenden Vorgang beschreiben. Jede Funktionsfamilie in diesem Explainer hat Regler, die verschieben,
-          strecken oder spiegeln.
+          wiederkehrenden Vorgang beschreiben. Jede Funktionsfamilie in diesem Explainer hat Regler, die ihre Grundform verändern.

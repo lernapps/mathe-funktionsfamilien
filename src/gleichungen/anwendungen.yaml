@@ -81,9 +81,6 @@ blocks:
         id: bruecke
         text: "Ein Brückenbogen hat die Form y = −0,05x² + 5 (x und y in Metern, x von der Mitte aus gemessen). Wie breit ist der Bogen am Boden, also bei y = 0?"
         options:
-          - text: "20 m"
-            correct: true
-            info: "−0,05x² + 5 = 0 gibt x² = 100, also x = 10 oder x = −10. Der Abstand beider Fußpunkte ist 20 m."
           - text: "10 m"
             correct: false
             info: "Das ist nur eine Lösung, die Entfernung von der Mitte bis zu einem Fußpunkt. Die Breite geht von −10 bis 10."
@@ -93,6 +90,9 @@ blocks:
           - text: "100 m"
             correct: false
             info: "Das ist x², nicht x. Aus x² = 100 musst du noch die Wurzel ziehen."
+          - text: "20 m"
+            correct: true
+            info: "−0,05x² + 5 = 0 gibt x² = 100, also x = 10 oder x = −10. Der Abstand beider Fußpunkte ist 20 m."
         explanation: Die Breite am Boden ist der Abstand der beiden Nullstellen.
       - type: generated
         id: landepunkt
@@ -157,6 +157,6 @@ blocks:
           - "Die Fläche ist ${{r.x}} \\cdot {{r.b}} = {{answer}}$ m²."
       - type: true-false
         id: scheitel-hoechster-punkt
-        text: Bei einer nach unten geöffneten Parabel ist der Scheitel der höchste Punkt des Graphen.
-        answer: true
-        explanation: Bei $a < 0$ fällt die Kurve nach beiden Seiten vom Scheitel weg. Darum liegt dort der größte Funktionswert, etwa die größte Höhe eines Wurfs.
+        text: Bei einer nach unten geöffneten Parabel ist der Scheitel der tiefste Punkt des Graphen.
+        answer: false
+        explanation: Bei $a < 0$ fällt die Kurve nach beiden Seiten vom Scheitel weg. Darum ist der Scheitel der höchste Punkt, etwa die größte Höhe eines Wurfs.

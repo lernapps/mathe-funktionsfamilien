@@ -23,7 +23,7 @@ blocks:
       - type: text
         text: |
           Bei **Zinseszins** werden die Zinsen im nächsten Jahr mitverzinst. Das Guthaben wird jedes Jahr mit dem
-          Wachstumsfaktor $q = 1 + \frac{p}{100}$ malgenommen. Nach $n$ Jahren ist es $K_n = K_0 \cdot q^n$. Das
+          Wachstumsfaktor $q = 1 + \frac{p}{100}$ malgenommen. Dabei ist $p$ der Zinssatz in Prozent. Nach $n$ Jahren ist es $K_n = K_0 \cdot q^n$. Das
           Startkapital $K_0$ steht hier fest bei 1000 €. Mit dem Regler änderst du den Faktor $q$.
       - type: vue-component
         id: regler-sparkonto
@@ -71,10 +71,16 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: definition
+        term: Zinseszins
+        explanation: Zinsen, die im nächsten Jahr mitverzinst werden. Auf 1000 € bei 3 % sind das nach zwei Jahren 1060,90 € statt 1060 €.
       - type: single-choice
         id: faktor-erkennen
         text: Welcher Wachstumsfaktor gehört zu 4 % Zinsen pro Jahr?
         options:
+          - text: "4"
+            correct: false
+            info: Das wäre eine Vervierfachung (300 % Zuwachs).
           - text: "1,04"
             correct: true
             info: "Das Guthaben bleibt (100 %) und 4 % kommen dazu: 1 + 0,04 = 1,04."
@@ -84,9 +90,6 @@ blocks:
           - text: "1,4"
             correct: false
             info: Das wären 40 % Zuwachs. 4 % sind 0,04, nicht 0,4.
-          - text: "4"
-            correct: false
-            info: Das wäre eine Vervierfachung (300 % Zuwachs).
         explanation: Der Wachstumsfaktor ist 1 plus der Zinssatz als Dezimalzahl.
       - type: generated
         id: wachstumsfaktor

@@ -80,29 +80,32 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: definition
+        term: Einheitskreis
+        explanation: Der Kreis mit Radius 1 um den Ursprung des Koordinatensystems. Ein Punkt auf ihm hat die Koordinaten (Kosinus | Sinus) seines Winkels.
       - type: single-choice
         id: sinus-90
         text: Der Punkt steht auf dem Einheitskreis bei 90°, also ganz oben. Wie groß ist der Sinus?
         options:
-          - text: "1"
-            correct: true
-            info: Ganz oben ist die Höhe so groß wie der Radius, also 1.
-          - text: "0"
-            correct: false
-            info: Die Höhe 0 gehört zu 0° und 180°, wenn der Punkt auf der waagerechten Achse liegt. Bei 90° ist der Kosinus 0.
           - text: "−1"
             correct: false
             info: Die Höhe −1 gehört zu 270°, ganz unten.
           - text: "90"
             correct: false
             info: Das ist die Gradzahl des Winkels. Der Sinus ist die Höhe des Punkts, ein Wert zwischen −1 und 1.
+          - text: "1"
+            correct: true
+            info: Ganz oben ist die Höhe so groß wie der Radius, also 1.
+          - text: "0"
+            correct: false
+            info: Die Höhe 0 gehört zu 0° und 180°, wenn der Punkt auf der waagerechten Achse liegt. Bei 90° ist der Kosinus 0.
         explanation: Der Sinus ist die Höhe des Punkts auf dem Einheitskreis. Sie ist bei 90° am größten.
       - type: generated
         id: sinus-wert
         given:
           r: { pick: 1, from: { data: sinuswerte } }
         task:
-          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind ${{r.bmtex}}$ im Bogenmaß. Wie groß ist der Sinus? Gib ihn als Dezimalzahl an."
+          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind {{r.bm}} im Bogenmaß. Wie groß ist der Sinus? Gib ihn als Dezimalzahl an."
         answer: { value: "r.wert", compare: { number: { format: decimal, decimals: 1 } } }
         mistakes:
           - {
@@ -118,7 +121,7 @@ blocks:
         given:
           r: { pick: 1, from: { data: kosinuswerte } }
         task:
-          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind ${{r.bmtex}}$ im Bogenmaß. Wie groß ist der Kosinus? Gib ihn als Dezimalzahl an."
+          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind {{r.bm}} im Bogenmaß. Wie groß ist der Kosinus? Gib ihn als Dezimalzahl an."
         answer: { value: "r.wert", compare: { number: { format: decimal, decimals: 1 } } }
         mistakes:
           - {
@@ -131,13 +134,16 @@ blocks:
           - "Der Kosinus ist ${{answer}}$."
       - type: true-false
         id: periode
-        text: Nach einer ganzen Umdrehung um 360° wiederholt sich die Sinuskurve, die Periode ist also $2\pi$.
-        answer: true
-        explanation: Nach 360° steht der Punkt wieder am Start, also wiederholen sich Höhe und Abstand. Im Bogenmaß sind das $2\pi$.
+        text: Nach einer halben Umdrehung um 180° wiederholt sich die Sinuskurve, die Periode ist also $\pi$.
+        answer: false
+        explanation: Nach 180° steht der Punkt auf der anderen Seite, die Höhe hat das umgekehrte Vorzeichen. Erst nach 360° steht der Punkt wieder am Start, die Periode ist $2\pi$.
       - type: multiple-choice
         id: eigenschaften
         text: "Welche Aussagen über die Sinusfunktion stimmen? Wähle alle richtigen."
         options:
+          - text: "Der Funktionswert kann 2 sein."
+            correct: false
+            info: Der Kreis hat den Radius 1, die Höhe ist höchstens 1.
           - text: "Der größte Wert ist 1."
             correct: true
             info: Der Punkt liegt höchstens so hoch wie der Radius des Einheitskreises, also bei 1.
@@ -147,7 +153,4 @@ blocks:
           - text: "Der Graph geht bei x = 0 durch den Punkt (0 | 1)."
             correct: false
             info: Das gilt für die Kosinusfunktion, die bei 0° ganz rechts bei 1 beginnt.
-          - text: "Der Funktionswert kann 2 sein."
-            correct: false
-            info: Der Kreis hat den Radius 1, die Höhe ist höchstens 1.
         explanation: Sinus und Kosinus liegen immer zwischen −1 und 1. Der Sinus beginnt bei 0, der Kosinus bei 1.

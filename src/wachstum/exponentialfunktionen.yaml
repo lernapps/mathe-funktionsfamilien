@@ -11,7 +11,7 @@ blocks:
         text: |
           Du kannst danach Wachstum und Zerfall mit dem Term $f(x) = a \cdot b^x$ beschreiben und entscheiden, ob ein
           Vorgang linear oder exponentiell ist. Beim Zinseszins hast du den Faktor schon benutzt. Jetzt wird daraus eine
-          Funktion mit der Hochzahl $x$.
+          Funktion mit dem Exponenten $x$.
   - type: section
     id: modell
     title: Zwei Konten um die Wette
@@ -41,6 +41,7 @@ blocks:
             tabelle: Guthaben in Euro
             reset: Regler zurücksetzen
             grundform: Konto A linear
+            eigene: Konto B exponentiell
             x: Jahre
             y: Konto B
             undefinedValue: nicht definiert
@@ -100,13 +101,13 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: definition
+        term: Exponentialfunktion
+        explanation: Eine Funktion der Form $f(x) = a \cdot b^x$ mit $b > 0$. Der Wert wird bei jedem Schritt mit dem Faktor $b$ malgenommen.
       - type: multiple-choice
         id: wachstum-erkennen
         text: "Welche Terme beschreiben exponentielles Wachstum? Wähle alle richtigen."
         options:
-          - text: "1000 · 1,05ˣ"
-            correct: true
-            info: Der Faktor 1,05 ist größer als 1, der Wert wächst jedes Mal um 5 %.
           - text: "80 · 2ˣ"
             correct: true
             info: Der Wert verdoppelt sich bei jedem Schritt, der Faktor 2 ist größer als 1.
@@ -116,6 +117,9 @@ blocks:
           - text: "1000 + 50x"
             correct: false
             info: Hier kommt bei jedem Schritt derselbe Betrag dazu. Das ist linear.
+          - text: "1000 · 1,05ˣ"
+            correct: true
+            info: Der Faktor 1,05 ist größer als 1, der Wert wächst jedes Mal um 5 %.
         explanation: Exponentielles Wachstum hat die Form a · bˣ mit b größer als 1, Zerfall mit b zwischen 0 und 1.
       - type: generated
         id: funktionswert
@@ -127,11 +131,11 @@ blocks:
         mistakes:
           - {
               value: "r.mal",
-              message: "Du hast {{r.b}} mit der Hochzahl multipliziert statt potenziert. Die Hochzahl sagt, wie oft der Faktor {{r.b}} vorkommt.",
+              message: "Du hast {{r.b}} mit dem Exponenten multipliziert statt potenziert. Der Exponent sagt, wie oft der Faktor {{r.b}} vorkommt.",
             }
           - {
               value: "r.vorher",
-              message: "Du hast einen Faktor zu wenig genommen: Bei der Hochzahl {{r.n}} kommt der Faktor {{r.n}}-mal vor.",
+              message: "Du hast einen Faktor zu wenig genommen: Beim Exponenten {{r.n}} kommt der Faktor {{r.n}}-mal vor.",
             }
         hint: "Rechne erst die Potenz, dann mal die Zahl vor der Potenz."
         steps:

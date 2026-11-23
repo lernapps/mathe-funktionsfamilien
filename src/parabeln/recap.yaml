@@ -88,7 +88,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Mit $a = x$ und $b = 3$ ist $(x - 3)^2 = x^2 - 2 \cdot x \cdot 3 + 3^2 = x^2 - 6x + 9$. Der mittlere
+              Mit $a = x$ und $b = 3$ ist $(x - 3)^2 = x^2 - 2 \cdot x \cdot 3 + 3^2$, also $x^2 - 6x + 9$. Der mittlere
               Summand heißt Mittelterm.
       - type: vue-component
         id: test-klammern-binome

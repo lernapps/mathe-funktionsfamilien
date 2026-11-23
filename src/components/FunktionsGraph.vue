@@ -45,6 +45,7 @@ const props = defineProps<{
     vergleichY?: string;
     vergleichTerm?: string;
     punkte?: string;
+    eigene?: string;
   };
 }>();
 
@@ -222,9 +223,12 @@ function set(s: Slider, event: Event): void {
       </table>
     </div>
     <p v-if="baseCurve" class="fg-legend">
-      <span v-if="vergleich">{{ compareTerm }}:</span>
       <svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="fg-base" /></svg>
       {{ labels.grundform }}
+    </p>
+    <p v-if="vergleich && labels.eigene" class="fg-legend">
+      <svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="fg-curve" /></svg>
+      {{ labels.eigene }}
     </p>
     <div class="fg-sliders">
       <label v-for="s in regler" :key="s.key" class="fg-slider">

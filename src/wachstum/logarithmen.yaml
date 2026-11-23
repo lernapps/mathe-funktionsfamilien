@@ -18,7 +18,7 @@ blocks:
       - type: text
         text: |
           Ein Konto mit 1000 € wächst mit dem Faktor $q$ pro Jahr. Es ist doppelt so hoch, wenn $1000 \cdot q^x = 2000$
-          ist, also $q^x = 2$. Gesucht ist die Hochzahl $x$. Probiere sie zuerst in der Tabelle aus.
+          ist, also $q^x = 2$. Gesucht ist der Exponent $x$. Probiere sie zuerst in der Tabelle aus.
       - type: vue-component
         id: regler-verdopplung
         component: FunktionsGraph
@@ -29,7 +29,7 @@ blocks:
           regler:
             - { key: b, label: "q: Wachstumsfaktor pro Jahr", min: 1.02, max: 1.1, step: 0.01, start: 1.05 }
           fenster: { xmin: 0, xmax: 40, ymin: 0, ymax: 6000 }
-          tabelleX: [10, 12, 14, 15, 16, 20]
+          tabelleX: [6, 8, 10, 12, 14, 15, 16, 20]
           labels:
             graph: Guthaben über die Jahre
             tabelle: Guthaben in Euro
@@ -44,11 +44,11 @@ blocks:
           noch ein wenig zur 2000, bei 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.
       - type: text
         text: |
-          Das Probieren geht, ist aber mühsam. Der **Logarithmus** rechnet es direkt: $\text{log}_b(y)$ ist die Hochzahl $x$, für die
+          Das Probieren geht, ist aber mühsam. Der **Logarithmus** rechnet es direkt: $\text{log}_b(y)$ ist der Exponent $x$, für die
           $b^x = y$ gilt. Er ist die Umkehrung des Potenzierens.
       - type: definition
         term: Logarithmus
-        explanation: "Der Logarithmus zur Basis b von y ist die Hochzahl, mit der man b potenzieren muss, um y zu erhalten. Zum Beispiel ist log zur Basis 2 von 8 gleich 3, denn 2³ = 8."
+        explanation: "Der Logarithmus zur Basis b von y ist der Exponent, mit dem man b potenzieren muss, um y zu erhalten. Zum Beispiel ist log zur Basis 2 von 8 gleich 3, denn 2³ = 8."
   - type: section
     id: beispiel
     title: Vom Potenzieren zum Logarithmus
@@ -70,7 +70,7 @@ blocks:
           - type: formula
             formula: 'x = \frac{\text{lg}(2)}{\text{lg}(1,05)}'
           - type: text
-            text: "Dabei ist lg der Logarithmus zur Basis 10, den dein Taschenrechner kann (Taste lg oder log). Du kannst den Bruch auch mit jedem anderen Logarithmus des Taschenrechners bilden. Es ist etwa 14,2. Nach 14 Jahren fehlt noch ein Rest, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch."
+            text: "Dabei ist lg der Logarithmus zur Basis 10, den dein Taschenrechner kann (Taste lg oder log). Du kannst den Bruch auch mit jedem anderen Logarithmus des Taschenrechners bilden. Es ist etwa 14,2. Der Bruch geht, weil man den Exponenten vor den Logarithmus ziehen darf: $\\text{lg}(1,05^x) = x \\cdot \\text{lg}(1,05)$. Nach 14 Jahren fehlt noch ein Rest, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch."
   - type: section
     id: uebung
     title: Übung
@@ -79,29 +79,29 @@ blocks:
         id: bedeutung
         text: Was bedeutet log₂(8) = 3?
         options:
-          - text: "2³ = 8"
-            correct: true
-            info: Der Logarithmus ist die Hochzahl. Zur Basis 2 braucht man die Hochzahl 3, um 8 zu erhalten.
-          - text: "3² = 8"
-            correct: false
-            info: Dann wären Basis und Hochzahl vertauscht. 3² ist 9, nicht 8.
           - text: "2 · 3 = 8"
             correct: false
             info: Es wird potenziert, nicht multipliziert. 2 · 3 ist 6.
           - text: "8 : 2 = 3"
             correct: false
             info: "Der Logarithmus ist kein Teilen. 8 : 2 ist 4."
+          - text: "2³ = 8"
+            correct: true
+            info: Der Logarithmus ist der Exponent. Zur Basis 2 braucht man den Exponenten 3, um 8 zu erhalten.
+          - text: "3² = 8"
+            correct: false
+            info: Dann wären Basis und Exponent vertauscht. 3² ist 9, nicht 8.
         explanation: log₂(8) = 3 ist eine andere Schreibweise für 2³ = 8.
       - type: generated
         id: logarithmus-berechnen
         given:
           r: { pick: 1, from: { data: logarithmen } }
         task:
-          text: "Berechne $\\text{log}_{{{r.b}}}({{r.y}})$. Mit welcher Hochzahl musst du {{r.b}} potenzieren, um {{r.y}} zu erhalten?"
+          text: "Berechne $\\text{log}_{{{r.b}}}({{r.y}})$. Mit welchem Exponenten musst du {{r.b}} potenzieren, um {{r.y}} zu erhalten?"
         answer: { value: "r.n", compare: { number: { format: integer } } }
         mistakes:
-          - { value: "r.b", message: "Das ist die Basis. Gesucht ist die Hochzahl, mit der du die Basis potenzierst." }
-          - { value: "r.y", message: "Das ist die Zahl, die herauskommen soll. Gesucht ist die Hochzahl." }
+          - { value: "r.b", message: "Das ist die Basis. Gesucht ist der Exponent, mit dem du die Basis potenzierst." }
+          - { value: "r.y", message: "Das ist die Zahl, die herauskommen soll. Gesucht ist der Exponent." }
         hint: "Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren."
         steps:
           - "Gesucht ist $x$ mit ${{r.b}}^x = {{r.y}}$."
@@ -118,7 +118,7 @@ blocks:
               value: "r.vorjahr",
               message: "Nach {{r.vorjahr}} Jahren ist das Guthaben erst das {{r.davor}}-Fache des Anfangs. Es muss mehr als das Doppelte sein, also ein Jahr länger.",
             }
-        hint: "Rechne $q^x$ für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt."
+        hint: "Rechne $q^x$ für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt. Gib eine ganze Zahl an, denn gefragt sind volle Jahre."
         steps:
           - "Nach {{r.vorjahr}} Jahren: $q^{{{r.vorjahr}}} = {{r.davor}}$, noch nicht das Doppelte."
           - "Nach {{r.jahre}} Jahren: $q^{{{r.jahre}}} = {{r.danach}}$, mehr als das Doppelte. Das ist nach {{answer}} Jahren."
@@ -126,4 +126,4 @@ blocks:
         id: umkehrung
         text: Aus log₁₀(1000) = 3 folgt 10³ = 1000.
         answer: true
-        explanation: Der Logarithmus und das Potenzieren heben sich auf. Die Hochzahl 3, mit der man 10 potenziert, ergibt 1000.
+        explanation: Der Logarithmus und das Potenzieren heben sich auf. Der Exponent 3, mit dem man 10 potenziert, ergibt 1000.
