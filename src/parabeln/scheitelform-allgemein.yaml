@@ -20,7 +20,7 @@ blocks:
         text: |
           Die **Scheitelform** $a \cdot (x - d)^2 + e$ verrät den Scheitel (d | e). Die **allgemeine Form**
           $a x^2 + b x + c$ entsteht durch Ausmultiplizieren. Dort ist $c$ der Wert bei $x = 0$, also der
-          Schnittpunkt mit der y-Achse, und $b$ der **Mittelterm** (nicht der Achsenabschnitt einer Geraden). Unter dem Term mit den Reglern steht die ausmultiplizierte Form.
+          Schnittpunkt mit der y-Achse, und $b$ die Zahl vor dem $x$ im **Mittelterm** $bx$ (nicht der Achsenabschnitt einer Geraden). Unter dem Term mit den Reglern steht die ausmultiplizierte Form.
       - type: vue-component
         id: regler-zwei-formen
         component: FunktionsGraph
@@ -71,7 +71,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Aus $(x - d)^2 + e = x^2 - 2dx + d^2 + e$ folgt: Der Mittelterm $b$ ist $−2d$, die Zahl $c$ ist
+              Aus $(x - d)^2 + e = x^2 - 2dx + d^2 + e$ folgt: Der Mittelterm $bx$ ist $−2dx$, also ist $b = −2d$, die Zahl $c$ ist
               $d^2 + e$. Also ist $d = −\frac{b}{2}$ und $e = c - d^2$. Ist $a \neq 1$, klammerst du zuerst $a$ aus. Die Aufgaben hier haben $a = 1$.
           - type: formula
             formula: 'x^2 - 6x + 11: \quad d = 3'

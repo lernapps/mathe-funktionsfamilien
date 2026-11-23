@@ -18,7 +18,7 @@ blocks:
       - type: text
         text: |
           Ein Konto mit 1000 € wächst mit dem Faktor $q$ pro Jahr. Es ist doppelt so hoch, wenn $1000 \cdot q^x = 2000$
-          ist, also $q^x = 2$. Gesucht ist der Exponent $x$. Probiere sie zuerst in der Tabelle aus.
+          ist, also $q^x = 2$. Gesucht ist der Exponent $x$. Probiere ihn zuerst in der Tabelle aus.
       - type: vue-component
         id: regler-verdopplung
         component: FunktionsGraph
@@ -44,7 +44,7 @@ blocks:
           noch ein wenig zur 2000, bei 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.
       - type: text
         text: |
-          Das Probieren geht, ist aber mühsam. Der **Logarithmus** rechnet es direkt: $\text{log}_b(y)$ ist der Exponent $x$, für die
+          Das Probieren geht, ist aber mühsam. Der **Logarithmus** rechnet es direkt: $\text{log}_b(y)$ ist der Exponent $x$, für den
           $b^x = y$ gilt. Er ist die Umkehrung des Potenzierens.
       - type: definition
         term: Logarithmus

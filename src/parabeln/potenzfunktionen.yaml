@@ -192,7 +192,7 @@ blocks:
         options:
           - text: f(x) = x³
             correct: false
-            info: Potenzen mit ganzem Exponenten kannst du für jede Zahl ausrechnen.
+            info: Potenzen mit natürlichem Exponenten wie x³ kannst du für jede Zahl ausrechnen.
           - text: f(x) = x⁴
             correct: false
             info: Auch negative $x$ gehen, denn $(−2)^4 = 16$.

@@ -73,7 +73,7 @@ blocks:
     blocks:
       - type: definition
         term: Zinseszins
-        explanation: Zinsen, die im nächsten Jahr mitverzinst werden. Auf 1000 € bei 3 % sind das nach zwei Jahren 1060,90 € statt 1060 €.
+        explanation: Zinsen, die im nächsten Jahr mitverzinst werden. Auf 1000 € bei 3 % sind das nach zwei Jahren 1060,90 € statt 1060 €.
       - type: single-choice
         id: faktor-erkennen
         text: Welcher Wachstumsfaktor gehört zu 4 % Zinsen pro Jahr?

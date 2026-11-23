@@ -188,7 +188,7 @@ blocks:
         text: Ist die Diskriminante einer quadratischen Gleichung negativ, dann schneidet die zugehörige nach oben geöffnete Parabel die x-Achse nicht.
         answer: true
         explanation: Keine Lösung heißt keine Nullstelle. Der Scheitel liegt dann über der x-Achse und die Parabel öffnet sich nach oben, ohne sie zu treffen.
-      - type: multiple-choice
+      - type: single-choice
         id: wege-vergleichen
         text: "Du hast die Gleichung x² − 4x + 3 = 0 gelöst. Welche Lösungen passen zur Wertetabelle mit f(1) = 0 und f(3) = 0?"
         options:

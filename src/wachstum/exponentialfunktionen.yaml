@@ -103,7 +103,7 @@ blocks:
     blocks:
       - type: definition
         term: Exponentialfunktion
-        explanation: Eine Funktion der Form $f(x) = a \cdot b^x$ mit $b > 0$. Der Wert wird bei jedem Schritt mit dem Faktor $b$ malgenommen.
+        explanation: Eine Funktion der Form $f(x) = a \cdot b^x$ mit $b > 0$ und $b \neq 1$. Der Wert wird bei jedem Schritt mit dem Faktor $b$ malgenommen.
       - type: multiple-choice
         id: wachstum-erkennen
         text: "Welche Terme beschreiben exponentielles Wachstum? Wähle alle richtigen."
