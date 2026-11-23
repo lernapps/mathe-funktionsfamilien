@@ -100,7 +100,8 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
    Abschnitten `einstieg`, `modell`, `beispiel`, `uebung`.
 4. Regler: `FunktionsGraph` mit `family`, `regler`, `fenster`, `tabelleX`, `labels`, `nojs`; neue Familie in
    `src/components/FunktionsGraph.ts` (Funktion, Termtext, Beschreibung) samt Test ergänzen.
-5. Aufgaben aus den Mustern oben; `generated` nur mit Rechenprobe; `npx vp check --fix`, `npx vp build`,
+5. 1 bis 3 ihrer Übungen in `selfAssessment` aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt (je Seite zwei bis drei, bevorzugt `generated`).
+6. Aufgaben aus den Mustern oben; `generated` nur mit Rechenprobe; `npx vp check --fix`, `npx vp build`,
    `npx --no -- lernapps check`, Commit.
 
 ## Rules learned from mistakes

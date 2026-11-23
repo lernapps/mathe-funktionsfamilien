@@ -2,3 +2,17 @@
 title: Quadratische Gleichungen auf drei Wegen
 summary: Lösungen sind Nullstellen der Parabel. Du löst quadratische Gleichungen am Graphen, mit einer Tabelle und mit Rechnung und wendest sie auf Würfe, Brücken und Zäune an.
 pages: [recap, einfache-gleichungen, drei-wege, anwendungen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /gleichungen/einfache-gleichungen/#wurzelziehen
+        - /gleichungen/einfache-gleichungen/#ausklammern
+        - /gleichungen/einfache-gleichungen/#produkt-null
+    - exercises:
+        - /gleichungen/drei-wege/#formel-anwenden
+        - /gleichungen/drei-wege/#anzahl-loesungen
+        - /gleichungen/drei-wege/#ergaenzung-zahl
+    - exercises:
+        - /gleichungen/anwendungen/#landepunkt
+        - /gleichungen/anwendungen/#hoechste-hoehe
+        - /gleichungen/anwendungen/#zaun

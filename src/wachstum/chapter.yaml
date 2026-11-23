@@ -2,3 +2,17 @@
 title: Wachstum und Zerfall
 summary: Ein Sparkonto wächst jedes Jahr um denselben Faktor. Du beschreibst das mit Exponentialfunktionen, vergleichst es mit linearem Wachstum und fragst mit dem Logarithmus, wann das Guthaben sich verdoppelt.
 pages: [recap, zinseszins, exponentialfunktionen, logarithmen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /wachstum/zinseszins/#wachstumsfaktor
+        - /wachstum/zinseszins/#endkapital
+        - /wachstum/zinseszins/#endkapital
+    - exercises:
+        - /wachstum/exponentialfunktionen/#funktionswert
+        - /wachstum/exponentialfunktionen/#medikament
+        - /wachstum/exponentialfunktionen/#wachstum-erkennen
+    - exercises:
+        - /wachstum/logarithmen/#logarithmus-berechnen
+        - /wachstum/logarithmen/#verdopplung
+        - /wachstum/logarithmen/#bedeutung

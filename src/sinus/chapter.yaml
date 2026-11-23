@@ -2,3 +2,13 @@
 title: Sinus und Kosinus als Funktionen
 summary: Ein Punkt läuft auf dem Einheitskreis wie auf einem Riesenrad. Seine Höhe wird zum Graphen der Sinusfunktion. Mit Amplitude und Periode beschreibst du periodische Vorgänge wie Gezeiten.
 pages: [recap, sinus-kosinus, periodische-vorgaenge]
+selfAssessment:
+  pages:
+    - exercises:
+        - /sinus/sinus-kosinus/#sinus-wert
+        - /sinus/sinus-kosinus/#kosinus-wert
+        - /sinus/sinus-kosinus/#sinus-90
+    - exercises:
+        - /sinus/periodische-vorgaenge/#amplitude-riesenrad
+        - /sinus/periodische-vorgaenge/#periode-berechnen
+        - /sinus/periodische-vorgaenge/#b-groesser

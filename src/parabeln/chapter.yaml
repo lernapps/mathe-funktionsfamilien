@@ -2,3 +2,17 @@
 title: Parabeln und Potenzfunktionen
 summary: Du verschiebst, streckst und spiegelst die Normalparabel mit Reglern und lernst weitere Mitglieder der Familie kennen.
 pages: [recap, normalparabel, scheitelform-allgemein, potenzfunktionen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /parabeln/normalparabel/#scheitel-ablesen
+        - /parabeln/normalparabel/#wert-berechnen
+        - /parabeln/normalparabel/#richtung-erkennen
+    - exercises:
+        - /parabeln/scheitelform-allgemein/#mittelterm
+        - /parabeln/scheitelform-allgemein/#absolutglied
+        - /parabeln/scheitelform-allgemein/#scheitelform-finden
+    - exercises:
+        - /parabeln/potenzfunktionen/#ungerade-potenz-rechnen
+        - /parabeln/potenzfunktionen/#kehrwert-rechnen
+        - /parabeln/potenzfunktionen/#wurzel-rechnen
