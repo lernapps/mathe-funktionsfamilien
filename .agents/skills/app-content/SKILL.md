@@ -102,3 +102,9 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
    `src/components/FunktionsGraph.ts` (Funktion, Termtext, Beschreibung) samt Test ergänzen.
 5. Aufgaben aus den Mustern oben; `generated` nur mit Rechenprobe; `npx vp check --fix`, `npx vp build`,
    `npx --no -- lernapps check`, Commit.
+
+## Rules learned from mistakes
+
+- Prop-Typen einer Komponente stehen inline in der `.vue` (kein importierter Alias, sonst scheitert `vue-component-props-valid`).
+- `generated`: Fehlwert darf für keinen gezogenen Wert gleich der Antwort sein (Bereiche der Variablen trennen).
+- `intro` und Texte mit Doppelpunkt in Anführungszeichen; Formelbefehl `\mid` ist nicht erlaubt: Koordinaten als Text `(2 | 0)`.

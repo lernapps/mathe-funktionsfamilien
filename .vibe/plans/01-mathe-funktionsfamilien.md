@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: {}
+failedChecks: { app-content-guide: 1, checks-pass: 1 }
 ---
 
 # Plan: mathe-funktionsfamilien, first version
@@ -33,6 +33,7 @@ Lernende der Klassen 9-10 erkunden Funktionsfamilien mit Schiebereglern (Parabel
 - Sprache nur Deutsch.
 - Regler-Komponente `FunktionsGraph` (Term – Tabelle – Graph, Regler, Pfeiltasten, Textalternative); eine Komponente, die Familie über Props (guess).
 - Selbsttest in Recaps: Komponente `Kurztest` aus dem Epic (regeln.md 7.6).
+- Kein `scope` (kein `open-task`, kein Material des Auftraggebers): Seiten haben keinen `scope`.
 - Kapitelschnitt wie im Auftrag; zwei bis vier Seiten je Kapitel plus ein Recap am Kapitelanfang (guess).
 
 ## Notes
@@ -227,12 +228,12 @@ Zahlen: Komma, `−`, `·`, `:`; Brüche in Rückmeldungen `a/b` (W28), im Text 
       `npx --no -- lernapps create --archetype explainer`.
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
-- [ ] Load skill `lernapps-explainer`.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-explainer`.
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [ ] Musterseite K1 'Normalparabel' mit Komponente FunktionsGraph (Term, Tabelle, Graph, Regler a, d, e, nojs und SVG-Form), Aufgaben (Ablesen, Einstellen, generated), plus Kapitel-Rahmen und app.yaml; Lernenden-Prüfer (Klasse 9-10) spielt durch; Befunde umsetzen
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
