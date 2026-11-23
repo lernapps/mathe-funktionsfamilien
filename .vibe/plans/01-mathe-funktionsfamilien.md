@@ -219,6 +219,7 @@ Umgesetzt: rohes LaTeX in `mistakes` entfernt (Klartext statt `$…$`); Reglerau
 Nicht umgesetzt / Laufzeit (Funde, nicht behoben): „Prüfen“ der Komponente erst nach Reglerbewegung aktiv und nach jeder Prüfung wieder gesperrt, ohne Hinweis; kein „Lösung“-Knopf bei Exercise-Komponenten, verdeckter Lösungstext bleibt bei „Neue Aufgabe“ veraltet; „x = 1“ im Zahlfeld → „Antworte zuerst …“ (W18/W6); Standardrückmeldung „Lies dazu noch einmal den Text“ bei true-false (W13); „Neue Aufgabe“ nur als Symbol (W5); Aufgabennummern springen (W12); Aufgaben 1 und true-false nicht wiederholbar nach „Lösung“.
 Offen: Zielparabel hat keine Textalternative im Graph (Aufgabe ist sehbasiert; `describe` für den Tutor nennt die Werte); Seite bei 360 px lang (neun Bildschirme).
 Noch nicht geprüft: Screenreader, Touch.
+Nach dem Prüferlauf geändert (nicht erneut geprüft): Textalternative der Zielkurve im `aria-label` des Graphen (Scheitel, Öffnung, Faktor a, drei Werte; Wunsch des Orchestrators, regeln.md 3.7), gilt für alle Aufgaben mit Zielkurve.
 
 ### Fachlicher Prüfer
 Offen (läuft vor „Veröffentlichen“).
@@ -248,9 +249,10 @@ Offen (läuft vor „Veröffentlichen“).
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Musterseite K1 'Normalparabel' mit Komponente FunktionsGraph (Term, Tabelle, Graph, Regler a, d, e, nojs und SVG-Form), Aufgaben (Ablesen, Einstellen, generated), plus Kapitel-Rahmen und app.yaml; Lernenden-Prüfer (Klasse 9-10) spielt durch; Befunde umsetzen
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
+      Creator: Musterseite angenommen (Orchestrator in Vertretung), Textalternative der Zielkurve nachgebessert
 - [ ] Kapitel 1: Recap (Kurztest-Kopie nach src/components, vier Bausteine, Glossar), Seiten scheitelform-allgemein und potenzfunktionen; Push
 - [ ] Kapitel 2: Recap, einfache-gleichungen, drei-wege (Rechteckmodell, Formel, FunktionsGraphAufgabe), anwendungen; Push
 - [ ] Kapitel 3: Recap, zinseszins, exponentialfunktionen, logarithmen mit Datenfile wachstum; Push

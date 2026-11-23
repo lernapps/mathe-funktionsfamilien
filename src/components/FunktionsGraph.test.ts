@@ -41,7 +41,7 @@ test("the table and the text alternative", () => {
   ]);
   const w = { xmin: -4, xmax: 4, ymin: -2, ymax: 10 };
   expect(describeGraph("quadratic", { a: 1, d: 0, e: 0 }, w)).toBe(
-    "f(x) = x². bei x = −4 ist f(x) = 16; bei x = 0 ist f(x) = 0; bei x = 4 ist f(x) = 16.",
+    "f(x) = x². Scheitel bei (0 | 0), nach oben geöffnet, Faktor a = 1. bei x = −4 ist f(x) = 16; bei x = 0 ist f(x) = 0; bei x = 4 ist f(x) = 16.",
   );
   expect(startValues([{ key: "a", label: "a", min: -3, max: 3, step: 0.5, start: 1 }])).toEqual({ a: 1 });
 });

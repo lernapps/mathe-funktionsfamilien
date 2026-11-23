@@ -106,5 +106,6 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 ## Rules learned from mistakes
 
 - Prop-Typen einer Komponente stehen inline in der `.vue` (kein importierter Alias, sonst scheitert `vue-component-props-valid`).
+- Jede Aufgabe mit Zielkurve beschreibt die Zielkurve in Worten in der Textalternative des Graphen (`aria-label`: Scheitel, Öffnung, Faktor, Werte), nicht sichtbar auf der Seite.
 - `generated`: Fehlwert darf für keinen gezogenen Wert gleich der Antwort sein (Bereiche der Variablen trennen).
 - `intro` und Texte mit Doppelpunkt in Anführungszeichen; Formelbefehl `\mid` ist nicht erlaubt: Koordinaten als Text `(2 | 0)`.

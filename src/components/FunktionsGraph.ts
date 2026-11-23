@@ -167,7 +167,11 @@ export function describeGraph(family: Family, v: Values, w: Window): string {
       return y === undefined ? `bei x = ${fmt(x)} nicht definiert` : `bei x = ${fmt(x)} ist f(x) = ${fmt(y)}`;
     })
     .join("; ");
-  return `${term(family, v)}. ${points}.`;
+  const shape =
+    family === "quadratic"
+      ? ` Scheitel bei (${fmt(v["d"] ?? 0)} | ${fmt(v["e"] ?? 0)}), nach ${(v["a"] ?? 1) < 0 ? "unten" : "oben"} geöffnet, Faktor a = ${fmt(v["a"] ?? 1)}.`
+      : "";
+  return `${term(family, v)}.${shape} ${points}.`;
 }
 
 /** The values of the sliders at their start. */

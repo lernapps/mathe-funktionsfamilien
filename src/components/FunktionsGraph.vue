@@ -73,7 +73,13 @@ const baseCurve = computed(() =>
 );
 const termText = computed(() => term(props.family, { ...values }));
 const rows = computed(() => table(props.family, { ...values }, props.tabelleX));
-const alt = computed(() => describeGraph(props.family, { ...values }, props.fenster));
+const alt = computed(() => {
+  const own = describeGraph(props.family, { ...values }, props.fenster);
+  // the dashed curve in words too, for those who cannot see it (only in the text alternative, not on the page)
+  return props.grundform?.length
+    ? `${own} ${props.labels.grundform}: ${describeGraph(props.family, base.value, props.fenster)}`
+    : own;
+});
 const clipId = `clip-${uid}`;
 
 function reset(): void {
