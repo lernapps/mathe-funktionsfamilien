@@ -17,6 +17,11 @@ const props = defineProps<{
   tabelleX: number[];
   /** The parameters of the basic form, drawn dashed for comparison; none: no comparison. */
   grundform?: { key: string; value: number }[];
+  /** A second curve of another family, drawn dashed with its own table column (for example linear against exponential). */
+  vergleich?: {
+    family: "quadratic" | "quadraticGeneral" | "power" | "reciprocal" | "root" | "exponential" | "sine" | "linear";
+    werte: { key: string; value: number }[];
+  };
   /** Parameters that stay fixed (no slider), for example the factor a of a trajectory. */
   fest?: { key: string; value: number }[];
   /** Show the term written out as ax² + bx + c below the term (for quadratic only). */
@@ -31,6 +36,8 @@ const props = defineProps<{
     y: string;
     undefinedValue: string;
     allgemein?: string;
+    vergleichY?: string;
+    vergleichTerm?: string;
   };
 }>();
 
@@ -77,8 +84,14 @@ const path = (ps: [number, number][][]) =>
     .join(" ");
 
 const curve = computed(() => path(pieces(props.family, { ...values }, props.fenster)));
-const baseCurve = computed(() =>
-  props.grundform?.length ? path(pieces(props.family, base.value, props.fenster)) : "",
+const compareValues = computed(() => Object.fromEntries((props.vergleich?.werte ?? []).map((g) => [g.key, g.value])));
+const baseCurve = computed(() => {
+  if (props.vergleich) return path(pieces(props.vergleich.family, compareValues.value, props.fenster));
+  return props.grundform?.length ? path(pieces(props.family, base.value, props.fenster)) : "";
+});
+const compareTerm = computed(() => (props.vergleich ? term(props.vergleich.family, compareValues.value) : ""));
+const compareRows = computed(() =>
+  props.vergleich ? table(props.vergleich.family, compareValues.value, props.tabelleX) : [],
 );
 const termText = computed(() => term(props.family, { ...values }));
 const generalText = computed(() => generalTerm({ ...values }));
@@ -86,6 +99,7 @@ const rows = computed(() => table(props.family, { ...values }, props.tabelleX));
 const alt = computed(() => {
   const own = describeGraph(props.family, { ...values }, props.fenster);
   // the dashed curve in words too, for those who cannot see it (only in the text alternative, not on the page)
+  if (props.vergleich) return `${own} ${props.labels.grundform}: ${compareTerm.value}.`;
   return props.grundform?.length
     ? `${own} ${props.labels.grundform}: ${describeGraph(props.family, base.value, props.fenster)}`
     : own;
@@ -145,17 +159,22 @@ function set(s: Slider, event: Event): void {
           <tr>
             <th scope="col">{{ labels.x }}</th>
             <th scope="col">{{ labels.y }}</th>
+            <th v-if="vergleich" scope="col">{{ labels.vergleichY ?? "" }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="r in rows" :key="r.x">
+          <tr v-for="(r, i) in rows" :key="r.x">
             <td>{{ fmt(r.x) }}</td>
             <td>{{ r.y === undefined ? labels.undefinedValue : fmt(r.y) }}</td>
+            <td v-if="vergleich">
+              {{ compareRows[i]?.y === undefined ? labels.undefinedValue : fmt(compareRows[i]?.y ?? 0) }}
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
     <p v-if="baseCurve" class="fg-legend">
+      <span v-if="vergleich">{{ compareTerm }}:</span>
       <svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="fg-base" /></svg>
       {{ labels.grundform }}
     </p>

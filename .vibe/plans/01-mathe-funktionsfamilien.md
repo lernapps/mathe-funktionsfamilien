@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 1
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { accessible: 4, app-content-guide: 1, checks-pass: 6 }
+failedChecks: { accessible: 4, app-content-guide: 1, checks-pass: 7 }
 ---
 
 # Plan: mathe-funktionsfamilien, first version
@@ -255,7 +255,7 @@ Offen (läuft vor „Veröffentlichen“).
       Creator: Musterseite angenommen (Orchestrator in Vertretung), Textalternative der Zielkurve nachgebessert
 - [x] Kapitel 1: Recap (Kurztest-Kopie nach src/components, vier Bausteine, Glossar), Seiten scheitelform-allgemein und potenzfunktionen; Push
 - [x] Kapitel 2: Recap, einfache-gleichungen, drei-wege (Rechteckmodell, Formel, FunktionsGraphAufgabe), anwendungen; Push
-- [ ] Kapitel 3: Recap, zinseszins, exponentialfunktionen, logarithmen mit Datenfile wachstum; Push
+- [x] Kapitel 3: Recap, zinseszins, exponentialfunktionen, logarithmen mit Datenfile wachstum; Push
 - [ ] Kapitel 4: Recap, sinus-kosinus, periodische-vorgaenge mit Datenfile messreihen; Push
 - [ ] App-Ebene: Start-/Intro-Text, Glossar, Medienübersicht, Selbsteinschätzung (Skill lernapps-explainer-self-assessment), Inhaltsleitfaden app-content
 - [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review, Änderungen danach erneut prüfen; lernapps check ohne Fehler

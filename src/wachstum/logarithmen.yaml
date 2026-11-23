@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Logarithmen
+description: "Der Logarithmus beantwortet die Frage, wann ein Guthaben doppelt so hoch ist: Er ist die Umkehrung des Potenzierens."
+competencies: [logarithmen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Du kannst danach den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache
+          Exponentialgleichungen lösen. Die Frage dazu ist: Nach wie vielen Jahren ist mein Guthaben doppelt so hoch?
+  - type: section
+    id: modell
+    title: Wann ist es doppelt so viel?
+    blocks:
+      - type: text
+        text: |
+          Ein Konto mit 1000 € wächst mit dem Faktor $q$ pro Jahr. Es ist doppelt so hoch, wenn $1000 \cdot q^x = 2000$
+          ist, also $q^x = 2$. Gesucht ist die Hochzahl $x$. Probiere sie zuerst in der Tabelle aus.
+      - type: vue-component
+        id: regler-verdopplung
+        component: FunktionsGraph
+        props:
+          family: exponential
+          fest:
+            - { key: a, value: 1000 }
+          regler:
+            - { key: b, label: "q: Wachstumsfaktor pro Jahr", min: 1.02, max: 1.1, step: 0.01, start: 1.05 }
+          fenster: { xmin: 0, xmax: 40, ymin: 0, ymax: 6000 }
+          tabelleX: [10, 12, 14, 15, 16, 20]
+          labels:
+            graph: Guthaben über die Jahre
+            tabelle: Guthaben in Euro
+            reset: Regler zurücksetzen
+            grundform: Vergleich
+            x: Jahre
+            y: Guthaben
+            undefinedValue: nicht definiert
+        nojs: |
+          Graph des Guthabens $1000 \cdot q^x$ mit Regler für $q$ von 1,02 bis 1,10. Beim Start ist $q = 1,05$: nach 10, 12,
+          14, 15, 16 und 20 Jahren sind es 1628,89, 1795,86, 1979,93, 2078,93, 2182,87 und 2653,30 €. Bei 14 Jahren fehlt
+          noch ein wenig zur 2000, bei 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.
+      - type: text
+        text: |
+          Das Probieren geht, ist aber mühsam. Der **Logarithmus** rechnet es direkt: $\text{log}_b(y)$ ist die Hochzahl $x$, für die
+          $b^x = y$ gilt. Er ist die Umkehrung des Potenzierens.
+      - type: definition
+        term: Logarithmus
+        explanation: "Der Logarithmus zur Basis b von y ist die Hochzahl, mit der man b potenzieren muss, um y zu erhalten. Zum Beispiel ist log zur Basis 2 von 8 gleich 3, denn 2³ = 8."
+  - type: section
+    id: beispiel
+    title: Vom Potenzieren zum Logarithmus
+    blocks:
+      - type: example
+        title: Hin und zurück
+        blocks:
+          - type: formula
+            formula: '2^3 = 8 \quad \Leftrightarrow \quad \text{log}_2(8) = 3'
+          - type: formula
+            formula: '10^3 = 1000 \quad \Leftrightarrow \quad \text{log}_{10}(1000) = 3'
+          - type: text
+            text: "Der Logarithmus fragt: „Hoch wie viel?“ Zur Basis 2 ist die Antwort für 8 die Zahl 3, zur Basis 10 für 1000 ebenfalls die 3."
+      - type: example
+        title: Verdopplungszeit bei 5 %
+        blocks:
+          - type: formula
+            formula: "1,05^x = 2"
+          - type: formula
+            formula: 'x = \frac{\text{lg}(2)}{\text{lg}(1,05)}'
+          - type: text
+            text: "Mit dem Taschenrechner (Taste lg oder log) ist das etwa 14,2. Nach 14 Jahren fehlt noch ein Rest, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: bedeutung
+        text: Was bedeutet log₂(8) = 3?
+        options:
+          - text: "2³ = 8"
+            correct: true
+            info: Der Logarithmus ist die Hochzahl. Zur Basis 2 braucht man die Hochzahl 3, um 8 zu erhalten.
+          - text: "3² = 8"
+            correct: false
+            info: Dann wären Basis und Hochzahl vertauscht. 3² ist 9, nicht 8.
+          - text: "2 · 3 = 8"
+            correct: false
+            info: Es wird potenziert, nicht multipliziert. 2 · 3 ist 6.
+          - text: "8 : 2 = 3"
+            correct: false
+            info: "Der Logarithmus ist kein Teilen. 8 : 2 ist 4."
+        explanation: log₂(8) = 3 ist eine andere Schreibweise für 2³ = 8.
+      - type: generated
+        id: logarithmus-berechnen
+        given:
+          r: { pick: 1, from: { data: logarithmen } }
+        task:
+          text: "Berechne $\\text{log}_{{{r.b}}}({{r.y}})$. Mit welcher Hochzahl musst du {{r.b}} potenzieren, um {{r.y}} zu erhalten?"
+        answer: { value: "r.n", compare: { number: { format: integer } } }
+        mistakes:
+          - { value: "r.b", message: "Das ist die Basis. Gesucht ist die Hochzahl, mit der du die Basis potenzierst." }
+          - { value: "r.y", message: "Das ist die Zahl, die herauskommen soll. Gesucht ist die Hochzahl." }
+        hint: "Multipliziere die Basis mit sich selbst, bis du die Zahl erreichst, und zähle die Faktoren."
+        steps:
+          - "Gesucht ist $x$ mit ${{r.b}}^x = {{r.y}}$."
+          - "Das gilt für $x = {{answer}}$."
+      - type: generated
+        id: verdopplung
+        given:
+          r: { pick: 1, from: { data: verdopplung } }
+        task:
+          text: "Ein Guthaben wächst mit {{r.p}} % pro Jahr (Faktor {{r.q}}). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus."
+        answer: { value: "r.jahre", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "r.vorjahr",
+              message: "Nach {{r.vorjahr}} Jahren ist das Guthaben erst das {{r.davor}}-Fache des Anfangs. Es muss mehr als das Doppelte sein, also ein Jahr länger.",
+            }
+        hint: "Rechne $q^x$ für verschiedene Jahre und suche das erste, bei dem mehr als 2 herauskommt."
+        steps:
+          - "Nach {{r.vorjahr}} Jahren: $q^{{{r.vorjahr}}} = {{r.davor}}$, noch nicht das Doppelte."
+          - "Nach {{r.jahre}} Jahren: $q^{{{r.jahre}}} = {{r.danach}}$, mehr als das Doppelte. Das ist nach {{answer}} Jahren."
+      - type: true-false
+        id: umkehrung
+        text: Aus log₁₀(1000) = 3 folgt 10³ = 1000.
+        answer: true
+        explanation: Der Logarithmus und das Potenzieren heben sich auf. Die Hochzahl 3, mit der man 10 potenziert, ergibt 1000.

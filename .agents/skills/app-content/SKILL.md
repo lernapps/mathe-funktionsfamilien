@@ -113,3 +113,5 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 - Eine `formula` je Zeile und kurz halten (360 px); zu breite Formeln scheitern an `accessible` (scrollable-region).
 - Datenfelder in `src/data/*.yaml` beginnen klein (`diskr`, nicht `D`); negative Zahlen in Schritten als Textfeld mit `−` (z. B. `dtext`), weil die Laufzeit Platzhalter mit Bindestrich schreibt.
 - `generated`: Schritte nennen nur gezogene Werte; Zwischenergebnisse stehen als Felder im Datensatz (`pick: 1` aus `{ data: … }`).
+- Formelbefehle `\log`, `\ln`, `\lg` fehlen: `\text{log}_{b}(y)` schreiben. Kein `\mid`: Koordinaten als Text `(2 | 0)`.
+- `FunktionsGraph`: `fest` = feste Parameter ohne Regler (z. B. Startkapital), `vergleich` = zweite, gestrichelte Kurve einer anderen Familie mit eigener Tabellenspalte (linear gegen exponentiell).

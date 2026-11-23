@@ -57,3 +57,12 @@ test("the Scheitelform written out as ax² + bx + c", () => {
   expect(generalTerm({ a: 2, d: -1, e: 0 })).toBe("f(x) = 2 · x² + 4 · x + 2");
   expect(generalTerm({ a: 1, d: 0, e: 0 })).toBe("f(x) = x²");
 });
+
+test("large numbers are grouped, the linear family counts from its start", () => {
+  expect(fmt(12345)).toBe("12\u202f345");
+  expect(fmt(1234)).toBe("1234");
+  expect(fmt(-1234567.5)).toBe("−1\u202f234\u202f567,5");
+  expect(value("linear", { a: 50, c: 1000 }, 10)).toBe(1500);
+  expect(term("linear", { a: 50, c: 1000 })).toBe("f(x) = 1000 + 50 · x");
+  expect(term("exponential", { a: 1000, b: 1.03 })).toBe("f(x) = 1000 · 1,03^x");
+});

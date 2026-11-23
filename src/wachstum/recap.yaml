@@ -1,0 +1,180 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Vier Bausteine für Wachstum und Zerfall: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die Darstellungen einer Funktion."
+recap:
+  [
+    mathematik/zinsrechnung,
+    mathematik/prozent-veraenderung,
+    mathematik/potenzgesetze,
+    mathematik/funktionen-darstellung,
+  ]
+blocks:
+  - type: section
+    id: kopf
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          Das brauchst du für dieses Kapitel: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die
+          Darstellungen einer Funktion. Jeder Baustein hat eine kurze Auffrischung und einen Kurztest mit sofortiger
+          Rückmeldung. Es wird nichts gezählt und nichts gespeichert.
+  - type: section
+    id: zinsrechnung
+    title: Zinsrechnung
+    blocks:
+      - type: text
+        text: |
+          Für geliehenes oder gespartes Geld gibt es **Zinsen**. Der **Zinssatz** sagt, wie viel Prozent des Kapitals
+          das pro Jahr sind. Jahreszinsen sind Kapital mal Zinssatz geteilt durch 100.
+      - type: example
+        title: 800 € bei 3 %
+        blocks:
+          - type: text
+            text: "Die Zinsen für ein Jahr sind $800 \\cdot 3 : 100 = 24$ €."
+      - type: vue-component
+        id: test-zinsrechnung
+        component: Kurztest
+        props:
+          question: "Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr?"
+          options:
+            - { text: "60 €", correct: true, info: "2400 · 2,5 : 100 = 60. Dasselbe wie 1 % (24 €) mal 2,5." }
+            - { text: "6 €", correct: false, info: "Du hast durch 1000 statt durch 100 geteilt." }
+            - {
+                text: "2402,50 €",
+                correct: false,
+                info: "Das ist die Summe aus Kapital und 2,50 €. Du hast 2,5 € statt 2,5 % genommen.",
+              }
+            - { text: "600 €", correct: false, info: "Das wären 25 % von 2400 €. Der Zinssatz ist aber 2,5 %." }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr? Antwort: 60 €, denn 2400 · 2,5 : 100 = 60.
+          Falsch sind 6 € (durch 1000 geteilt), 2402,50 € (2,5 € statt 2,5 %) und 600 € (das wären 25 %).
+      - type: text
+        text: "Wenn du unsicher warst: Wiederhole den Baustein „Zinsrechnung“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/zinsrechnung/)."
+      - type: definition
+        term: Zinssatz
+        explanation: Der Prozentsatz, der angibt, wie viel Prozent des Kapitals pro Jahr als Zinsen dazukommen. Bei 3 % auf 800 € sind es 24 €.
+  - type: section
+    id: prozent-veraenderung
+    title: Prozentuale Zu- und Abnahme
+    blocks:
+      - type: text
+        text: |
+          Bei einer Zunahme um $p$ % rechnest du mit dem **Wachstumsfaktor** $1 + \frac{p}{100}$, bei einer Abnahme mit
+          $1 - \frac{p}{100}$. Den neuen Wert bekommst du, indem du den alten Wert mit dem Faktor malnimmst.
+      - type: example
+        title: 50 € werden 20 % teurer
+        blocks:
+          - type: text
+            text: Der Faktor ist 1,20, der neue Preis ist $50 \cdot 1,20 = 60$ €.
+      - type: vue-component
+        id: test-prozent-veraenderung
+        component: Kurztest
+        props:
+          question: "Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?"
+          options:
+            - { text: "68 €", correct: true, info: "Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68." }
+            - { text: "65 €", correct: false, info: "Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €." }
+            - { text: "12 €", correct: false, info: "Das ist die Ersparnis, nicht der neue Preis." }
+            - {
+                text: "92 €",
+                correct: false,
+                info: "Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.",
+              }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis? Antwort: 68 €, denn der Faktor ist
+          0,85 und 80 · 0,85 = 68. Falsch sind 65 € (15 € statt 15 %), 12 € (das ist die Ersparnis) und 92 € (das wäre
+          eine Zunahme).
+      - type: text
+        text: "Wenn du unsicher warst: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/)."
+      - type: definition
+        term: Wachstumsfaktor
+        explanation: Die Zahl, mit der du einen Wert malnimmst, um ihn um einen Prozentsatz zu ändern. Bei 20 % Zunahme ist er 1,20, bei 20 % Abnahme 0,80.
+  - type: section
+    id: potenzgesetze
+    title: Potenzgesetze
+    blocks:
+      - type: text
+        text: |
+          Gleiche Basen lassen sich beim Teilen und Malnehmen zusammenfassen: $a^m \cdot a^n = a^{m+n}$ und
+          $a^m : a^n = a^{m-n}$. Für ein Produkt in der Basis gilt $(a \cdot b)^n = a^n \cdot b^n$.
+      - type: vue-component
+        id: test-potenzgesetze
+        component: Kurztest
+        props:
+          question: "Was ergibt 5⁴ : 5²?"
+          options:
+            - {
+                text: "25",
+                correct: true,
+                info: "Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.",
+              }
+            - {
+                text: "5⁶",
+                correct: false,
+                info: "Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen.",
+              }
+            - {
+                text: "1",
+                correct: false,
+                info: "Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg.",
+              }
+            - {
+                text: "5⁸",
+                correct: false,
+                info: "Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen.",
+              }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Was ergibt 5⁴ : 5²? Antwort: 25, denn die Exponenten werden abgezogen: 5⁴ : 5² = 5² = 25. Falsch sind
+          5⁶ (Exponenten addiert), 1 (nur zwei Faktoren heben sich weg) und 5⁸ (Exponenten multipliziert).
+      - type: text
+        text: "Wenn du unsicher warst: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/)."
+  - type: section
+    id: funktionen-darstellung
+    title: Darstellungen von Funktionen
+    blocks:
+      - type: text
+        text: |
+          Eine Funktion zeigst du als Gleichung, Tabelle oder Graph. Aus der Tabelle erkennst du die Art der Funktion:
+          Wächst der Wert bei jedem Schritt um dieselbe Zahl, ist sie linear.
+      - type: vue-component
+        id: test-funktionen-darstellung
+        component: Kurztest
+        props:
+          question: "Eine Tabelle zeigt f(0) = 100, f(1) = 110 und f(2) = 120. Welcher Term passt?"
+          options:
+            - {
+                text: "f(x) = 100 + 10x",
+                correct: true,
+                info: "Bei x = 0 ist der Wert 100, und er wächst bei jedem Schritt um 10.",
+              }
+            - {
+                text: "f(x) = 100 · 1,1ˣ",
+                correct: false,
+                info: "Das ergibt f(2) = 121, nicht 120. Hier wird nicht mit demselben Faktor, sondern um dieselbe Zahl gewachsen.",
+              }
+            - { text: "f(x) = 110x", correct: false, info: "Bei x = 0 käme 0 heraus, nicht 100." }
+            - { text: "f(x) = 100x + 10", correct: false, info: "Bei x = 0 käme 10 heraus, nicht 100." }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Eine Tabelle zeigt f(0) = 100, f(1) = 110 und f(2) = 120. Welcher Term passt? Antwort: f(x) = 100 + 10x.
+          Der Wert wächst bei jedem Schritt um 10. Falsch sind f(x) = 100 · 1,1ˣ (das ergibt f(2) = 121), f(x) = 110x
+          (bei x = 0 käme 0) und f(x) = 100x + 10 (bei x = 0 käme 10).
+      - type: text
+        text: "Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/)."
+  - type: section
+    id: checkliste
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - Jahres-, Monats- und Tageszinsen berechnen kannst,
+          - neue und alte Werte nach einer prozentualen Zunahme oder Abnahme berechnen kannst,
+          - die Potenzgesetze für natürliche Exponenten anwenden kannst,
+          - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.

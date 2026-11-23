@@ -3,8 +3,16 @@
 // change the parameters, the term, the table and the graph follow.
 
 /** The families of the app. quadratic: a(x−d)²+e; quadraticGeneral: ax²+bx+c; power: a(x−d)^n+e; reciprocal:
- *  a/(x−d)+e; root: a√(x−d)+e; exponential: a·b^x; sine: a·sin(b·x). */
-export type Family = "quadratic" | "quadraticGeneral" | "power" | "reciprocal" | "root" | "exponential" | "sine";
+ *  a/(x−d)+e; root: a√(x−d)+e; exponential: a·b^x; sine: a·sin(b·x); linear: c + a·x. */
+export type Family =
+  | "quadratic"
+  | "quadraticGeneral"
+  | "power"
+  | "reciprocal"
+  | "root"
+  | "exponential"
+  | "sine"
+  | "linear";
 
 /** The values of the parameters by name (a, b, c, d, e, n). */
 export type Values = Record<string, number>;
@@ -58,6 +66,9 @@ export function value(family: Family, v: Values, x: number): number | undefined 
     case "sine":
       y = a * Math.sin((v["b"] ?? 1) * x);
       break;
+    case "linear":
+      y = c + a * x;
+      break;
   }
   return y !== undefined && Number.isFinite(y) ? y : undefined;
 }
@@ -65,8 +76,12 @@ export function value(family: Family, v: Values, x: number): number | undefined 
 /** A number as a learner reads it: decimal comma, true minus sign, at most two decimals. */
 export function fmt(n: number): string {
   const r = Math.round(n * 100) / 100;
-  const text = String(Object.is(r, -0) ? 0 : r).replace(".", ",");
-  return text.replace("-", "−");
+  const [whole = "0", fraction] = String(Object.is(r, -0) ? 0 : r).split(".");
+  const sign = whole.startsWith("-") ? "−" : "";
+  const digits = whole.replace("-", "");
+  // five digits or more: groups of three with a narrow no-break space (U+202F)
+  const grouped = digits.length >= 5 ? digits.replace(/\B(?=(\d{3})+(?!\d))/g, "\u202f") : digits;
+  return `${sign}${grouped}${fraction === undefined ? "" : `,${fraction}`}`;
 }
 
 /** The sign and size of a term: "+ 2", "− 2,5", for a number after another term. */
@@ -103,6 +118,8 @@ export function term(family: Family, v: Values): string {
       return `f(x) = ${factor(a)}√${shifted(d)}${tail}`;
     case "exponential":
       return `f(x) = ${a === 1 ? "" : `${fmt(a)} · `}${fmt(v["b"] ?? 2)}^x`;
+    case "linear":
+      return `f(x) = ${fmt(v["c"] ?? 0)} ${signed(a)} · x`;
     case "sine":
       return `f(x) = ${factor(a)}sin(${(v["b"] ?? 1) === 1 ? "x" : `${fmt(v["b"] ?? 1)} · x`})`;
   }

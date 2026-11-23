@@ -4,4 +4,4 @@ strand: mathematik/algebra
 title: Funktionsfamilien mit Schiebereglern
 intro: "Funktionen kommen in Familien: Ihre Graphen lassen sich mit Reglern verschieben, strecken und spiegeln. Du erkundest Parabeln, löst quadratische Gleichungen, beschreibst Wachstum und Zerfall und passt Sinuskurven an Messwerte an."
 languages: [de]
-chapters: [parabeln, gleichungen]
+chapters: [parabeln, gleichungen, wachstum]

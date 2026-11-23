@@ -1,0 +1,6 @@
+- { p: 3, q: "1,03", jahre: 24, davor: "1,97", danach: "2,03", vorjahr: 23 }
+- { p: 4, q: "1,04", jahre: 18, davor: "1,95", danach: "2,03", vorjahr: 17 }
+- { p: 5, q: "1,05", jahre: 15, davor: "1,98", danach: "2,08", vorjahr: 14 }
+- { p: 6, q: "1,06", jahre: 12, davor: "1,90", danach: "2,01", vorjahr: 11 }
+- { p: 7, q: "1,07", jahre: 11, davor: "1,97", danach: "2,10", vorjahr: 10 }
+- { p: 10, q: "1,10", jahre: 8, davor: "1,95", danach: "2,14", vorjahr: 7 }
