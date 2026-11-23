@@ -1,4 +1,4 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Parabeln und Potenzfunktionen
 summary: Du verschiebst, streckst und spiegelst die Normalparabel mit Reglern und lernst weitere Mitglieder der Familie kennen.
-pages: [recap, normalparabel, scheitelform-allgemein]
+pages: [recap, normalparabel, scheitelform-allgemein, potenzfunktionen]

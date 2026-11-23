@@ -80,7 +80,9 @@ blocks:
           Beim **Klammern auflösen** wird jeder Summand der einen Klammer mit jedem der anderen malgenommen.
           Quadrate von Summen und Differenzen haben einen festen Aufbau, die **binomischen Formeln**:
       - type: formula
-        formula: '(a + b)^2 = a^2 + 2ab + b^2 \qquad (a - b)^2 = a^2 - 2ab + b^2'
+        formula: "(a + b)^2 = a^2 + 2ab + b^2"
+      - type: formula
+        formula: "(a - b)^2 = a^2 - 2ab + b^2"
       - type: example
         title: (x − 3)²
         blocks:
@@ -126,7 +128,11 @@ blocks:
           Eine **Potenz** $a^n$ ist das $n$-fache Produkt von $a$: $a$ heißt **Basis**, $n$ heißt **Exponent**. Für
           dieselbe Basis gelten diese Gesetze:
       - type: formula
-        formula: 'a^m \cdot a^n = a^{m+n} \qquad (a^m)^n = a^{m \cdot n} \qquad (a \cdot b)^n = a^n \cdot b^n'
+        formula: 'a^m \cdot a^n = a^{m+n}'
+      - type: formula
+        formula: '(a^m)^n = a^{m \cdot n}'
+      - type: formula
+        formula: '(a \cdot b)^n = a^n \cdot b^n'
       - type: example
         title: 2³ · 2⁴
         blocks:
