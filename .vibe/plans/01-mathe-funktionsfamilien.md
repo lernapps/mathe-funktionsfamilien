@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -108,9 +108,10 @@ Jeder Baustein mindestens drei Aufgaben.
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: Recherche freigegeben (Orchestrator in Vertretung): Zuschnitt, FunktionsGraph, nur Deutsch, Musterseite Normalparabel in K1
 
 ### Answers
 
@@ -136,28 +137,78 @@ Jeder Baustein mindestens drei Aufgaben.
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
 
 ### Content method
 
-<!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
-checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
-<!-- An explainer: per figure, model and component its learning action in two to four sentences
-(`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
-page, which a link. -->
+**Seiten (Baustein → Seite):**
+
+| Kapitel | Seite (Datei) | Baustein-Ids | Neuer Schritt | Kernkomponente |
+|---|---|---|---|---|
+| 1 `parabeln` | `recap` | recap: lineare-funktionen, klammern-binome, potenzgesetze, funktionen-darstellung | Selbsttest je Baustein | `Kurztest` |
+| 1 | `normalparabel` (Muster) | quadratische-funktionen | a, d, e verschieben/strecken/spiegeln: f(x) = a(x − d)² + e | `FunktionsGraph` |
+| 1 | `scheitelform-allgemein` | quadratische-funktionen | Scheitelform und f(x) = ax² + bx + c als derselbe Graph, Umrechnen | `FunktionsGraph` |
+| 1 | `potenzfunktionen` | potenzfunktionen | x³, 1/x, √x als weitere Mitglieder, Definitionsbereich | `FunktionsGraph` |
+| 2 `gleichungen` | `recap` | recap: klammern-binome, quadratwurzeln, lineare-gleichungen | | `Kurztest` |
+| 2 | `einfache-gleichungen` | quadratische-gleichungen-einfach | Nullstellen, Wurzelziehen, Ausklammern, Produkt gleich null | `FunktionsGraph` |
+| 2 | `drei-wege` | quadratische-gleichungen | zwei/eine/keine Lösung; quadratische Ergänzung (Rechteckmodell), Lösungsformel | `FunktionsGraph`, SVG |
+| 2 | `anwendungen` | quadratische-funktionen-anwenden | Wurfbahn, Brückenbogen, größte Fläche | `FunktionsGraph` |
+| 3 `wachstum` | `recap` | recap: zinsrechnung, prozent-veraenderung, potenzgesetze, funktionen-darstellung | | `Kurztest` |
+| 3 | `zinseszins` | zinseszins | Faktor statt Betrag je Jahr | Tabelle, `FunktionsGraph` |
+| 3 | `exponentialfunktionen` | exponentialfunktionen | linear gegen exponentiell, Zerfall (Medikament) | `FunktionsGraph` |
+| 3 | `logarithmen` | logarithmen | „Wann doppelt so viel?“, Logarithmus als Umkehrung | `FunktionsGraph` |
+| 4 `sinus` | `recap` | recap: bogenmass, funktionen-darstellung | | `Kurztest` |
+| 4 | `sinus-kosinus` | sinusfunktion | Riesenrad, Einheitskreis, Höhe wird zum Graphen | `FunktionsGraph` |
+| 4 | `periodische-vorgaenge` | periodische-vorgaenge | a·sin(b·x), Amplitude und Periode an Messreihe anpassen | `FunktionsGraph` |
+
+Alle zehn Bausteine werden auf mindestens einer Seite geübt; mindestens drei Aufgaben je Baustein, steigend.
+
+**Komponente `FunktionsGraph` (einzige Reglerkomponente, Warum Komponente: kein Block zeichnet Graphen mit Reglern):** Props `family` (quadratic | cubic | reciprocal | sqrt | exp | sin), Reglerliste (Name, Min, Max, Schritt, Start), Fenster, Achsenbeschriftung, optional Zielkurve/Messpunkte. Sichtbar: Term (mit aktuellen Parameterwerten), Wertetabelle (7 Zeilen), Graph (SVG). Regler = `<input type="range">` mit Beschriftung, Pfeiltasten, Wert angezeigt; Reset-Knopf. Startzustand zeigt die Grundform, der erste Regler ändert genau eine Eigenschaft (`explainer-control-purpose`). Statische Form: `nojs`-Text (Term, Tabelle, Beschreibung des Graphen mit je drei Beispielwerten der Regler) plus ein SVG-Bild je Grundform. Eine zweite Komponente `FunktionsGraphAufgabe` (Exercise-Komponente): „Stelle die Regler so ein, dass der Graph durch die Punkte geht“ mit `check` über Toleranz, `reason` je typischem Fehler (Vorzeichen, Streckung). Sie zählt nicht als Pflichtübung; jede Seite hat zusätzlich Fragen/`generated`.
+
+**Muster (Exercises, Rückmeldung):**
+- *Ablesen/Deuten*: Graph und Regler gegeben, Wert oder Aussage gefragt (single-choice, number).
+- *Passend einstellen*: Exercise-Komponente, Zielwerte aus Seed.
+- *Rechnen*: `generated` mit `mistakes` (Vorzeichen bei Verschiebung, Zinssatz statt Faktor, + statt ·, falsche Quadratwurzel, −b statt b in der Formel).
+- *Begründen*: true-false/multiple-choice mit Grund in `info`.
+Zahlen: Komma, `−`, `·`, `:`; Brüche in Rückmeldungen `a/b` (W28), im Text gesetzt (`\frac`).
+
+**Aufbau jeder Seite (Abschnitte mit gleichen Ids):** `einstieg` (Ziel in Lernerwort + erste leichte Aufgabe/Regler), `modell` (Darstellung in Worten, vor der ersten Aufgabe), `beispiel`, `uebung`. Höchstens 350 Wörter, höchstens 4 Textblöcke in Folge.
+
+**Recap-Seiten:** je Baustein ein Abschnitt (Überschrift = Kartenname), Begriffe fett, Beispielkasten, `Kurztest` (nicht zu leicht: erste Frage nicht im Kopf lösbar, Hinweis zeigt den Weg), Satz mit Kartenseite `https://lernapps.net/apps/map/mathematik/c/<id>/`; Kopf „Das brauchst du für dieses Kapitel“, Schluss Checkliste „Du bist bereit, wenn du …“. Begriffe ins Glossar (`definition`; Wiederholung nur fett, W34). `Kurztest` kopiert aus `/tmp/epic/docs/mathe-epic/components/`, mit W42-Korrektur.
+
+**Engagement je Kapitel:** Wurfbahn eines Balls (K2), Brückenbogen, Sparkonto (K3), Medikament, Riesenrad (K4). Keine Personen mit Namen außer erfundenen; keine Marken.
+
+**Daten:** `src/data/wachstum.yaml` (Szenarien Sparkonto/Medikament mit Anfangswert, Faktor) für `generated` mit Schritten; `src/data/messreihen.yaml` (Gezeiten, Tageslänge) für Periodenseite.
+
+**Tutor:** keine Sonderregeln. Selbsteinschätzung (`selfAssessment`) in Commit wie im Skill.
+
+**Engagement je Seite (Öffnung · Wechsel · Belohnung · Geschichte):**
+- `normalparabel`: Regler a, d, e; Öffnung: „Ziehe a auf −1: was passiert?“ (Regler, Begründung in der Antwort) · Wechsel Regler → Tabelle → Lesen → Einstellen-Aufgabe · Belohnung: du liest d, e am Scheitel ab · Geschichte: Wurfbahn eines Balls (Vorgriff, K2 nimmt sie auf).
+- `scheitelform-allgemein`: zwei Terme, ein Graph; Öffnung: „Welcher Term gehört zum Graphen?“ · Rechnen mit `generated` (binomische Formel rückwärts) · Belohnung: du wandelst beide Formen ineinander · Brückenbogen.
+- `potenzfunktionen`: Regler Exponent n und Faktor a; Öffnung: Welche Familie hat keine negativen Werte? · Zuordnung Term–Graph · Wertebereiche.
+- `einfache-gleichungen`: Öffnung: Graph schneidet die x-Achse: wo? · drei Typen (Wurzelziehen, Ausklammern, Produkt null) mit `generated`.
+- `drei-wege`: Öffnung: zwei, eine, keine Lösung am Regler e · Rechteckmodell der quadratischen Ergänzung als SVG · Formel · Belohnung: Vergleich der drei Wege an einer Aufgabe.
+- `anwendungen`: Wurfbahn, Brückenbogen, Zaun (größte Fläche); Öffnung: Wie weit fliegt der Ball? (Regler) · Rechnen mit Rückfragen zum Sachbezug.
+- `zinseszins`: Öffnung: 1 000 € bei 3 %: Jahr 1 bis 3 von Hand · Tabelle zeigt Faktor 1,03 · Belohnung: du berechnest K·qⁿ.
+- `exponentialfunktionen`: lineares und exponentielles Konto laufen um die Wette (zwei Graphen, ein Regler) · Zerfall eines Medikaments.
+- `logarithmen`: Öffnung: Wann ist das Konto doppelt so hoch? Probieren in der Tabelle · dann log als Umkehrung.
+- `sinus-kosinus`: Öffnung: Riesenrad, Punkt läuft, Höhe wird zum Graphen (Regler Winkel) · Bogenmaß-Werte ablesen.
+- `periodische-vorgaenge`: Regler a, b gegen Messpunkte (Gezeiten, Tageslänge) · Belohnung: Modell passt zur Messreihe; Kapitel schließt mit Rückblick.
+
+**Prüfer:** vor „Veröffentlichen“ fachlicher Prüfer und Lernenden-Prüfer; Musterseite vorher vom Lernenden-Prüfer (Klasse 9-10).
 
 ## Code
 
@@ -182,11 +233,18 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Musterseite K1 'Normalparabel' mit Komponente FunktionsGraph (Term, Tabelle, Graph, Regler a, d, e, nojs und SVG-Form), Aufgaben (Ablesen, Einstellen, generated), plus Kapitel-Rahmen und app.yaml; Lernenden-Prüfer (Klasse 9-10) spielt durch; Befunde umsetzen
+<!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Kapitel 1: Recap (Kurztest-Kopie nach src/components, vier Bausteine, Glossar), Seiten scheitelform-allgemein und potenzfunktionen; Push
+- [ ] Kapitel 2: Recap, einfache-gleichungen, drei-wege (Rechteckmodell, Formel, FunktionsGraphAufgabe), anwendungen; Push
+- [ ] Kapitel 3: Recap, zinseszins, exponentialfunktionen, logarithmen mit Datenfile wachstum; Push
+- [ ] Kapitel 4: Recap, sinus-kosinus, periodische-vorgaenge mit Datenfile messreihen; Push
+- [ ] App-Ebene: Start-/Intro-Text, Glossar, Medienübersicht, Selbsteinschätzung (Skill lernapps-explainer-self-assessment), Inhaltsleitfaden app-content
+- [ ] Prüfer: fachlicher Prüfer und Lernenden-Prüfer über alle Seiten; Befunde im Plan unter Review, Änderungen danach erneut prüfen; lernapps check ohne Fehler
+<!-- tasks: pages (6 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
