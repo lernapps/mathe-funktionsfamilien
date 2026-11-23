@@ -25,7 +25,7 @@ blocks:
       - type: text
         text: |
           Für geliehenes oder gespartes Geld gibt es **Zinsen**. Der **Zinssatz** sagt, wie viel Prozent des Kapitals
-          das pro Jahr sind. Jahreszinsen sind Kapital mal Zinssatz geteilt durch 100.
+          das pro Jahr sind. Jahreszinsen sind Kapital mal Zinssatz geteilt durch 100. Für Monatszinsen rechnest du mit $\frac{1}{12}$ des Jahres, für Tageszinsen mit $\frac{1}{360}$.
       - type: example
         title: 800 € bei 3 %
         blocks:
@@ -35,26 +35,26 @@ blocks:
         id: test-zinsrechnung
         component: Kurztest
         props:
-          question: "Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr?"
+          question: "Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr?"
           options:
-            - { text: "60 €", correct: true, info: "2400 · 2,5 : 100 = 60. Dasselbe wie 1 % (24 €) mal 2,5." }
-            - { text: "6 €", correct: false, info: "Du hast durch 1000 statt durch 100 geteilt." }
+            - { text: "6 €", correct: false, info: "Du hast durch 1000 statt durch 100 geteilt." }
+            - { text: "60 €", correct: true, info: "2400 · 2,5 : 100 = 60. Dasselbe wie 1 % (24 €) mal 2,5." }
             - {
-                text: "2402,50 €",
+                text: "2402,50 €",
                 correct: false,
-                info: "Das ist die Summe aus Kapital und 2,50 €. Du hast 2,5 € statt 2,5 % genommen.",
+                info: "Das ist die Summe aus Kapital und 2,50 €. Du hast 2,5 € statt 2,5 % genommen.",
               }
-            - { text: "600 €", correct: false, info: "Das wären 25 % von 2400 €. Der Zinssatz ist aber 2,5 %." }
+            - { text: "600 €", correct: false, info: "Das wären 25 % von 2400 €. Der Zinssatz ist aber 2,5 %." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr? Antwort: 60 €, denn 2400 · 2,5 : 100 = 60.
-          Falsch sind 6 € (durch 1000 geteilt), 2402,50 € (2,5 € statt 2,5 %) und 600 € (das wären 25 %).
+          Kurztest: Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr? Antwort: 60 €, denn 2400 · 2,5 : 100 = 60.
+          Falsch sind 6 € (durch 1000 geteilt), 2402,50 € (2,5 € statt 2,5 %) und 600 € (das wären 25 %).
       - type: text
         text: "Wenn du unsicher warst: Wiederhole den Baustein „Zinsrechnung“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/zinsrechnung/)."
       - type: definition
         term: Zinssatz
-        explanation: Der Prozentsatz, der angibt, wie viel Prozent des Kapitals pro Jahr als Zinsen dazukommen. Bei 3 % auf 800 € sind es 24 €.
+        explanation: Der Prozentsatz, der angibt, wie viel Prozent des Kapitals pro Jahr als Zinsen dazukommen. Bei 3 % auf 800 € sind es 24 €.
   - type: section
     id: prozent-veraenderung
     title: Prozentuale Zu- und Abnahme
@@ -72,27 +72,27 @@ blocks:
         id: test-prozent-veraenderung
         component: Kurztest
         props:
-          question: "Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?"
+          question: "Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?"
           options:
-            - { text: "68 €", correct: true, info: "Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68." }
-            - { text: "65 €", correct: false, info: "Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €." }
-            - { text: "12 €", correct: false, info: "Das ist die Ersparnis, nicht der neue Preis." }
+            - { text: "12 €", correct: false, info: "Das ist die Ersparnis, nicht der neue Preis." }
+            - { text: "68 €", correct: true, info: "Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68." }
+            - { text: "65 €", correct: false, info: "Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €." }
             - {
-                text: "92 €",
+                text: "92 €",
                 correct: false,
-                info: "Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.",
+                info: "Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.",
               }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis? Antwort: 68 €, denn der Faktor ist
-          0,85 und 80 · 0,85 = 68. Falsch sind 65 € (15 € statt 15 %), 12 € (das ist die Ersparnis) und 92 € (das wäre
+          Kurztest: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis? Antwort: 68 €, denn der Faktor ist
+          0,85 und 80 · 0,85 = 68. Falsch sind 65 € (15 € statt 15 %), 12 € (das ist die Ersparnis) und 92 € (das wäre
           eine Zunahme).
       - type: text
         text: "Wenn du unsicher warst: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/)."
       - type: definition
         term: Wachstumsfaktor
-        explanation: Die Zahl, mit der du einen Wert malnimmst, um ihn um einen Prozentsatz zu ändern. Bei 20 % Zunahme ist er 1,20, bei 20 % Abnahme 0,80.
+        explanation: Die Zahl, mit der du einen Wert malnimmst, um ihn um einen Prozentsatz zu ändern. Bei 20 % Zunahme ist er 1,20, bei 20 % Abnahme 0,80.
   - type: section
     id: potenzgesetze
     title: Potenzgesetze
@@ -158,8 +158,8 @@ blocks:
                 correct: false,
                 info: "Das ergibt f(2) = 121, nicht 120. Hier wird nicht mit demselben Faktor, sondern um dieselbe Zahl gewachsen.",
               }
-            - { text: "f(x) = 110x", correct: false, info: "Bei x = 0 käme 0 heraus, nicht 100." }
             - { text: "f(x) = 100x + 10", correct: false, info: "Bei x = 0 käme 10 heraus, nicht 100." }
+            - { text: "f(x) = 110x", correct: false, info: "Bei x = 0 käme 0 heraus, nicht 100." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |

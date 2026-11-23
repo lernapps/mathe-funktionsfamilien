@@ -111,7 +111,7 @@ export function term(family: Family, v: Values): string {
       return `f(x) = ${parts.join(" ")}`;
     }
     case "power":
-      return `f(x) = ${factor(a)}${shifted(d)}${superscript(v["n"] ?? 2)}${tail}`;
+      return `f(x) = ${factor(a)}${shifted(d)}${(v["n"] ?? 2) === 1 ? "" : superscript(v["n"] ?? 2)}${tail}`;
     case "reciprocal":
       return `f(x) = ${fmt(a)} : ${shifted(d)}${tail}`;
     case "root":

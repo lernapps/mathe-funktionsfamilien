@@ -2,7 +2,7 @@
 // A short self-test for a recap page: one question, the learner picks an option and sees at once whether it is right and
 // why. It is no exercise: nothing is counted or stored. The page says what to do when the answer was wrong.
 import { computed, ref } from "vue";
-import { feedback } from "./Kurztest.ts";
+import { feedback, shuffled } from "./Kurztest.ts";
 
 type Choice = { text: string; correct: boolean; info: string };
 
@@ -17,7 +17,10 @@ const props = defineProps<{
 }>();
 
 const picked = ref<number | null>(null);
-const id = `kurztest-${Math.abs(props.question.split("").reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7))}`;
+const seed = Math.abs(props.question.split("").reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7));
+const id = `kurztest-${seed}`;
+// the options in a fixed order that is not the order of the content: the right one is not always first
+const order = shuffled(props.options, seed);
 const result = computed(() =>
   picked.value === null ? null : feedback(props.options, picked.value, props.right, props.wrong),
 );
@@ -26,9 +29,9 @@ const result = computed(() =>
 <template>
   <fieldset class="kurztest">
     <legend>{{ question }}</legend>
-    <label v-for="(o, i) in options" :key="i" class="kurztest-option">
-      <input v-model="picked" type="radio" :name="id" :value="i" />
-      {{ o.text }}
+    <label v-for="o in order" :key="o.index" class="kurztest-option">
+      <input v-model="picked" type="radio" :name="id" :value="o.index" />
+      {{ o.option.text }}
     </label>
     <p
       class="kurztest-result"

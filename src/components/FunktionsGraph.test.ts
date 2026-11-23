@@ -66,3 +66,8 @@ test("large numbers are grouped, the linear family counts from its start", () =>
   expect(term("linear", { a: 50, c: 1000 })).toBe("f(x) = 1000 + 50 · x");
   expect(term("exponential", { a: 1000, b: 1.03 })).toBe("f(x) = 1000 · 1,03^x");
 });
+
+test("a power with exponent 1 is written as x", () => {
+  expect(term("power", { a: 1, d: 0, e: 0, n: 1 })).toBe("f(x) = x");
+  expect(term("power", { a: -2, d: 0, e: 0, n: 1 })).toBe("f(x) = −2 · x");
+});

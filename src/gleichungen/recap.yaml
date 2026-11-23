@@ -32,9 +32,9 @@ blocks:
                 correct: true,
                 info: "Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².",
               }
-            - { text: "(x + 25)²", correct: false, info: "Dann wäre der Mittelterm 50x und das letzte Glied 625." }
             - { text: "(x − 5)²", correct: false, info: "Dann wäre der Mittelterm −10x. Hier steht +10x." }
             - { text: "(x + 10)²", correct: false, info: "Dann wäre der Mittelterm 20x und das letzte Glied 100." }
+            - { text: "(x + 25)²", correct: false, info: "Dann wäre der Mittelterm 50x und das letzte Glied 625." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |

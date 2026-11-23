@@ -70,7 +70,16 @@ const sy = (y: number) =>
 
 const ticks = (min: number, max: number) => {
   const range = max - min;
-  const step = range <= 14 ? 1 : range <= 30 ? 2 : range <= 70 ? 5 : 10 ** Math.ceil(Math.log10(range / 6));
+  let step = 1;
+  if (range > 30) {
+    // a round step (1, 2 or 5 times a power of ten) that gives about six marks
+    const raw = range / 6;
+    const magnitude = 10 ** Math.floor(Math.log10(raw));
+    const ratio = raw / magnitude;
+    step = magnitude * (ratio <= 1 ? 1 : ratio <= 2 ? 2 : ratio <= 5 ? 5 : 10);
+  } else if (range > 14) {
+    step = 2;
+  }
   const out: number[] = [];
   for (let t = Math.ceil(min / step) * step; t <= max + 1e-9; t += step) out.push(Math.round(t * 1000) / 1000);
   return out;

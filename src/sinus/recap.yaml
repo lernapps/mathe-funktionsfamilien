@@ -56,9 +56,9 @@ blocks:
                 correct: true,
                 info: "π entspricht 180°. Ein Viertel davon sind 45°, und 3 mal 45° sind 135°.",
               }
-            - { text: "270°", correct: false, info: "Das wäre 3π/2. Du hast nicht durch 4 geteilt, sondern durch 2." }
             - { text: "45°", correct: false, info: "Das ist π/4. Hier ist es das Dreifache davon." }
             - { text: "60°", correct: false, info: "Das ist π/3. Die Zahl unter dem Bruchstrich ist hier 4." }
+            - { text: "270°", correct: false, info: "Das wäre 3π/2. Du hast nicht durch 4 geteilt, sondern durch 2." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
@@ -83,10 +83,10 @@ blocks:
         props:
           question: "Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?"
           options:
-            - { text: "f(x) = 2x²", correct: true, info: "Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8." }
-            - { text: "f(x) = 4x", correct: false, info: "Bei x = 1 käme 4 heraus, nicht 2." }
             - { text: "f(x) = 2x", correct: false, info: "Bei x = 2 käme 4 heraus, nicht 8." }
             - { text: "f(x) = x³", correct: false, info: "Bei x = 1 käme 1 heraus, nicht 2." }
+            - { text: "f(x) = 2x²", correct: true, info: "Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8." }
+            - { text: "f(x) = 4x", correct: false, info: "Bei x = 1 käme 4 heraus, nicht 2." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |

@@ -17,7 +17,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Ein Konto mit 1000 € wächst mit dem Faktor $q$ pro Jahr. Es ist doppelt so hoch, wenn $1000 \cdot q^x = 2000$
+          Ein Konto mit 1000 € wächst mit dem Faktor $q$ pro Jahr. Es ist doppelt so hoch, wenn $1000 \cdot q^x = 2000$
           ist, also $q^x = 2$. Gesucht ist die Hochzahl $x$. Probiere sie zuerst in der Tabelle aus.
       - type: vue-component
         id: regler-verdopplung
@@ -40,7 +40,7 @@ blocks:
             undefinedValue: nicht definiert
         nojs: |
           Graph des Guthabens $1000 \cdot q^x$ mit Regler für $q$ von 1,02 bis 1,10. Beim Start ist $q = 1,05$: nach 10, 12,
-          14, 15, 16 und 20 Jahren sind es 1628,89, 1795,86, 1979,93, 2078,93, 2182,87 und 2653,30 €. Bei 14 Jahren fehlt
+          14, 15, 16 und 20 Jahren sind es 1628,89, 1795,86, 1979,93, 2078,93, 2182,87 und 2653,30 €. Bei 14 Jahren fehlt
           noch ein wenig zur 2000, bei 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.
       - type: text
         text: |
@@ -70,7 +70,7 @@ blocks:
           - type: formula
             formula: 'x = \frac{\text{lg}(2)}{\text{lg}(1,05)}'
           - type: text
-            text: "Mit dem Taschenrechner (Taste lg oder log) ist das etwa 14,2. Nach 14 Jahren fehlt noch ein Rest, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch."
+            text: "Dabei ist lg der Logarithmus zur Basis 10, den dein Taschenrechner kann (Taste lg oder log). Du kannst den Bruch auch mit jedem anderen Logarithmus des Taschenrechners bilden. Es ist etwa 14,2. Nach 14 Jahren fehlt noch ein Rest, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch."
   - type: section
     id: uebung
     title: Übung
@@ -111,7 +111,7 @@ blocks:
         given:
           r: { pick: 1, from: { data: verdopplung } }
         task:
-          text: "Ein Guthaben wächst mit {{r.p}} % pro Jahr (Faktor {{r.q}}). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus."
+          text: "Ein Guthaben wächst mit {{r.p}} % pro Jahr (Faktor {{r.q}}). Nach wie vielen vollen Jahren ist es erstmals mehr als doppelt so hoch? Probiere mit dem Taschenrechner oder rechne mit dem Logarithmus."
         answer: { value: "r.jahre", compare: { number: { format: integer } } }
         mistakes:
           - {

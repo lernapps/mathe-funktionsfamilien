@@ -13,9 +13,9 @@ blocks:
           werden. Bisher hast du die Zinsen für ein Jahr ausgerechnet. Hier legst du das Geld mehrere Jahre an.
       - type: text
         text: |
-          **Versuche es zuerst von Hand.** 1000 € werden zu 3 % angelegt, die Zinsen bleiben auf dem Konto. Nach dem
+          **Versuche es zuerst von Hand.** 1000 € werden zu 3 % angelegt, die Zinsen bleiben auf dem Konto. Nach dem
           ersten Jahr sind es $1000 \cdot 1,03 = 1030$ €. Wie viel sind es nach dem zweiten Jahr? Die Zinsen des
-          zweiten Jahres gibt es auf 1030 €, nicht auf 1000 €.
+          zweiten Jahres gibt es auf 1030 €, nicht auf 1000 €.
   - type: section
     id: modell
     title: Jedes Jahr derselbe Faktor
@@ -24,7 +24,7 @@ blocks:
         text: |
           Bei **Zinseszins** werden die Zinsen im nächsten Jahr mitverzinst. Das Guthaben wird jedes Jahr mit dem
           Wachstumsfaktor $q = 1 + \frac{p}{100}$ malgenommen. Nach $n$ Jahren ist es $K_n = K_0 \cdot q^n$. Das
-          Startkapital $K_0$ steht hier fest bei 1000 €. Mit dem Regler änderst du den Faktor $q$.
+          Startkapital $K_0$ steht hier fest bei 1000 €. Mit dem Regler änderst du den Faktor $q$.
       - type: vue-component
         id: regler-sparkonto
         component: FunktionsGraph
@@ -46,8 +46,8 @@ blocks:
             undefinedValue: nicht definiert
         nojs: |
           Graph des Guthabens $K_n = 1000 \cdot q^n$ in Euro über die Jahre $n$, mit Regler für $q$ von 1,01 bis 1,10. Beim
-          Start ist $q = 1,03$: nach 0 Jahren 1000 €, nach 1 Jahr 1030 €, nach 2 Jahren 1060,90 €, nach 5 Jahren
-          1159,27 €, nach 10 Jahren 1343,92 €, nach 20 Jahren 1806,11 €. Die Kurve steigt immer steiler.
+          Start ist $q = 1,03$: nach 0 Jahren 1000 €, nach 1 Jahr 1030 €, nach 2 Jahren 1060,90 €, nach 5 Jahren
+          1159,27 €, nach 10 Jahren 1343,92 €, nach 20 Jahren 1806,11 €. Die Kurve steigt immer steiler.
       - type: text
         text: |
           **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Stelle den Faktor auf 1,05 und vergleiche das
@@ -73,27 +73,27 @@ blocks:
     blocks:
       - type: single-choice
         id: faktor-erkennen
-        text: Welcher Wachstumsfaktor gehört zu 4 % Zinsen pro Jahr?
+        text: Welcher Wachstumsfaktor gehört zu 4 % Zinsen pro Jahr?
         options:
           - text: "1,04"
             correct: true
-            info: "Das Guthaben bleibt (100 %) und 4 % kommen dazu: 1 + 0,04 = 1,04."
+            info: "Das Guthaben bleibt (100 %) und 4 % kommen dazu: 1 + 0,04 = 1,04."
           - text: "0,04"
             correct: false
             info: Das ist nur der Zinssatz als Dezimalzahl. Mit 0,04 würde das Guthaben fast verschwinden.
           - text: "1,4"
             correct: false
-            info: Das wären 40 % Zuwachs. 4 % sind 0,04, nicht 0,4.
+            info: Das wären 40 % Zuwachs. 4 % sind 0,04, nicht 0,4.
           - text: "4"
             correct: false
-            info: Das wäre eine Vervierfachung (300 % Zuwachs).
+            info: Das wäre eine Vervierfachung (300 % Zuwachs).
         explanation: Der Wachstumsfaktor ist 1 plus der Zinssatz als Dezimalzahl.
       - type: generated
         id: wachstumsfaktor
         given:
           p: { int: [2, 9] }
         task:
-          text: "Ein Konto wird mit {{p}} % pro Jahr verzinst. Wie lautet der Wachstumsfaktor? Gib ihn als Dezimalzahl an."
+          text: "Ein Konto wird mit {{p}} % pro Jahr verzinst. Wie lautet der Wachstumsfaktor? Gib ihn als Dezimalzahl an."
         answer: { value: "1 + p / 100", compare: { number: { format: decimal, decimals: 2 } } }
         mistakes:
           - {
@@ -103,14 +103,14 @@ blocks:
           - { value: "p", message: "Das ist die Prozentzahl, kein Faktor. Teile durch 100 und rechne 1 dazu." }
         hint: "Zinssatz als Dezimalzahl schreiben und 1 addieren."
         steps:
-          - "{{p}} % sind {{p}} : 100 als Dezimalzahl."
+          - "{{p}} % sind {{p}} : 100 als Dezimalzahl."
           - "Der Faktor ist 1 plus diese Zahl: {{answer}}."
       - type: generated
         id: endkapital
         given:
           r: { pick: 1, from: { data: zinseszins } }
         task:
-          text: "Auf ein Konto werden {{r.k0}} € zu {{r.p}} % pro Jahr angelegt, die Zinsen werden mitverzinst. Wie viel Euro sind es nach {{r.n}} Jahren? Runde auf Cent."
+          text: "Auf ein Konto werden {{r.k0}} € zu {{r.p}} % pro Jahr angelegt, die Zinsen werden mitverzinst. Wie viel Euro sind es nach {{r.n}} Jahren? Runde auf Cent."
         answer: { value: "r.ende", compare: { number: { format: money } } }
         mistakes:
           - {
@@ -121,11 +121,11 @@ blocks:
               value: "r.jahr1",
               message: "Das ist das Guthaben nach einem Jahr. Der Faktor wird so oft malgenommen, wie Jahre vergehen.",
             }
-        hint: "Nimm das Startkapital mit dem Wachstumsfaktor hoch die Zahl der Jahre. Der Taschenrechner hat dafür eine Potenztaste."
+        hint: "Rechne Startkapital mal Wachstumsfaktor hoch Jahre. Der Taschenrechner hat dafür eine Potenztaste."
         steps:
           - "Wachstumsfaktor: $q = {{r.q}}$"
-          - "$K_{{{r.n}}} = {{r.k0}} \\cdot {{r.q}}^{{{r.n}}} = {{r.k0}} \\cdot {{r.faktor}}$"
-          - "Das sind {{r.endetext}} €."
+          - "$K_{{{r.n}}} = {{r.k0}} \\cdot {{r.q}}^{{{r.n}}}$. Rechne mit dem Taschenrechner und runde nicht zwischendurch."
+          - "Das sind {{r.endetext}} €."
       - type: true-false
         id: betrag-oder-faktor
         text: Beim Zinseszins wächst das Guthaben jedes Jahr um denselben Euro-Betrag.

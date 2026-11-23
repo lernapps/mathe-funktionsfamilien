@@ -36,5 +36,5 @@ export function piLabel(degrees: number): string {
 export function describe(degrees: number, which: "sin" | "cos"): string {
   const p = point(degrees);
   const value = which === "sin" ? p.y : p.x;
-  return `Winkel ${degrees}°, im Bogenmaß ${piLabel(degrees)}. Der Punkt auf dem Einheitskreis liegt bei (${fmt(p.x)} | ${fmt(p.y)}). ${which === "sin" ? "Sinus (Höhe)" : "Kosinus (Abstand von der senkrechten Achse)"} ${fmt(value)}.`;
+  return `Winkel ${degrees}°, im Bogenmaß ${piLabel(degrees)}. Der Punkt auf dem Einheitskreis liegt bei (${fmt(p.x)} | ${fmt(p.y)}). ${which === "sin" ? "Sinus (Höhe)" : "Kosinus (waagerechter Abstand mit Vorzeichen)"} ${fmt(value)}.`;
 }

@@ -106,8 +106,8 @@ blocks:
                 correct: false,
                 info: "So sieht (x − 4)(x + 4) aus. Beim Quadrat fehlt hier der Mittelterm.",
               }
-            - { text: "x² + 16", correct: false, info: "Es fehlt der Mittelterm: (x − 4)² ist nicht x² + 4²." }
             - { text: "x² − 8x − 16", correct: false, info: "Das letzte Glied ist (−4)² = +16, nicht −16." }
+            - { text: "x² + 16", correct: false, info: "Es fehlt der Mittelterm: (x − 4)² ist nicht x² + 4²." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
@@ -118,15 +118,15 @@ blocks:
         text: "Wenn du unsicher warst: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/)."
       - type: definition
         term: Binomische Formeln
-        explanation: Drei feste Regeln für Klammern wie $(a + b)^2$. Zum Beispiel ist $(x + 2)^2 = x^2 + 4x + 4$.
+        explanation: "Feste Regeln für Klammern: $(a + b)^2$, $(a - b)^2$ und $(a + b)(a - b)$. Zum Beispiel ist $(x + 2)^2 = x^2 + 4x + 4$."
   - type: section
     id: potenzgesetze
     title: Potenzgesetze
     blocks:
       - type: text
         text: |
-          Eine **Potenz** $a^n$ ist das $n$-fache Produkt von $a$: $a$ heißt **Basis**, $n$ heißt **Exponent**. Für
-          dieselbe Basis gelten diese Gesetze:
+          Eine **Potenz** $a^n$ ist das $n$-fache Produkt von $a$: $a$ heißt **Basis**, $n$ heißt **Exponent**. Diese
+          Gesetze gelten:
       - type: formula
         formula: 'a^m \cdot a^n = a^{m+n}'
       - type: formula
@@ -162,7 +162,7 @@ blocks:
                 info: "Der Exponent 2 wird nicht hoch 3 genommen. Die Exponenten werden multipliziert.",
               }
             - {
-                text: "9⁵ = 59049",
+                text: "9⁵ = 59 049",
                 correct: false,
                 info: "3² ist 9, aber dann wird 9 dreimal als Faktor genommen: 9³ = 729.",
               }

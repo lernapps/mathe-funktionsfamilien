@@ -18,7 +18,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Konto A bekommt jedes Jahr 40 € dazu: $f(x) = 1000 + 40x$ (linear, gestrichelt). Konto B wächst jedes Jahr um
+          Konto A bekommt jedes Jahr 40 € dazu: $f(x) = 1000 + 40x$ (linear, gestrichelt). Konto B wächst jedes Jahr um
           denselben Faktor $b$: $f(x) = 1000 \cdot b^x$ (exponentiell). Der Regler stellt den Faktor von Konto B ein.
       - type: vue-component
         id: regler-wette
@@ -53,7 +53,7 @@ blocks:
       - type: text
         text: |
           **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Bei welchem Faktor überholt Konto B das
-          Konto A schon vor Jahr 20? Schau auf die Tabelle und den Schnittpunkt der Kurven.
+          Konto A schon in weniger als 10 Jahren? Schau auf die Tabelle und den Schnittpunkt der Kurven.
   - type: section
     id: zerfall
     title: "Zerfall: Ein Medikament wird abgebaut"
@@ -61,7 +61,7 @@ blocks:
       - type: text
         text: |
           Ist der Faktor $b$ kleiner als 1, nimmt der Wert ab: Das ist **exponentieller Zerfall**. Im Körper wird ein
-          Medikament oft in jeder Stunde um denselben Anteil abgebaut. Hier sind 100 mg gegeben. Der Regler stellt
+          Medikament oft in jeder Stunde um denselben Anteil abgebaut. Hier sind 100 mg gegeben. Der Regler stellt
           den Faktor $b$ pro Stunde ein, bei 0,5 halbiert sich die Menge jede Stunde.
       - type: vue-component
         id: regler-zerfall
@@ -84,7 +84,7 @@ blocks:
             undefinedValue: nicht definiert
         nojs: |
           Graph der Menge $f(x) = 100 \cdot b^x$ in Milligramm über die Stunden, mit Regler für $b$ von 0,5 bis 0,95.
-          Beim Start ist $b = 0,5$: nach 0, 1, 2, 4, 8 und 12 Stunden bleiben 100, 50, 25, 6,25, 0,39 und 0,02 mg. Die Kurve
+          Beim Start ist $b = 0,5$: nach 0, 1, 2, 4, 8 und 12 Stunden bleiben 100, 50, 25, 6,25, 0,39 und 0,02 mg. Die Kurve
           fällt immer flacher und erreicht die Null nie.
   - type: section
     id: beispiel
@@ -106,7 +106,7 @@ blocks:
         options:
           - text: "1000 · 1,05ˣ"
             correct: true
-            info: Der Faktor 1,05 ist größer als 1, der Wert wächst jedes Mal um 5 %.
+            info: Der Faktor 1,05 ist größer als 1, der Wert wächst jedes Mal um 5 %.
           - text: "80 · 2ˣ"
             correct: true
             info: Der Wert verdoppelt sich bei jedem Schritt, der Faktor 2 ist größer als 1.
@@ -143,7 +143,7 @@ blocks:
           m: { oneOf: [80, 160, 200] }
           h: { int: [2, 4] }
         task:
-          text: "Von einem Medikament sind {{m}} mg im Körper. Jede Stunde wird die Menge halbiert. Wie viel mg sind es nach {{h}} Stunden?"
+          text: "Von einem Medikament sind {{m}} mg im Körper. Jede Stunde wird die Menge halbiert. Wie viel mg sind es nach {{h}} Stunden?"
         answer: { value: "m / pow(2, h)", compare: { number: { format: decimal, decimals: 2 } } }
         mistakes:
           - {
@@ -153,7 +153,7 @@ blocks:
         hint: "Halbieren heißt: mal 0,5. Das passiert in jeder Stunde, also {{h}}-mal."
         steps:
           - "Die Menge wird {{h}}-mal halbiert: $m \\cdot 0,5^{{{h}}}$."
-          - "Das Ergebnis ist {{answer}} mg."
+          - "Das Ergebnis ist {{answer}} mg."
       - type: true-false
         id: gleicher-faktor
         text: Bei exponentiellem Wachstum wird der Wert in gleich langen Zeitschritten mit demselben Faktor multipliziert.

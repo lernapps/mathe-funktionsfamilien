@@ -19,8 +19,8 @@ blocks:
       - type: text
         text: |
           Ein Ball wird geworfen. Seine Höhe $h$ in Metern hängt von der Entfernung $x$ in Metern ab:
-          $h(x) = −0,2 \cdot (x - d)^2 + e$. Der Scheitel (d | e) ist der höchste Punkt. Der Faktor $−0,2$ bleibt
-          fest, weil die Schwerkraft ihn bestimmt.
+          $h(x) = −0,2 \cdot (x - d)^2 + e$. Der Scheitel (d | e) ist der höchste Punkt. Wir halten den Faktor $−0,2$
+          fest, damit sich nur der Scheitel ändert.
       - type: vue-component
         id: regler-wurf
         component: FunktionsGraph
@@ -43,8 +43,8 @@ blocks:
             undefinedValue: nicht definiert
         nojs: |
           Flugbahn $h(x) = −0,2 \cdot (x - d)^2 + e$ mit Reglern für $d$ (1 bis 9) und $e$ (1 bis 9). Beim Start ist
-          $d = 5$, $e = 5$: Der Ball steigt auf 5 m Höhe bei 5 m Entfernung und landet bei x = 10. Werte: (0 | 0),
-          (2 | 2,2), (4 | 4,8), (5 | 5), (6 | 4,8), (8 | 2,2), (10 | 0).
+          $d = 5$, $e = 5$: Der Ball steigt auf 5 m Höhe bei 5 m Entfernung und landet bei x = 10. Werte: (0 | 0),
+          (2 | 3,2), (4 | 4,8), (5 | 5), (6 | 4,8), (8 | 3,2), (10 | 0).
       - type: text
         text: |
           **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Stelle $d = 5$ und $e = 5$ ein. Der Ball
@@ -59,20 +59,20 @@ blocks:
           - type: formula
             formula: '-0{,}2 \cdot (x - 5)^2 + 5 = 0'
           - type: text
-            text: Wurzelziehen gibt $(x - 5)^2 = 25$, also $x - 5 = 5$ oder $x - 5 = −5$. Der Ball landet bei $x = 10$ (die zweite Lösung $x = 0$ ist der Abwurf).
+            text: Subtrahiere 5 und teile durch $−0,2$, das gibt $(x - 5)^2 = 25$. Wurzelziehen gibt also $x - 5 = 5$ oder $x - 5 = −5$. Der Ball landet bei $x = 10$ (die zweite Lösung $x = 0$ ist der Abwurf).
       - type: example
         title: Wie hoch fliegt er? Scheitel
         blocks:
           - type: text
-            text: In der Scheitelform $h(x) = −0,2 \cdot (x - 5)^2 + 5$ liest du den Scheitel direkt ab, (5 | 5). Der Ball erreicht 5 m Höhe.
+            text: In der Scheitelform $h(x) = −0,2 \cdot (x - 5)^2 + 5$ liest du den Scheitel direkt ab, (5 | 5). Der Ball erreicht 5 m Höhe.
       - type: example
         title: Welche Seite ist die beste? Zaun
         blocks:
           - type: text
             text: |
-              Ein Zaun von 24 m soll an einer Mauer ein Rechteck umgeben, die Mauer ist die vierte Seite. Die Seite
+              Ein Zaun von 24 m soll an einer Mauer ein Rechteck umgeben, die Mauer ist die vierte Seite. Die Seite
               senkrecht zur Mauer sei $x$, dann ist die Seite parallel zur Mauer $24 - 2x$ lang. Die Fläche ist
-              $A(x) = x \cdot (24 - 2x) = −2x^2 + 24x$. Der Scheitel liegt bei $x = 6$, die Fläche ist dort 72 m².
+              $A(x) = x \cdot (24 - 2x) = −2x^2 + 24x$. Die Fläche ist null bei $x = 0$ und bei $x = 12$, der Scheitel liegt in der Mitte, bei $x = 6$. Die Fläche ist dort 72 m².
   - type: section
     id: uebung
     title: Übung
@@ -81,16 +81,16 @@ blocks:
         id: bruecke
         text: "Ein Brückenbogen hat die Form y = −0,05x² + 5 (x und y in Metern, x von der Mitte aus gemessen). Wie breit ist der Bogen am Boden, also bei y = 0?"
         options:
-          - text: "20 m"
+          - text: "20 m"
             correct: true
-            info: "−0,05x² + 5 = 0 gibt x² = 100, also x = 10 oder x = −10. Der Abstand beider Fußpunkte ist 20 m."
-          - text: "10 m"
+            info: "−0,05x² + 5 = 0 gibt x² = 100, also x = 10 oder x = −10. Der Abstand beider Fußpunkte ist 20 m."
+          - text: "10 m"
             correct: false
             info: "Das ist nur eine Lösung, die Entfernung von der Mitte bis zu einem Fußpunkt. Die Breite geht von −10 bis 10."
-          - text: "5 m"
+          - text: "5 m"
             correct: false
             info: "Das ist die Höhe des Bogens, der Wert bei x = 0."
-          - text: "100 m"
+          - text: "100 m"
             correct: false
             info: "Das ist x², nicht x. Aus x² = 100 musst du noch die Wurzel ziehen."
         explanation: Die Breite am Boden ist der Abstand der beiden Nullstellen.
@@ -112,9 +112,9 @@ blocks:
             }
         hint: "Setze h(x) = 0 und ziehe die Wurzel. Zwei Lösungen: Abwurf und Landung."
         steps:
-          - "$h(x) = 0$ gibt ${{r.a}} \\cdot (x - {{r.s}})^2 = {{r.e}}$, also $(x - {{r.s}})^2 = {{r.ss}}$."
+          - "$h(x) = 0$ gibt ${{r.a}} \\cdot (x - {{r.s}})^2 = {{r.e}}$. Teile durch {{r.a}}: $(x - {{r.s}})^2 = {{r.ss}}$."
           - "Wurzelziehen: $x - {{r.s}} = {{r.s}}$ oder $x - {{r.s}} = −{{r.s}}$."
-          - "Das gibt $x = {{r.w}}$ (Landung) oder $x = 0$ (Start). Die Rakete landet bei {{answer}} m."
+          - "Das gibt $x = {{r.w}}$ (Landung) oder $x = 0$ (Start). Die Rakete landet bei {{answer}} m."
       - type: generated
         id: hoechste-hoehe
         given:
@@ -134,13 +134,13 @@ blocks:
         hint: "Die größte Höhe ist der y-Wert des Scheitels. Lies sie aus der Scheitelform ab."
         steps:
           - "Der Scheitel der Scheitelform ist ({{r.s}} | {{r.e}})."
-          - "Die Rakete fliegt höchstens {{answer}} m hoch."
+          - "Die Rakete fliegt höchstens {{answer}} m hoch."
       - type: generated
         id: zaun
         given:
           r: { pick: 1, from: { data: zaun } }
         task:
-          text: "Mit {{r.l}} m Zaun wird an einer Mauer ein Rechteck eingezäunt, die Mauer ist die vierte Seite. Die Fläche ist $A(x) = x \\cdot ({{r.l}} - 2x)$ mit der Seite $x$ senkrecht zur Mauer. Die größte Fläche liegt am Scheitel, bei $x = {{r.x}}$. Wie viele Quadratmeter sind das?"
+          text: "Mit {{r.l}} m Zaun wird an einer Mauer ein Rechteck eingezäunt, die Mauer ist die vierte Seite. Die Fläche ist $A(x) = x \\cdot ({{r.l}} - 2x)$ mit der Seite $x$ senkrecht zur Mauer. Die größte Fläche liegt am Scheitel, bei $x = {{r.x}}$. Wie viele Quadratmeter sind das?"
         answer: { value: "r.flaeche", compare: { number: { format: integer } } }
         mistakes:
           - {

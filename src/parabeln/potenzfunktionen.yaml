@@ -18,7 +18,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Eine **Potenzfunktion** hat den Term $f(x) = a \cdot x^n$ mit einer ganzen Zahl $n$. Der Regler $n$ ist der
+          Eine **Potenzfunktion** hat den Term $f(x) = a \cdot x^n$ mit einer natürlichen Zahl $n \ge 1$. Der Regler $n$ ist der
           Exponent, der Regler $a$ streckt und spiegelt wie bei der Parabel. Term, Tabelle und Graph gehören wieder
           zusammen.
       - type: vue-component
@@ -76,8 +76,7 @@ blocks:
             undefinedValue: nicht definiert
         nojs: |
           Graph der Kehrwertfunktion $f(x) = a : x$ mit Regler für $a$. Beim Start ist $a = 1$: Werte (−2 | −0,5),
-          (−1 | −1), (0 | nicht definiert), (1 | 1), (2 | 0,5). Der Graph hat zwei Äste, einen im ersten und einen im
-          dritten Feld des Koordinatensystems. Er berührt die Achsen nie.
+          (−1 | −1), (0 | nicht definiert), (1 | 1), (2 | 0,5). Der Graph hat zwei Äste, einen im ersten und einen im dritten Quadranten des Koordinatensystems (für a > 0). Er berührt die Achsen nie.
       - type: vue-component
         id: regler-wurzel
         component: FunktionsGraph
@@ -108,8 +107,8 @@ blocks:
         header: [Funktion, Definiert für, Verlauf]
         rows:
           - ["$x^3$", alle x, steigt von links unten nach rechts oben]
-          - ["$x^4$", alle x, "wie eine breite Parabel, symmetrisch zur y-Achse"]
-          - ["$1 : x$", "alle x außer 0", "zwei Äste, einer im ersten und einer im dritten Feld"]
+          - ["$x^4$", alle x, "wie die Parabel, aber nahe 0 flacher und weiter außen steiler, symmetrisch zur y-Achse"]
+          - ["$1 : x$", "alle x außer 0", "zwei Äste, bei positivem a einer im ersten und einer im dritten Quadranten"]
           - ["$\\sqrt{x}$", "x größer oder gleich 0", "beginnt im Ursprung, steigt immer langsamer"]
   - type: section
     id: uebung
@@ -130,7 +129,7 @@ blocks:
             info: "Das wäre $3 \\cdot (−2)$. Der Exponent 3 heißt aber: dreimal den Faktor −2 malnehmen."
           - text: f(−2) ist nicht definiert
             correct: false
-            info: Die Potenzfunktion mit ganzem Exponenten $n \ge 1$ ist für alle $x$ definiert.
+            info: Die Potenzfunktion mit natürlichem Exponenten $n \ge 1$ ist für alle $x$ definiert.
         explanation: Gerade Exponenten ergeben nie negative Werte, ungerade Exponenten behalten das Vorzeichen von $x$.
       - type: generated
         id: ungerade-potenz-rechnen
@@ -147,12 +146,12 @@ blocks:
             }
           - {
               value: "x * n",
-              message: "Der Exponent heißt nicht mal, sondern wie oft der Faktor vorkommt: {{n}} Faktoren {{x}}.",
+              message: "Der Exponent heißt nicht mal, sondern sagt, wie oft die Zahl als Faktor vorkommt.",
             }
         hint: Schreibe die Potenz als Produkt mit gleichen Faktoren und rechne Schritt für Schritt.
         steps:
-          - "$x^{{{n}}}$ heißt {{n}} gleiche Faktoren {{x}}."
-          - "Das Ergebnis ist $x^{{{n}}} = {{answer}}$."
+          - "$({{x}})^{{{n}}}$ heißt {{n}} gleiche Faktoren $({{x}})$."
+          - "Das Ergebnis ist $({{x}})^{{{n}}} = {{answer}}$."
       - type: generated
         id: kehrwert-rechnen
         given:
@@ -163,7 +162,7 @@ blocks:
         mistakes:
           - { value: "x", message: "Das ist die Zahl selbst. Bei 1 : x wird 1 durch die Zahl geteilt." }
           - { value: "1 - x", message: "Es wird nicht abgezogen, sondern geteilt: 1 : {{x}}." }
-        hint: "1 : 4 ist ein Viertel, also 0,25."
+        hint: "Teile 1 durch die Zahl. Das Ergebnis ist eine Dezimalzahl."
         steps:
           - "$f({{x}}) = 1 : {{x}} = {{answer}}$"
       - type: generated

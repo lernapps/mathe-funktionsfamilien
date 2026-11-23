@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Du kannst danach jede quadratische Gleichung $x^2 + px + q = 0$ lösen und vorher sagen, ob sie zwei, eine
+          Du kannst danach jede quadratische Gleichung in der Normalform $x^2 + px + q = 0$ lösen und vorher sagen, ob sie zwei, eine
           oder keine Lösung hat. Dafür gehst du drei Wege: am Graphen, mit einer Wertetabelle und durch Rechnen.
   - type: section
     id: modell
@@ -173,7 +173,7 @@ blocks:
         id: negative-diskriminante
         text: Ist die Diskriminante einer quadratischen Gleichung negativ, dann schneidet die zugehörige nach oben geöffnete Parabel die x-Achse nicht.
         answer: true
-        explanation: Keine reelle Lösung heißt keine Nullstelle. Der Scheitel liegt dann über der x-Achse und die Parabel öffnet sich nach oben, ohne sie zu treffen.
+        explanation: Keine Lösung heißt keine Nullstelle. Der Scheitel liegt dann über der x-Achse und die Parabel öffnet sich nach oben, ohne sie zu treffen.
       - type: multiple-choice
         id: wege-vergleichen
         text: "Du hast die Gleichung x² − 4x + 3 = 0 gelöst. Welche Lösungen passen zur Wertetabelle mit f(1) = 0 und f(3) = 0?"

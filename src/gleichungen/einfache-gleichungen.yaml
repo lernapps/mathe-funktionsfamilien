@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           Du kannst danach einfache quadratische Gleichungen lösen und sagen, was ihre Lösungen am Graphen bedeuten.
-          Eine **quadratische Gleichung** hat ein $x^2$ und keine höhere Potenz, zum Beispiel $x^2 - 9 = 0$. Ihre
+          Bei einer **quadratischen Gleichung** kommt $x$ höchstens in der zweiten Potenz vor, und $x^2$ kommt wirklich vor, zum Beispiel $x^2 - 9 = 0$. Ihre
           Lösungen sind die **Nullstellen** der Parabel: die Stellen, an denen der Graph die x-Achse schneidet.
       - type: definition
         term: Nullstelle
@@ -110,7 +110,7 @@ blocks:
         hint: "Beide Vorzeichen: Die Quadratzahl hat zwei Wurzeln."
         steps:
           - "$x^2 = {{r}}^2$ hat die Lösungen $x = {{r}}$ und $x = −{{r}}$."
-          - "Die kleinere Lösung ist {{answer}}."
+          - "Die kleinere Lösung ist $x = {{answer}}$."
       - type: generated
         id: ausklammern
         given:

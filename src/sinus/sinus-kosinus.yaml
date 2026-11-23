@@ -18,7 +18,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der Kreis mit Radius 1 um den Mittelpunkt heißt **Einheitskreis**. Du startest rechts bei 0°. Der Winkel wächst
+          Der Kreis mit Radius 1 um den Ursprung heißt **Einheitskreis**. Du startest rechts bei 0°. Der Winkel wächst
           gegen den Uhrzeigersinn. Die **Höhe** des Punkts ist der **Sinus** des Winkels. Trägst du die Höhe über dem
           Winkel im Bogenmaß auf, entsteht die Sinuskurve.
       - type: vue-component
@@ -44,7 +44,7 @@ blocks:
           beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist.
       - type: text
         text: |
-          Die Entfernung des Punkts von der senkrechten Achse ist der **Kosinus**. Seine Kurve beginnt oben bei 1, denn
+          Der waagerechte Abstand des Punkts von der senkrechten Achse, rechts positiv und links negativ, ist der **Kosinus**. Seine Kurve beginnt oben bei 1, denn
           bei 0° liegt der Punkt ganz rechts.
       - type: vue-component
         id: kreis-kosinus
@@ -53,7 +53,7 @@ blocks:
           funktion: cos
           labels:
             winkel: Winkel
-            wert: "Abstand von der senkrechten Achse (Kosinus)"
+            wert: "Waagerechter Abstand mit Vorzeichen (Kosinus)"
             kreis: Einheitskreis mit laufendem Punkt
             graph: Graph der Kosinusfunktion
             regler: Winkel drehen
@@ -73,7 +73,7 @@ blocks:
           - [Periode, "$2\\pi$", "$2\\pi$"]
           - [Größter und kleinster Wert, "1 und −1", "1 und −1"]
           - [Wert bei x = 0, "0", "1"]
-          - [Nullstellen, "0, π, 2π, …", "π/2, 3π/2, …"]
+          - [Nullstellen, "$0$, $\\pi$, $2\\pi$, …", "$\\frac{\\pi}{2}, \\frac{3\\pi}{2}$"]
       - type: text
         text: Beide Kurven sehen gleich aus. Die Kosinuskurve ist die Sinuskurve, um $\frac{\pi}{2}$ nach links verschoben.
   - type: section
@@ -102,7 +102,7 @@ blocks:
         given:
           r: { pick: 1, from: { data: sinuswerte } }
         task:
-          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind {{r.bm}} im Bogenmaß. Wie groß ist der Sinus? Gib ihn als Dezimalzahl an."
+          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind ${{r.bmtex}}$ im Bogenmaß. Wie groß ist der Sinus? Gib ihn als Dezimalzahl an."
         answer: { value: "r.wert", compare: { number: { format: decimal, decimals: 1 } } }
         mistakes:
           - {
@@ -112,13 +112,13 @@ blocks:
         hint: "Zeichne den Punkt auf dem Einheitskreis. Liegt er über oder unter der waagerechten Achse? Und wie weit?"
         steps:
           - "Bei {{r.grad}}° liegt der Punkt in einer Höhe von {{r.wtext}}."
-          - "Der Sinus ist {{answer}}."
+          - "Der Sinus ist ${{answer}}$."
       - type: generated
         id: kosinus-wert
         given:
           r: { pick: 1, from: { data: kosinuswerte } }
         task:
-          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind {{r.bm}} im Bogenmaß. Wie groß ist der Kosinus? Gib ihn als Dezimalzahl an."
+          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind ${{r.bmtex}}$ im Bogenmaß. Wie groß ist der Kosinus? Gib ihn als Dezimalzahl an."
         answer: { value: "r.wert", compare: { number: { format: decimal, decimals: 1 } } }
         mistakes:
           - {
@@ -128,7 +128,7 @@ blocks:
         hint: "Zeichne den Punkt auf dem Einheitskreis. Liegt er rechts oder links von der senkrechten Achse? Und wie weit?"
         steps:
           - "Bei {{r.grad}}° liegt der Punkt {{r.wtext}} von der senkrechten Achse entfernt (negativ: links)."
-          - "Der Kosinus ist {{answer}}."
+          - "Der Kosinus ist ${{answer}}$."
       - type: true-false
         id: periode
         text: Nach einer ganzen Umdrehung um 360° wiederholt sich die Sinuskurve, die Periode ist also $2\pi$.
