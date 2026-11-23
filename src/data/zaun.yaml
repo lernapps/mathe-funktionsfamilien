@@ -1,0 +1,4 @@
+- { l: 12, x: 3, b: 6, flaeche: 18, quadrat: 16, drittel: 4 }
+- { l: 24, x: 6, b: 12, flaeche: 72, quadrat: 64, drittel: 8 }
+- { l: 36, x: 9, b: 18, flaeche: 162, quadrat: 144, drittel: 12 }
+- { l: 48, x: 12, b: 24, flaeche: 288, quadrat: 256, drittel: 16 }

@@ -254,7 +254,7 @@ Offen (läuft vor „Veröffentlichen“).
       change: change the pattern first.
       Creator: Musterseite angenommen (Orchestrator in Vertretung), Textalternative der Zielkurve nachgebessert
 - [x] Kapitel 1: Recap (Kurztest-Kopie nach src/components, vier Bausteine, Glossar), Seiten scheitelform-allgemein und potenzfunktionen; Push
-- [ ] Kapitel 2: Recap, einfache-gleichungen, drei-wege (Rechteckmodell, Formel, FunktionsGraphAufgabe), anwendungen; Push
+- [x] Kapitel 2: Recap, einfache-gleichungen, drei-wege (Rechteckmodell, Formel, FunktionsGraphAufgabe), anwendungen; Push
 - [ ] Kapitel 3: Recap, zinseszins, exponentialfunktionen, logarithmen mit Datenfile wachstum; Push
 - [ ] Kapitel 4: Recap, sinus-kosinus, periodische-vorgaenge mit Datenfile messreihen; Push
 - [ ] App-Ebene: Start-/Intro-Text, Glossar, Medienübersicht, Selbsteinschätzung (Skill lernapps-explainer-self-assessment), Inhaltsleitfaden app-content

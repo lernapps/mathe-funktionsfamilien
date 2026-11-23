@@ -1,0 +1,12 @@
+- { b: 4, q: 3, m: 2, mm: 4, dtext: "1", anzahl: 2 }
+- { b: 4, q: 4, m: 2, mm: 4, dtext: "0", anzahl: 1 }
+- { b: 4, q: 5, m: 2, mm: 4, dtext: "−1", anzahl: 0 }
+- { b: 6, q: 5, m: 3, mm: 9, dtext: "4", anzahl: 2 }
+- { b: 6, q: 9, m: 3, mm: 9, dtext: "0", anzahl: 1 }
+- { b: 6, q: 10, m: 3, mm: 9, dtext: "−1", anzahl: 0 }
+- { b: 8, q: 12, m: 4, mm: 16, dtext: "4", anzahl: 2 }
+- { b: 8, q: 16, m: 4, mm: 16, dtext: "0", anzahl: 1 }
+- { b: 8, q: 17, m: 4, mm: 16, dtext: "−1", anzahl: 0 }
+- { b: 10, q: 26, m: 5, mm: 25, dtext: "−1", anzahl: 0 }
+- { b: 10, q: 25, m: 5, mm: 25, dtext: "0", anzahl: 1 }
+- { b: 10, q: 16, m: 5, mm: 25, dtext: "9", anzahl: 2 }

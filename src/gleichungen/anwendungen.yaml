@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Quadratische Funktionen anwenden
+description: "Wurfbahn, Brückenbogen und Zaun: Sachprobleme mit Parabeln lösen, Nullstellen und höchste Werte bestimmen."
+competencies: [quadratische-funktionen-anwenden]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Du kannst danach ein Sachproblem mit einer Parabel beschreiben und zwei Fragen beantworten: Wo ist der
+          Funktionswert null (zum Beispiel: Wo landet der Ball?) und wo ist er am größten (zum Beispiel: Wie hoch
+          fliegt er?). Die erste Frage löst du mit Nullstellen, die zweite mit dem Scheitel.
+  - type: section
+    id: modell
+    title: Eine Wurfbahn mit Reglern
+    blocks:
+      - type: text
+        text: |
+          Ein Ball wird geworfen. Seine Höhe $h$ in Metern hängt von der Entfernung $x$ in Metern ab:
+          $h(x) = −0,2 \cdot (x - d)^2 + e$. Der Scheitel (d | e) ist der höchste Punkt. Der Faktor $−0,2$ bleibt
+          fest, weil die Schwerkraft ihn bestimmt.
+      - type: vue-component
+        id: regler-wurf
+        component: FunktionsGraph
+        props:
+          family: quadratic
+          fest:
+            - { key: a, value: -0.2 }
+          regler:
+            - { key: d, label: "d: Entfernung des höchsten Punkts in m", min: 1, max: 9, step: 1, start: 5 }
+            - { key: e, label: "e: größte Höhe in m", min: 1, max: 9, step: 1, start: 5 }
+          fenster: { xmin: 0, xmax: 20, ymin: -2, ymax: 12 }
+          tabelleX: [0, 2, 4, 6, 8, 10]
+          labels:
+            graph: Flugbahn des Balls, Höhe über der Entfernung
+            tabelle: Wertetabelle
+            reset: Regler zurücksetzen
+            grundform: Vergleich
+            x: Entfernung x in m
+            y: Höhe h(x) in m
+            undefinedValue: nicht definiert
+        nojs: |
+          Flugbahn $h(x) = −0,2 \cdot (x - d)^2 + e$ mit Reglern für $d$ (1 bis 9) und $e$ (1 bis 9). Beim Start ist
+          $d = 5$, $e = 5$: Der Ball steigt auf 5 m Höhe bei 5 m Entfernung und landet bei x = 10. Werte: (0 | 0),
+          (2 | 2,2), (4 | 4,8), (5 | 5), (6 | 4,8), (8 | 2,2), (10 | 0).
+      - type: text
+        text: |
+          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Stelle $d = 5$ und $e = 5$ ein. Der Ball
+          landet dort, wo $h$ wieder null ist. Lies in der Tabelle ab, bei welcher Entfernung das ist.
+  - type: section
+    id: beispiel
+    title: Drei Fragen, drei Wege
+    blocks:
+      - type: example
+        title: Wo landet der Ball? Nullstelle
+        blocks:
+          - type: formula
+            formula: '-0{,}2 \cdot (x - 5)^2 + 5 = 0'
+          - type: text
+            text: Wurzelziehen gibt $(x - 5)^2 = 25$, also $x - 5 = 5$ oder $x - 5 = −5$. Der Ball landet bei $x = 10$ (die zweite Lösung $x = 0$ ist der Abwurf).
+      - type: example
+        title: Wie hoch fliegt er? Scheitel
+        blocks:
+          - type: text
+            text: In der Scheitelform $h(x) = −0,2 \cdot (x - 5)^2 + 5$ liest du den Scheitel direkt ab, (5 | 5). Der Ball erreicht 5 m Höhe.
+      - type: example
+        title: Welche Seite ist die beste? Zaun
+        blocks:
+          - type: text
+            text: |
+              Ein Zaun von 24 m soll an einer Mauer ein Rechteck umgeben, die Mauer ist die vierte Seite. Die Seite
+              senkrecht zur Mauer sei $x$, dann ist die Seite parallel zur Mauer $24 - 2x$ lang. Die Fläche ist
+              $A(x) = x \cdot (24 - 2x) = −2x^2 + 24x$. Der Scheitel liegt bei $x = 6$, die Fläche ist dort 72 m².
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: bruecke
+        text: "Ein Brückenbogen hat die Form y = −0,05x² + 5 (x und y in Metern, x von der Mitte aus gemessen). Wie breit ist der Bogen am Boden, also bei y = 0?"
+        options:
+          - text: "20 m"
+            correct: true
+            info: "−0,05x² + 5 = 0 gibt x² = 100, also x = 10 oder x = −10. Der Abstand beider Fußpunkte ist 20 m."
+          - text: "10 m"
+            correct: false
+            info: "Das ist nur eine Lösung, die Entfernung von der Mitte bis zu einem Fußpunkt. Die Breite geht von −10 bis 10."
+          - text: "5 m"
+            correct: false
+            info: "Das ist die Höhe des Bogens, der Wert bei x = 0."
+          - text: "100 m"
+            correct: false
+            info: "Das ist x², nicht x. Aus x² = 100 musst du noch die Wurzel ziehen."
+        explanation: Die Breite am Boden ist der Abstand der beiden Nullstellen.
+      - type: generated
+        id: landepunkt
+        given:
+          r: { pick: 1, from: { data: wurfbahnen } }
+        task:
+          text: "Eine Wasserrakete fliegt auf der Bahn $h(x) = −{{r.a}} \\cdot (x - {{r.s}})^2 + {{r.e}}$ ($x$ und $h$ in Metern). Sie startet bei $x = 0$. Bei welcher Entfernung $x$ landet sie?"
+        answer: { value: "r.w", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "r.s",
+              message: "Das ist die Entfernung des höchsten Punkts. Die Rakete landet erst, wenn h wieder 0 ist, genauso weit hinter dem Scheitel.",
+            }
+          - {
+              value: "r.e",
+              message: "Das ist die größte Höhe in Metern. Gefragt ist die Entfernung, bei der die Höhe 0 ist.",
+            }
+        hint: "Setze h(x) = 0 und ziehe die Wurzel. Zwei Lösungen: Abwurf und Landung."
+        steps:
+          - "$h(x) = 0$ gibt ${{r.a}} \\cdot (x - {{r.s}})^2 = {{r.e}}$, also $(x - {{r.s}})^2 = {{r.ss}}$."
+          - "Wurzelziehen: $x - {{r.s}} = {{r.s}}$ oder $x - {{r.s}} = −{{r.s}}$."
+          - "Das gibt $x = {{r.w}}$ (Landung) oder $x = 0$ (Start). Die Rakete landet bei {{answer}} m."
+      - type: generated
+        id: hoechste-hoehe
+        given:
+          r: { pick: 1, from: { data: wurfbahnen } }
+        task:
+          text: "Eine Wasserrakete fliegt auf der Bahn $h(x) = −{{r.a}} \\cdot (x - {{r.s}})^2 + {{r.e}}$ ($x$ und $h$ in Metern). Wie hoch fliegt sie höchstens?"
+        answer: { value: "r.e", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "r.s",
+              message: "Das ist die Entfernung des höchsten Punkts (x-Wert des Scheitels). Gefragt ist die Höhe, der y-Wert.",
+            }
+          - {
+              value: "r.w",
+              message: "Das ist die Weite des Flugs (Nullstelle). Die größte Höhe liest du am Scheitel ab.",
+            }
+        hint: "Die größte Höhe ist der y-Wert des Scheitels. Lies sie aus der Scheitelform ab."
+        steps:
+          - "Der Scheitel der Scheitelform ist ({{r.s}} | {{r.e}})."
+          - "Die Rakete fliegt höchstens {{answer}} m hoch."
+      - type: generated
+        id: zaun
+        given:
+          r: { pick: 1, from: { data: zaun } }
+        task:
+          text: "Mit {{r.l}} m Zaun wird an einer Mauer ein Rechteck eingezäunt, die Mauer ist die vierte Seite. Die Fläche ist $A(x) = x \\cdot ({{r.l}} - 2x)$ mit der Seite $x$ senkrecht zur Mauer. Die größte Fläche liegt am Scheitel, bei $x = {{r.x}}$. Wie viele Quadratmeter sind das?"
+        answer: { value: "r.flaeche", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "r.quadrat",
+              message: "So sieht ein Quadrat aus Dritteln des Zauns aus. Hier hat die Seite parallel zur Mauer aber die Länge {{r.l}} − 2x.",
+            }
+          - {
+              value: "r.x * r.x",
+              message: "Das wäre ein Quadrat mit der Seite x. Die zweite Seite ist {{r.l}} − 2x, also länger.",
+            }
+        hint: "Rechne zuerst die zweite Seite aus: Zaunlänge minus zweimal x. Dann Länge mal Breite."
+        steps:
+          - "Die Seite parallel zur Mauer ist ${{r.l}} - 2 \\cdot {{r.x}} = {{r.b}}$ m lang."
+          - "Die Fläche ist ${{r.x}} \\cdot {{r.b}} = {{answer}}$ m²."
+      - type: true-false
+        id: scheitel-hoechster-punkt
+        text: Bei einer nach unten geöffneten Parabel ist der Scheitel der höchste Punkt des Graphen.
+        answer: true
+        explanation: Bei $a < 0$ fällt die Kurve nach beiden Seiten vom Scheitel weg. Darum liegt dort der größte Funktionswert, etwa die größte Höhe eines Wurfs.

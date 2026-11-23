@@ -109,3 +109,7 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 - Jede Aufgabe mit Zielkurve beschreibt die Zielkurve in Worten in der Textalternative des Graphen (`aria-label`: Scheitel, Öffnung, Faktor, Werte), nicht sichtbar auf der Seite.
 - `generated`: Fehlwert darf für keinen gezogenen Wert gleich der Antwort sein (Bereiche der Variablen trennen).
 - `intro` und Texte mit Doppelpunkt in Anführungszeichen; Formelbefehl `\mid` ist nicht erlaubt: Koordinaten als Text `(2 | 0)`.
+- Formeln in Antwortoptionen (`single-choice`, `multiple-choice`) als Unicode-Text schreiben (`x² + 2x − 3`), nicht als `$…$`: Der No-JS-Test vergleicht den Text und scheitert sonst.
+- Eine `formula` je Zeile und kurz halten (360 px); zu breite Formeln scheitern an `accessible` (scrollable-region).
+- Datenfelder in `src/data/*.yaml` beginnen klein (`diskr`, nicht `D`); negative Zahlen in Schritten als Textfeld mit `−` (z. B. `dtext`), weil die Laufzeit Platzhalter mit Bindestrich schreibt.
+- `generated`: Schritte nennen nur gezogene Werte; Zwischenergebnisse stehen als Felder im Datensatz (`pick: 1` aus `{ data: … }`).

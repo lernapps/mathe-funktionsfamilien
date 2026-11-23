@@ -17,6 +17,8 @@ const props = defineProps<{
   tabelleX: number[];
   /** The parameters of the basic form, drawn dashed for comparison; none: no comparison. */
   grundform?: { key: string; value: number }[];
+  /** Parameters that stay fixed (no slider), for example the factor a of a trajectory. */
+  fest?: { key: string; value: number }[];
   /** Show the term written out as ax² + bx + c below the term (for quadratic only). */
   allgemein?: boolean;
   /** The texts: the graph, the table, the reset button, the basic form and the two table headers. */
@@ -34,8 +36,12 @@ const props = defineProps<{
 
 const emit = defineEmits<{ change: [Record<string, number>] }>();
 const uid = useId();
-const values = reactive(startValues(props.regler));
-const base = computed(() => Object.fromEntries((props.grundform ?? []).map((g) => [g.key, g.value])));
+const fixedValues = () => Object.fromEntries((props.fest ?? []).map((f) => [f.key, f.value]));
+const values = reactive({ ...fixedValues(), ...startValues(props.regler) });
+const base = computed(() => ({
+  ...fixedValues(),
+  ...Object.fromEntries((props.grundform ?? []).map((g) => [g.key, g.value])),
+}));
 
 const W = 340;
 const H = 250;
@@ -87,7 +93,7 @@ const alt = computed(() => {
 const clipId = `clip-${uid}`;
 
 function reset(): void {
-  Object.assign(values, startValues(props.regler));
+  Object.assign(values, fixedValues(), startValues(props.regler));
   emit("change", { ...values });
 }
 const inputValue = (s: Slider) => values[s.key] ?? s.start;

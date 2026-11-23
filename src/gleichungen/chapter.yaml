@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Quadratische Gleichungen auf drei Wegen
+summary: Lösungen sind Nullstellen der Parabel. Du löst quadratische Gleichungen am Graphen, mit einer Tabelle und mit Rechnung und wendest sie auf Würfe, Brücken und Zäune an.
+pages: [recap, einfache-gleichungen, drei-wege, anwendungen]
