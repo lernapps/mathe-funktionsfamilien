@@ -1,0 +1,153 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Sinus und Kosinus am Einheitskreis
+description: "Ein Punkt läuft auf dem Einheitskreis wie auf einem Riesenrad. Seine Höhe wird zum Graphen der Sinusfunktion, sein Abstand von der senkrechten Achse zum Graphen der Kosinusfunktion."
+competencies: [sinusfunktion]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Du kannst danach erklären, woher die Graphen von Sinus und Kosinus kommen, und ihre Eigenschaften nennen:
+          Periode, größter und kleinster Wert, Nullstellen. Stell dir ein Riesenrad mit Radius 1 vor. Du sitzt in einer
+          Gondel und fährst im Kreis. Wie hoch bist du, wenn das Rad sich um einen Winkel gedreht hat?
+  - type: section
+    id: modell
+    title: Vom Kreis zum Graphen
+    blocks:
+      - type: text
+        text: |
+          Der Kreis mit Radius 1 um den Mittelpunkt heißt **Einheitskreis**. Du startest rechts bei 0°. Der Winkel wächst
+          gegen den Uhrzeigersinn. Die **Höhe** des Punkts ist der **Sinus** des Winkels. Trägst du die Höhe über dem
+          Winkel im Bogenmaß auf, entsteht die Sinuskurve.
+      - type: vue-component
+        id: kreis-sinus
+        component: Einheitskreis
+        props:
+          funktion: sin
+          labels:
+            winkel: Winkel
+            wert: "Höhe (Sinus)"
+            kreis: Einheitskreis mit laufendem Punkt
+            graph: Graph der Sinusfunktion
+            regler: Winkel drehen
+            einheit: "°"
+        nojs: |
+          Einheitskreis und Sinuskurve mit einem Regler für den Winkel von 0° bis 360° in Schritten von 15°. Die Höhe des
+          Punkts auf dem Kreis ist der Sinus. Werte: bei 0° ist sie 0, bei 30° (π/6) 0,5, bei 90° (π/2) 1, bei 180° (π)
+          0, bei 270° (3π/2) −1 und bei 360° (2π) wieder 0. Die Kurve steigt von 0 auf 1, fällt über 0 auf −1 und
+          steigt wieder auf 0.
+      - type: text
+        text: |
+          **Probiere es aus** (mit Regler, dafür brauchst du JavaScript). Drehe den Winkel langsam von 0° bis 360° und
+          beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist.
+      - type: text
+        text: |
+          Die Entfernung des Punkts von der senkrechten Achse ist der **Kosinus**. Seine Kurve beginnt oben bei 1, denn
+          bei 0° liegt der Punkt ganz rechts.
+      - type: vue-component
+        id: kreis-kosinus
+        component: Einheitskreis
+        props:
+          funktion: cos
+          labels:
+            winkel: Winkel
+            wert: "Abstand von der senkrechten Achse (Kosinus)"
+            kreis: Einheitskreis mit laufendem Punkt
+            graph: Graph der Kosinusfunktion
+            regler: Winkel drehen
+            einheit: "°"
+        nojs: |
+          Einheitskreis und Kosinuskurve mit einem Regler für den Winkel. Der Abstand des Punkts von der senkrechten Achse
+          ist der Kosinus. Werte: bei 0° ist er 1, bei 60° (π/3) 0,5, bei 90° (π/2) 0, bei 180° (π) −1, bei 270° (3π/2) 0 und
+          bei 360° (2π) wieder 1.
+  - type: section
+    id: beispiel
+    title: Eigenschaften von Sinus und Kosinus
+    blocks:
+      - type: table
+        caption: Was für beide Funktionen gilt
+        header: [Eigenschaft, Sinus, Kosinus]
+        rows:
+          - [Periode, "$2\\pi$", "$2\\pi$"]
+          - [Größter und kleinster Wert, "1 und −1", "1 und −1"]
+          - [Wert bei x = 0, "0", "1"]
+          - [Nullstellen, "0, π, 2π, …", "π/2, 3π/2, …"]
+      - type: text
+        text: Beide Kurven sehen gleich aus. Die Kosinuskurve ist die Sinuskurve, um $\frac{\pi}{2}$ nach links verschoben.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: sinus-90
+        text: Der Punkt steht auf dem Einheitskreis bei 90°, also ganz oben. Wie groß ist der Sinus?
+        options:
+          - text: "1"
+            correct: true
+            info: Ganz oben ist die Höhe so groß wie der Radius, also 1.
+          - text: "0"
+            correct: false
+            info: Die Höhe 0 gehört zu 0° und 180°, wenn der Punkt auf der waagerechten Achse liegt. Bei 90° ist der Kosinus 0.
+          - text: "−1"
+            correct: false
+            info: Die Höhe −1 gehört zu 270°, ganz unten.
+          - text: "90"
+            correct: false
+            info: Das ist die Gradzahl des Winkels. Der Sinus ist die Höhe des Punkts, ein Wert zwischen −1 und 1.
+        explanation: Der Sinus ist die Höhe des Punkts auf dem Einheitskreis. Sie ist bei 90° am größten.
+      - type: generated
+        id: sinus-wert
+        given:
+          r: { pick: 1, from: { data: sinuswerte } }
+        task:
+          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind {{r.bm}} im Bogenmaß. Wie groß ist der Sinus? Gib ihn als Dezimalzahl an."
+        answer: { value: "r.wert", compare: { number: { format: decimal, decimals: 1 } } }
+        mistakes:
+          - {
+              value: "0 - r.wert",
+              message: "Das Vorzeichen stimmt nicht. Der Sinus ist die Höhe: Liegt der Punkt über der waagerechten Achse, ist sie positiv, darunter negativ.",
+            }
+        hint: "Zeichne den Punkt auf dem Einheitskreis. Liegt er über oder unter der waagerechten Achse? Und wie weit?"
+        steps:
+          - "Bei {{r.grad}}° liegt der Punkt in einer Höhe von {{r.wtext}}."
+          - "Der Sinus ist {{answer}}."
+      - type: generated
+        id: kosinus-wert
+        given:
+          r: { pick: 1, from: { data: kosinuswerte } }
+        task:
+          text: "Der Punkt hat sich um {{r.grad}}° gedreht, das sind {{r.bm}} im Bogenmaß. Wie groß ist der Kosinus? Gib ihn als Dezimalzahl an."
+        answer: { value: "r.wert", compare: { number: { format: decimal, decimals: 1 } } }
+        mistakes:
+          - {
+              value: "0 - r.wert",
+              message: "Das Vorzeichen stimmt nicht. Der Kosinus ist der Abstand von der senkrechten Achse: rechts davon positiv, links davon negativ.",
+            }
+        hint: "Zeichne den Punkt auf dem Einheitskreis. Liegt er rechts oder links von der senkrechten Achse? Und wie weit?"
+        steps:
+          - "Bei {{r.grad}}° liegt der Punkt {{r.wtext}} von der senkrechten Achse entfernt (negativ: links)."
+          - "Der Kosinus ist {{answer}}."
+      - type: true-false
+        id: periode
+        text: Nach einer ganzen Umdrehung um 360° wiederholt sich die Sinuskurve, die Periode ist also $2\pi$.
+        answer: true
+        explanation: Nach 360° steht der Punkt wieder am Start, also wiederholen sich Höhe und Abstand. Im Bogenmaß sind das $2\pi$.
+      - type: multiple-choice
+        id: eigenschaften
+        text: "Welche Aussagen über die Sinusfunktion stimmen? Wähle alle richtigen."
+        options:
+          - text: "Der größte Wert ist 1."
+            correct: true
+            info: Der Punkt liegt höchstens so hoch wie der Radius des Einheitskreises, also bei 1.
+          - text: "Der Graph geht durch den Ursprung."
+            correct: true
+            info: "Bei 0° liegt der Punkt auf der waagerechten Achse, die Höhe ist 0."
+          - text: "Der Graph geht bei x = 0 durch den Punkt (0 | 1)."
+            correct: false
+            info: Das gilt für die Kosinusfunktion, die bei 0° ganz rechts bei 1 beginnt.
+          - text: "Der Funktionswert kann 2 sein."
+            correct: false
+            info: Der Kreis hat den Radius 1, die Höhe ist höchstens 1.
+        explanation: Sinus und Kosinus liegen immer zwischen −1 und 1. Der Sinus beginnt bei 0, der Kosinus bei 1.

@@ -24,6 +24,12 @@ const props = defineProps<{
   };
   /** Parameters that stay fixed (no slider), for example the factor a of a trajectory. */
   fest?: { key: string; value: number }[];
+  /** The x-axis is labelled in multiples of π (for the sine family). */
+  piAchse?: boolean;
+  /** The x-values of the table as the learner reads them (for example "π/2"), one for each of tabelleX. */
+  tabelleLabels?: string[];
+  /** Measured points drawn as marks (a measurement series to fit the curve to). */
+  punkte?: { x: number; y: number }[];
   /** Show the term written out as ax² + bx + c below the term (for quadratic only). */
   allgemein?: boolean;
   /** The texts: the graph, the table, the reset button, the basic form and the two table headers. */
@@ -38,6 +44,7 @@ const props = defineProps<{
     allgemein?: string;
     vergleichY?: string;
     vergleichTerm?: string;
+    punkte?: string;
   };
 }>();
 
@@ -68,7 +75,22 @@ const ticks = (min: number, max: number) => {
   for (let t = Math.ceil(min / step) * step; t <= max + 1e-9; t += step) out.push(Math.round(t * 1000) / 1000);
   return out;
 };
-const xticks = computed(() => ticks(props.fenster.xmin, props.fenster.xmax));
+const piTicks = computed(() => {
+  const out: number[] = [];
+  for (let k = Math.ceil(props.fenster.xmin / (Math.PI / 2)); k * (Math.PI / 2) <= props.fenster.xmax + 1e-9; k++) {
+    out.push(k * (Math.PI / 2));
+  }
+  return out;
+});
+const piText = (t: number) => {
+  const k = Math.round(t / (Math.PI / 2));
+  if (k === 0) return "0";
+  const num = Math.abs(k) % 2 === 0 ? Math.abs(k) / 2 : Math.abs(k);
+  const den = Math.abs(k) % 2 === 0 ? 1 : 2;
+  const top = num === 1 ? "π" : `${num}π`;
+  return `${k < 0 ? "−" : ""}${den === 1 ? top : `${top}/${den}`}`;
+};
+const xticks = computed(() => (props.piAchse ? piTicks.value : ticks(props.fenster.xmin, props.fenster.xmax)));
 const yticks = computed(() => ticks(props.fenster.ymin, props.fenster.ymax));
 
 const path = (ps: [number, number][][]) =>
@@ -104,6 +126,7 @@ const alt = computed(() => {
     ? `${own} ${props.labels.grundform}: ${describeGraph(props.family, base.value, props.fenster)}`
     : own;
 });
+const pointsText = computed(() => (props.punkte ?? []).map((pt) => `(${fmt(pt.x)} | ${fmt(pt.y)})`).join(", "));
 const clipId = `clip-${uid}`;
 
 function reset(): void {
@@ -122,7 +145,12 @@ function set(s: Slider, event: Event): void {
     <p class="fg-term" aria-live="polite">{{ termText }}</p>
     <p v-if="allgemein" class="fg-general" aria-live="polite">{{ labels.allgemein ?? "" }} {{ generalText }}</p>
     <div class="fg-view">
-      <svg :viewBox="`0 0 ${W} ${H}`" role="img" :aria-label="`${labels.graph}: ${alt}`" class="fg-svg">
+      <svg
+        :viewBox="`0 0 ${W} ${H}`"
+        role="img"
+        :aria-label="`${labels.graph}: ${alt}${pointsText ? ` ${labels.punkte ?? ''}: ${pointsText}.` : ''}`"
+        class="fg-svg"
+      >
         <defs>
           <clipPath :id="clipId">
             <rect :x="left" :y="top" :width="W - left - right" :height="H - bottom - top" />
@@ -138,7 +166,7 @@ function set(s: Slider, event: Event): void {
         </g>
         <g class="fg-labels">
           <text v-for="t in xticks" :key="`tx${t}`" :x="sx(t)" :y="H - bottom + 14" text-anchor="middle">
-            {{ fmt(t) }}
+            {{ piAchse ? piText(t) : fmt(t) }}
           </text>
           <text v-for="t in yticks" :key="`ty${t}`" :x="left - 4" :y="sy(t) + 4" text-anchor="end">{{ fmt(t) }}</text>
           <text :x="W - right" :y="H - bottom - 4" text-anchor="end"><tspan font-style="italic">x</tspan></text>
@@ -147,6 +175,17 @@ function set(s: Slider, event: Event): void {
         <g :clip-path="`url(#${clipId})`">
           <path v-if="baseCurve" :d="baseCurve" class="fg-base" />
           <path :d="curve" class="fg-curve" />
+        </g>
+        <g v-if="punkte?.length" class="fg-points">
+          <rect
+            v-for="(pt, i) in punkte"
+            :key="i"
+            :x="sx(pt.x) - 3.5"
+            :y="sy(pt.y) - 3.5"
+            width="7"
+            height="7"
+            :transform="`rotate(45 ${sx(pt.x)} ${sy(pt.y)})`"
+          />
         </g>
       </svg>
       <table class="fg-table">
@@ -164,7 +203,7 @@ function set(s: Slider, event: Event): void {
         </thead>
         <tbody>
           <tr v-for="(r, i) in rows" :key="r.x">
-            <td>{{ fmt(r.x) }}</td>
+            <td>{{ tabelleLabels?.[i] ?? fmt(r.x) }}</td>
             <td>{{ r.y === undefined ? labels.undefinedValue : fmt(r.y) }}</td>
             <td v-if="vergleich">
               {{ compareRows[i]?.y === undefined ? labels.undefinedValue : fmt(compareRows[i]?.y ?? 0) }}
@@ -252,6 +291,12 @@ function set(s: Slider, event: Event): void {
   fill: none;
   stroke: var(--page-accent);
   stroke-width: 2.5;
+}
+
+.fg-points rect {
+  fill: var(--page-surface);
+  stroke: var(--page-text);
+  stroke-width: 1.8;
 }
 
 .fg-base {

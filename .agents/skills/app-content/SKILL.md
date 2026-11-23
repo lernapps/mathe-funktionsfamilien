@@ -115,3 +115,4 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 - `generated`: Schritte nennen nur gezogene Werte; Zwischenergebnisse stehen als Felder im Datensatz (`pick: 1` aus `{ data: … }`).
 - Formelbefehle `\log`, `\ln`, `\lg` fehlen: `\text{log}_{b}(y)` schreiben. Kein `\mid`: Koordinaten als Text `(2 | 0)`.
 - `FunktionsGraph`: `fest` = feste Parameter ohne Regler (z. B. Startkapital), `vergleich` = zweite, gestrichelte Kurve einer anderen Familie mit eigener Tabellenspalte (linear gegen exponentiell).
+- `Einheitskreis` (`funktion: sin|cos`, Regler in 15°-Schritten, zeigt Grad und Bogenmaß als Vielfaches von π). `FunktionsGraph`: `piAchse` und `tabelleLabels` für Sinus, `punkte: { data: … }` für Messreihen (Rauten, dazu Textalternative). Kein `transform-origin` zusammen mit `rotate(a cx cy)` im SVG.

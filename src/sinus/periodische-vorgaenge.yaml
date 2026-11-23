@@ -1,0 +1,137 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Periodische Vorgänge beschreiben
+description: "Amplitude und Periode der Funktion a·sin(b·x) deuten und mit Reglern an eine Messreihe anpassen, zum Beispiel an die Gezeiten."
+competencies: [periodische-vorgaenge]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Du kannst danach einen Vorgang, der sich immer wiederholt, mit $f(x) = a \cdot \sin(b \cdot x)$ beschreiben und
+          sagen, was $a$ und $b$ bedeuten. Solche Vorgänge sind die Gezeiten, ein Riesenrad oder die Tageslänge
+          über das Jahr. Die Sinuskurve von der Seite davor ist der Anfang.
+  - type: section
+    id: modell
+    title: Amplitude und Periode mit Reglern
+    blocks:
+      - type: text
+        text: |
+          Die Rauten sind Messwerte: der Wasserstand an einer Küste (in Metern über dem mittleren Wasserstand) zu
+          verschiedenen Stunden. Mit $a$ und $b$ stellst du die Kurve ein. $a$ heißt **Amplitude**: die größte
+          Abweichung von der Mitte. $b$ bestimmt die **Periode** $T = \frac{2\pi}{b}$, also die Zeit, nach der sich
+          der Verlauf wiederholt.
+      - type: vue-component
+        id: regler-gezeiten
+        component: FunktionsGraph
+        props:
+          family: sine
+          regler:
+            - { key: a, label: "a: Amplitude in m", min: 0.5, max: 3, step: 0.5, start: 1 }
+            - { key: b, label: "b: bestimmt die Periode", min: 0.1, max: 2, step: 0.1, start: 1 }
+          punkte: { data: gezeiten }
+          fenster: { xmin: 0, xmax: 24, ymin: -3, ymax: 3 }
+          tabelleX: [0, 3, 6, 9, 12]
+          labels:
+            graph: Wasserstand über die Stunden mit Messpunkten
+            tabelle: Wasserstand in Metern
+            reset: Regler zurücksetzen
+            grundform: Vergleich
+            x: Stunden
+            y: Wasserstand
+            undefinedValue: nicht definiert
+            punkte: Messpunkte
+        nojs: |
+          Graph von $f(x) = a \cdot \sin(b \cdot x)$ mit Reglern für $a$ (0,5 bis 3) und $b$ (0,1 bis 2) und den Messpunkten des
+          Wasserstands in Metern: (0 | 0), (2 | 1,3), (4 | 1,4), (6 | 0,2), (8 | −1,1), (10 | −1,4), (12 | −0,4), (14 | 1), (16 | 1,5),
+          (18 | 0,6), (20 | −0,8), (22 | −1,5), (24 | −0,8). Die Kurve passt, wenn $a = 1,5$ und $b = 0,5$ sind: Der Wasserstand
+          schwankt zwischen −1,5 m und 1,5 m und wiederholt sich nach etwa 12,6 Stunden.
+      - type: text
+        text: |
+          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Stelle zuerst $a$ so ein, dass die höchsten
+          und tiefsten Rauten getroffen werden. Dann ändere $b$, bis auch die Nullstellen passen.
+  - type: section
+    id: beispiel
+    title: Was a und b bedeuten
+    blocks:
+      - type: example
+        title: Wasserstand mit a = 1,5 und b = 0,5
+        blocks:
+          - type: text
+            text: |
+              Die Amplitude ist 1,5, der Wasserstand schwankt also zwischen −1,5 m und 1,5 m. Die Periode ist
+              $T = \frac{2\pi}{0,5} = 4\pi \approx 12,6$ Stunden. Ein größeres $b$ macht die Periode kürzer, die Welle
+              wird enger.
+      - type: note
+        title: Auch die Tageslänge schwingt
+        blocks:
+          - type: text
+            text: Die Tageslänge weicht im Lauf eines Jahres von 12 Stunden ab, nach oben im Sommer und nach unten im Winter. Auch das ist ein periodischer Vorgang mit der Periode von einem Jahr.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: amplitude-riesenrad
+        given:
+          a: { int: [4, 12] }
+        task:
+          text: "Die Höhe einer Gondel über der Mitte des Riesenrads ist $h(x) = {{a}} \\cdot \\sin(x)$ in Metern. Wie groß ist die größte Höhe über der Mitte?"
+        answer: { value: "a", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "2 * a",
+              message: "Das ist der Durchmesser des Rades. Von der Mitte aus geht es nur bis zum Radius, und der ist die Amplitude.",
+            }
+        hint: "Der größte Wert von sin ist 1. Wie groß ist dann a mal 1?"
+        steps:
+          - "Der Sinus ist höchstens 1."
+          - "Die größte Höhe ist {{a}} · 1 = {{answer}} Meter. Das ist die Amplitude."
+      - type: generated
+        id: periode-berechnen
+        given:
+          r: { pick: 1, from: { data: perioden } }
+        task:
+          text: "Gegeben ist $f(x) = 3 \\cdot \\sin({{r.btext}} \\cdot x)$. Die Periode ist $T = \\frac{2\\pi}{b}$. Gib die Periode als Vielfaches von $\\pi$ an. Für $T = 2\\pi$ gib 2 ein."
+        answer: { value: "r.tp", compare: { number: { format: decimal, decimals: 2 } } }
+        mistakes:
+          - {
+              value: "2 * r.b",
+              message: "Du hast 2 mit b multipliziert. Die Periode ist 2π geteilt durch b, nicht mal b: Ein größeres b gibt eine kürzere Periode.",
+            }
+        hint: "Rechne 2 geteilt durch b. Das Ergebnis ist die Zahl vor dem π."
+        steps:
+          - "$T = \\frac{2\\pi}{{{r.btext}}}$"
+          - "Das ist {{r.tptext}} mal π. Gib {{answer}} ein."
+      - type: single-choice
+        id: b-groesser
+        text: Der Regler b wird größer gestellt. Was passiert mit der Kurve $a \cdot \sin(b \cdot x)$?
+        options:
+          - text: Die Kurve wird enger, die Periode kürzer.
+            correct: true
+            info: "Die Periode ist 2π geteilt durch b. Ein größeres b macht sie kleiner, die Welle wiederholt sich schneller."
+          - text: Die Kurve wird höher.
+            correct: false
+            info: Die Höhe bestimmt die Amplitude a, nicht b.
+          - text: Die Kurve wird breiter, die Periode länger.
+            correct: false
+            info: "Das wäre bei einem kleineren b so, denn die Periode ist 2π geteilt durch b."
+          - text: Die Kurve wird nach rechts verschoben.
+            correct: false
+            info: Eine Verschiebung käme von einer Zahl in der Klammer (x − d). Hier gibt es sie nicht.
+        explanation: b stellt ein, wie schnell sich der Vorgang wiederholt. Die Periode ist 2π geteilt durch b.
+      - type: true-false
+        id: amplitude-hoehe
+        text: Eine Welle mit der Amplitude 2 schwankt zwischen −2 und 2.
+        answer: true
+        explanation: Die Amplitude ist die größte Abweichung von der Mitte, nach oben wie nach unten. Beim Sinus ohne Verschiebung ist die Mitte die x-Achse.
+  - type: section
+    id: rueckblick
+    title: Rückblick auf das Kapitel
+    blocks:
+      - type: text
+        text: |
+          Du hast gesehen, wie ein Punkt auf dem Einheitskreis zur Sinuskurve wird, und wie Amplitude und Periode einen
+          wiederkehrenden Vorgang beschreiben. Jede Funktionsfamilie in diesem Explainer hat Regler, die verschieben,
+          strecken oder spiegeln.

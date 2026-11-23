@@ -1,0 +1,6 @@
+- { grad: 30, bm: "π/6", wert: 0.5, wtext: "0,5" }
+- { grad: 90, bm: "π/2", wert: 1, wtext: "1" }
+- { grad: 150, bm: "5π/6", wert: 0.5, wtext: "0,5" }
+- { grad: 210, bm: "7π/6", wert: -0.5, wtext: "−0,5" }
+- { grad: 270, bm: "3π/2", wert: -1, wtext: "−1" }
+- { grad: 330, bm: "11π/6", wert: -0.5, wtext: "−0,5" }
