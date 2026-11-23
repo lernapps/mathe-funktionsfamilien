@@ -46,8 +46,8 @@ const sy = (y: number) =>
   H - bottom - ((y - props.fenster.ymin) / (props.fenster.ymax - props.fenster.ymin)) * (H - bottom - top);
 
 const ticks = (min: number, max: number) => {
-  const raw = (max - min) / 6;
-  const step = raw <= 1 ? 1 : raw <= 2 ? 2 : raw <= 5 ? 5 : 10 ** Math.ceil(Math.log10(raw));
+  const range = max - min;
+  const step = range <= 14 ? 1 : range <= 30 ? 2 : range <= 70 ? 5 : 10 ** Math.ceil(Math.log10(range / 6));
   const out: number[] = [];
   for (let t = Math.ceil(min / step) * step; t <= max + 1e-9; t += step) out.push(Math.round(t * 1000) / 1000);
   return out;

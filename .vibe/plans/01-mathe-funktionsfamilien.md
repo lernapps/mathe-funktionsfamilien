@@ -212,6 +212,17 @@ Zahlen: Komma, `−`, `·`, `:`; Brüche in Rückmeldungen `a/b` (W28), im Text 
 
 **Prüfer:** vor „Veröffentlichen“ fachlicher Prüfer und Lernenden-Prüfer; Musterseite vorher vom Lernenden-Prüfer (Klasse 9-10).
 
+## Review
+
+### Lernenden-Prüfer, Musterseite `normalparabel` (Klasse 9-10, unabhängiger Unteragent)
+Umgesetzt: rohes LaTeX in `mistakes` entfernt (Klartext statt `$…$`); Regleraufgabe gibt jetzt je falschem Regler einen Hinweis (`hints`, ohne Lösung); Anleitung „a an der Kurve ablesen“; Gitterlinien im Graphen alle 1 bzw. 2 Einheiten; Tabelle der Aufgabe bis ±6; „Öffnung“ und „Familie“ erklärt; Staucht-Beispiel; Reihenfolge der Regler im Text wie auf der Seite; Hinweis „dafür brauchst du JavaScript“; Tipp ohne Buchstaben a, d, e; Lösungsweg mit Zwischenergebnissen (Datenfile `parabelwerte`); zusätzliche Aufgabe `scheitel-plus` für (x + d)²; Reglertabelle ohne umbrechende Klammern.
+Nicht umgesetzt / Laufzeit (Funde, nicht behoben): „Prüfen“ der Komponente erst nach Reglerbewegung aktiv und nach jeder Prüfung wieder gesperrt, ohne Hinweis; kein „Lösung“-Knopf bei Exercise-Komponenten, verdeckter Lösungstext bleibt bei „Neue Aufgabe“ veraltet; „x = 1“ im Zahlfeld → „Antworte zuerst …“ (W18/W6); Standardrückmeldung „Lies dazu noch einmal den Text“ bei true-false (W13); „Neue Aufgabe“ nur als Symbol (W5); Aufgabennummern springen (W12); Aufgaben 1 und true-false nicht wiederholbar nach „Lösung“.
+Offen: Zielparabel hat keine Textalternative im Graph (Aufgabe ist sehbasiert; `describe` für den Tutor nennt die Werte); Seite bei 360 px lang (neun Bildschirme).
+Noch nicht geprüft: Screenreader, Touch.
+
+### Fachlicher Prüfer
+Offen (läuft vor „Veröffentlichen“).
+
 ## Code
 
 <!--
@@ -235,7 +246,7 @@ Zahlen: Komma, `−`, `·`, `:`; Brüche in Rückmeldungen `a/b` (W28), im Text 
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Musterseite K1 'Normalparabel' mit Komponente FunktionsGraph (Term, Tabelle, Graph, Regler a, d, e, nojs und SVG-Form), Aufgaben (Ablesen, Einstellen, generated), plus Kapitel-Rahmen und app.yaml; Lernenden-Prüfer (Klasse 9-10) spielt durch; Befunde umsetzen
+- [x] Musterseite K1 'Normalparabel' mit Komponente FunktionsGraph (Term, Tabelle, Graph, Regler a, d, e, nojs und SVG-Form), Aufgaben (Ablesen, Einstellen, generated), plus Kapitel-Rahmen und app.yaml; Lernenden-Prüfer (Klasse 9-10) spielt durch; Befunde umsetzen
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A

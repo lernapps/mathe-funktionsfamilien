@@ -11,6 +11,8 @@ const props = defineProps<{
   task: string;
   /** The app's message for each typical mistake, in the order of about.mistakes. */
   mistakes: string[];
+  /** What to look at for each of a, d and e that is still wrong. */
+  hints: string[];
   /** The names of the three sliders a, d and e. */
   sliderLabels: string[];
   /** The texts of the graph, as FunktionsGraph. */
@@ -54,7 +56,7 @@ function change(values: Record<string, number>): void {
       family="quadratic"
       :regler="regler"
       :fenster="{ xmin: -7, xmax: 7, ymin: -8, ymax: 8 }"
-      :tabelle-x="[-2, -1, 0, 1, 2]"
+      :tabelle-x="[-6, -4, -2, 0, 2, 4, 6]"
       :grundform="goal"
       :labels="labels"
       @change="change"

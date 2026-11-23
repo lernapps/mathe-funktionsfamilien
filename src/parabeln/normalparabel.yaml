@@ -30,9 +30,10 @@ blocks:
     blocks:
       - type: text
         text: |
-          Der Term $f(x) = a \cdot (x - d)^2 + e$ beschreibt eine ganze Familie von Parabeln. Die drei Zahlen
-          $a$, $d$ und $e$ sind die Regler. Wenn du einen Regler bewegst, ändern sich der Term, die Tabelle und die
-          Kurve gleichzeitig. Die gestrichelte Kurve ist zum Vergleich immer die Normalparabel.
+          Der Term $f(x) = a \cdot (x - d)^2 + e$ beschreibt eine ganze Familie von Parabeln: alle Kurven, die du aus
+          der Normalparabel machst, indem du die drei Zahlen $a$, $d$ und $e$ änderst. Sie sind die Regler. Wenn du
+          einen Regler bewegst, ändern sich der Term, die Tabelle und die Kurve gleichzeitig. Die gestrichelte Kurve
+          ist zum Vergleich immer die Normalparabel. Bei $a = 0$ bleibt keine Parabel übrig, nur eine Gerade.
       - type: vue-component
         id: regler-normalparabel
         component: FunktionsGraph
@@ -64,8 +65,9 @@ blocks:
           gespiegelt und nach unten geöffnet, mit $a = 2$ ist sie doppelt so steil.
       - type: text
         text: |
-          **Probiere es aus.** Bewege zuerst nur $e$, dann nur $d$, dann nur $a$. Achte darauf, an welchem Punkt der
-          Scheitel liegt und wie sich die Zahlen in der Tabelle ändern.
+          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Bewege die Regler der Reihe nach: erst $a$,
+          dann $d$, dann $e$. Achte darauf, an welchem Punkt der Scheitel liegt und wie sich die Zahlen in der
+          Tabelle ändern.
   - type: section
     id: beispiel
     title: Was jeder Regler macht
@@ -74,9 +76,28 @@ blocks:
         caption: Die drei Regler der Parabel
         header: [Regler, Wirkung, Beispiel]
         rows:
-          - ["$e$", "schiebt die Kurve nach oben ($e > 0$) oder unten ($e < 0$)", "$x^2 + 2$: Scheitel (0 | 2)"]
-          - ["$d$", "schiebt nach rechts ($d > 0$) oder links ($d < 0$)", "$(x - 2)^2$: Scheitel (2 | 0)"]
-          - ["$a$", "streckt ($|a| > 1$), staucht ($|a| < 1$) oder spiegelt ($a < 0$)", "$−x^2$: nach unten geöffnet"]
+          - [
+              "$a$",
+              "streckt, wenn $a$ größer als 1 ist; staucht (macht breiter), wenn $a$ zwischen 0 und 1 liegt; spiegelt, wenn $a$ negativ ist",
+              "$2x^2$ ist enger, $0,5 \\cdot x^2$ ist breiter, $−x^2$ ist nach unten geöffnet",
+            ]
+          - [
+              "$d$",
+              "schiebt nach rechts, wenn $d$ positiv ist, und nach links, wenn $d$ negativ ist",
+              "$(x - 2)^2$ hat den Scheitel bei x = 2",
+            ]
+          - [
+              "$e$",
+              "schiebt nach oben, wenn $e$ positiv ist, und nach unten, wenn $e$ negativ ist",
+              "$x^2 + 2$ hat den Scheitel bei y = 2",
+            ]
+      - type: note
+        title: So liest du a an der Kurve ab
+        blocks:
+          - type: text
+            text: |
+              Gehe vom Scheitel einen Schritt nach rechts. Bei der Normalparabel steigt die Kurve dabei um 1. Steigt
+              sie um 2, ist $a = 2$; steigt sie um 0,5, ist $a = 0,5$. Fällt sie, ist $a$ negativ.
       - type: example
         title: Warum verschiebt (x − 2)² nach rechts?
         blocks:
@@ -110,12 +131,16 @@ blocks:
         id: parabel-einstellen
         component: FunktionsGraphAufgabe
         props:
-          task: Stelle die drei Regler so ein, dass deine Parabel genau auf der gestrichelten Zielparabel liegt. Lies dazu den Scheitel und die Öffnung ab.
+          task: Stelle die drei Regler so ein, dass deine Parabel genau auf der gestrichelten Zielparabel liegt. Lies dazu den Scheitel ab und ob die Kurve nach oben oder unten geöffnet ist. Wie steil sie ist, siehst du, wenn du vom Scheitel einen Schritt nach rechts gehst.
           sliderLabels: ["a: strecken und spiegeln", "d: nach rechts oder links", "e: nach oben oder unten"]
           mistakes:
-            - "Die Parabel liegt auf der falschen Seite: Bei $(x - d)^2$ schiebt ein positives d nach rechts. Prüfe, wo der Scheitel der gestrichelten Kurve auf der x-Achse liegt (d = x-Wert des Scheitels)."
-            - "Die Parabel liegt oben statt unten (oder umgekehrt): e ist der y-Wert des Scheitels."
+            - "Deine Parabel liegt auf der falschen Seite: Bei (x − d)² schiebt ein positives d nach rechts. d ist der x-Wert des Scheitels der gestrichelten Kurve."
+            - "Deine Parabel liegt oben statt unten (oder umgekehrt): e ist der y-Wert des Scheitels."
             - "Die Öffnung stimmt nicht: Bei a < 0 ist die Parabel nach unten geöffnet, bei a > 0 nach oben."
+          hints:
+            - "Noch nicht ganz: Gehe vom Scheitel einen Schritt nach rechts. Wie viel steigt oder fällt die gestrichelte Kurve? Das ist a."
+            - "Noch nicht ganz: Lies den x-Wert des Scheitels der gestrichelten Kurve ab. Das ist d."
+            - "Noch nicht ganz: Lies den y-Wert des Scheitels der gestrichelten Kurve ab. Das ist e."
           labels:
             graph: Graph der Parabel
             tabelle: Wertetabelle
@@ -140,39 +165,64 @@ blocks:
         mistakes:
           - {
               value: "0 - d",
-              message: "Das Vorzeichen ist umgekehrt: Die Klammer $(x - {{d}})$ ist null für $x = {{d}}$, der Scheitel liegt rechts vom Ursprung.",
+              message: "Das Vorzeichen ist umgekehrt: Die Klammer (x − {{d}}) ist null für x = {{d}}, der Scheitel liegt rechts vom Ursprung.",
             }
           - {
               value: "e",
               message: "Das ist der y-Wert des Scheitels. Gefragt ist der x-Wert, den liest du in der Klammer.",
             }
-        hint: Der Scheitel liegt dort, wo die Klammer null wird.
+        hint: Der Scheitel liegt dort, wo die Klammer null wird. Gib nur die Zahl ein.
         steps:
           - "Die Klammer ist null, wenn $x - {{d}} = 0$ ist."
           - "Das gilt für $x = {{answer}}$."
       - type: generated
-        id: wert-berechnen
+        id: scheitel-plus
         given:
-          a: { int: [2, 3] }
-          d: { int: [1, 4] }
-          e: { int: [1, 5] }
-          x: { int: [6, 9] }
+          d: { int: [1, 6] }
+          e: { int: [7, 9] }
         task:
-          text: "Gegeben ist $f(x) = {{a}} \\cdot (x - {{d}})^2 + {{e}}$. Berechne den Funktionswert an der Stelle $x = {{x}}$."
-        answer: { value: "a * (x - d) * (x - d) + e", compare: { number: { format: integer } } }
+          text: "Eine Parabel hat den Term $f(x) = (x + {{d}})^2 + {{e}}$. Bei welchem x-Wert liegt ihr Scheitel? Beachte das Vorzeichen."
+        answer: { value: "0 - d", compare: { number: { format: integer } } }
         mistakes:
           - {
-              value: "a * (x - d) + e",
-              message: "Du hast die Klammer nicht quadriert. Erst $(x - {{d}})$ ausrechnen, dann quadrieren, dann mit {{a}} malnehmen.",
+              value: "d",
+              message: "Das Vorzeichen stimmt nicht: x + {{d}} ist null für x = −{{d}}, nicht für x = {{d}}. Der Scheitel liegt links vom Ursprung.",
             }
           - {
-              value: "(a * (x - d)) * (a * (x - d)) + e",
-              message: "Das a gehört nicht in die Klammer, die quadriert wird: Erst quadrieren, dann mit {{a}} malnehmen.",
+              value: "e",
+              message: "Das ist der y-Wert des Scheitels. Gefragt ist der x-Wert, den liest du in der Klammer.",
             }
-        hint: Rechne in dieser Reihenfolge, Klammer, Quadrat, mal a, plus e.
+        hint: Schreibe x + {{d}} als x − (−{{d}}). Dann siehst du, wo die Klammer null wird.
         steps:
-          - "$x - d = {{x}} - {{d}}$"
-          - "Das Ergebnis der Klammer quadrieren, mit {{a}} malnehmen und {{e}} addieren."
+          - "Die Klammer ist null, wenn $x + {{d}} = 0$ ist."
+          - "Das gilt für $x = {{answer}}$."
+      - type: generated
+        id: wert-berechnen
+        given:
+          r: { pick: 1, from: { data: parabelwerte } }
+        task:
+          text: "Gegeben ist $f(x) = {{r.a}} \\cdot (x - {{r.d}})^2 + {{r.e}}$. Berechne den Funktionswert an der Stelle $x = {{r.x}}$."
+        answer: { value: "r.w", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "r.a * r.k + r.e",
+              message: "Du hast die Klammer nicht quadriert. Erst die Klammer ausrechnen, dann quadrieren, dann mit {{r.a}} malnehmen.",
+            }
+          - {
+              value: "(r.a * r.k) * (r.a * r.k) + r.e",
+              message: "Der Faktor {{r.a}} gehört nicht in die Klammer, die quadriert wird: Erst quadrieren, dann mit {{r.a}} malnehmen.",
+            }
+          - { value: "r.m", message: "Die Zahl am Ende fehlt: Zum Ergebnis kommt noch {{r.e}} dazu." }
+          - {
+              value: "r.q + r.e",
+              message: "Der Faktor {{r.a}} vor der Klammer fehlt: Das Quadrat wird noch mit {{r.a}} malgenommen.",
+            }
+        hint: "Rechne in dieser Reihenfolge: die Klammer, dann das Quadrat, dann mal der Zahl vor der Klammer, dann plus die Zahl am Ende."
+        steps:
+          - "Klammer: $x - {{r.d}} = {{r.x}} - {{r.d}} = {{r.k}}$"
+          - "Quadrat: ${{r.k}}^2 = {{r.q}}$"
+          - "Mal {{r.a}}: ${{r.a}} \\cdot {{r.q}} = {{r.m}}$"
+          - "Plus {{r.e}}: ${{r.m}} + {{r.e}} = {{r.w}}$"
       - type: true-false
         id: spiegeln
         text: Bei $f(x) = −2 \cdot x^2$ ist die Parabel nach unten geöffnet und steiler als die Normalparabel.

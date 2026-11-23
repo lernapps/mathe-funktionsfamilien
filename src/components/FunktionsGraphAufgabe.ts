@@ -6,6 +6,8 @@
 export interface Props {
   task: string;
   mistakes?: readonly string[];
+  /** What to look at for each of a, d and e (in this order) that is still wrong. */
+  hints?: readonly string[];
 }
 
 export interface Task {
@@ -63,7 +65,15 @@ export function mistakes(task: Task): (Answer | undefined)[] {
 /** The app's message for a wrong answer, from the props: that of its typical mistake, or none. */
 export function reason(task: Task, answer: Answer, props: Props, _lang?: string): string | undefined {
   const index = mistakes(task).findIndex((m) => m !== undefined && check(m, answer));
-  return index < 0 ? undefined : props.mistakes?.[index];
+  if (index >= 0) return props.mistakes?.[index];
+  // not a typical mistake: say which sliders are still wrong, never to which values they must be set
+  const parts = [
+    answer.a !== task.a ? props.hints?.[0] : undefined,
+    answer.d !== task.d ? props.hints?.[1] : undefined,
+    answer.e !== task.e ? props.hints?.[2] : undefined,
+  ];
+  const text = parts.filter((t): t is string => t !== undefined).join(" ");
+  return text === "" ? undefined : text;
 }
 
 const number = (n: number) => String(n).replace(".", ",").replace("-", "−");

@@ -15,6 +15,7 @@ import {
 const props = {
   task: "Stelle die Regler so ein, dass deine Parabel auf der gestrichelten liegt.",
   mistakes: ["Vorzeichen von d.", "Vorzeichen von e.", "Vorzeichen von a."],
+  hints: ["Prüfe a.", "Prüfe d.", "Prüfe e."],
 };
 
 test("the target is right; each sign mistake is wrong and distinct", () => {
@@ -37,7 +38,9 @@ test("each typical mistake gets its message; another wrong answer none", () => {
   expect(reason(task, { a: 2, d: -3, e: -1 }, props)).toBe("Vorzeichen von d.");
   expect(reason(task, { a: 2, d: 3, e: 1 }, props)).toBe("Vorzeichen von e.");
   expect(reason(task, { a: -2, d: 3, e: -1 }, props)).toBe("Vorzeichen von a.");
-  expect(reason(task, { a: 1, d: 0, e: 0 }, props)).toBeUndefined();
+  expect(reason(task, { a: 1, d: 0, e: 0 }, props)).toBe("Prüfe a. Prüfe d. Prüfe e.");
+  expect(reason(task, { a: 2, d: 3, e: 0 }, props)).toBe("Prüfe e.");
+  expect(reason(task, { a: 2, d: 3, e: -1 }, { task: "t" })).toBeUndefined();
 });
 
 test("describe states the target; show writes the numbers with a true minus", () => {
