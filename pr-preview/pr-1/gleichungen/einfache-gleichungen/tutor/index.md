@@ -68,19 +68,19 @@ Nullstelle gibt, dann so, dass es keine gibt. Lies bei $e = −9$ die beiden Nul
 
 Wenn du wissen willst, wo eine Parabel die x-Achse schneidet, suchst du eine Nullstelle. Alle drei Wege haben gemeinsam, dass man überlegt, wann eine Seite der Gleichung null werden kann.
 
-**Beispiel: Wurzelziehen**
+**Beispiel: Wurzelziehen, wenn nur x² und eine Zahl dastehen**
 
 $x^2 - 9 = 0 \quad \Rightarrow \quad x^2 = 9$
 
 Dann ziehst du auf beiden Seiten die Wurzel und denkst an beide Vorzeichen, $x = 3$ oder $x = −3$.
 
-**Beispiel: Ausklammern**
+**Beispiel: Ausklammern, wenn jeder Summand ein x enthält**
 
 $x^2 - 4x = 0 \quad \Rightarrow \quad x \cdot (x - 4) = 0$
 
 Ein Produkt ist null, wenn ein Faktor null ist. Also gilt $x = 0$ oder $x - 4 = 0$, das heißt $x = 0$ oder $x = 4$.
 
-**Beispiel: Produkt gleich null**
+**Beispiel: Produkt gleich null, wenn die Gleichung schon als Produkt dasteht**
 
 $(x - 2) \cdot (x + 5) = 0$
 

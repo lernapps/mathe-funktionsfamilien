@@ -80,7 +80,7 @@ $1,05^x = 2$
 
 $x = \frac{\text{lg}(2)}{\text{lg}(1,05)}$
 
-Dabei ist lg der Logarithmus zur Basis 10, den dein Taschenrechner kann (Taste lg oder log). Du kannst den Bruch auch mit jedem anderen Logarithmus des Taschenrechners bilden. Es ist etwa 14,2. Der Bruch geht, weil man den Exponenten vor den Logarithmus ziehen darf: $\text{lg}(1,05^x) = x \cdot \text{lg}(1,05)$. Nach 14 Jahren fehlt noch ein Rest, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.
+Dabei ist lg der Logarithmus zur Basis 10, den dein Taschenrechner kann (Taste lg oder log). Du kannst den Bruch auch mit jedem anderen Logarithmus des Taschenrechners bilden. Es ist etwa 14,2. Der Bruch geht, weil man den Exponenten vor den Logarithmus ziehen darf: $\text{lg}(1,05^x) = x \cdot \text{lg}(1,05)$. Nach 14 Jahren ist das Guthaben noch nicht das Doppelte, nach 15 Jahren ist das Guthaben erstmals mehr als doppelt so hoch.
 
 ### Übung
 

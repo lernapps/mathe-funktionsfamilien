@@ -20,11 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
-- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?wachstumsfaktor=12`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?zinsen-zweites-jahr=12`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
-- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/wachstum/zinseszins/?wachstumsfaktor=12&via=tutor#wachstumsfaktor`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/wachstum/zinseszins/?zinsen-zweites-jahr=12&via=tutor#zinsen-zweites-jahr`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -46,7 +46,7 @@ Ein Sparkonto wächst jedes Jahr um denselben Faktor, nicht um denselben Betrag:
 Wenn du wissen willst, wie viel Geld du nach mehreren Jahren auf dem Konto hast, reicht die Rechnung für ein Jahr nicht mehr.
 
 Du kannst danach das Guthaben auf einem Sparkonto nach mehreren Jahren berechnen, wenn die Zinsen mitverzinst
-werden. Bisher hast du die Zinsen für ein Jahr ausgerechnet. Hier legst du das Geld mehrere Jahre an.
+werden. Hier legst du das Geld mehrere Jahre an.
 
 **Versuche es zuerst von Hand.** 1000 € werden zu 3 % angelegt, die Zinsen bleiben auf dem Konto. Nach dem
 ersten Jahr sind es $1000 \cdot 1,03 = 1030$ €. Wie viel sind es nach dem zweiten Jahr? Die Zinsen des
@@ -67,7 +67,7 @@ Guthaben nach 10 und nach 20 Jahren. Wächst es in den zweiten zehn Jahren um me
 
 ### Was beim Zinseszins passiert
 
-Wenn du dem Zinseszins nicht traust, vergleiche ihn mit einfachen Zinsen.
+Wenn du wissen willst, was der Zinseszins bringt, vergleiche ihn mit einfachen Zinsen.
 
 **Beispiel: 1000 € bei 3 % in drei Jahren**
 
@@ -83,51 +83,52 @@ Kürzer: $1000 \cdot 1,03^3 = 1092,73$ €. Mit einfachen Zinsen ohne Mitverzins
 
 - **Zinseszins**: Zinsen, die im nächsten Jahr mitverzinst werden. Auf 1000 € bei 3 % sind das nach zwei Jahren 1060,90 € statt 1060 €.
 
-- Aufgabe `faktor-erkennen` (unten)
+- Aufgabe `zinseszins-idee` (unten)
 
-- Aufgabe `wachstumsfaktor` (unten)
+- Aufgabe `zinsen-zweites-jahr` (unten)
 
 - Aufgabe `endkapital` (unten)
 
 - Aufgabe `betrag-oder-faktor` (unten)
 
-### Aufgabe faktor-erkennen
+### Aufgabe zinseszins-idee
 
-- Aufgabe: Welcher Wachstumsfaktor gehört zu 4 % Zinsen pro Jahr?
+- Aufgabe: Auf einem Konto liegen 1000 €, die Zinsen bleiben auf dem Konto. Welche Aussage über das zweite Jahr stimmt?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✗ 4 – Das wäre eine Vervierfachung (300 % Zuwachs).
-  - ✓ 1,04 – Das Guthaben bleibt (100 %) und 4 % kommen dazu: 1 + 0,04 = 1,04.
-  - ✗ 0,04 – Das ist nur der Zinssatz als Dezimalzahl. Mit 0,04 würde das Guthaben fast verschwinden.
-  - ✗ 1,4 – Das wären 40 % Zuwachs. 4 % sind 0,04, nicht 0,4.
-- Lösung: 1,04
-- Erklärung: Der Wachstumsfaktor ist 1 plus der Zinssatz als Dezimalzahl.
-- Link: [../?via=tutor#faktor-erkennen](../?via=tutor#faktor-erkennen)
+  - ✗ Die Zinsen sind genauso hoch wie im ersten Jahr. – So wäre es ohne Zinseszins. Dann würden die Zinsen nur auf die ersten 1000 € gerechnet.
+  - ✓ Es gibt Zinsen auf das Guthaben vom Ende des ersten Jahres. – Das Guthaben ist nach dem ersten Jahr größer als 1000 €. Auch die Zinsen aus dem ersten Jahr werden verzinst.
+  - ✗ Der Zinssatz steigt im zweiten Jahr. – Der Zinssatz bleibt gleich. Größer wird das Guthaben, auf das er angewendet wird.
+  - ✗ Das Guthaben wächst um denselben Euro-Betrag wie im ersten Jahr. – Der Zuwachs in Euro ist im zweiten Jahr etwas größer, weil das Guthaben größer ist.
+- Lösung: Es gibt Zinsen auf das Guthaben vom Ende des ersten Jahres.
+- Erklärung: Zinseszins heißt, dass jedes Jahr auf das gesamte Guthaben Zinsen gerechnet werden, auch auf die Zinsen der Vorjahre.
+- Link: [../?via=tutor#zinseszins-idee](../?via=tutor#zinseszins-idee)
 
-### Aufgabe wachstumsfaktor
+### Aufgabe zinsen-zweites-jahr
 
-- Aufgabe: „Ein Konto wird mit {p} % pro Jahr verzinst. Wie lautet der Wachstumsfaktor? Gib ihn als Dezimalzahl an.“
-- Antwortformat: eine Zahl eintippen
-- Tipp der App: „Zinssatz als Dezimalzahl schreiben und 1 addieren.“
+- Aufgabe: „Auf ein Konto werden {r.k0} € zu {r.p} % pro Jahr angelegt, die Zinsen bleiben auf dem Konto. Wie viel Euro Zinsen gibt es im zweiten Jahr? Runde auf Cent.“
+- Antwortformat: eine Zahl eintippen (€)
+- Tipp der App: „Rechne erst das Guthaben nach dem ersten Jahr aus. Davon sind dann die Zinsen im zweiten Jahr zu berechnen.“
 - Lösungsweg:
-  - {p} % sind {p} : 100 als Dezimalzahl.
-  - Der Faktor ist 1 plus diese Zahl: {answer}.
+  - Guthaben nach einem Jahr: {r.k0} € mal {r.q} sind {r.jahr1text} €.
+  - Zinsen im zweiten Jahr: {r.jahr1text} € mal {r.p} : 100 sind {r.zinsen2text} €.
 - Typische Fehler und was die App sagt:
-  - F1: „Das ist nur der Zinssatz als Dezimalzahl. Das alte Guthaben bleibt ja, es kommt etwas dazu: Der Faktor ist 1 plus dieser Wert.“
-  - F2: „Das ist die Prozentzahl, kein Faktor. Teile durch 100 und rechne 1 dazu.“
-- Link zu Nummer n: `../?wachstumsfaktor=n&via=tutor#wachstumsfaktor`
-- Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt. `{answer}` ist die Lösung.
+  - F1: „Das sind die Zinsen des ersten Jahres, gerechnet auf das Startkapital. Im zweiten Jahr zählt das Guthaben nach dem ersten Jahr.“
+- Link zu Nummer n: `../?zinsen-zweites-jahr=n&via=tutor#zinsen-zweites-jahr`
+- Aufgaben nach Nummer: die Werte für `{…}`, die Lösung und was bei den Fehlern herauskommt. Ein Fehler ohne Spalte hat keinen festen Wert; die Meldung der App sagt, ob er vorliegt.
 
 ```
-Nr. | p | Lösung | F1 | F2
-1 | 4 | 1,04 | 0,04 | 4
-2 | 9 | 1,09 | 0,09 | 9
-3 | 7 | 1,07 | 0,07 | 7
-4 | 5 | 1,05 | 0,05 | 5
-5 | 3 | 1,03 | 0,03 | 3
-6 | 2 | 1,02 | 0,02 | 2
-7 | 8 | 1,08 | 0,08 | 8
-8 | 6 | 1,06 | 0,06 | 6
+Nr. | r.k0 | r.p | r.q | r.jahr1text | r.zinsen2text | Lösung | F1
+1 | 1500 | 4 | 1,04 | 1560,00 | 62,40 | 62,4 € | 60
+2 | 1200 | 5 | 1,05 | 1260,00 | 63,00 | 63 € | 60
+3 | 3000 | 2 | 1,02 | 3060,00 | 61,20 | 61,2 € | 60
+4 | 2500 | 5 | 1,05 | 2625,00 | 131,25 | 131,25 € | 125
+5 | 2000 | 3 | 1,03 | 2060,00 | 61,80 | 61,8 € | 60
+6 | 5000 | 3 | 1,03 | 5150,00 | 154,50 | 154,5 € | 150
+7 | 2000 | 6 | 1,06 | 2120,00 | 127,20 | 127,2 € | 120
+8 | 1000 | 5 | 1,05 | 1050,00 | 52,50 | 52,5 € | 50
+9 | 1000 | 2 | 1,02 | 1020,00 | 20,40 | 20,4 € | 20
+10 | 4000 | 4 | 1,04 | 4160,00 | 166,40 | 166,4 € | 160
 ```
 
 ### Aufgabe endkapital

@@ -60,7 +60,7 @@ Winkel im Bogenmaß auf, entsteht die Sinuskurve.
 Interaktiv: Einheitskreis und Sinuskurve mit einem Regler für den Winkel von 0° bis 360° in Schritten von 15°. Die Höhe des Punkts auf dem Kreis ist der Sinus. Werte: bei 0° ist sie 0, bei 30° (π/6) 0,5, bei 90° (π/2) 1, bei 180° (π) 0, bei 270° (3π/2) −1 und bei 360° (2π) wieder 0. Die Kurve steigt von 0 auf 1, fällt über 0 auf −1 und steigt wieder auf 0.
 
 **Probiere es aus** (mit Regler, dafür brauchst du JavaScript). Drehe den Winkel langsam von 0° bis 360° und
-beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist. Für Winkel über 90° stellst du den Winkel mit dem Regler ein und liest die Höhe oder den Abstand ab.
+beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist. Für Winkel über 90° gilt dasselbe: Stelle den Winkel am Regler ein und lies beim Sinus die Höhe, beim Kosinus den waagerechten Abstand ab.
 
 Der waagerechte Abstand des Punkts von der senkrechten Achse, rechts positiv und links negativ, ist der **Kosinus**. Seine Kurve beginnt oben bei 1, denn
 bei 0° liegt der Punkt ganz rechts.
@@ -69,7 +69,7 @@ Interaktiv: Einheitskreis und Kosinuskurve mit einem Regler für den Winkel. Der
 
 ### Eigenschaften von Sinus und Kosinus
 
-Wenn du Sinus und Kosinus anwenden willst, musst du ihre Eigenschaften kennen.
+Wenn du mit Sinus und Kosinus rechnen willst, hilft es zu wissen, wie sich beide Kurven verhalten: wie groß ihre Werte werden und wann sie sich wiederholen.
 
 Was für beide Funktionen gilt:
 - Eigenschaft | Sinus | Kosinus

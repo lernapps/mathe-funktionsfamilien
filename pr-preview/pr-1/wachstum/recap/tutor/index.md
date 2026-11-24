@@ -45,8 +45,7 @@ Vier Bausteine für Wachstum und Zerfall: Zinsrechnung, prozentuale Zu- und Abna
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die
-Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
+Diese Seite frischt vier Bausteine auf: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
 
 ### Zinsrechnung
 

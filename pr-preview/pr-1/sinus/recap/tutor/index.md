@@ -45,7 +45,7 @@ Zwei Bausteine für Sinus und Kosinus: das Bogenmaß und die Darstellungen einer
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts
+Diese Seite frischt zwei Bausteine auf: das Bogenmaß und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts
 gespeichert.
 
 ### Bogenmaß

@@ -45,7 +45,7 @@ Drei Bausteine für quadratische Gleichungen: binomische Formeln rückwärts, Qu
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
+Diese Seite frischt drei Bausteine auf: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
 gezählt und nichts gespeichert.
 
 ### Klammern und binomische Formeln

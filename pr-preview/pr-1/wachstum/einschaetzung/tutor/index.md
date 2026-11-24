@@ -71,7 +71,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Die Aufgaben dieser Selbsteinschätzung
 
-- A1: Aufgabe wachstumsfaktor der Seite „Zinseszins“
+- A1: Aufgabe zinsen-zweites-jahr der Seite „Zinseszins“
 - A2: Aufgabe endkapital der Seite „Zinseszins“
 - A3: Aufgabe endkapital der Seite „Zinseszins“
 - A4: Aufgabe funktionswert der Seite „Exponentialfunktionen“

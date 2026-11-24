@@ -89,7 +89,7 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 - A16: Aufgabe landepunkt der Seite „Quadratische Funktionen anwenden“
 - A17: Aufgabe hoechste-hoehe der Seite „Quadratische Funktionen anwenden“
 - A18: Aufgabe zaun der Seite „Quadratische Funktionen anwenden“
-- A19: Aufgabe wachstumsfaktor der Seite „Zinseszins“
+- A19: Aufgabe zinsen-zweites-jahr der Seite „Zinseszins“
 - A20: Aufgabe endkapital der Seite „Zinseszins“
 - A21: Aufgabe endkapital der Seite „Zinseszins“
 - A22: Aufgabe funktionswert der Seite „Exponentialfunktionen“

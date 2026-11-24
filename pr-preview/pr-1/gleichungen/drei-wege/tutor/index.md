@@ -45,8 +45,8 @@ Quadratische Gleichungen am Graphen, mit einer Wertetabelle und mit Rechnung lö
 
 Wenn eine quadratische Gleichung nicht auf den ersten Blick einfach ist, etwa x² + 6x − 7 = 0, brauchst du ein Verfahren, das immer funktioniert.
 
-Du kannst danach jede quadratische Gleichung in der Normalform $x^2 + px + q = 0$ lösen und vorher sagen, ob sie zwei, eine
-oder keine Lösung hat. Dafür gehst du drei Wege: am Graphen, mit einer Wertetabelle und durch Rechnen.
+Du kannst danach jede quadratische Gleichung in der Normalform $x^2 + px + q = 0$ (vor dem $x^2$ steht nur die 1) lösen und vorher sagen, ob sie zwei, eine
+oder keine Lösung hat. Dafür gehst du drei Wege: am Graphen, mit einer Wertetabelle und durch Rechnen mit quadratischer Ergänzung oder Lösungsformel.
 
 ### Zwei, eine oder keine Lösung
 
@@ -115,7 +115,9 @@ Numerisch: Wertetabelle von f(x) = x² − 6x + 5:
 - x | f(x)
 - 0 | 5
 - 1 | 0
+- 2 | −3
 - 3 | −4
+- 4 | −3
 - 5 | 0
 - 6 | 5
 

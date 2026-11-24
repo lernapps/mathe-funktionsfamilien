@@ -45,8 +45,7 @@ Vier Bausteine, die du für Parabeln und Potenzfunktionen brauchst: lineare Funk
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: lineare Funktionen, Klammern und binomische Formeln, Potenzgesetze und
-die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben sofort, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
+Diese Seite frischt vier Bausteine auf: lineare Funktionen, Klammern und binomische Formeln, Potenzgesetze und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben sofort, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
 
 ### Lineare Funktionen
 
@@ -77,7 +76,7 @@ $(a - b)^2 = a^2 - 2ab + b^2$
 **Beispiel: (x − 3)²**
 
 Mit $a = x$ und $b = 3$ ist $(x - 3)^2 = x^2 - 2 \cdot x \cdot 3 + 3^2$, also $x^2 - 6x + 9$. Der mittlere
-Summand heißt Mittelterm.
+Summand heißt Mittelterm. Rückwärts gelesen: $x^2 + 6x + 9 = (x + 3)^2$.
 
 Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/).
 

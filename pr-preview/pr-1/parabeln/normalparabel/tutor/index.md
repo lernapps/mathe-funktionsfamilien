@@ -46,12 +46,11 @@ Die Normalparabel mit drei Reglern verschieben, strecken und spiegeln: Term, Tab
 Wenn du etwas beschreiben willst, das sich krümmt, etwa die Flugbahn eines geworfenen Balls, reicht eine Gerade nicht. Dafür brauchst du Parabeln.
 
 Du kannst danach sagen, was mit der Kurve passiert, wenn du an einer Zahl im Term drehst, und du kannst
-Term und Kurve einander zuordnen. Lineare Funktionen kennst du schon: Term, Tabelle und Graph gehören
-zusammen. Hier kommt eine gebogene Kurve dazu.
+Term und Kurve einander zuordnen. Term, Tabelle und Graph gehören auch hier zusammen. Hier kommt eine gebogene Kurve dazu.
 
 Bild: Der Graph von f(x) = x²: eine nach oben geöffnete Kurve mit dem tiefsten Punkt im Ursprung, bei x = 2 und x = −2 liegt sie bei y = 4. Bildunterschrift: Die Normalparabel zu f(x) = x². Ihr tiefster Punkt heißt Scheitel.
 
-- **Parabel**: Die gebogene Kurve, die der Graph einer quadratischen Funktion ist. Sie ist symmetrisch und hat einen höchsten oder tiefsten Punkt, den Scheitel.
+- **Parabel**: Die gebogene Kurve, die der Graph einer quadratischen Funktion wie $f(x) = ax^2 + bx + c$ ist. Sie ist symmetrisch und hat einen höchsten oder tiefsten Punkt, den Scheitel.
 
 - **Normalparabel**: Der Graph der Funktion $f(x) = x^2$. Sie ist nach oben geöffnet und hat ihren Scheitel im Ursprung.
 
