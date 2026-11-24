@@ -1,0 +1,172 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Vier Bausteine, die du für Parabeln und Potenzfunktionen brauchst: lineare Funktionen, binomische
+  Formeln, Potenzgesetze und die Darstellungen einer Funktion."
+recap:
+  - mathematik/lineare-funktionen
+  - mathematik/klammern-binome
+  - mathematik/potenzgesetze
+  - mathematik/funktionen-darstellung
+blocks:
+  - type: section
+    id: kopf
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          Diese Seite frischt vier Bausteine auf: lineare Funktionen, Klammern und binomische Formeln, Potenzgesetze und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben sofort, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
+  - type: section
+    id: lineare-funktionen
+    title: Lineare Funktionen
+    blocks:
+      - type: text
+        text: |
+          Eine **lineare Funktion** hat den Term $f(x) = m \cdot x + b$. Die **Steigung** $m$ sagt, um wie viel
+          $f(x)$ größer wird, wenn $x$ um 1 wächst. Der **Achsenabschnitt** $b$ ist der Wert bei $x = 0$: Dort
+          schneidet der Graph die y-Achse.
+      - type: example
+        title: f(x) = 2x − 3
+        blocks:
+          - type: text
+            text: |
+              Bei $x = 0$ ist $f(0) = −3$, bei $x = 1$ ist $f(1) = −1$, bei $x = 4$ ist $f(4) = 5$. Mit jedem Schritt
+              nach rechts steigt der Wert um die Steigung 2.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Lineare Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/)."
+      - type: definition
+        term: Steigung
+        explanation: Die Steigung $m$ einer linearen Funktion sagt, um wie viel der Funktionswert wächst, wenn $x$ um
+          1 größer wird. Bei $f(x) = 2x - 3$ ist sie 2.
+      - type: definition
+        term: Achsenabschnitt
+        explanation: Der Wert $b$ einer linearen Funktion bei $x = 0$. Dort schneidet der Graph die y-Achse. Bei $f(x)
+          = 2x - 3$ ist er −3.
+  - type: section
+    id: klammern-binome
+    title: Klammern und binomische Formeln
+    blocks:
+      - type: text
+        text: |
+          Beim **Klammern auflösen** wird jeder Summand der einen Klammer mit jedem der anderen malgenommen.
+          Quadrate von Summen und Differenzen haben einen festen Aufbau, die **binomischen Formeln**:
+      - type: formula
+        formula: (a + b)^2 = a^2 + 2ab + b^2
+      - type: formula
+        formula: (a - b)^2 = a^2 - 2ab + b^2
+      - type: example
+        title: (x − 3)²
+        blocks:
+          - type: text
+            text: |
+              Mit $a = x$ und $b = 3$ ist $(x - 3)^2 = x^2 - 2 \cdot x \cdot 3 + 3^2$, also $x^2 - 6x + 9$. Der mittlere
+              Summand heißt Mittelterm. Rückwärts gelesen: $x^2 + 6x + 9 = (x + 3)^2$.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/)."
+      - type: definition
+        term: Binomische Formeln
+        explanation: "Feste Regeln für Klammern: $(a + b)^2$, $(a - b)^2$ und $(a + b)(a - b)$. Zum Beispiel ist $(x
+          + 2)^2 = x^2 + 4x + 4$."
+  - type: section
+    id: potenzgesetze
+    title: Potenzgesetze
+    blocks:
+      - type: text
+        text: |
+          Eine **Potenz** $a^n$ ist das $n$-fache Produkt von $a$: $a$ heißt **Basis**, $n$ heißt **Exponent**. Diese
+          Gesetze gelten:
+      - type: formula
+        formula: a^m \cdot a^n = a^{m+n}
+      - type: formula
+        formula: (a^m)^n = a^{m \cdot n}
+      - type: formula
+        formula: (a \cdot b)^n = a^n \cdot b^n
+      - type: example
+        title: 2³ · 2⁴
+        blocks:
+          - type: text
+            text: |
+              Es ist $2^3 \cdot 2^4 = 2^{3+4} = 2^7 = 128$. Beim Malnehmen gleicher Basen werden die Exponenten
+              addiert.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/)."
+      - type: definition
+        term: Potenz
+        explanation: Die Kurzschreibweise $a^n$ für $n$ gleiche Faktoren $a$. Zum Beispiel ist $2^4 = 2 \cdot 2 \cdot
+          2 \cdot 2 = 16$.
+  - type: section
+    id: funktionen-darstellung
+    title: Darstellungen von Funktionen
+    blocks:
+      - type: text
+        text: |
+          Dieselbe Funktion kannst du auf drei Arten zeigen: als **Funktionsgleichung** (der Term), als
+          **Wertetabelle** und als **Graph**. Aus dem Term rechnest du die Tabelle aus, die Punkte der Tabelle ergeben
+          den Graphen.
+      - type: example
+        title: f(x) = x² + 1
+        blocks:
+          - type: text
+            text: |
+              Für $x = −1, 0, 1, 2$ ergeben sich die Werte 2, 1, 2 und 5. Die Punkte (−1 | 2), (0 | 1), (1 | 2) und
+              (2 | 5) liegen auf dem Graphen.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/)."
+      - type: definition
+        term: Wertetabelle
+        explanation: Eine Tabelle mit Zahlen $x$ und den zugehörigen Funktionswerten $f(x)$. Zum Beispiel gehört zu
+          $f(x) = x^2$ die Zeile $x = 3$ und $f(x) = 9$.
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt
+          und nichts gespeichert.
+      - type: single-choice
+        id: selbsttest-lineare-funktionen
+        text: Eine Gerade geht durch die Punkte (0 | 4) und (3 | −2). Wie lautet ihr Term?
+        options:
+          - text: f(x) = 2x + 4
+            correct: false
+            info: Der Wert sinkt von 4 auf −2, die Steigung ist also negativ.
+          - text: f(x) = −2x + 4
+            correct: true
+            info: "Der Achsenabschnitt ist 4. Von x = 0 bis x = 3 sinkt der Wert um 6, also um 2 je Schritt: Steigung
+              −2."
+          - text: f(x) = −6x + 4
+            correct: false
+            info: "6 ist die Änderung über drei Schritte. Die Steigung gilt für einen Schritt: 6 geteilt durch 3."
+          - text: f(x) = −2x − 4
+            correct: false
+            info: Der Achsenabschnitt ist der Wert bei x = 0, also +4.
+        explanation: "Der Achsenabschnitt ist 4. Von x = 0 bis x = 3 sinkt der Wert um 6, also um 2 je Schritt: Steigung
+          −2."
+      - type: single-choice
+        id: selbsttest-klammern-binome
+        text: Welcher Term entsteht beim Ausmultiplizieren von (x − 4)²?
+        options:
+          - text: x² − 16
+            correct: false
+            info: So sieht (x − 4)(x + 4) aus. Beim Quadrat fehlt hier der Mittelterm.
+          - text: x² − 8x + 16
+            correct: true
+            info: "x² − 2 · x · 4 + 4²: Der Mittelterm ist −8x, das letzte Glied (−4)² ist +16."
+          - text: x² − 8x − 16
+            correct: false
+            info: Das letzte Glied ist (−4)² = +16, nicht −16.
+          - text: x² + 16
+            correct: false
+            info: "Es fehlt der Mittelterm: (x − 4)² ist nicht x² + 4²."
+        explanation: "x² − 2 · x · 4 + 4²: Der Mittelterm ist −8x, das letzte Glied (−4)² ist +16."
+  - type: section
+    id: checkliste
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - lineare Funktionen mit Gleichung, Tabelle und Graph beschreiben und Steigung und Achsenabschnitt deuten kannst,
+          - Klammern auflösen und die binomischen Formeln vorwärts und rückwärts anwenden kannst,
+          - die Potenzgesetze für natürliche Exponenten anwenden kannst,
+          - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.

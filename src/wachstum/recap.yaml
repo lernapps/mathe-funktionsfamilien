@@ -1,0 +1,128 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Vier Bausteine für Wachstum und Zerfall: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze
+  und die Darstellungen einer Funktion."
+recap:
+  - mathematik/zinsrechnung
+  - mathematik/prozent-veraenderung
+  - mathematik/potenzgesetze
+  - mathematik/funktionen-darstellung
+blocks:
+  - type: section
+    id: kopf
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          Diese Seite frischt vier Bausteine auf: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
+  - type: section
+    id: zinsrechnung
+    title: Zinsrechnung
+    blocks:
+      - type: text
+        text: |
+          Für geliehenes oder gespartes Geld gibt es **Zinsen**. Der **Zinssatz** sagt, wie viel Prozent des Kapitals
+          das pro Jahr sind. Jahreszinsen sind Kapital mal Zinssatz geteilt durch 100. Für Monatszinsen rechnest du mit $\frac{1}{12}$ des Jahres, für Tageszinsen mit $\frac{1}{360}$.
+      - type: example
+        title: 800 € bei 3 %
+        blocks:
+          - type: text
+            text: 'Die Zinsen für ein Jahr sind $800 \cdot 3 : 100 = 24$ €.'
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Zinsrechnung“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/zinsrechnung/)."
+      - type: definition
+        term: Zinssatz
+        explanation: Der Prozentsatz, der angibt, wie viel Prozent des Kapitals pro Jahr als Zinsen dazukommen. Bei
+          3 % auf 800 € sind es 24 €.
+  - type: section
+    id: prozent-veraenderung
+    title: Prozentuale Zu- und Abnahme
+    blocks:
+      - type: text
+        text: |
+          Bei einer Zunahme um $p$ % rechnest du mit dem **Wachstumsfaktor** $1 + \frac{p}{100}$, bei einer Abnahme mit
+          $1 - \frac{p}{100}$. Den neuen Wert bekommst du, indem du den alten Wert mit dem Faktor malnimmst.
+      - type: example
+        title: 50 € werden 20 % teurer
+        blocks:
+          - type: text
+            text: Der Faktor ist 1,20, der neue Preis ist $50 \cdot 1,20 = 60$ €.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/)."
+      - type: definition
+        term: Wachstumsfaktor
+        explanation: Die Zahl, mit der du einen Wert malnimmst, um ihn um einen Prozentsatz zu ändern. Bei 20 % Zunahme
+          ist er 1,20, bei 20 % Abnahme 0,80.
+  - type: section
+    id: potenzgesetze
+    title: Potenzgesetze
+    blocks:
+      - type: text
+        text: |
+          Gleiche Basen lassen sich beim Teilen und Malnehmen zusammenfassen: $a^m \cdot a^n = a^{m+n}$ und
+          $a^m : a^n = a^{m-n}$. Für ein Produkt in der Basis gilt $(a \cdot b)^n = a^n \cdot b^n$.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/)."
+  - type: section
+    id: funktionen-darstellung
+    title: Darstellungen von Funktionen
+    blocks:
+      - type: text
+        text: |
+          Eine Funktion zeigst du als Gleichung, Tabelle oder Graph. Aus der Tabelle erkennst du die Art der Funktion:
+          Wächst der Wert bei jedem Schritt um dieselbe Zahl, ist sie linear.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/)."
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt
+          und nichts gespeichert.
+      - type: single-choice
+        id: selbsttest-prozent-veraenderung
+        text: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?
+        options:
+          - text: 12 €
+            correct: false
+            info: Das ist die Ersparnis, nicht der neue Preis.
+          - text: 68 €
+            correct: true
+            info: Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.
+          - text: 65 €
+            correct: false
+            info: Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €.
+          - text: 92 €
+            correct: false
+            info: Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.
+        explanation: Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.
+      - type: single-choice
+        id: selbsttest-potenzgesetze
+        text: "Was ergibt 5⁴ : 5²?"
+        options:
+          - text: 5⁶
+            correct: false
+            info: Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen.
+          - text: "25"
+            correct: true
+            info: "Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25."
+          - text: "1"
+            correct: false
+            info: Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg.
+          - text: 5⁸
+            correct: false
+            info: Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen.
+        explanation: "Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25."
+  - type: section
+    id: checkliste
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - Jahres-, Monats- und Tageszinsen berechnen kannst,
+          - neue und alte Werte nach einer prozentualen Zunahme oder Abnahme berechnen kannst,
+          - die Potenzgesetze für natürliche Exponenten anwenden kannst,
+          - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.

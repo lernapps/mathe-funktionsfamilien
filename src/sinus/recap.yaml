@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Zwei Bausteine für Sinus und Kosinus: das Bogenmaß und die Darstellungen einer Funktion."
+recap:
+  - mathematik/bogenmass
+  - mathematik/funktionen-darstellung
+blocks:
+  - type: section
+    id: kopf
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          Diese Seite frischt zwei Bausteine auf: das Bogenmaß und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts
+          gespeichert.
+  - type: section
+    id: bogenmass
+    title: Bogenmaß
+    blocks:
+      - type: text
+        text: |
+          Das **Bogenmaß** misst einen Winkel mit der Länge des Bogens am Einheitskreis, dem Kreis mit Radius 1. Ein
+          halber Kreis hat die Bogenlänge $\pi$ (etwa 3,14), der ganze Kreis $2\pi$. Darum gilt: $180° = \pi$ und
+          $360° = 2\pi$. Aus einem Winkel in Grad wird das Bogenmaß, indem du ihn mit $\frac{\pi}{180}$ malnimmst.
+      - type: example
+        title: 90° im Bogenmaß
+        blocks:
+          - type: text
+            text: Ein Viertelkreis ist $90 \cdot \frac{\pi}{180} = \frac{\pi}{2}$, also etwa 1,57.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Bogenmaß“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/bogenmass/)."
+      - type: definition
+        term: Bogenmaß
+        explanation:
+          Das Maß eines Winkels als Länge des Bogens am Einheitskreis. Ein rechter Winkel (90°) hat das Bogenmaß
+          π/2.
+  - type: section
+    id: funktionen-darstellung
+    title: Darstellungen von Funktionen
+    blocks:
+      - type: text
+        text: |
+          Eine Funktion kannst du als Gleichung, Wertetabelle und Graph darstellen. Aus einem Term wird eine Tabelle,
+          indem du Werte für $x$ einsetzt, und aus der Tabelle einen Term findest du durch Prüfen der Zeilen.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/)."
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt
+          und nichts gespeichert.
+      - type: single-choice
+        id: selbsttest-bogenmass-grad
+        text: Wie groß ist 60° im Bogenmaß?
+        options:
+          - text: π/6
+            correct: false
+            info: Das sind 30°, denn π/6 ist ein Sechstel von 180°.
+          - text: π/3
+            correct: true
+            info: "60 : 180 = 1 : 3, also ist 60° ein Drittel von π."
+          - text: 2π/3
+            correct: false
+            info: Das sind 120°, doppelt so viel wie 60°.
+          - text: 60π
+            correct: false
+            info: Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen.
+        explanation: "60 : 180 = 1 : 3, also ist 60° ein Drittel von π."
+      - type: single-choice
+        id: selbsttest-funktionen-darstellung
+        text: Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?
+        options:
+          - text: f(x) = 2x
+            correct: false
+            info: Bei x = 2 käme 4 heraus, nicht 8.
+          - text: f(x) = x³
+            correct: false
+            info: Bei x = 1 käme 1 heraus, nicht 2.
+          - text: f(x) = 2x²
+            correct: true
+            info: Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.
+          - text: f(x) = 4x
+            correct: false
+            info: Bei x = 1 käme 4 heraus, nicht 2.
+        explanation: Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.
+  - type: section
+    id: checkliste
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - Winkel im Bogenmaß angeben und zwischen Grad- und Bogenmaß wechseln kannst,
+          - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.

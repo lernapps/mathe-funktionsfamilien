@@ -1,0 +1,179 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Exponentialfunktionen
+description: "Lineares und exponentielles Wachstum laufen um die Wette; dazu der Zerfall, etwa der Abbau eines Medikaments im Körper."
+competencies: [exponentialfunktionen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Wenn du entscheiden willst, ob ein Vorgang linear oder exponentiell wächst, musst du wissen, was bei jedem Schritt gleich bleibt: der Betrag oder der Faktor.
+
+          Du kannst danach Wachstum und Zerfall mit dem Term $f(x) = a \cdot b^x$ beschreiben und entscheiden, ob ein
+          Vorgang linear oder exponentiell ist. Beim Zinseszins hast du den Faktor schon benutzt. Jetzt wird daraus eine
+          Funktion mit dem Exponenten $x$.
+  - type: section
+    id: modell
+    title: Zwei Konten um die Wette
+    blocks:
+      - type: text
+        text: |
+          Wenn du zwei Entwicklungen vergleichen willst, zeichne beide in dasselbe Bild.
+
+          Konto A bekommt jedes Jahr 40 € dazu: $f(x) = 1000 + 40x$ (linear, gestrichelt). Konto B wächst jedes Jahr um
+          denselben Faktor $b$: $f(x) = 1000 \cdot b^x$ (exponentiell). Der Regler stellt den Faktor von Konto B ein.
+      - type: vue-component
+        id: regler-wette
+        component: FunktionsGraph
+        props:
+          family: exponential
+          fest:
+            - { key: a, value: 1000 }
+          regler:
+            - { key: b, label: "b: Wachstumsfaktor von Konto B", min: 1.01, max: 1.1, step: 0.01, start: 1.03 }
+          vergleich:
+            family: linear
+            werte:
+              - { key: c, value: 1000 }
+              - { key: a, value: 40 }
+          fenster: { xmin: 0, xmax: 40, ymin: 0, ymax: 4500 }
+          tabelleX: [0, 10, 20, 30, 40]
+          labels:
+            graph: Guthaben der beiden Konten über die Jahre
+            tabelle: Guthaben in Euro
+            reset: Regler zurücksetzen
+            grundform: Konto A linear
+            eigene: Konto B exponentiell
+            x: Jahre
+            y: Konto B
+            undefinedValue: nicht definiert
+            vergleichY: Konto A
+        nojs: |
+          Graphen von Konto A (linear, $1000 + 40x$) und Konto B (exponentiell, $1000 \cdot b^x$, Regler für $b$ von 1,01 bis 1,10).
+          Beim Start ist $b = 1,03$. Werte nach 0, 10, 20, 30 und 40 Jahren, Konto B gegen Konto A: 1000 und 1000; 1343,92
+          und 1400; 1806,11 und 1800; 2427,26 und 2200; 3262,04 und 2600. Zuerst liegt Konto A vorn, nach etwa 20 Jahren
+          überholt Konto B.
+      - type: text
+        text: |
+          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Welcher kleinste Faktor reicht, damit Konto B nach 10 Jahren vor Konto A liegt? Schau in die Tabelle bei 10 Jahren.
+  - type: section
+    id: zerfall
+    title: "Zerfall: Ein Medikament wird abgebaut"
+    blocks:
+      - type: text
+        text: |
+          Wenn etwas abnimmt, zum Beispiel ein Medikament im Körper, ist der Faktor kleiner als 1.
+
+          Ist der Faktor $b$ kleiner als 1, nimmt der Wert ab: Das ist **exponentieller Zerfall**. Im Körper wird ein
+          Medikament oft in jeder Stunde um denselben Anteil abgebaut. Hier sind 100 mg gegeben. Der Regler stellt
+          den Faktor $b$ pro Stunde ein, bei 0,5 halbiert sich die Menge jede Stunde.
+      - type: vue-component
+        id: regler-zerfall
+        component: FunktionsGraph
+        props:
+          family: exponential
+          fest:
+            - { key: a, value: 100 }
+          regler:
+            - { key: b, label: "b: Faktor pro Stunde", min: 0.5, max: 0.95, step: 0.05, start: 0.5 }
+          fenster: { xmin: 0, xmax: 12, ymin: 0, ymax: 100 }
+          tabelleX: [0, 1, 2, 4, 8, 12]
+          labels:
+            graph: Menge des Medikaments im Körper über die Stunden
+            tabelle: Menge in Milligramm
+            reset: Regler zurücksetzen
+            grundform: Vergleich
+            x: Stunden
+            y: Menge in mg
+            undefinedValue: nicht definiert
+        nojs: |
+          Graph der Menge $f(x) = 100 \cdot b^x$ in Milligramm über die Stunden, mit Regler für $b$ von 0,5 bis 0,95.
+          Beim Start ist $b = 0,5$: nach 0, 1, 2, 4, 8 und 12 Stunden bleiben 100, 50, 25, 6,25, 0,39 und 0,02 mg. Die Kurve
+          fällt immer flacher und erreicht die Null nie.
+  - type: section
+    id: beispiel
+    title: Linear oder exponentiell?
+    blocks:
+      - type: text
+        text: "Wenn du bei einem neuen Vorgang entscheiden musst, welche Art es ist, schau auf die Tabelle: Was bleibt gleich?"
+      - type: table
+        caption: Zwei Arten zu wachsen
+        header: [Art, Was gleich bleibt]
+        rows:
+          - [linear, "Zuwachs je Schritt"]
+          - [exponentiell, "Faktor je Schritt"]
+      - type: formula
+        formula: 'f(x) = c + m \cdot x \quad \text{(linear)}'
+      - type: formula
+        formula: 'f(x) = a \cdot b^x \quad \text{(exponentiell)}'
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: definition
+        term: Exponentieller Zerfall
+        explanation: Abnahme, bei der der Wert in gleichen Schritten mit demselben Faktor zwischen 0 und 1 malgenommen wird, etwa 0,5 für eine Halbierung.
+      - type: definition
+        term: Exponentialfunktion
+        explanation: Eine Funktion der Form $f(x) = a \cdot b^x$ mit $b > 0$ und $b \neq 1$. Der Wert wird bei jedem Schritt mit dem Faktor $b$ malgenommen.
+      - type: multiple-choice
+        id: wachstum-erkennen
+        text: "Welche Terme beschreiben exponentielles Wachstum? Wähle alle richtigen."
+        options:
+          - text: "80 · 2ˣ"
+            correct: true
+            info: Der Wert verdoppelt sich bei jedem Schritt, der Faktor 2 ist größer als 1.
+          - text: "1000 · 0,95ˣ"
+            correct: false
+            info: Der Faktor 0,95 ist kleiner als 1. Das ist Zerfall, der Wert nimmt ab.
+          - text: "1000 + 50x"
+            correct: false
+            info: Hier kommt bei jedem Schritt derselbe Betrag dazu. Das ist linear.
+          - text: "1000 · 1,05ˣ"
+            correct: true
+            info: Der Faktor 1,05 ist größer als 1, der Wert wächst jedes Mal um 5 %.
+        explanation: Exponentielles Wachstum hat die Form a · bˣ mit b größer als 1, Zerfall mit b zwischen 0 und 1.
+      - type: generated
+        id: funktionswert
+        given:
+          r: { pick: 1, from: { data: exponentiell } }
+        task:
+          text: "Gegeben ist $f(x) = {{r.a}} \\cdot {{r.b}}^x$. Berechne $f({{r.n}})$."
+        answer: { value: "r.w", compare: { number: { format: integer } } }
+        mistakes:
+          - {
+              value: "r.mal",
+              message: "Du hast {{r.b}} mit dem Exponenten multipliziert statt potenziert. Der Exponent sagt, wie oft der Faktor {{r.b}} vorkommt.",
+            }
+          - {
+              value: "r.vorher",
+              message: "Du hast einen Faktor zu wenig genommen: Beim Exponenten {{r.n}} kommt der Faktor {{r.n}}-mal vor.",
+            }
+        hint: "Rechne erst die Potenz, dann mal die Zahl vor der Potenz."
+        steps:
+          - "$f({{r.n}}) = {{r.a}} \\cdot {{r.b}}^{{{r.n}}}$"
+          - "Die Potenz mal {{r.a}} ergibt {{answer}}."
+      - type: generated
+        id: medikament
+        given:
+          m: { oneOf: [80, 160, 200] }
+          h: { int: [2, 4] }
+        task:
+          text: "Von einem Medikament sind {{m}} mg im Körper. Jede Stunde wird die Menge halbiert. Wie viel mg sind es nach {{h}} Stunden?"
+        answer: { value: "m / pow(2, h)", compare: { number: { format: decimal, decimals: 2 } } }
+        mistakes:
+          - {
+              value: "m / 2",
+              message: "Das ist die Menge nach nur einer Stunde. Es wird nach jeder Stunde wieder halbiert, hier {{h}}-mal.",
+            }
+        hint: "Halbieren heißt: mal 0,5. Das passiert in jeder Stunde, also {{h}}-mal."
+        steps:
+          - "Die Menge wird {{h}}-mal halbiert: $m \\cdot 0,5^{{{h}}}$."
+          - "Das Ergebnis ist {{answer}} mg."
+      - type: true-false
+        id: gleicher-faktor
+        text: Bei exponentiellem Wachstum wird der Wert in gleich langen Zeitschritten mit demselben Faktor multipliziert.
+        answer: true
+        explanation: Das unterscheidet es vom linearen Wachstum, bei dem in jedem Schritt derselbe Betrag addiert wird.

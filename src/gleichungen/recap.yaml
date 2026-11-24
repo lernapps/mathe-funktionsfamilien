@@ -1,0 +1,109 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Drei Bausteine für quadratische Gleichungen: binomische Formeln rückwärts, Quadratwurzeln und lineare
+  Gleichungen."
+recap:
+  - mathematik/klammern-binome
+  - mathematik/quadratwurzeln
+  - mathematik/lineare-gleichungen
+blocks:
+  - type: section
+    id: kopf
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          Diese Seite frischt drei Bausteine auf: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
+          gezählt und nichts gespeichert.
+  - type: section
+    id: klammern-binome
+    title: Klammern und binomische Formeln
+    blocks:
+      - type: text
+        text: |
+          Du kennst die binomischen Formeln vorwärts. Hier brauchst du sie rückwärts: Ein Term wie $x^2 + 6x + 9$
+          lässt sich als Quadrat einer Klammer schreiben, $(x + 3)^2$. Das nennt man **Faktorisieren**. Du erkennst es
+          an drei Dingen: ein $x^2$, ein Mittelterm und eine Quadratzahl am Ende, die zur Hälfte des Mittelterms passt.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/)."
+  - type: section
+    id: quadratwurzeln
+    title: Quadratwurzeln
+    blocks:
+      - type: text
+        text: |
+          Die **Quadratwurzel** $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ ist: $\sqrt{49} = 7$, denn
+          $7^2 = 49$. Weil auch $(−7)^2 = 49$ ist, hat die Gleichung $x^2 = 49$ zwei Lösungen: 7 und −7. Bei Zahlen
+          wie $\sqrt{2}$ bestimmst du einen Näherungswert, etwa √2 ≈ 1,41.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Quadratwurzeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/quadratwurzeln/)."
+      - type: definition
+        term: Quadratwurzel
+        explanation: Die Quadratwurzel $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ ist. Zum Beispiel ist
+          $\sqrt{36} = 6$.
+  - type: section
+    id: lineare-gleichungen
+    title: Lineare Gleichungen
+    blocks:
+      - type: text
+        text: |
+          Eine lineare Gleichung löst du mit **Äquivalenzumformungen**: Du tust auf beiden Seiten dasselbe, bis $x$
+          allein steht. Zum Beispiel: $3x - 7 = 2x + 5$ wird mit $-2x$ zu $x - 7 = 5$ und mit $+7$ zu $x = 12$.
+      - type: text
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Lineare Gleichungen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
+      - type: definition
+        term: Äquivalenzumformung
+        explanation:
+          Eine Umformung einer Gleichung, die ihre Lösung nicht ändert, etwa auf beiden Seiten dasselbe addieren
+          oder durch dieselbe Zahl teilen. Aus $x + 3 = 5$ wird mit $-3$ die Gleichung $x = 2$.
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt
+          und nichts gespeichert.
+      - type: single-choice
+        id: selbsttest-klammern-binome
+        text: Welche Klammer gehört zu x² + 10x + 25?
+        options:
+          - text: (x − 5)²
+            correct: false
+            info: Dann wäre der Mittelterm −10x. Hier steht +10x.
+          - text: (x + 5)²
+            correct: true
+            info: Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².
+          - text: (x + 10)²
+            correct: false
+            info: Dann wäre der Mittelterm 20x und das letzte Glied 100.
+          - text: (x + 25)²
+            correct: false
+            info: Dann wäre der Mittelterm 50x und das letzte Glied 625.
+        explanation: Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².
+      - type: single-choice
+        id: selbsttest-quadratwurzeln
+        text: Welche Zahlen x erfüllen x² = 81?
+        options:
+          - text: nur 9
+            correct: false
+            info: Auch −9 hat das Quadrat 81, denn minus mal minus ist plus.
+          - text: 9 und −9
+            correct: true
+            info: 9² = 81 und auch (−9)² = 81.
+          - text: 40,5
+            correct: false
+            info: Das ist die Hälfte von 81. Gesucht ist die Zahl, die mit sich selbst malgenommen 81 ergibt.
+          - text: "6561"
+            correct: false
+            info: Das ist 81², also die Zahl zum Quadrat. Gesucht ist die Wurzel.
+        explanation: 9² = 81 und auch (−9)² = 81.
+  - type: section
+    id: checkliste
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - Klammern auflösen und die binomischen Formeln vorwärts und rückwärts anwenden kannst,
+          - Quadratwurzeln erklären und Näherungswerte bestimmen kannst,
+          - lineare Gleichungen lösen und die Lösungsverfahren vergleichen kannst.

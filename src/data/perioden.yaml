@@ -1,0 +1,4 @@
+- { b: 2, btext: "2", tp: 1, tptext: "1" }
+- { b: 0.5, btext: "0,5", tp: 4, tptext: "4" }
+- { b: 4, btext: "4", tp: 0.5, tptext: "0,5" }
+- { b: 0.25, btext: "0,25", tp: 8, tptext: "8" }

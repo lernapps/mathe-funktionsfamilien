@@ -1,0 +1,141 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zinseszins
+description: "Ein Sparkonto wächst jedes Jahr um denselben Faktor, nicht um denselben Betrag: Endkapital mit Zinseszins berechnen."
+competencies: [zinseszins]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Wenn du wissen willst, wie viel Geld du nach mehreren Jahren auf dem Konto hast, reicht die Rechnung für ein Jahr nicht mehr.
+
+          Du kannst danach das Guthaben auf einem Sparkonto nach mehreren Jahren berechnen, wenn die Zinsen mitverzinst
+          werden. Hier legst du das Geld mehrere Jahre an.
+      - type: text
+        text: |
+          **Versuche es zuerst von Hand.** 1000 € werden zu 3 % angelegt, die Zinsen bleiben auf dem Konto. Nach dem
+          ersten Jahr sind es $1000 \cdot 1,03 = 1030$ €. Wie viel sind es nach dem zweiten Jahr? Die Zinsen des
+          zweiten Jahres gibt es auf 1030 €, nicht auf 1000 €.
+  - type: section
+    id: modell
+    title: Jedes Jahr derselbe Faktor
+    blocks:
+      - type: text
+        text: |
+          Wenn du das Guthaben für beliebig viele Jahre schnell ausrechnen willst, nutzt du den Wachstumsfaktor.
+
+          Bei **Zinseszins** werden die Zinsen im nächsten Jahr mitverzinst. Das Guthaben wird jedes Jahr mit dem
+          Wachstumsfaktor $q = 1 + \frac{p}{100}$ malgenommen. Dabei ist $p$ der Zinssatz in Prozent. Nach $n$ Jahren ist es $K_n = K_0 \cdot q^n$. Das
+          Startkapital $K_0$ steht hier fest bei 1000 €. Mit dem Regler änderst du den Faktor $q$.
+      - type: vue-component
+        id: regler-sparkonto
+        component: FunktionsGraph
+        props:
+          family: exponential
+          fest:
+            - { key: a, value: 1000 }
+          regler:
+            - { key: b, label: "q: Wachstumsfaktor pro Jahr", min: 1.01, max: 1.1, step: 0.01, start: 1.03 }
+          fenster: { xmin: 0, xmax: 20, ymin: 0, ymax: 7000 }
+          tabelleX: [0, 1, 2, 5, 10, 20]
+          labels:
+            graph: Guthaben auf dem Sparkonto über die Jahre
+            tabelle: Guthaben in Euro
+            reset: Regler zurücksetzen
+            grundform: Vergleich
+            x: Jahre
+            y: Guthaben
+            undefinedValue: nicht definiert
+        nojs: |
+          Graph des Guthabens $K_n = 1000 \cdot q^n$ in Euro über die Jahre $n$, mit Regler für $q$ von 1,01 bis 1,10. Beim
+          Start ist $q = 1,03$: nach 0 Jahren 1000 €, nach 1 Jahr 1030 €, nach 2 Jahren 1060,90 €, nach 5 Jahren
+          1159,27 €, nach 10 Jahren 1343,92 €, nach 20 Jahren 1806,11 €. Die Kurve steigt immer steiler.
+      - type: text
+        text: |
+          **Probiere es aus** (mit Reglern, dafür brauchst du JavaScript). Stelle den Faktor auf 1,05 und vergleiche das
+          Guthaben nach 10 und nach 20 Jahren. Wächst es in den zweiten zehn Jahren um mehr als in den ersten zehn?
+  - type: section
+    id: beispiel
+    title: Was beim Zinseszins passiert
+    blocks:
+      - type: text
+        text: "Wenn du wissen willst, was der Zinseszins bringt, vergleiche ihn mit einfachen Zinsen."
+      - type: example
+        title: 1000 € bei 3 % in drei Jahren
+        blocks:
+          - type: formula
+            formula: '1000 \cdot 1,03 = 1030'
+          - type: formula
+            formula: '1030 \cdot 1,03 = 1060,90'
+          - type: formula
+            formula: '1060,90 \cdot 1,03 = 1092,73'
+          - type: text
+            text: "Kürzer: $1000 \\cdot 1,03^3 = 1092,73$ €. Mit einfachen Zinsen ohne Mitverzinsen wären es nur $1000 + 3 \\cdot 30 = 1090$ €."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: definition
+        term: Zinseszins
+        explanation: Zinsen, die im nächsten Jahr mitverzinst werden. Auf 1000 € bei 3 % sind das nach zwei Jahren 1060,90 € statt 1060 €.
+      - type: single-choice
+        id: zinseszins-idee
+        text: Auf einem Konto liegen 1000 €, die Zinsen bleiben auf dem Konto. Welche Aussage über das zweite Jahr stimmt?
+        options:
+          - text: Die Zinsen sind genauso hoch wie im ersten Jahr.
+            correct: false
+            info: So wäre es ohne Zinseszins. Dann würden die Zinsen nur auf die ersten 1000 € gerechnet.
+          - text: Es gibt Zinsen auf das Guthaben vom Ende des ersten Jahres.
+            correct: true
+            info: Das Guthaben ist nach dem ersten Jahr größer als 1000 €. Auch die Zinsen aus dem ersten Jahr werden verzinst.
+          - text: Der Zinssatz steigt im zweiten Jahr.
+            correct: false
+            info: Der Zinssatz bleibt gleich. Größer wird das Guthaben, auf das er angewendet wird.
+          - text: Das Guthaben wächst um denselben Euro-Betrag wie im ersten Jahr.
+            correct: false
+            info: Der Zuwachs in Euro ist im zweiten Jahr etwas größer, weil das Guthaben größer ist.
+        explanation: Zinseszins heißt, dass jedes Jahr auf das gesamte Guthaben Zinsen gerechnet werden, auch auf die Zinsen der Vorjahre.
+      - type: generated
+        id: zinsen-zweites-jahr
+        given:
+          r: { pick: 1, from: { data: zinseszins } }
+        task:
+          text: "Auf ein Konto werden {{r.k0}} € zu {{r.p}} % pro Jahr angelegt, die Zinsen bleiben auf dem Konto. Wie viel Euro Zinsen gibt es im zweiten Jahr? Runde auf Cent."
+        answer: { value: "r.zinsen2", compare: { number: { format: money } } }
+        mistakes:
+          - {
+              value: "r.zinsen1",
+              message: "Das sind die Zinsen des ersten Jahres, gerechnet auf das Startkapital. Im zweiten Jahr zählt das Guthaben nach dem ersten Jahr.",
+            }
+        hint: "Rechne erst das Guthaben nach dem ersten Jahr aus. Davon sind dann die Zinsen im zweiten Jahr zu berechnen."
+        steps:
+          - "Guthaben nach einem Jahr: {{r.k0}} € mal {{r.q}} sind {{r.jahr1text}} €."
+          - "Zinsen im zweiten Jahr: {{r.jahr1text}} € mal {{r.p}} : 100 sind {{r.zinsen2text}} €."
+      - type: generated
+        id: endkapital
+        given:
+          r: { pick: 1, from: { data: zinseszins } }
+        task:
+          text: "Auf ein Konto werden {{r.k0}} € zu {{r.p}} % pro Jahr angelegt, die Zinsen werden mitverzinst. Wie viel Euro sind es nach {{r.n}} Jahren? Runde auf Cent."
+        answer: { value: "r.ende", compare: { number: { format: money } } }
+        mistakes:
+          - {
+              value: "r.einfach",
+              message: "Du hast die Zinsen jedes Jahr nur auf das Startkapital gerechnet. Beim Zinseszins werden auch die Zinsen verzinst, das Guthaben wird jedes Jahr mit dem Faktor malgenommen.",
+            }
+          - {
+              value: "r.jahr1",
+              message: "Das ist das Guthaben nach einem Jahr. Der Faktor wird so oft malgenommen, wie Jahre vergehen.",
+            }
+        hint: "Rechne Startkapital mal Wachstumsfaktor hoch Jahre. Der Taschenrechner hat dafür eine Potenztaste."
+        steps:
+          - "Wachstumsfaktor: $q = {{r.q}}$"
+          - "$K_{{{r.n}}} = {{r.k0}} \\cdot {{r.q}}^{{{r.n}}}$. Rechne mit dem Taschenrechner und runde nicht zwischendurch."
+          - "Das sind {{r.endetext}} €."
+      - type: true-false
+        id: betrag-oder-faktor
+        text: Beim Zinseszins wächst das Guthaben jedes Jahr um denselben Euro-Betrag.
+        answer: false
+        explanation: Es wächst um denselben Faktor. Der Zuwachs in Euro wird jedes Jahr größer, weil auch die Zinsen verzinst werden.
