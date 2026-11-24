@@ -9,6 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
+          Wenn du entscheiden willst, ob ein Vorgang linear oder exponentiell wächst, musst du wissen, was bei jedem Schritt gleich bleibt: der Betrag oder der Faktor.
+
           Du kannst danach Wachstum und Zerfall mit dem Term $f(x) = a \cdot b^x$ beschreiben und entscheiden, ob ein
           Vorgang linear oder exponentiell ist. Beim Zinseszins hast du den Faktor schon benutzt. Jetzt wird daraus eine
           Funktion mit dem Exponenten $x$.
@@ -18,6 +20,8 @@ blocks:
     blocks:
       - type: text
         text: |
+          Wenn du zwei Entwicklungen vergleichen willst, zeichne beide in dasselbe Bild.
+
           Konto A bekommt jedes Jahr 40 € dazu: $f(x) = 1000 + 40x$ (linear, gestrichelt). Konto B wächst jedes Jahr um
           denselben Faktor $b$: $f(x) = 1000 \cdot b^x$ (exponentiell). Der Regler stellt den Faktor von Konto B ein.
       - type: vue-component
@@ -60,6 +64,8 @@ blocks:
     blocks:
       - type: text
         text: |
+          Wenn etwas abnimmt, zum Beispiel ein Medikament im Körper, ist der Faktor kleiner als 1.
+
           Ist der Faktor $b$ kleiner als 1, nimmt der Wert ab: Das ist **exponentieller Zerfall**. Im Körper wird ein
           Medikament oft in jeder Stunde um denselben Anteil abgebaut. Hier sind 100 mg gegeben. Der Regler stellt
           den Faktor $b$ pro Stunde ein, bei 0,5 halbiert sich die Menge jede Stunde.
@@ -90,6 +96,8 @@ blocks:
     id: beispiel
     title: Linear oder exponentiell?
     blocks:
+      - type: text
+        text: "Wenn du bei einem neuen Vorgang entscheiden musst, welche Art es ist, schau auf die Tabelle: Was bleibt gleich?"
       - type: table
         caption: Zwei Arten zu wachsen
         header: [Art, Was gleich bleibt]

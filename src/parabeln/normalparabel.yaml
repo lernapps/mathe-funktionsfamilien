@@ -9,6 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
+          Wenn du etwas beschreiben willst, das sich krümmt, etwa die Flugbahn eines geworfenen Balls, reicht eine Gerade nicht. Dafür brauchst du Parabeln.
+
           Du kannst danach sagen, was mit der Kurve passiert, wenn du an einer Zahl im Term drehst, und du kannst
           Term und Kurve einander zuordnen. Lineare Funktionen kennst du schon: Term, Tabelle und Graph gehören
           zusammen. Hier kommt eine gebogene Kurve dazu.
@@ -33,6 +35,8 @@ blocks:
     blocks:
       - type: text
         text: |
+          Wenn du eine Parabel verändern willst, ohne sie jedes Mal neu zu zeichnen, hast du drei Zahlen, an denen du drehst.
+
           Der Term $f(x) = a \cdot (x - d)^2 + e$ beschreibt eine ganze Familie von Parabeln: alle Kurven, die du aus
           der Normalparabel machst, indem du die drei Zahlen $a$, $d$ und $e$ änderst. Sie sind die Regler. Wenn du
           einen Regler bewegst, ändern sich der Term, die Tabelle und die Kurve gleichzeitig. Die gestrichelte Kurve
@@ -75,6 +79,8 @@ blocks:
     id: beispiel
     title: Was jeder Regler macht
     blocks:
+      - type: text
+        text: "Wenn du einem Term sofort ansehen willst, wo die Kurve liegt, musst du wissen, was jede der drei Zahlen bewirkt."
       - type: table
         caption: Die drei Regler der Parabel
         header: [Regler, Wirkung, Beispiel]
