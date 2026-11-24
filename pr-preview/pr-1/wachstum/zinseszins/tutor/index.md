@@ -43,6 +43,8 @@ Ein Sparkonto wächst jedes Jahr um denselben Faktor, nicht um denselben Betrag:
 
 ### Was du hier lernst
 
+Wenn du wissen willst, wie viel Geld du nach mehreren Jahren auf dem Konto hast, reicht die Rechnung für ein Jahr nicht mehr.
+
 Du kannst danach das Guthaben auf einem Sparkonto nach mehreren Jahren berechnen, wenn die Zinsen mitverzinst
 werden. Bisher hast du die Zinsen für ein Jahr ausgerechnet. Hier legst du das Geld mehrere Jahre an.
 
@@ -51,6 +53,8 @@ ersten Jahr sind es $1000 \cdot 1,03 = 1030$ €. Wie viel sind es nach dem zwei
 zweiten Jahres gibt es auf 1030 €, nicht auf 1000 €.
 
 ### Jedes Jahr derselbe Faktor
+
+Wenn du das Guthaben für beliebig viele Jahre schnell ausrechnen willst, nutzt du den Wachstumsfaktor.
 
 Bei **Zinseszins** werden die Zinsen im nächsten Jahr mitverzinst. Das Guthaben wird jedes Jahr mit dem
 Wachstumsfaktor $q = 1 + \frac{p}{100}$ malgenommen. Dabei ist $p$ der Zinssatz in Prozent. Nach $n$ Jahren ist es $K_n = K_0 \cdot q^n$. Das
@@ -62,6 +66,8 @@ Interaktiv: Graph des Guthabens $K_n = 1000 \cdot q^n$ in Euro über die Jahre $
 Guthaben nach 10 und nach 20 Jahren. Wächst es in den zweiten zehn Jahren um mehr als in den ersten zehn?
 
 ### Was beim Zinseszins passiert
+
+Wenn du dem Zinseszins nicht traust, vergleiche ihn mit einfachen Zinsen.
 
 **Beispiel: 1000 € bei 3 % in drei Jahren**
 

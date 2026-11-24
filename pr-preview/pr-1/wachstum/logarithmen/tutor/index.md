@@ -43,10 +43,14 @@ Der Logarithmus beantwortet die Frage, wann ein Guthaben doppelt so hoch ist: Er
 
 ### Was du hier lernst
 
+Wenn du wissen willst, wie lange es dauert, bis sich etwas verdoppelt, suchst du einen Exponenten.
+
 Du kannst danach den Logarithmus als Umkehrung des Potenzierens erklären und damit einfache
 Exponentialgleichungen lösen. Die Frage dazu ist: Nach wie vielen Jahren ist mein Guthaben doppelt so hoch?
 
 ### Wann ist es doppelt so viel?
+
+Wenn du den Exponenten $x$ in $q^x = 2$ suchst, kannst du probieren oder rechnen.
 
 Ein Konto mit 1000 € wächst mit dem Faktor $q$ pro Jahr. Es ist doppelt so hoch, wenn $1000 \cdot q^x = 2000$
 ist, also $q^x = 2$. Gesucht ist der Exponent $x$. Probiere ihn zuerst in der Tabelle aus.
@@ -59,6 +63,8 @@ $b^x = y$ gilt. Er ist die Umkehrung des Potenzierens.
 - **Logarithmus**: Der Logarithmus zur Basis b von y ist der Exponent, mit dem man b potenzieren muss, um y zu erhalten. Zum Beispiel ist log zur Basis 2 von 8 gleich 3, denn 2³ = 8.
 
 ### Vom Potenzieren zum Logarithmus
+
+Wenn du die Verdopplungszeit schnell ausrechnen willst, nutzt du den Logarithmus und den Taschenrechner.
 
 **Beispiel: Hin und zurück**
 

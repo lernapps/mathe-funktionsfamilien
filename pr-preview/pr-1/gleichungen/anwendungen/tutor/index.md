@@ -43,11 +43,15 @@ Wurfbahn, Brückenbogen und Zaun: Sachprobleme mit Parabeln lösen, Nullstellen 
 
 ### Was du hier lernst
 
+Wenn du wissen willst, wo ein Ball landet oder wie viel Fläche ein Zaun höchstens umschließt, stellst du eine Parabel auf und fragst nach ihren Nullstellen oder ihrem Scheitel.
+
 Du kannst danach ein Sachproblem mit einer Parabel beschreiben und zwei Fragen beantworten: Wo ist der
 Funktionswert null (zum Beispiel: Wo landet der Ball?) und wo ist er am größten (zum Beispiel: Wie hoch
 fliegt er?). Die erste Frage löst du mit Nullstellen, die zweite mit dem Scheitel.
 
 ### Eine Wurfbahn mit Reglern
+
+Wenn du eine Wurfbahn beschreiben willst, brauchst du den höchsten Punkt: Mit dem Scheitel ist die Parabel festgelegt.
 
 Ein Ball wird geworfen. Seine Höhe $h$ in Metern hängt von der Entfernung $x$ in Metern ab:
 $h(x) = −0,2 \cdot (x - d)^2 + e$. Der Scheitel (d | e) ist der höchste Punkt. Wir halten den Faktor $−0,2$
@@ -59,6 +63,8 @@ Interaktiv: Flugbahn $h(x) = −0,2 \cdot (x - d)^2 + e$ mit Reglern für $d$ (1
 landet dort, wo $h$ wieder null ist. Lies in der Tabelle ab, bei welcher Entfernung das ist.
 
 ### Drei Fragen, drei Wege
+
+Wenn du ein Sachproblem lösen willst, fragst du zuerst: Suche ich eine Stelle, an der der Wert null ist, oder den größten Wert?
 
 **Beispiel: Wo landet der Ball? Nullstelle**
 

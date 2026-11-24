@@ -43,11 +43,15 @@ Ein Punkt läuft auf dem Einheitskreis wie auf einem Riesenrad. Seine Höhe wird
 
 ### Was du hier lernst
 
+Wenn du etwas beschreiben willst, das sich immer wiederholt, etwa die Höhe einer Gondel am Riesenrad, brauchst du eine Funktion, die nach einer Runde wieder von vorn beginnt.
+
 Du kannst danach erklären, woher die Graphen von Sinus und Kosinus kommen, und ihre Eigenschaften nennen:
 Periode, größter und kleinster Wert, Nullstellen. Stell dir ein Riesenrad mit Radius 1 vor. Du sitzt in einer
 Gondel und fährst im Kreis. Wie hoch bist du, wenn das Rad sich um einen Winkel gedreht hat?
 
 ### Vom Kreis zum Graphen
+
+Wenn du sehen willst, woher diese Funktion kommt, folge dem Punkt auf dem Kreis.
 
 Der Kreis mit Radius 1 um den Ursprung heißt **Einheitskreis**. Du startest rechts bei 0°. Der Winkel wächst
 gegen den Uhrzeigersinn. Die **Höhe** des Punkts ist der **Sinus** des Winkels. Trägst du die Höhe über dem
@@ -64,6 +68,8 @@ bei 0° liegt der Punkt ganz rechts.
 Interaktiv: Einheitskreis und Kosinuskurve mit einem Regler für den Winkel. Der Abstand des Punkts von der senkrechten Achse ist der Kosinus. Werte: bei 0° ist er 1, bei 60° (π/3) 0,5, bei 90° (π/2) 0, bei 180° (π) −1, bei 270° (3π/2) 0 und bei 360° (2π) wieder 1.
 
 ### Eigenschaften von Sinus und Kosinus
+
+Wenn du Sinus und Kosinus anwenden willst, musst du ihre Eigenschaften kennen.
 
 Was für beide Funktionen gilt:
 - Eigenschaft | Sinus | Kosinus

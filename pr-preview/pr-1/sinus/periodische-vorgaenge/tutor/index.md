@@ -43,11 +43,15 @@ Amplitude und Periode der Funktion a·sin(b·x) deuten und mit Reglern an eine M
 
 ### Was du hier lernst
 
+Wenn du Gezeiten, ein Riesenrad oder die Tageslänge beschreiben willst, brauchst du eine Funktion, die zu den Messwerten passt.
+
 Du kannst danach einen Vorgang, der sich immer wiederholt, mit $f(x) = a \cdot \sin(b \cdot x)$ beschreiben und
 sagen, was $a$ und $b$ bedeuten. Solche Vorgänge sind die Gezeiten, ein Riesenrad oder die Tageslänge
 über das Jahr. Die Sinuskurve von der Seite davor ist der Anfang.
 
 ### Amplitude und Periode mit Reglern
+
+Wenn eine Kurve nicht zu den Messwerten passt, verstellst du zwei Dinge: wie hoch die Welle ist und wie schnell sie sich wiederholt.
 
 Die Rauten sind (erfundene) Messwerte: der Wasserstand an einer Küste (in Metern über dem mittleren Wasserstand) zu
 verschiedenen Stunden. Mit $a$ und $b$ stellst du die Kurve ein. $a$ heißt **Amplitude**: die größte
@@ -60,6 +64,8 @@ Interaktiv: Graph von $f(x) = a \cdot \sin(b \cdot x)$ mit Reglern für $a$ (0,5
 und tiefsten Rauten getroffen werden. Dann ändere $b$, bis auch die Nullstellen passen.
 
 ### Was a und b bedeuten
+
+Wenn du die Zahlen a und b deuten willst, übersetze sie in Meter und Stunden.
 
 **Beispiel: Wasserstand mit a = 1,5 und b = 0,5**
 

@@ -43,11 +43,15 @@ Weitere Mitglieder der Funktionsfamilie: Potenzfunktionen x³, x⁴, die Kehrwer
 
 ### Was du hier lernst
 
+Wenn du Zusammenhänge beschreiben willst, die nicht wie eine Parabel verlaufen, etwa das Volumen eines Würfels oder eine Größe, die kleiner wird, wenn die andere wächst, brauchst du weitere Funktionen der Familie.
+
 Du kannst danach sagen, wie die Graphen von $x^3$, $x^4$, $1 : x$ und $\sqrt{x}$ aussehen und für welche
 $x$ sie definiert sind. **Definiert** heißt: Du kannst den Funktionswert ausrechnen. Die Normalparabel $x^2$ kennst du schon. Sie ist die Potenzfunktion mit Exponent 2.
 Jetzt bewegst du den Exponenten selbst.
 
 ### Der Exponent als Regler
+
+Wenn du wissen willst, was der Exponent mit der Kurve macht, bewege ihn.
 
 Eine **Potenzfunktion** hat den Term $f(x) = a \cdot x^n$ mit einer natürlichen Zahl $n \ge 1$. Der Regler $n$ ist der
 Exponent, der Regler $a$ streckt und spiegelt wie bei der Parabel. Term, Tabelle und Graph gehören wieder
@@ -60,6 +64,8 @@ Was ist bei geraden und ungeraden Zahlen anders? Schau auf die Tabelle bei $x = 
 
 ### Kehrwert und Wurzel
 
+Wenn du Funktionen benutzen willst, die für manche Zahlen keinen Wert haben, musst du wissen, wo sie definiert sind.
+
 Zwei weitere Mitglieder haben eine Lücke: Bei $f(x) = a : x$ darfst du nicht durch null teilen, bei
 $f(x) = a \cdot \sqrt{x}$ darfst du keine negative Zahl unter die Wurzel schreiben. Die Tabelle zeigt dort
 „nicht definiert“.
@@ -69,6 +75,8 @@ Interaktiv: Graph der Kehrwertfunktion $f(x) = a : x$ mit Regler für $a$. Beim 
 Interaktiv: Graph der Wurzelfunktion $f(x) = a \cdot \sqrt{x}$ mit Regler für $a$. Beim Start ist $a = 1$: Werte (−1 | nicht definiert), (0 | 0), (1 | 1), (4 | 2), (9 | 3). Der Graph beginnt im Ursprung und steigt nach rechts immer langsamer.
 
 ### Die Familie im Überblick
+
+Wenn du vier Funktionen auseinanderhalten willst, hilft ein Blick darauf, wofür sie definiert sind und wie sie verlaufen.
 
 Vier Mitglieder der Funktionsfamilie:
 - Funktion | Definiert für | Verlauf

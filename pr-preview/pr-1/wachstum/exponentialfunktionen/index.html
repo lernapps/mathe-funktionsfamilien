@@ -35,16 +35,18 @@
 <nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#modell">Zwei Konten um die Wette</a></li><li><a href="#zerfall">Zerfall: Ein Medikament wird abgebaut</a></li><li><a href="#beispiel">Linear oder exponentiell?</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
 <section class="explainer-section">
 <h2 id="einstieg">Was du hier lernst</h2>
-<div class="explainer-block" data-block="einstieg/1" data-block-id="e68dcb14" data-block-type="text" data-block-order="1">
-<div class="block-text"><p>Du kannst danach Wachstum und Zerfall mit dem Term <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mi>a</mi><mo>⋅</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></math> beschreiben und entscheiden, ob ein
+<div class="explainer-block" data-block="einstieg/1" data-block-id="fbc930fa" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du entscheiden willst, ob ein Vorgang linear oder exponentiell wächst, musst du wissen, was bei jedem Schritt gleich bleibt: der Betrag oder der Faktor.</p>
+<p>Du kannst danach Wachstum und Zerfall mit dem Term <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mi>a</mi><mo>⋅</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></math> beschreiben und entscheiden, ob ein
 Vorgang linear oder exponentiell ist. Beim Zinseszins hast du den Faktor schon benutzt. Jetzt wird daraus eine
 Funktion mit dem Exponenten <math><mi>x</mi></math>.</p></div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="modell">Zwei Konten um die Wette</h2>
-<div class="explainer-block" data-block="modell/1" data-block-id="c16d9823" data-block-type="text" data-block-order="2">
-<div class="block-text"><p>Konto A bekommt jedes Jahr 40 € dazu: <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>1000</mn><mo>+</mo><mn>40</mn><mi>x</mi></mrow></math> (linear, gestrichelt). Konto B wächst jedes Jahr um
+<div class="explainer-block" data-block="modell/1" data-block-id="479fec86" data-block-type="text" data-block-order="2">
+<div class="block-text"><p>Wenn du zwei Entwicklungen vergleichen willst, zeichne beide in dasselbe Bild.</p>
+<p>Konto A bekommt jedes Jahr 40 € dazu: <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>1000</mn><mo>+</mo><mn>40</mn><mi>x</mi></mrow></math> (linear, gestrichelt). Konto B wächst jedes Jahr um
 denselben Faktor <math><mi>b</mi></math>: <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mn>1000</mn><mo>⋅</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></math> (exponentiell). Der Regler stellt den Faktor von Konto B ein.</p></div>
 </div>
 <div class="explainer-block" data-block="modell/2" data-block-id="f1f2da34" data-block-type="vue-component" data-block-order="3">
@@ -63,8 +65,9 @@ und 1400; 1806,11 und 1800; 2427,26 und 2200; 3262,04 und 2600. Zuerst liegt Kon
 </section>
 <section class="explainer-section">
 <h2 id="zerfall">Zerfall: Ein Medikament wird abgebaut</h2>
-<div class="explainer-block" data-block="zerfall/1" data-block-id="d7ea1258" data-block-type="text" data-block-order="5">
-<div class="block-text"><p>Ist der Faktor <math><mi>b</mi></math> kleiner als 1, nimmt der Wert ab: Das ist <strong>exponentieller Zerfall</strong>. Im Körper wird ein
+<div class="explainer-block" data-block="zerfall/1" data-block-id="b790b58e" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn etwas abnimmt, zum Beispiel ein Medikament im Körper, ist der Faktor kleiner als 1.</p>
+<p>Ist der Faktor <math><mi>b</mi></math> kleiner als 1, nimmt der Wert ab: Das ist <strong>exponentieller Zerfall</strong>. Im Körper wird ein
 Medikament oft in jeder Stunde um denselben Anteil abgebaut. Hier sind 100 mg gegeben. Der Regler stellt
 den Faktor <math><mi>b</mi></math> pro Stunde ein, bei 0,5 halbiert sich die Menge jede Stunde.</p></div>
 </div>
@@ -80,25 +83,28 @@ fällt immer flacher und erreicht die Null nie.</p></div>
 </section>
 <section class="explainer-section">
 <h2 id="beispiel">Linear oder exponentiell?</h2>
-<div class="explainer-block" data-block="beispiel/1" data-block-id="baf3a84f" data-block-type="table" data-block-order="7">
+<div class="explainer-block" data-block="beispiel/1" data-block-id="e282e4c7" data-block-type="text" data-block-order="7">
+<div class="block-text"><p>Wenn du bei einem neuen Vorgang entscheiden musst, welche Art es ist, schau auf die Tabelle: Was bleibt gleich?</p></div>
+</div>
+<div class="explainer-block" data-block="beispiel/2" data-block-id="baf3a84f" data-block-type="table" data-block-order="8">
 <div class="block-table" role="region" aria-label="Zwei Arten zu wachsen" tabindex="0"><table><caption>Zwei Arten zu wachsen</caption><thead><tr><th scope="col">Art</th><th scope="col">Was gleich bleibt</th></tr></thead><tbody><tr><td>linear</td><td>Zuwachs je Schritt</td></tr><tr><td>exponentiell</td><td>Faktor je Schritt</td></tr></tbody></table></div>
 </div>
-<div class="explainer-block" data-block="beispiel/2" data-block-id="de292e62" data-block-type="formula" data-block-order="8">
+<div class="explainer-block" data-block="beispiel/3" data-block-id="de292e62" data-block-type="formula" data-block-order="9">
 <div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mi>c</mi><mo>+</mo><mi>m</mi><mo>⋅</mo><mi>x</mi><mspace width="1em"></mspace><mtext>(linear)</mtext></mrow></math></div>
 </div>
-<div class="explainer-block" data-block="beispiel/3" data-block-id="935c53c4" data-block-type="formula" data-block-order="9">
+<div class="explainer-block" data-block="beispiel/4" data-block-id="935c53c4" data-block-type="formula" data-block-order="10">
 <div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mi>a</mi><mo>⋅</mo><msup><mi>b</mi><mi>x</mi></msup><mspace width="1em"></mspace><mtext>(exponentiell)</mtext></mrow></math></div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="uebung">Übung</h2>
-<div class="explainer-block" data-block="uebung/1" data-block-id="439b181f" data-block-type="definition" data-block-order="10">
+<div class="explainer-block" data-block="uebung/1" data-block-id="439b181f" data-block-type="definition" data-block-order="11">
 <dl class="explainer-definition"><dt><dfn id="begriff-exponentieller-zerfall"><a href="../../glossar/#exponentieller-zerfall">Exponentieller Zerfall</a></dfn></dt><dd><p>Abnahme, bei der der Wert in gleichen Schritten mit demselben Faktor zwischen 0 und 1 malgenommen wird, etwa 0,5 für eine Halbierung.</p></dd></dl>
 </div>
-<div class="explainer-block" data-block="uebung/2" data-block-id="595b6b27" data-block-type="definition" data-block-order="11">
+<div class="explainer-block" data-block="uebung/2" data-block-id="595b6b27" data-block-type="definition" data-block-order="12">
 <dl class="explainer-definition"><dt><dfn id="begriff-exponentialfunktion"><a href="../../glossar/#exponentialfunktion">Exponentialfunktion</a></dfn></dt><dd><p>Eine Funktion der Form <math><mrow><mi>f</mi><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mo>=</mo><mi>a</mi><mo>⋅</mo><msup><mi>b</mi><mi>x</mi></msup></mrow></math> mit <math><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow></math> und <math><mrow><mi>b</mi><mo>≠</mo><mn>1</mn></mrow></math>. Der Wert wird bei jedem Schritt mit dem Faktor <math><mi>b</mi></math> malgenommen.</p></dd></dl>
 </div>
-<div class="explainer-block" data-block="uebung/3" data-block-id="c12c67e4" data-block-type="multiple-choice" data-block-order="12">
+<div class="explainer-block" data-block="uebung/3" data-block-id="c12c67e4" data-block-type="multiple-choice" data-block-order="13">
 <div class="explainer-exercise explainer-question" id="wachstum-erkennen">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="question" id="frage-wachstum-erkennen" data-id="wachstum-erkennen" data-type="multiple-choice">
@@ -135,7 +141,7 @@ fällt immer flacher und erreicht die Null nie.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"wachstum-erkennen","text":"Welche Terme beschreiben exponentielles Wachstum? Wähle alle richtigen.","explanation":"Exponentielles Wachstum hat die Form a · bˣ mit b größer als 1, Zerfall mit b zwischen 0 und 1.","links":[],"type":"multiple-choice","options":[{"text":"80 · 2ˣ","correct":true,"info":"Der Wert verdoppelt sich bei jedem Schritt, der Faktor 2 ist größer als 1."},{"text":"1000 · 0,95ˣ","correct":false,"info":"Der Faktor 0,95 ist kleiner als 1. Das ist Zerfall, der Wert nimmt ab."},{"text":"1000 + 50x","correct":false,"info":"Hier kommt bei jedem Schritt derselbe Betrag dazu. Das ist linear."},{"text":"1000 · 1,05ˣ","correct":true,"info":"Der Faktor 1,05 ist größer als 1, der Wert wächst jedes Mal um 5 %."}]},"rendered":{}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/4" data-block-id="793a6f8f" data-block-type="generated" data-block-order="13">
+<div class="explainer-block" data-block="uebung/4" data-block-id="793a6f8f" data-block-type="generated" data-block-order="14">
 <div class="explainer-exercise explainer-generated" id="funktionswert">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="explainer-live" hidden></div>
@@ -146,7 +152,7 @@ fällt immer flacher und erreicht die Null nie.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"funktionswert","given":{"r":{"pick":1,"from":{"data":"exponentiell"}}},"task":{"text":"Gegeben ist $f(x) = {{r.a}} \\cdot {{r.b}}^x$. Berechne $f({{r.n}})$."},"answer":{"value":"r.w","compare":{"number":{"format":"integer"}}},"mistakes":[{"value":"r.mal","message":"Du hast {{r.b}} mit dem Exponenten multipliziert statt potenziert. Der Exponent sagt, wie oft der Faktor {{r.b}} vorkommt."},{"value":"r.vorher","message":"Du hast einen Faktor zu wenig genommen: Beim Exponenten {{r.n}} kommt der Faktor {{r.n}}-mal vor."}],"hint":"Rechne erst die Potenz, dann mal die Zahl vor der Potenz.","steps":["$f({{r.n}}) = {{r.a}} \\cdot {{r.b}}^{{{r.n}}}$","Die Potenz mal {{r.a}} ergibt {{answer}}."]},"templates":{"de":{"task":"Gegeben ist \u003cmath>\u003cmrow>\u003cmi>f\u003c/mi>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"false\">(\u003c/mo>\u003cmi>x\u003c/mi>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"false\">)\u003c/mo>\u003c/mrow>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003cmi>x\u003c/mi>\u003c/msup>\u003c/mrow>\u003c/math>. Berechne \u003cmath>\u003cmrow>\u003cmi>f\u003c/mi>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"false\">(\u003c/mo>\u003cmtext>⟦r.n⟧\u003c/mtext>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"false\">)\u003c/mo>\u003c/mrow>\u003c/mrow>\u003c/math>.","steps":["\u003cmath>\u003cmrow>\u003cmi>f\u003c/mi>\u003cmrow>\u003cmo fence=\"true\" form=\"prefix\" stretchy=\"false\">(\u003c/mo>\u003cmtext>⟦r.n⟧\u003c/mtext>\u003cmo fence=\"true\" form=\"postfix\" stretchy=\"false\">)\u003c/mo>\u003c/mrow>\u003cmo>=\u003c/mo>\u003cmtext>⟦r.a⟧\u003c/mtext>\u003cmo>⋅\u003c/mo>\u003cmsup>\u003cmtext>⟦r.b⟧\u003c/mtext>\u003cmtext>⟦r.n⟧\u003c/mtext>\u003c/msup>\u003c/mrow>\u003c/math>","Die Potenz mal ⟦r.a⟧ ergibt ⟦answer⟧."],"hint":"Rechne erst die Potenz, dann mal die Zahl vor der Potenz.","messages":["Du hast ⟦r.b⟧ mit dem Exponenten multipliziert statt potenziert. Der Exponent sagt, wie oft der Faktor ⟦r.b⟧ vorkommt.","Du hast einen Faktor zu wenig genommen: Beim Exponenten ⟦r.n⟧ kommt der Faktor ⟦r.n⟧-mal vor."]}},"data":{"exponentiell":[{"a":100,"b":3,"n":4,"w":8100,"vorher":2700,"mal":1200},{"a":50,"b":3,"n":4,"w":4050,"vorher":1350,"mal":600},{"a":100,"b":2,"n":3,"w":800,"vorher":400,"mal":600},{"a":200,"b":2,"n":3,"w":1600,"vorher":800,"mal":1200},{"a":50,"b":2,"n":5,"w":1600,"vorher":800,"mal":500},{"a":100,"b":2,"n":5,"w":3200,"vorher":1600,"mal":1000}]},"seeds":[1,2,5,7,9,10],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/5" data-block-id="f923a63a" data-block-type="generated" data-block-order="14">
+<div class="explainer-block" data-block="uebung/5" data-block-id="f923a63a" data-block-type="generated" data-block-order="15">
 <div class="explainer-exercise explainer-generated" id="medikament">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="explainer-live" hidden></div>
@@ -157,7 +163,7 @@ fällt immer flacher und erreicht die Null nie.</p></div>
 <script type="application/json" class="explainer-exercise-data">{"kind":"generated","lang":"de","spec":{"type":"generated","id":"medikament","given":{"m":{"oneOf":[80,160,200]},"h":{"int":[2,4]}},"task":{"text":"Von einem Medikament sind {{m}} mg im Körper. Jede Stunde wird die Menge halbiert. Wie viel mg sind es nach {{h}} Stunden?"},"answer":{"value":"m / pow(2, h)","compare":{"number":{"format":"decimal","decimals":2}}},"mistakes":[{"value":"m / 2","message":"Das ist die Menge nach nur einer Stunde. Es wird nach jeder Stunde wieder halbiert, hier {{h}}-mal."}],"hint":"Halbieren heißt: mal 0,5. Das passiert in jeder Stunde, also {{h}}-mal.","steps":["Die Menge wird {{h}}-mal halbiert: $m \\cdot 0,5^{{{h}}}$.","Das Ergebnis ist {{answer}} mg."]},"templates":{"de":{"task":"Von einem Medikament sind ⟦m⟧ mg im Körper. Jede Stunde wird die Menge halbiert. Wie viel mg sind es nach ⟦h⟧ Stunden?","steps":["Die Menge wird ⟦h⟧-mal halbiert: \u003cmath>\u003cmrow>\u003cmi>m\u003c/mi>\u003cmo>⋅\u003c/mo>\u003cmn>0\u003c/mn>\u003cmo separator=\"true\">,\u003c/mo>\u003cmsup>\u003cmn>5\u003c/mn>\u003cmtext>⟦h⟧\u003c/mtext>\u003c/msup>\u003c/mrow>\u003c/math>.","Das Ergebnis ist ⟦answer⟧ mg."],"hint":"Halbieren heißt: mal 0,5. Das passiert in jeder Stunde, also ⟦h⟧-mal.","messages":["Das ist die Menge nach nur einer Stunde. Es wird nach jeder Stunde wieder halbiert, hier ⟦h⟧-mal."]}},"data":{},"seeds":[1,2,3,4,5,6,7,10,26],"texts":{"newTask":"Neue Aufgabe","practice":"Übe selbst, mit immer neuen Aufgaben:","hint":"Tipp","solution":"Lösung","taskNumber":"Aufgabe Nr. {n}"}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="uebung/6" data-block-id="aa61cdf0" data-block-type="true-false" data-block-order="15">
+<div class="explainer-block" data-block="uebung/6" data-block-id="aa61cdf0" data-block-type="true-false" data-block-order="16">
 <div class="explainer-exercise explainer-question" id="gleicher-faktor">
 <p class="explainer-exercise-label">Aufgabe</p>
 <div class="question" id="frage-gleicher-faktor" data-id="gleicher-faktor" data-type="true-false">
@@ -221,7 +227,7 @@ fällt immer flacher und erreicht die Null nie.</p></div>
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"4358339","page":{"title":"Exponentialfunktionen","order":10}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"880797b","page":{"title":"Exponentialfunktionen","order":10}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../wachstum/zinseszins/">Zurück: Zinseszins</a><a rel="next" href="../../wachstum/logarithmen/">Weiter: Logarithmen</a></nav>

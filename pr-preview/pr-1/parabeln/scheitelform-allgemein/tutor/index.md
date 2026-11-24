@@ -43,11 +43,15 @@ Zwei Terme für dieselbe Parabel: Die Scheitelform zeigt den Scheitel, die allge
 
 ### Was du hier lernst
 
+Wenn du eine Parabel zeichnen oder mit einem anderen Term vergleichen willst, begegnet sie dir in zwei Formen. Du brauchst beide, weil jede etwas anderes zeigt.
+
 Du kannst danach eine Parabel in zwei Formen schreiben und die eine in die andere umrechnen. Auf der Seite
 vorher hast du die Scheitelform $f(x) = a \cdot (x - d)^2 + e$ mit Reglern bewegt. Hier siehst du, wie
 derselbe Graph aussieht, wenn du die Klammer ausmultiplizierst.
 
 ### Eine Kurve, zwei Terme
+
+Wenn du wissen willst, was die beiden Formen verraten, schau auf den Scheitel und auf den Schnittpunkt mit der y-Achse.
 
 Die **Scheitelform** $a \cdot (x - d)^2 + e$ verrät den Scheitel (d | e). Die **allgemeine Form**
 $a x^2 + b x + c$ entsteht durch Ausmultiplizieren. Dort ist $c$ der Wert bei $x = 0$, also der
@@ -59,6 +63,8 @@ Interaktiv: Graph mit Reglern für die Scheitelform $f(x) = a \cdot (x - d)^2 + 
 ausgerechnete Form am Ende $x^2 - 4x + 7$ heißt. Welche Werte haben $d$ und $e$?
 
 ### Hin und zurück rechnen
+
+Wenn dir ein Term in der Form gegeben ist, die du gerade nicht brauchst, rechnest du ihn um. Das geht in beide Richtungen.
 
 **Beispiel: Von der Scheitelform zur allgemeinen Form**
 

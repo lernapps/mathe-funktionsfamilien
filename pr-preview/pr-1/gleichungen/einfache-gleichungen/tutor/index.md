@@ -43,6 +43,8 @@ Lösungen einer quadratischen Gleichung sind die Nullstellen der Parabel. Drei e
 
 ### Was du hier lernst
 
+Eine Gleichung mit einem x² begegnet dir, sobald du wissen willst, wo ein Ball landet oder wo eine Brücke den Boden berührt.
+
 Du kannst danach einfache quadratische Gleichungen lösen und sagen, was ihre Lösungen am Graphen bedeuten.
 Bei einer **quadratischen Gleichung** kommt $x$ höchstens in der zweiten Potenz vor, und $x^2$ kommt wirklich vor, zum Beispiel $x^2 - 9 = 0$. Ihre
 Lösungen sind die **Nullstellen** der Parabel: die Stellen, an denen der Graph die x-Achse schneidet.
@@ -50,6 +52,8 @@ Lösungen sind die **Nullstellen** der Parabel: die Stellen, an denen der Graph 
 - **Nullstelle**: Eine Zahl $x$, für die der Funktionswert $f(x)$ gleich 0 ist. Am Graphen ist es ein Schnittpunkt mit der x-Achse.
 
 ### Nullstellen am Graphen
+
+Wenn du sehen willst, wie viele Lösungen eine Gleichung hat, schau auf den Graphen.
 
 Der Graph zeigt $f(x) = x^2 + e$. Mit dem Regler $e$ schiebst du die Parabel nach oben und unten. Die
 Gleichung $x^2 + e = 0$ ist gelöst, wo die Kurve die x-Achse berührt oder schneidet. Es können zwei, eine
@@ -61,6 +65,8 @@ Interaktiv: Graph von $f(x) = x^2 + e$ mit Regler für $e$ von −9 bis 4. Beim 
 Nullstelle gibt, dann so, dass es keine gibt. Lies bei $e = −9$ die beiden Nullstellen ab.
 
 ### Drei Wege
+
+Wenn du wissen willst, wo eine Parabel die x-Achse schneidet, suchst du eine Nullstelle. Alle drei Wege haben gemeinsam, dass man überlegt, wann eine Seite der Gleichung null werden kann.
 
 **Beispiel: Wurzelziehen**
 

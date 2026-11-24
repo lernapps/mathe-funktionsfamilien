@@ -43,11 +43,15 @@ Lineares und exponentielles Wachstum laufen um die Wette; dazu der Zerfall, etwa
 
 ### Was du hier lernst
 
+Wenn du entscheiden willst, ob ein Vorgang linear oder exponentiell wächst, musst du wissen, was bei jedem Schritt gleich bleibt: der Betrag oder der Faktor.
+
 Du kannst danach Wachstum und Zerfall mit dem Term $f(x) = a \cdot b^x$ beschreiben und entscheiden, ob ein
 Vorgang linear oder exponentiell ist. Beim Zinseszins hast du den Faktor schon benutzt. Jetzt wird daraus eine
 Funktion mit dem Exponenten $x$.
 
 ### Zwei Konten um die Wette
+
+Wenn du zwei Entwicklungen vergleichen willst, zeichne beide in dasselbe Bild.
 
 Konto A bekommt jedes Jahr 40 € dazu: $f(x) = 1000 + 40x$ (linear, gestrichelt). Konto B wächst jedes Jahr um
 denselben Faktor $b$: $f(x) = 1000 \cdot b^x$ (exponentiell). Der Regler stellt den Faktor von Konto B ein.
@@ -58,6 +62,8 @@ Interaktiv: Graphen von Konto A (linear, $1000 + 40x$) und Konto B (exponentiell
 
 ### Zerfall: Ein Medikament wird abgebaut
 
+Wenn etwas abnimmt, zum Beispiel ein Medikament im Körper, ist der Faktor kleiner als 1.
+
 Ist der Faktor $b$ kleiner als 1, nimmt der Wert ab: Das ist **exponentieller Zerfall**. Im Körper wird ein
 Medikament oft in jeder Stunde um denselben Anteil abgebaut. Hier sind 100 mg gegeben. Der Regler stellt
 den Faktor $b$ pro Stunde ein, bei 0,5 halbiert sich die Menge jede Stunde.
@@ -65,6 +71,8 @@ den Faktor $b$ pro Stunde ein, bei 0,5 halbiert sich die Menge jede Stunde.
 Interaktiv: Graph der Menge $f(x) = 100 \cdot b^x$ in Milligramm über die Stunden, mit Regler für $b$ von 0,5 bis 0,95. Beim Start ist $b = 0,5$: nach 0, 1, 2, 4, 8 und 12 Stunden bleiben 100, 50, 25, 6,25, 0,39 und 0,02 mg. Die Kurve fällt immer flacher und erreicht die Null nie.
 
 ### Linear oder exponentiell?
+
+Wenn du bei einem neuen Vorgang entscheiden musst, welche Art es ist, schau auf die Tabelle: Was bleibt gleich?
 
 Zwei Arten zu wachsen:
 - Art | Was gleich bleibt

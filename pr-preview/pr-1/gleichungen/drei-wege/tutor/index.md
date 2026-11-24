@@ -43,10 +43,14 @@ Quadratische Gleichungen am Graphen, mit einer Wertetabelle und mit Rechnung lö
 
 ### Was du hier lernst
 
+Wenn eine quadratische Gleichung nicht auf den ersten Blick einfach ist, etwa x² + 6x − 7 = 0, brauchst du ein Verfahren, das immer funktioniert.
+
 Du kannst danach jede quadratische Gleichung in der Normalform $x^2 + px + q = 0$ lösen und vorher sagen, ob sie zwei, eine
 oder keine Lösung hat. Dafür gehst du drei Wege: am Graphen, mit einer Wertetabelle und durch Rechnen.
 
 ### Zwei, eine oder keine Lösung
+
+Wenn du schon vor dem Rechnen wissen willst, ob es sich lohnt, schau, wie die Parabel zur x-Achse liegt.
 
 Die Lösungen von $f(x) = 0$ sind die Nullstellen der Parabel. Verschiebe sie mit den Reglern und
 achte darauf, wie oft sie die x-Achse trifft.
@@ -57,6 +61,8 @@ Der Scheitel liegt bei (d | e). Eine nach oben geöffnete Parabel hat zwei Nulls
 unter der x-Achse liegt, eine, wenn er darauf liegt, und keine, wenn er darüber liegt.
 
 ### Quadratische Ergänzung
+
+Wenn ein Term wie x² + 6x kein fertiges Quadrat ist, kannst du ihn mit einer Ergänzung dazu machen. Das ist der Weg zur Lösung.
 
 Die **quadratische Ergänzung** macht aus $x^2 + 6x$ ein Quadrat. Im Rechteckmodell ist $x^2$ ein Quadrat und
 $6x$ besteht aus zwei Rechtecken mit den Seiten $x$ und 3. Zum großen Quadrat fehlt noch die Ecke $3 \cdot 3 = 9$.
@@ -83,6 +89,8 @@ Dann ziehst du die Wurzel, $x + 3 = 4$ oder $x + 3 = −4$, also $x = 1$ oder $x
 
 ### Die Lösungsformel
 
+Wenn du nicht jedes Mal neu ergänzen willst, rechne die Ergänzung einmal allgemein durch. Das Ergebnis ist die Lösungsformel.
+
 Wenn du die quadratische Ergänzung allgemein für $x^2 + px + q = 0$ machst, entsteht die **Lösungsformel**
 (auch p-q-Formel genannt):
 
@@ -96,6 +104,8 @@ Lösungen, bei $D = 0$ eine und bei $D < 0$ keine, denn aus einer negativen Zahl
 - **Diskriminante**: Der Term unter der Wurzel der Lösungsformel. Sein Vorzeichen entscheidet, ob es zwei, eine oder keine Lösung gibt.
 
 ### Dieselbe Gleichung auf drei Wegen
+
+Wenn du sicher sein willst, dass dein Ergebnis stimmt, prüfst du es auf einem zweiten Weg.
 
 **Beispiel: x² − 6x + 5 = 0**
 
