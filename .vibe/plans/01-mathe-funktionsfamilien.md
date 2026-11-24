@@ -303,14 +303,15 @@ Nach diesem Lauf geändert (nicht erneut geprüft): die genannten Textumformunge
 - [x] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
 - [x] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
-- [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
+- [x] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
       whether it may go online. Stop and wait for the yes.
-- [ ] Load skill `lernapps-commit`. Publish as skill `lernapps-github` says: `work` into `main` as one squash commit,
+      Creator: Der Mensch hat die Veröffentlichung freigegeben (PR gemergt).
+- [x] Load skill `lernapps-commit`. Publish as skill `lernapps-github` says: `work` into `main` as one squash commit,
       the run of `Pages` watched to its end.
-- [ ] Open the address the job `deploy` printed and confirm that the app shows. Never use a derived address.
-- [ ] Load skill `lernapps-listing`. Write the entry under "Entry draft" as it says, with the creator's answer to
+- [x] Open the address the job `deploy` printed and confirm that the app shows. Never use a derived address.
+- [x] Load skill `lernapps-listing`. Write the entry under "Entry draft" as it says, with the creator's answer to
       "Finding the app".
-- [ ] Fill the retrospective.
+- [x] Fill the retrospective.
 - [ ] Commit this plan on `main` and push it: the listing check and the review read it there.
 - [ ] **Checkpoint:** list. Open the listing pull request as skill `lernapps-listing` says, without asking first: the
       pull request is the review. See it to "bestanden", then show the creator the pull request and its result.
@@ -318,24 +319,44 @@ Nach diesem Lauf geändert (nicht erneut geprüft): die genannten Textumformunge
 
 ### Entry draft
 
-<!-- YAML valid against the entry schema the listing skill names. Only known values, never invented. -->
+Adresse bestätigt (Job `deploy`: „published at http://lernapps.net/mathe-funktionsfamilien/“, beide Schreibweisen liefern 200; der Eintrag verlangt https). Der Listing-PR wird auf Anweisung des Orchestrators nicht von dieser Session geöffnet; den Katalog entscheidet der Mensch.
 
 ```yaml
+# yaml-language-server: $schema=https://lernapps.net/apps/schemas/entry.v1.schema.json
+title: Funktionsfamilien mit Schiebereglern
+subject: mathematik
+grades: [9, 10]
+summary: >-
+  Parabeln, Wachstum und Sinuskurven mit Reglern verschieben, strecken und spiegeln.
+  Quadratische Gleichungen am Graphen, mit Tabelle und durch Rechnen lösen, mit sofortiger Rückmeldung.
+url: https://lernapps.net/mathe-funktionsfamilien/
+keywords: [Funktionsfamilien, Parabel, quadratische Gleichungen, Zinseszins, Exponentialfunktion, Logarithmus, Sinusfunktion]
+strand: mathematik/algebra
+creator: { name: "lernapps", url: "https://github.com/lernapps" }
+source: https://github.com/lernapps/mathe-funktionsfamilien
+commit: 3b8ef728cefc87d047da8e57356c74a863f86d38
+fitness:
+  account: false
+  install: false
+  storage: device
+  thirdParty: none
+  thirdPartyNote: ""
+  checked: false
 ```
+
+Offen für den Menschen: Name der Urheberin oder des Urhebers in `creator` (bisher „lernapps“ als Annahme); `commit` ist der Squash-Commit des Merges, nach weiteren Änderungen an `main` neu setzen.
 
 ## Retrospective
 
-<!-- At the end of Commit, before the listing pull request. Facts, short, no names. Read by review and evals. -->
-
 ### Phases reached
-
-<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+Commit; Recherche, Plan, Musterseite und Veröffentlichen bestätigt (vom Orchestrator in Vertretung, die Freigabe zum Merge vom Menschen). Zwei Lernenden-Prüfer- und zwei fachliche Läufe, eine Runde nach dem Review des Menschen (Update auf app-templates 0.19.0). Vorschau-PR grün und gemergt, Pages-Lauf auf `main` erfolgreich, Adresse bestätigt. Der Eintrag in den Katalog ist entworfen, nicht geöffnet.
 
 ### Creator turns after the plan
-
-<!-- Number of creator messages after the confirmation, topic of each. Target: at most 3. -->
+Keine eigenen Rückfragen der Session nach dem Plan; Antworten des Orchestrators: Musterseite angenommen (mit Nachbesserung: Textalternative der Zielkurve), Veröffentlichen; vom Menschen über den Orchestrator: Review der Vorschauen, drei allgemeine Anmerkungen (Wiederholungen nur in Recaps, erst das Wozu, Knöpfe mit Wirkung und Gestaltung), Merge. Danach: Adresse prüfen, Eintrag und Retrospektive schreiben.
 
 ### Where I had to guess
-
-<!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
-
+- Die Fehlertypen der Rückmeldungen (Vorzeichen der Verschiebung, Faktor statt Zinssatz u. a.) aus eigener Erfahrung, nicht aus einer Quelle.
+- Ein Recap je Kapitel mit zwei Übungen; Kapitelzuschnitt (15 Seiten) und Wertebereiche der Regler.
+- Name der Urheberin oder des Urhebers im Eintrag („lernapps“); Hessischer Lehrplan und KMK-Standards nicht geöffnet.
+- Formeln in Rückmeldungen (`a/b`, π/6 im Aufgabentext) weil die Laufzeit dort keine Formeln setzt; Optionen von Auswahlaufgaben als Unicode statt Formel.
+- Ein Hook-Befund: `lint-staged` brach bei der Umstellung von Dateien auf Verknüpfungen am selben Pfad ab; ich habe die Verknüpfungen für einen Commit beiseitegelegt und danach committet (kein `--no-verify`).
