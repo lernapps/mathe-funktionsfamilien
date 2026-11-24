@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="module" crossorigin src="../../assets/index-0b1Xp4Kp.js"></script>
+    <script type="module" crossorigin src="../../assets/index-C7yglwom.js"></script>
     <link rel="modulepreload" crossorigin href="../../assets/tasks-DADUYy52-D5IfZDbd.js">
-    <link rel="stylesheet" crossorigin href="../../assets/index-BKgMJ1l0.css">
+    <link rel="stylesheet" crossorigin href="../../assets/index-CieAblO6.css">
     <title>Quadratische Gleichungen auf drei Wegen – Funktionsfamilien mit Schiebereglern</title>
     <meta name="description" content="Quadratische Gleichungen am Graphen, mit einer Wertetabelle und mit Rechnung lösen: quadratische Ergänzung und Lösungsformel, und wie viele Lösungen es gibt." />
     <meta name="lernapps-archetype" content="explainer" />
     <link rel="alternate" hreflang="de" href="../../gleichungen/drei-wege/" />
-    <script type="module" crossorigin src="../../assets/islands-B0nt3RuL.js"></script>
+    <script type="module" crossorigin src="../../assets/islands-CocctdY6.js"></script>
     <meta name="robots" content="noindex" />
   </head>
   <body>
@@ -32,7 +32,6 @@
 <script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧gleichungen/drei-wege/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"drei-wege","title":"Quadratische Gleichungen auf drei Wegen","exercises":[{"id":"ergaenzung-zahl","section":"uebung","numbered":false},{"id":"formel-anwenden","section":"uebung","numbered":true},{"id":"anzahl-loesungen","section":"uebung","numbered":true},{"id":"ergaenzung-schritte","section":"uebung","numbered":false},{"id":"negative-diskriminante","section":"uebung","numbered":false},{"id":"wege-vergleichen","section":"uebung","numbered":false}],"sections":["einstieg","modell","ergaenzung","formel","beispiel","uebung"]},"tutor":"gleichungen/drei-wege/tutor/","markdown":"gleichungen/drei-wege/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
 </div>
 </div>
-
 <nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#modell">Zwei, eine oder keine Lösung</a></li><li><a href="#ergaenzung">Quadratische Ergänzung</a></li><li><a href="#formel">Die Lösungsformel</a></li><li><a href="#beispiel">Dieselbe Gleichung auf drei Wegen</a></li><li><a href="#uebung">Übung</a></li></ol></nav>
 <section class="explainer-section">
 <h2 id="einstieg">Was du hier lernst</h2>
@@ -68,7 +67,7 @@ unter der x-Achse liegt, eine, wenn er darauf liegt, und keine, wenn er darüber
 <math><mrow><mn>6</mn><mi>x</mi></mrow></math> besteht aus zwei Rechtecken mit den Seiten <math><mi>x</mi></math> und 3. Zum großen Quadrat fehlt noch die Ecke <math><mrow><mn>3</mn><mo>⋅</mo><mn>3</mn><mo>=</mo><mn>9</mn></mrow></math>.</p></div>
 </div>
 <div class="explainer-block" data-block="ergaenzung/2" data-block-id="7915913c" data-block-type="figure" data-block-order="6">
-<figure class="block-figure"><img src="../../images/quadratische-ergaenzung.svg" alt="Ein Quadrat mit der Seite x. Rechts daneben und darunter liegt je ein Rechteck mit den Seiten 3 und x. In der Ecke fehlt ein gestricheltes Quadrat mit der Seite 3 und der Fläche 9." loading="lazy" decoding="async"><figcaption><p>Die gestrichelte Ecke 9 ergänzt x² + 6x zum Quadrat (x + 3)².</p> <span class="block-credit">Quelle: eigene Zeichnung. Lizenz: CC0-1.0.</span></figcaption></figure>
+<figure class="block-figure"><div class="block-image-credit block-image-fill"><img src="../../images/quadratische-ergaenzung.svg" alt="Ein Quadrat mit der Seite x. Rechts daneben und darunter liegt je ein Rechteck mit den Seiten 3 und x. In der Ecke fehlt ein gestricheltes Quadrat mit der Seite 3 und der Fläche 9." loading="lazy" decoding="async"><span class="block-credit" tabindex="0" role="img" data-info="Quelle: eigene Zeichnung. Lizenz: CC0-1.0." aria-label="Quelle: eigene Zeichnung. Lizenz: CC0-1.0.">© CC0-1.0</span></div><figcaption><p>Die gestrichelte Ecke 9 ergänzt x² + 6x zum Quadrat (x + 3)².</p></figcaption></figure>
 </div>
 <div class="explainer-block" data-block="ergaenzung/3" data-block-id="58062926" data-block-type="formula" data-block-order="7">
 <div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><msup><mi>x</mi><mn class="tml-sml-pad">2</mn></msup><mo>+</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>9</mn><mo>=</mo><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>3</mn><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></math></div>
@@ -327,7 +326,7 @@ Lösungen, bei <math><mrow><mi>D</mi><mo>=</mo><mn>0</mn></mrow></math> eine und
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"6fce1f1","page":{"title":"Quadratische Gleichungen auf drei Wegen","order":6}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"18fda53","page":{"title":"Quadratische Gleichungen auf drei Wegen","order":6}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungen/einfache-gleichungen/">Zurück: Einfache quadratische Gleichungen</a><a rel="next" href="../../gleichungen/anwendungen/">Weiter: Quadratische Funktionen anwenden</a></nav>
