@@ -1,7 +1,9 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Das brauchst du für dieses Kapitel
 description: "Zwei Bausteine für Sinus und Kosinus: das Bogenmaß und die Darstellungen einer Funktion."
-recap: [mathematik/bogenmass, mathematik/funktionen-darstellung]
+recap:
+  - mathematik/bogenmass
+  - mathematik/funktionen-darstellung
 blocks:
   - type: section
     id: kopf
@@ -9,8 +11,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Jeder Baustein hat
-          eine kurze Auffrischung und einen Kurztest mit sofortiger Rückmeldung. Es wird nichts gezählt und nichts
+          Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts
           gespeichert.
   - type: section
     id: bogenmass
@@ -25,50 +26,14 @@ blocks:
         title: 90° im Bogenmaß
         blocks:
           - type: text
-            text: "Ein Viertelkreis ist $90 \\cdot \\frac{\\pi}{180} = \\frac{\\pi}{2}$, also etwa 1,57."
-      - type: vue-component
-        id: test-bogenmass-grad
-        component: Kurztest
-        props:
-          question: "Wie groß ist 60° im Bogenmaß?"
-          options:
-            - { text: "π/3", correct: true, info: "60 : 180 = 1 : 3, also ist 60° ein Drittel von π." }
-            - { text: "π/6", correct: false, info: "Das sind 30°, denn π/6 ist ein Sechstel von 180°." }
-            - { text: "2π/3", correct: false, info: "Das sind 120°, doppelt so viel wie 60°." }
-            - {
-                text: "60π",
-                correct: false,
-                info: "Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Wie groß ist 60° im Bogenmaß? Antwort: π/3, denn 60 : 180 = 1 : 3. Falsch sind π/6 (das sind 30°), 2π/3
-          (das sind 120°) und 60π (es fehlt das Teilen durch 180).
-      - type: vue-component
-        id: test-bogenmass-bogen
-        component: Kurztest
-        props:
-          question: "Wie viel Grad sind 3π/4?"
-          options:
-            - {
-                text: "135°",
-                correct: true,
-                info: "π entspricht 180°. Ein Viertel davon sind 45°, und 3 mal 45° sind 135°.",
-              }
-            - { text: "45°", correct: false, info: "Das ist π/4. Hier ist es das Dreifache davon." }
-            - { text: "60°", correct: false, info: "Das ist π/3. Die Zahl unter dem Bruchstrich ist hier 4." }
-            - { text: "270°", correct: false, info: "Das wäre 3π/2. Du hast nicht durch 4 geteilt, sondern durch 2." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Wie viel Grad sind 3π/4? Antwort: 135°, denn π/4 sind 45° und 3 mal 45° sind 135°. Falsch sind 270° (das
-          wäre 3π/2), 45° (das ist π/4) und 60° (das ist π/3).
+            text: Ein Viertelkreis ist $90 \cdot \frac{\pi}{180} = \frac{\pi}{2}$, also etwa 1,57.
       - type: text
-        text: "Wenn du unsicher warst: Wiederhole den Baustein „Bogenmaß“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/bogenmass/)."
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Bogenmaß“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/bogenmass/)."
       - type: definition
         term: Bogenmaß
-        explanation: Das Maß eines Winkels als Länge des Bogens am Einheitskreis. Ein rechter Winkel (90°) hat das Bogenmaß π/2.
+        explanation:
+          Das Maß eines Winkels als Länge des Bogens am Einheitskreis. Ein rechter Winkel (90°) hat das Bogenmaß
+          π/2.
   - type: section
     id: funktionen-darstellung
     title: Darstellungen von Funktionen
@@ -77,23 +42,50 @@ blocks:
         text: |
           Eine Funktion kannst du als Gleichung, Wertetabelle und Graph darstellen. Aus einem Term wird eine Tabelle,
           indem du Werte für $x$ einsetzt, und aus der Tabelle einen Term findest du durch Prüfen der Zeilen.
-      - type: vue-component
-        id: test-funktionen-darstellung
-        component: Kurztest
-        props:
-          question: "Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?"
-          options:
-            - { text: "f(x) = 2x", correct: false, info: "Bei x = 2 käme 4 heraus, nicht 8." }
-            - { text: "f(x) = x³", correct: false, info: "Bei x = 1 käme 1 heraus, nicht 2." }
-            - { text: "f(x) = 2x²", correct: true, info: "Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8." }
-            - { text: "f(x) = 4x", correct: false, info: "Bei x = 1 käme 4 heraus, nicht 2." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt? Antwort: f(x) = 2x². Falsch sind
-          f(x) = 4x (bei x = 1 käme 4), f(x) = 2x (bei x = 2 käme 4) und f(x) = x³ (bei x = 1 käme 1).
       - type: text
-        text: "Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/)."
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/)."
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt
+          und nichts gespeichert.
+      - type: single-choice
+        id: selbsttest-bogenmass-grad
+        text: Wie groß ist 60° im Bogenmaß?
+        options:
+          - text: π/6
+            correct: false
+            info: Das sind 30°, denn π/6 ist ein Sechstel von 180°.
+          - text: π/3
+            correct: true
+            info: "60 : 180 = 1 : 3, also ist 60° ein Drittel von π."
+          - text: 2π/3
+            correct: false
+            info: Das sind 120°, doppelt so viel wie 60°.
+          - text: 60π
+            correct: false
+            info: Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen.
+        explanation: "60 : 180 = 1 : 3, also ist 60° ein Drittel von π."
+      - type: single-choice
+        id: selbsttest-funktionen-darstellung
+        text: Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?
+        options:
+          - text: f(x) = 2x
+            correct: false
+            info: Bei x = 2 käme 4 heraus, nicht 8.
+          - text: f(x) = x³
+            correct: false
+            info: Bei x = 1 käme 1 heraus, nicht 2.
+          - text: f(x) = 2x²
+            correct: true
+            info: Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.
+          - text: f(x) = 4x
+            correct: false
+            info: Bei x = 1 käme 4 heraus, nicht 2.
+        explanation: Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.
   - type: section
     id: checkliste
     title: Du bist bereit, wenn du …

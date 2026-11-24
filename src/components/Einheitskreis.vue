@@ -156,6 +156,7 @@ const marks = [0, 90, 180, 270, 360];
 }
 
 .ek-slider input {
+  accent-color: var(--page-accent);
   width: 100%;
   min-width: 0;
   height: 2rem;

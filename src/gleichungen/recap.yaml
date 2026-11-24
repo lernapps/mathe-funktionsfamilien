@@ -1,7 +1,11 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Das brauchst du für dieses Kapitel
-description: "Drei Bausteine für quadratische Gleichungen: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen."
-recap: [mathematik/klammern-binome, mathematik/quadratwurzeln, mathematik/lineare-gleichungen]
+description: "Drei Bausteine für quadratische Gleichungen: binomische Formeln rückwärts, Quadratwurzeln und lineare
+  Gleichungen."
+recap:
+  - mathematik/klammern-binome
+  - mathematik/quadratwurzeln
+  - mathematik/lineare-gleichungen
 blocks:
   - type: section
     id: kopf
@@ -9,8 +13,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Das brauchst du für dieses Kapitel: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen.
-          Zu jedem Baustein steht eine kurze Auffrischung und ein Kurztest mit sofortiger Rückmeldung. Es wird nichts
+          Das brauchst du für dieses Kapitel: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
           gezählt und nichts gespeichert.
   - type: section
     id: klammern-binome
@@ -21,27 +24,9 @@ blocks:
           Du kennst die binomischen Formeln vorwärts. Hier brauchst du sie rückwärts: Ein Term wie $x^2 + 6x + 9$
           lässt sich als Quadrat einer Klammer schreiben, $(x + 3)^2$. Das nennt man **Faktorisieren**. Du erkennst es
           an drei Dingen: ein $x^2$, ein Mittelterm und eine Quadratzahl am Ende, die zur Hälfte des Mittelterms passt.
-      - type: vue-component
-        id: test-klammern-binome
-        component: Kurztest
-        props:
-          question: "Welche Klammer gehört zu x² + 10x + 25?"
-          options:
-            - {
-                text: "(x + 5)²",
-                correct: true,
-                info: "Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².",
-              }
-            - { text: "(x − 5)²", correct: false, info: "Dann wäre der Mittelterm −10x. Hier steht +10x." }
-            - { text: "(x + 10)²", correct: false, info: "Dann wäre der Mittelterm 20x und das letzte Glied 100." }
-            - { text: "(x + 25)²", correct: false, info: "Dann wäre der Mittelterm 50x und das letzte Glied 625." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Welche Klammer gehört zu x² + 10x + 25? Antwort: (x + 5)². Die Hälfte von 10 ist 5 und 5² = 25.
-          Falsch sind (x + 25)² (Mittelterm 50x), (x − 5)² (Mittelterm −10x) und (x + 10)² (Mittelterm 20x).
       - type: text
-        text: "Wenn du unsicher warst: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/)."
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner
+          [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/)."
   - type: section
     id: quadratwurzeln
     title: Quadratwurzeln
@@ -51,30 +36,12 @@ blocks:
           Die **Quadratwurzel** $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ ist: $\sqrt{49} = 7$, denn
           $7^2 = 49$. Weil auch $(−7)^2 = 49$ ist, hat die Gleichung $x^2 = 49$ zwei Lösungen: 7 und −7. Bei Zahlen
           wie $\sqrt{2}$ bestimmst du einen Näherungswert, etwa √2 ≈ 1,41.
-      - type: vue-component
-        id: test-quadratwurzeln
-        component: Kurztest
-        props:
-          question: "Welche Zahlen x erfüllen x² = 81?"
-          options:
-            - { text: "9 und −9", correct: true, info: "9² = 81 und auch (−9)² = 81." }
-            - { text: "nur 9", correct: false, info: "Auch −9 hat das Quadrat 81, denn minus mal minus ist plus." }
-            - {
-                text: "40,5",
-                correct: false,
-                info: "Das ist die Hälfte von 81. Gesucht ist die Zahl, die mit sich selbst malgenommen 81 ergibt.",
-              }
-            - { text: "6561", correct: false, info: "Das ist 81², also die Zahl zum Quadrat. Gesucht ist die Wurzel." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Welche Zahlen x erfüllen x² = 81? Antwort: 9 und −9, denn 9² = 81 und (−9)² = 81. Falsch sind nur 9
-          (−9 geht auch), 40,5 (die Hälfte) und 6561 (das ist 81²).
       - type: text
-        text: "Wenn du unsicher warst: Wiederhole den Baustein „Quadratwurzeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/quadratwurzeln/)."
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Quadratwurzeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/quadratwurzeln/)."
       - type: definition
         term: Quadratwurzel
-        explanation: Die Quadratwurzel $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ ist. Zum Beispiel ist $\sqrt{36} = 6$.
+        explanation: Die Quadratwurzel $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ ist. Zum Beispiel ist
+          $\sqrt{36} = 6$.
   - type: section
     id: lineare-gleichungen
     title: Lineare Gleichungen
@@ -83,34 +50,54 @@ blocks:
         text: |
           Eine lineare Gleichung löst du mit **Äquivalenzumformungen**: Du tust auf beiden Seiten dasselbe, bis $x$
           allein steht. Zum Beispiel: $3x - 7 = 2x + 5$ wird mit $-2x$ zu $x - 7 = 5$ und mit $+7$ zu $x = 12$.
-      - type: vue-component
-        id: test-lineare-gleichungen
-        component: Kurztest
-        props:
-          question: "Löse 4x − 9 = 2x + 7. Was ist x?"
-          options:
-            - { text: "8", correct: true, info: "Auf beiden Seiten −2x und +9: 2x = 16, also x = 8." }
-            - {
-                text: "−1",
-                correct: false,
-                info: "Die 9 wurde abgezogen statt addiert: Aus −9 wird auf der anderen Seite +9.",
-              }
-            - { text: "4", correct: false, info: "Bei 2x = 16 wurde durch 4 geteilt. Der Faktor vor x ist aber 2." }
-            - {
-                text: "16",
-                correct: false,
-                info: "Es fehlt der letzte Schritt: 2x = 16 heißt noch nicht x = 16, sondern x = 8.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Löse 4x − 9 = 2x + 7. Antwort: x = 8. Auf beiden Seiten −2x und +9 ergibt 2x = 16. Falsch sind −1
-          (9 wurde abgezogen statt addiert), 4 (durch 4 statt durch 2 geteilt) und 16 (der letzte Schritt fehlt).
       - type: text
-        text: "Wenn du unsicher warst: Wiederhole den Baustein „Lineare Gleichungen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
+        text: "Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Lineare Gleichungen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/)."
       - type: definition
         term: Äquivalenzumformung
-        explanation: Eine Umformung einer Gleichung, die ihre Lösung nicht ändert, etwa auf beiden Seiten dasselbe addieren oder durch dieselbe Zahl teilen. Aus $x + 3 = 5$ wird mit $-3$ die Gleichung $x = 2$.
+        explanation:
+          Eine Umformung einer Gleichung, die ihre Lösung nicht ändert, etwa auf beiden Seiten dasselbe addieren
+          oder durch dieselbe Zahl teilen. Aus $x + 3 = 5$ wird mit $-3$ die Gleichung $x = 2$.
+  - type: section
+    id: selbsttest
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt
+          und nichts gespeichert.
+      - type: single-choice
+        id: selbsttest-klammern-binome
+        text: Welche Klammer gehört zu x² + 10x + 25?
+        options:
+          - text: (x − 5)²
+            correct: false
+            info: Dann wäre der Mittelterm −10x. Hier steht +10x.
+          - text: (x + 5)²
+            correct: true
+            info: Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².
+          - text: (x + 10)²
+            correct: false
+            info: Dann wäre der Mittelterm 20x und das letzte Glied 100.
+          - text: (x + 25)²
+            correct: false
+            info: Dann wäre der Mittelterm 50x und das letzte Glied 625.
+        explanation: Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².
+      - type: single-choice
+        id: selbsttest-quadratwurzeln
+        text: Welche Zahlen x erfüllen x² = 81?
+        options:
+          - text: nur 9
+            correct: false
+            info: Auch −9 hat das Quadrat 81, denn minus mal minus ist plus.
+          - text: 9 und −9
+            correct: true
+            info: 9² = 81 und auch (−9)² = 81.
+          - text: 40,5
+            correct: false
+            info: Das ist die Hälfte von 81. Gesucht ist die Zahl, die mit sich selbst malgenommen 81 ergibt.
+          - text: "6561"
+            correct: false
+            info: Das ist 81², also die Zahl zum Quadrat. Gesucht ist die Wurzel.
+        explanation: 9² = 81 und auch (−9)² = 81.
   - type: section
     id: checkliste
     title: Du bist bereit, wenn du …

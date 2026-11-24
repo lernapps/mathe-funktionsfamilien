@@ -48,9 +48,9 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 - Die tragende Darstellung ist die Dreifachansicht Term – Tabelle – Graph mit Reglern (`FunktionsGraph`): Der Term
   zeigt die Reglerwerte, die Tabelle die Funktionswerte, der Graph (SVG) mit der gestrichelten Grundform zum Vergleich.
 - Recap-Seiten (`recap:`): Kopf „Das brauchst du für dieses Kapitel“, je Baustein ein Abschnitt (Überschrift = Name
-  des Bausteins der Karte), Begriffe fett, Beispielkasten, ein `Kurztest` (nicht zu leicht, Hinweis zeigt den Weg),
+  des Bausteins der Karte), Begriffe fett, Beispielkasten, am Ende des Recaps höchstens zwei normale Übungen (`single-choice`, nicht zu leicht, Rückmeldung mit Grund),
   Satz mit der Kartenseite `https://lernapps.net/apps/map/mathematik/c/<id>/`; Schluss „Du bist bereit, wenn du …“.
-  Das Schema erlaubt dort keine Aufgaben, deshalb die Komponente `Kurztest`.
+  Eine Recap-Seite erlaubt seit app-templates 0.19.0 bis zu zwei Übungen; die Komponente `Kurztest` ist gelöscht.
 - Keine `links:` an Aufgaben (Regeln Abschnitt 9). Keine Seite verweist in andere Apps.
 
 ## Terminology
@@ -79,7 +79,7 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 
 ## Figures
 
-- Komponenten in `src/components/`: `FunktionsGraph` (Regler, Term, Tabelle, Graph; Familien quadratic, quadraticGeneral, power, reciprocal, root, exponential, sine, linear), `FunktionsGraphAufgabe` (Regler auf Zielparabel einstellen, mit `hints` je Regler), `Einheitskreis` (Sinus/Kosinus am Kreis), `Kurztest` (Kopie aus dem Epic, Optionen deterministisch gemischt, W42 enthalten).
+- Komponenten in `src/components/`: `FunktionsGraph` (Regler, Term, Tabelle, Graph; Familien quadratic, quadraticGeneral, power, reciprocal, root, exponential, sine, linear), `FunktionsGraphAufgabe` (Regler auf Zielparabel einstellen, mit `hints` je Regler), `Einheitskreis` (Sinus/Kosinus am Kreis).
 
 - Graphen entstehen in der Komponente als SVG (Textalternative: Term, Scheitel/Eigenschaften, drei Beispielpunkte).
   Kurve voll, Grundform gestrichelt (zweites Merkmal neben der Farbe); Farben nur über die Variablen der Laufzeit
@@ -98,7 +98,7 @@ Jede Kapitelseite `recap` wiederholt die Voraussetzungen von außen: K1 `lineare
 
 1. Ids der Karte prüfen (`mathematik.json`), Kompetenz und Voraussetzungen (`requires`) lesen.
 2. Ordner `src/<kapitel>/`, `chapter.yaml` mit `title`, `summary`, `pages`; Kapitel in `src/app.yaml` unter `chapters`.
-3. Seite `recap` für Voraussetzungen von außen (Komponente `Kurztest`), dann je Kompetenz eine Seite mit den
+3. Seite `recap` für Voraussetzungen von außen (höchstens zwei Übungen), dann je Kompetenz eine Seite mit den
    Abschnitten `einstieg`, `modell`, `beispiel`, `uebung`.
 4. Regler: `FunktionsGraph` mit `family`, `regler`, `fenster`, `tabelleX`, `labels`, `nojs`; neue Familie in
    `src/components/FunktionsGraph.ts` (Funktion, Termtext, Beschreibung) samt Test ergänzen.

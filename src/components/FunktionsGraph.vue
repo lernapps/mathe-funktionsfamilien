@@ -148,6 +148,8 @@ const cell = (n: number) => {
   const text = fmt(n);
   return Math.abs(n) >= 100 && /,\d$/.test(text) ? `${text}0` : text;
 };
+/** Whether a slider differs from its start: the reset button only shows then, so it always has a visible effect. */
+const changed = computed(() => props.regler.some((r) => (values[r.key] ?? r.start) !== r.start));
 const inputValue = (s: Slider) => values[s.key] ?? s.start;
 function set(s: Slider, event: Event): void {
   values[s.key] = Number((event.target as HTMLInputElement).value);
@@ -250,7 +252,7 @@ function set(s: Slider, event: Event): void {
         <output class="fg-slider-value">{{ fmt(inputValue(s)) }}</output>
       </label>
     </div>
-    <button type="button" class="fg-reset" @click="reset">{{ labels.reset }}</button>
+    <button v-if="changed" type="button" class="fg-reset" @click="reset">{{ labels.reset }}</button>
   </div>
 </template>
 
@@ -365,6 +367,7 @@ function set(s: Slider, event: Event): void {
 }
 
 .fg-slider input {
+  accent-color: var(--page-accent);
   width: 100%;
   min-width: 0;
   height: 2rem;
@@ -378,8 +381,20 @@ function set(s: Slider, event: Event): void {
 
 .fg-reset {
   margin-top: 0.5rem;
-  min-height: 44px;
-  padding: 0.4rem 1rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  /* the look of the runtime's buttons (variables switch with the dark mode) */
+  font: inherit;
+  border: 2px solid var(--page-accent);
+  border-radius: 0.375rem;
+  background: var(--page-background);
+  color: var(--page-accent);
+  cursor: pointer;
+}
+
+.fg-reset:focus-visible {
+  outline: 3px solid var(--page-text);
+  outline-offset: 2px;
 }
 
 @media (max-width: 30rem) {
