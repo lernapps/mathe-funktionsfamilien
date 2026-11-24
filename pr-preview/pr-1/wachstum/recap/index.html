@@ -10,7 +10,6 @@
     <meta name="description" content="Vier Bausteine für Wachstum und Zerfall: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die Darstellungen einer Funktion." />
     <meta name="lernapps-archetype" content="explainer" />
     <link rel="alternate" hreflang="de" href="../../wachstum/recap/" />
-    <script type="module" crossorigin src="../../assets/islands-CocctdY6.js"></script>
     <meta name="robots" content="noindex" />
   </head>
   <body>
@@ -36,15 +35,14 @@
 </details>
 <p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
 <p class="explainer-tutor-status" role="status" aria-live="polite"></p>
-<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧wachstum/recap/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"recap","title":"Das brauchst du für dieses Kapitel","exercises":[],"sections":["kopf","zinsrechnung","prozent-veraenderung","potenzgesetze","funktionen-darstellung","checkliste"]},"tutor":"wachstum/recap/tutor/","markdown":"wachstum/recap/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧wachstum/recap/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"recap","title":"Das brauchst du für dieses Kapitel","exercises":[{"id":"selbsttest-prozent-veraenderung","section":"selbsttest","numbered":false},{"id":"selbsttest-potenzgesetze","section":"selbsttest","numbered":false}],"sections":["kopf","zinsrechnung","prozent-veraenderung","potenzgesetze","funktionen-darstellung","selbsttest","checkliste"]},"tutor":"wachstum/recap/tutor/","markdown":"wachstum/recap/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
 </div>
 </div>
 <section class="explainer-section">
 <h2 id="kopf">Wofür diese Seite ist</h2>
-<div class="explainer-block" data-block="kopf/1" data-block-id="7da0b5e7" data-block-type="text" data-block-order="1">
+<div class="explainer-block" data-block="kopf/1" data-block-id="9b416d10" data-block-type="text" data-block-order="1">
 <div class="block-text"><p>Das brauchst du für dieses Kapitel: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die
-Darstellungen einer Funktion. Jeder Baustein hat eine kurze Auffrischung und einen Kurztest mit sofortiger
-Rückmeldung. Es wird nichts gezählt und nichts gespeichert.</p></div>
+Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.</p></div>
 </div>
 </section>
 <section class="explainer-section">
@@ -61,91 +59,137 @@ das pro Jahr sind. Jahreszinsen sind Kapital mal Zinssatz geteilt durch 100. Fü
 </div>
 </div>
 </div>
-<div class="explainer-block" data-block="zinsrechnung/3" data-block-id="231aff63" data-block-type="vue-component" data-block-order="5">
-<div class="explainer-component" id="test-zinsrechnung" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1009138699" value="2" data-v-62d18b49> 2402,50 €</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1009138699" value="3" data-v-62d18b49> 600 €</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1009138699" value="0" data-v-62d18b49> 6 €</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1009138699" value="1" data-v-62d18b49> 60 €</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr? Antwort: 60 €, denn 2400 · 2,5 : 100 = 60.
-Falsch sind 6 € (durch 1000 geteilt), 2402,50 € (2,5 € statt 2,5 %) und 600 € (das wären 25 %).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr?","options":[{"text":"6 €","correct":false,"info":"Du hast durch 1000 statt durch 100 geteilt."},{"text":"60 €","correct":true,"info":"2400 · 2,5 : 100 = 60. Dasselbe wie 1 % (24 €) mal 2,5."},{"text":"2402,50 €","correct":false,"info":"Das ist die Summe aus Kapital und 2,50 €. Du hast 2,5 € statt 2,5 % genommen."},{"text":"600 €","correct":false,"info":"Das wären 25 % von 2400 €. Der Zinssatz ist aber 2,5 %."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+<div class="explainer-block" data-block="zinsrechnung/3" data-block-id="5092902c" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Zinsrechnung“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/zinsrechnung/" rel="noopener">Kartenseite</a>.</p></div>
 </div>
-</div>
-<div class="explainer-block" data-block="zinsrechnung/4" data-block-id="bcbab336" data-block-type="text" data-block-order="6">
-<div class="block-text"><p>Wenn du unsicher warst: Wiederhole den Baustein „Zinsrechnung“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/zinsrechnung/" rel="noopener">Kartenseite</a>.</p></div>
-</div>
-<div class="explainer-block" data-block="zinsrechnung/5" data-block-id="f3f50192" data-block-type="definition" data-block-order="7">
+<div class="explainer-block" data-block="zinsrechnung/4" data-block-id="f3f50192" data-block-type="definition" data-block-order="6">
 <dl class="explainer-definition"><dt><dfn id="begriff-zinssatz"><a href="../../glossar/#zinssatz">Zinssatz</a></dfn></dt><dd><p>Der Prozentsatz, der angibt, wie viel Prozent des Kapitals pro Jahr als Zinsen dazukommen. Bei 3 % auf 800 € sind es 24 €.</p></dd></dl>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="prozent-veraenderung">Prozentuale Zu- und Abnahme</h2>
-<div class="explainer-block" data-block="prozent-veraenderung/1" data-block-id="27a43380" data-block-type="text" data-block-order="8">
+<div class="explainer-block" data-block="prozent-veraenderung/1" data-block-id="27a43380" data-block-type="text" data-block-order="7">
 <div class="block-text"><p>Bei einer Zunahme um <math><mi>p</mi></math> % rechnest du mit dem <strong>Wachstumsfaktor</strong> <math><mrow><mn>1</mn><mo>+</mo><mfrac><mi>p</mi><mn>100</mn></mfrac></mrow></math>, bei einer Abnahme mit
 <math><mrow><mn>1</mn><mo>−</mo><mfrac><mi>p</mi><mn>100</mn></mfrac></mrow></math>. Den neuen Wert bekommst du, indem du den alten Wert mit dem Faktor malnimmst.</p></div>
 </div>
-<div class="explainer-block" data-block="prozent-veraenderung/2" data-block-id="a0ffbeca" data-block-type="example" data-block-order="9">
+<div class="explainer-block" data-block="prozent-veraenderung/2" data-block-id="a0ffbeca" data-block-type="example" data-block-order="8">
 <div class="explainer-box explainer-example">
 <h3 class="explainer-box-title">50 € werden 20 % teurer</h3>
-<div class="explainer-block" data-block="prozent-veraenderung/2/1" data-block-id="4a9729fa" data-block-type="text" data-block-order="10">
+<div class="explainer-block" data-block="prozent-veraenderung/2/1" data-block-id="4a9729fa" data-block-type="text" data-block-order="9">
 <div class="block-text"><p>Der Faktor ist 1,20, der neue Preis ist <math><mrow><mn>50</mn><mo>⋅</mo><mn>1,20</mn><mo>=</mo><mn>60</mn></mrow></math> €.</p></div>
 </div>
 </div>
 </div>
-<div class="explainer-block" data-block="prozent-veraenderung/3" data-block-id="7d977f3d" data-block-type="vue-component" data-block-order="11">
-<div class="explainer-component" id="test-prozent-veraenderung" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1879682449" value="0" data-v-62d18b49> 12 €</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1879682449" value="2" data-v-62d18b49> 65 €</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1879682449" value="1" data-v-62d18b49> 68 €</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1879682449" value="3" data-v-62d18b49> 92 €</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis? Antwort: 68 €, denn der Faktor ist
-0,85 und 80 · 0,85 = 68. Falsch sind 65 € (15 € statt 15 %), 12 € (das ist die Ersparnis) und 92 € (das wäre
-eine Zunahme).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?","options":[{"text":"12 €","correct":false,"info":"Das ist die Ersparnis, nicht der neue Preis."},{"text":"68 €","correct":true,"info":"Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68."},{"text":"65 €","correct":false,"info":"Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €."},{"text":"92 €","correct":false,"info":"Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+<div class="explainer-block" data-block="prozent-veraenderung/3" data-block-id="642f2450" data-block-type="text" data-block-order="10">
+<div class="block-text"><p>Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/" rel="noopener">Kartenseite</a>.</p></div>
 </div>
-</div>
-<div class="explainer-block" data-block="prozent-veraenderung/4" data-block-id="4d1e8bb2" data-block-type="text" data-block-order="12">
-<div class="block-text"><p>Wenn du unsicher warst: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/" rel="noopener">Kartenseite</a>.</p></div>
-</div>
-<div class="explainer-block" data-block="prozent-veraenderung/5" data-block-id="fb056beb" data-block-type="definition" data-block-order="13">
+<div class="explainer-block" data-block="prozent-veraenderung/4" data-block-id="fb056beb" data-block-type="definition" data-block-order="11">
 <dl class="explainer-definition"><dt><dfn id="begriff-wachstumsfaktor"><a href="../../glossar/#wachstumsfaktor">Wachstumsfaktor</a></dfn></dt><dd><p>Die Zahl, mit der du einen Wert malnimmst, um ihn um einen Prozentsatz zu ändern. Bei 20 % Zunahme ist er 1,20, bei 20 % Abnahme 0,80.</p></dd></dl>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="potenzgesetze">Potenzgesetze</h2>
-<div class="explainer-block" data-block="potenzgesetze/1" data-block-id="42e9f0c4" data-block-type="text" data-block-order="14">
+<div class="explainer-block" data-block="potenzgesetze/1" data-block-id="42e9f0c4" data-block-type="text" data-block-order="12">
 <div class="block-text"><p>Gleiche Basen lassen sich beim Teilen und Malnehmen zusammenfassen: <math><mrow><msup><mi>a</mi><mi>m</mi></msup><mo>⋅</mo><msup><mi>a</mi><mi>n</mi></msup><mo>=</mo><msup><mi>a</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup></mrow></math> und
 <math><mrow><msup><mi>a</mi><mi>m</mi></msup><mo lspace="0.2222em" rspace="0.2222em">:</mo><msup><mi>a</mi><mi>n</mi></msup><mo>=</mo><msup><mi>a</mi><mrow><mi>m</mi><mo>−</mo><mi>n</mi></mrow></msup></mrow></math>. Für ein Produkt in der Basis gilt <math><mrow><msup><mrow><mo fence="true" form="prefix" stretchy="false">(</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo fence="true" form="postfix" stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>=</mo><msup><mi>a</mi><mi>n</mi></msup><mo>⋅</mo><msup><mi>b</mi><mi>n</mi></msup></mrow></math>.</p></div>
 </div>
-<div class="explainer-block" data-block="potenzgesetze/2" data-block-id="c2c0244e" data-block-type="vue-component" data-block-order="15">
-<div class="explainer-component" id="test-potenzgesetze" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Was ergibt 5⁴ : 5²?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-5963012" value="2" data-v-62d18b49> 1</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-5963012" value="0" data-v-62d18b49> 25</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-5963012" value="1" data-v-62d18b49> 5⁶</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-5963012" value="3" data-v-62d18b49> 5⁸</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Was ergibt 5⁴ : 5²? Antwort: 25, denn die Exponenten werden abgezogen: 5⁴ : 5² = 5² = 25. Falsch sind
-5⁶ (Exponenten addiert), 1 (nur zwei Faktoren heben sich weg) und 5⁸ (Exponenten multipliziert).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Was ergibt 5⁴ : 5²?","options":[{"text":"25","correct":true,"info":"Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25."},{"text":"5⁶","correct":false,"info":"Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen."},{"text":"1","correct":false,"info":"Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg."},{"text":"5⁸","correct":false,"info":"Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
-</div>
-</div>
-<div class="explainer-block" data-block="potenzgesetze/3" data-block-id="1211fb77" data-block-type="text" data-block-order="16">
-<div class="block-text"><p>Wenn du unsicher warst: Wiederhole den Baustein „Potenzgesetze“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/potenzgesetze/" rel="noopener">Kartenseite</a>.</p></div>
+<div class="explainer-block" data-block="potenzgesetze/2" data-block-id="e052cdb3" data-block-type="text" data-block-order="13">
+<div class="block-text"><p>Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Potenzgesetze“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/potenzgesetze/" rel="noopener">Kartenseite</a>.</p></div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="funktionen-darstellung">Darstellungen von Funktionen</h2>
-<div class="explainer-block" data-block="funktionen-darstellung/1" data-block-id="586fa0d1" data-block-type="text" data-block-order="17">
+<div class="explainer-block" data-block="funktionen-darstellung/1" data-block-id="586fa0d1" data-block-type="text" data-block-order="14">
 <div class="block-text"><p>Eine Funktion zeigst du als Gleichung, Tabelle oder Graph. Aus der Tabelle erkennst du die Art der Funktion:
 Wächst der Wert bei jedem Schritt um dieselbe Zahl, ist sie linear.</p></div>
 </div>
-<div class="explainer-block" data-block="funktionen-darstellung/2" data-block-id="13eb2ffc" data-block-type="vue-component" data-block-order="18">
-<div class="explainer-component" id="test-funktionen-darstellung" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Eine Tabelle zeigt f(0) = 100, f(1) = 110 und f(2) = 120. Welcher Term passt?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-825315562" value="2" data-v-62d18b49> f(x) = 100x + 10</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-825315562" value="1" data-v-62d18b49> f(x) = 100 · 1,1ˣ</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-825315562" value="0" data-v-62d18b49> f(x) = 100 + 10x</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-825315562" value="3" data-v-62d18b49> f(x) = 110x</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Eine Tabelle zeigt f(0) = 100, f(1) = 110 und f(2) = 120. Welcher Term passt? Antwort: f(x) = 100 + 10x.
-Der Wert wächst bei jedem Schritt um 10. Falsch sind f(x) = 100 · 1,1ˣ (das ergibt f(2) = 121), f(x) = 110x
-(bei x = 0 käme 0) und f(x) = 100x + 10 (bei x = 0 käme 10).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Eine Tabelle zeigt f(0) = 100, f(1) = 110 und f(2) = 120. Welcher Term passt?","options":[{"text":"f(x) = 100 + 10x","correct":true,"info":"Bei x = 0 ist der Wert 100, und er wächst bei jedem Schritt um 10."},{"text":"f(x) = 100 · 1,1ˣ","correct":false,"info":"Das ergibt f(2) = 121, nicht 120. Hier wird nicht mit demselben Faktor, sondern um dieselbe Zahl gewachsen."},{"text":"f(x) = 100x + 10","correct":false,"info":"Bei x = 0 käme 10 heraus, nicht 100."},{"text":"f(x) = 110x","correct":false,"info":"Bei x = 0 käme 0 heraus, nicht 100."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+<div class="explainer-block" data-block="funktionen-darstellung/2" data-block-id="81477e9f" data-block-type="text" data-block-order="15">
+<div class="block-text"><p>Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/" rel="noopener">Kartenseite</a>.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="selbsttest">Kannst du das?</h2>
+<div class="explainer-block" data-block="selbsttest/1" data-block-id="7a8e4b84" data-block-type="text" data-block-order="16">
+<div class="block-text"><p>Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt und nichts gespeichert.</p></div>
+</div>
+<div class="explainer-block" data-block="selbsttest/2" data-block-id="02eab48d" data-block-type="single-choice" data-block-order="17">
+<div class="explainer-exercise explainer-question" id="selbsttest-prozent-veraenderung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-selbsttest-prozent-veraenderung" data-id="selbsttest-prozent-veraenderung" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?</legend>
+<label class="question-option"><input type="radio" name="frage-selbsttest-prozent-veraenderung" value="0"> <span>12 €</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-prozent-veraenderung" value="1"> <span>68 €</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-prozent-veraenderung" value="2"> <span>65 €</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-prozent-veraenderung" value="3"> <span>92 €</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>12 €</strong></p><p>Das ist die Ersparnis, nicht der neue Preis.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>68 €</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>65 €</strong></p><p>Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>92 €</strong></p><p>Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.</p></li>
+</ul>
+<p class="question-explanation">Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>12 €</strong></p><p>Das ist die Ersparnis, nicht der neue Preis.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>68 €</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>65 €</strong></p><p>Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>92 €</strong></p><p>Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.</p></li>
+</ul>
+<p class="question-explanation">Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"selbsttest-prozent-veraenderung","text":"Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?","explanation":"Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.","links":[],"type":"single-choice","options":[{"text":"12 €","correct":false,"info":"Das ist die Ersparnis, nicht der neue Preis."},{"text":"68 €","correct":true,"info":"Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68."},{"text":"65 €","correct":false,"info":"Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €."},{"text":"92 €","correct":false,"info":"Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1."}]},"rendered":{}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="funktionen-darstellung/3" data-block-id="aa9dd181" data-block-type="text" data-block-order="19">
-<div class="block-text"><p>Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/" rel="noopener">Kartenseite</a>.</p></div>
+<div class="explainer-block" data-block="selbsttest/3" data-block-id="5f7a8ae8" data-block-type="single-choice" data-block-order="18">
+<div class="explainer-exercise explainer-question" id="selbsttest-potenzgesetze">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-selbsttest-potenzgesetze" data-id="selbsttest-potenzgesetze" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Was ergibt 5⁴ : 5²?</legend>
+<label class="question-option"><input type="radio" name="frage-selbsttest-potenzgesetze" value="0"> <span>5⁶</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-potenzgesetze" value="1"> <span>25</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-potenzgesetze" value="2"> <span>1</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-potenzgesetze" value="3"> <span>5⁸</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>5⁶</strong></p><p>Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>25</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1</strong></p><p>Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>5⁸</strong></p><p>Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen.</p></li>
+</ul>
+<p class="question-explanation">Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>5⁶</strong></p><p>Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>25</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>1</strong></p><p>Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>5⁸</strong></p><p>Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen.</p></li>
+</ul>
+<p class="question-explanation">Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"selbsttest-potenzgesetze","text":"Was ergibt 5⁴ : 5²?","explanation":"Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.","links":[],"type":"single-choice","options":[{"text":"5⁶","correct":false,"info":"Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen."},{"text":"25","correct":true,"info":"Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25."},{"text":"1","correct":false,"info":"Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg."},{"text":"5⁸","correct":false,"info":"Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen."}]},"rendered":{}}</script>
+</div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="checkliste">Du bist bereit, wenn du …</h2>
-<div class="explainer-block" data-block="checkliste/1" data-block-id="759eb029" data-block-type="text" data-block-order="20">
+<div class="explainer-block" data-block="checkliste/1" data-block-id="759eb029" data-block-type="text" data-block-order="19">
 <div class="block-text"><ul>
 <li>Jahres-, Monats- und Tageszinsen berechnen kannst,</li>
 <li>neue und alte Werte nach einer prozentualen Zunahme oder Abnahme berechnen kannst,</li>
@@ -192,7 +236,7 @@ Der Wert wächst bei jedem Schritt um 10. Falsch sind f(x) = 100 · 1,1ˣ (das e
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"18fda53","page":{"title":"Das brauchst du für dieses Kapitel","order":8}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"4358339","page":{"title":"Das brauchst du für dieses Kapitel","order":8}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../gleichungen/anwendungen/">Zurück: Quadratische Funktionen anwenden</a><a rel="next" href="../../wachstum/zinseszins/">Weiter: Zinseszins</a></nav>

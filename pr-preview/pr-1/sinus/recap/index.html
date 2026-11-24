@@ -10,7 +10,6 @@
     <meta name="description" content="Zwei Bausteine für Sinus und Kosinus: das Bogenmaß und die Darstellungen einer Funktion." />
     <meta name="lernapps-archetype" content="explainer" />
     <link rel="alternate" hreflang="de" href="../../sinus/recap/" />
-    <script type="module" crossorigin src="../../assets/islands-CocctdY6.js"></script>
     <meta name="robots" content="noindex" />
   </head>
   <body>
@@ -36,14 +35,13 @@
 </details>
 <p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
 <p class="explainer-tutor-status" role="status" aria-live="polite"></p>
-<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧sinus/recap/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"recap","title":"Das brauchst du für dieses Kapitel","exercises":[],"sections":["kopf","bogenmass","funktionen-darstellung","checkliste"]},"tutor":"sinus/recap/tutor/","markdown":"sinus/recap/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧sinus/recap/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-funktionsfamilien","page":{"id":"recap","title":"Das brauchst du für dieses Kapitel","exercises":[{"id":"selbsttest-bogenmass-grad","section":"selbsttest","numbered":false},{"id":"selbsttest-funktionen-darstellung","section":"selbsttest","numbered":false}],"sections":["kopf","bogenmass","funktionen-darstellung","selbsttest","checkliste"]},"tutor":"sinus/recap/tutor/","markdown":"sinus/recap/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
 </div>
 </div>
 <section class="explainer-section">
 <h2 id="kopf">Wofür diese Seite ist</h2>
-<div class="explainer-block" data-block="kopf/1" data-block-id="2f41dc24" data-block-type="text" data-block-order="1">
-<div class="block-text"><p>Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Jeder Baustein hat
-eine kurze Auffrischung und einen Kurztest mit sofortiger Rückmeldung. Es wird nichts gezählt und nichts
+<div class="explainer-block" data-block="kopf/1" data-block-id="4bea7c29" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts
 gespeichert.</p></div>
 </div>
 </section>
@@ -62,45 +60,101 @@ halber Kreis hat die Bogenlänge <math><mi>π</mi></math> (etwa 3,14), der ganze
 </div>
 </div>
 </div>
-<div class="explainer-block" data-block="bogenmass/3" data-block-id="2be241c1" data-block-type="vue-component" data-block-order="5">
-<div class="explainer-component" id="test-bogenmass-grad" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Wie groß ist 60° im Bogenmaß?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1794343756" value="2" data-v-62d18b49> 2π/3</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1794343756" value="3" data-v-62d18b49> 60π</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1794343756" value="0" data-v-62d18b49> π/3</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1794343756" value="1" data-v-62d18b49> π/6</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Wie groß ist 60° im Bogenmaß? Antwort: π/3, denn 60 : 180 = 1 : 3. Falsch sind π/6 (das sind 30°), 2π/3
-(das sind 120°) und 60π (es fehlt das Teilen durch 180).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Wie groß ist 60° im Bogenmaß?","options":[{"text":"π/3","correct":true,"info":"60 : 180 = 1 : 3, also ist 60° ein Drittel von π."},{"text":"π/6","correct":false,"info":"Das sind 30°, denn π/6 ist ein Sechstel von 180°."},{"text":"2π/3","correct":false,"info":"Das sind 120°, doppelt so viel wie 60°."},{"text":"60π","correct":false,"info":"Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+<div class="explainer-block" data-block="bogenmass/3" data-block-id="568d4b0b" data-block-type="text" data-block-order="5">
+<div class="block-text"><p>Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Bogenmaß“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/bogenmass/" rel="noopener">Kartenseite</a>.</p></div>
 </div>
-</div>
-<div class="explainer-block" data-block="bogenmass/4" data-block-id="77b0164d" data-block-type="vue-component" data-block-order="6">
-<div class="explainer-component" id="test-bogenmass-bogen" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Wie viel Grad sind 3π/4?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-803298279" value="2" data-v-62d18b49> 60°</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-803298279" value="3" data-v-62d18b49> 270°</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-803298279" value="1" data-v-62d18b49> 45°</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-803298279" value="0" data-v-62d18b49> 135°</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Wie viel Grad sind 3π/4? Antwort: 135°, denn π/4 sind 45° und 3 mal 45° sind 135°. Falsch sind 270° (das
-wäre 3π/2), 45° (das ist π/4) und 60° (das ist π/3).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Wie viel Grad sind 3π/4?","options":[{"text":"135°","correct":true,"info":"π entspricht 180°. Ein Viertel davon sind 45°, und 3 mal 45° sind 135°."},{"text":"45°","correct":false,"info":"Das ist π/4. Hier ist es das Dreifache davon."},{"text":"60°","correct":false,"info":"Das ist π/3. Die Zahl unter dem Bruchstrich ist hier 4."},{"text":"270°","correct":false,"info":"Das wäre 3π/2. Du hast nicht durch 4 geteilt, sondern durch 2."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
-</div>
-</div>
-<div class="explainer-block" data-block="bogenmass/5" data-block-id="047f7966" data-block-type="text" data-block-order="7">
-<div class="block-text"><p>Wenn du unsicher warst: Wiederhole den Baustein „Bogenmaß“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/bogenmass/" rel="noopener">Kartenseite</a>.</p></div>
-</div>
-<div class="explainer-block" data-block="bogenmass/6" data-block-id="836b46b9" data-block-type="definition" data-block-order="8">
+<div class="explainer-block" data-block="bogenmass/4" data-block-id="836b46b9" data-block-type="definition" data-block-order="6">
 <dl class="explainer-definition"><dt><dfn id="begriff-bogenmass"><a href="../../glossar/#bogenmass">Bogenmaß</a></dfn></dt><dd><p>Das Maß eines Winkels als Länge des Bogens am Einheitskreis. Ein rechter Winkel (90°) hat das Bogenmaß π/2.</p></dd></dl>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="funktionen-darstellung">Darstellungen von Funktionen</h2>
-<div class="explainer-block" data-block="funktionen-darstellung/1" data-block-id="6058566a" data-block-type="text" data-block-order="9">
+<div class="explainer-block" data-block="funktionen-darstellung/1" data-block-id="6058566a" data-block-type="text" data-block-order="7">
 <div class="block-text"><p>Eine Funktion kannst du als Gleichung, Wertetabelle und Graph darstellen. Aus einem Term wird eine Tabelle,
 indem du Werte für <math><mi>x</mi></math> einsetzt, und aus der Tabelle einen Term findest du durch Prüfen der Zeilen.</p></div>
 </div>
-<div class="explainer-block" data-block="funktionen-darstellung/2" data-block-id="d5ce36a1" data-block-type="vue-component" data-block-order="10">
-<div class="explainer-component" id="test-funktionen-darstellung" data-component="Kurztest">
-<div class="explainer-island" hidden><fieldset class="kurztest" data-v-62d18b49><legend data-v-62d18b49>Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?</legend><!--[--><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1107947982" value="3" data-v-62d18b49> f(x) = 4x</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1107947982" value="1" data-v-62d18b49> f(x) = x³</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1107947982" value="0" data-v-62d18b49> f(x) = 2x</label><label class="kurztest-option" data-v-62d18b49><input type="radio" name="kurztest-1107947982" value="2" data-v-62d18b49> f(x) = 2x²</label><!--]--><p class="kurztest-result" aria-live="polite" data-v-62d18b49></p></fieldset></div>
-<div class="explainer-nojs"><p>Kurztest: Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt? Antwort: f(x) = 2x². Falsch sind
-f(x) = 4x (bei x = 1 käme 4), f(x) = 2x (bei x = 2 käme 4) und f(x) = x³ (bei x = 1 käme 1).</p></div>
-<script type="application/json" class="explainer-component-props">{"question":"Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?","options":[{"text":"f(x) = 2x","correct":false,"info":"Bei x = 2 käme 4 heraus, nicht 8."},{"text":"f(x) = x³","correct":false,"info":"Bei x = 1 käme 1 heraus, nicht 2."},{"text":"f(x) = 2x²","correct":true,"info":"Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8."},{"text":"f(x) = 4x","correct":false,"info":"Bei x = 1 käme 4 heraus, nicht 2."}],"right":"Richtig.","wrong":"Nicht richtig."}</script>
+<div class="explainer-block" data-block="funktionen-darstellung/2" data-block-id="81477e9f" data-block-type="text" data-block-order="8">
+<div class="block-text"><p>Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/" rel="noopener">Kartenseite</a>.</p></div>
+</div>
+</section>
+<section class="explainer-section">
+<h2 id="selbsttest">Kannst du das?</h2>
+<div class="explainer-block" data-block="selbsttest/1" data-block-id="7a8e4b84" data-block-type="text" data-block-order="9">
+<div class="block-text"><p>Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt und nichts gespeichert.</p></div>
+</div>
+<div class="explainer-block" data-block="selbsttest/2" data-block-id="117ab8b5" data-block-type="single-choice" data-block-order="10">
+<div class="explainer-exercise explainer-question" id="selbsttest-bogenmass-grad">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-selbsttest-bogenmass-grad" data-id="selbsttest-bogenmass-grad" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Wie groß ist 60° im Bogenmaß?</legend>
+<label class="question-option"><input type="radio" name="frage-selbsttest-bogenmass-grad" value="0"> <span>π/6</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-bogenmass-grad" value="1"> <span>π/3</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-bogenmass-grad" value="2"> <span>2π/3</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-bogenmass-grad" value="3"> <span>60π</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>π/6</strong></p><p>Das sind 30°, denn π/6 ist ein Sechstel von 180°.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>π/3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>60 : 180 = 1 : 3, also ist 60° ein Drittel von π.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>2π/3</strong></p><p>Das sind 120°, doppelt so viel wie 60°.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>60π</strong></p><p>Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen.</p></li>
+</ul>
+<p class="question-explanation">60 : 180 = 1 : 3, also ist 60° ein Drittel von π.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>π/6</strong></p><p>Das sind 30°, denn π/6 ist ein Sechstel von 180°.</p></li>
+<li class="question-info question-info-right" data-option="1"><p class="question-info-head"><strong>π/3</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>60 : 180 = 1 : 3, also ist 60° ein Drittel von π.</p></li>
+<li class="question-info" data-option="2"><p class="question-info-head"><strong>2π/3</strong></p><p>Das sind 120°, doppelt so viel wie 60°.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>60π</strong></p><p>Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen.</p></li>
+</ul>
+<p class="question-explanation">60 : 180 = 1 : 3, also ist 60° ein Drittel von π.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"selbsttest-bogenmass-grad","text":"Wie groß ist 60° im Bogenmaß?","explanation":"60 : 180 = 1 : 3, also ist 60° ein Drittel von π.","links":[],"type":"single-choice","options":[{"text":"π/6","correct":false,"info":"Das sind 30°, denn π/6 ist ein Sechstel von 180°."},{"text":"π/3","correct":true,"info":"60 : 180 = 1 : 3, also ist 60° ein Drittel von π."},{"text":"2π/3","correct":false,"info":"Das sind 120°, doppelt so viel wie 60°."},{"text":"60π","correct":false,"info":"Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen."}]},"rendered":{}}</script>
 </div>
 </div>
-<div class="explainer-block" data-block="funktionen-darstellung/3" data-block-id="aa9dd181" data-block-type="text" data-block-order="11">
-<div class="block-text"><p>Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner <a href="https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/" rel="noopener">Kartenseite</a>.</p></div>
+<div class="explainer-block" data-block="selbsttest/3" data-block-id="631ef3c2" data-block-type="single-choice" data-block-order="11">
+<div class="explainer-exercise explainer-question" id="selbsttest-funktionen-darstellung">
+<p class="explainer-exercise-label">Aufgabe</p>
+<div class="question" id="frage-selbsttest-funktionen-darstellung" data-id="selbsttest-funktionen-darstellung" data-type="single-choice">
+<form class="question-form" novalidate>
+<fieldset>
+<legend class="question-text">Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?</legend>
+<label class="question-option"><input type="radio" name="frage-selbsttest-funktionen-darstellung" value="0"> <span>f(x) = 2x</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-funktionen-darstellung" value="1"> <span>f(x) = x³</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-funktionen-darstellung" value="2"> <span>f(x) = 2x²</span></label>
+<label class="question-option"><input type="radio" name="frage-selbsttest-funktionen-darstellung" value="3"> <span>f(x) = 4x</span></label>
+</fieldset>
+<div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
+<div class="question-reveal" hidden>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>f(x) = 2x</strong></p><p>Bei x = 2 käme 4 heraus, nicht 8.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>f(x) = x³</strong></p><p>Bei x = 1 käme 1 heraus, nicht 2.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>f(x) = 2x²</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>f(x) = 4x</strong></p><p>Bei x = 1 käme 4 heraus, nicht 2.</p></li>
+</ul>
+<p class="question-explanation">Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.</p>
+</div>
+<p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
+</form>
+</div>
+<details class="explainer-solution"><summary>Lösung</summary>
+<ul class="question-infos">
+<li class="question-info" data-option="0"><p class="question-info-head"><strong>f(x) = 2x</strong></p><p>Bei x = 2 käme 4 heraus, nicht 8.</p></li>
+<li class="question-info" data-option="1"><p class="question-info-head"><strong>f(x) = x³</strong></p><p>Bei x = 1 käme 1 heraus, nicht 2.</p></li>
+<li class="question-info question-info-right" data-option="2"><p class="question-info-head"><strong>f(x) = 2x²</strong> <span class="question-badge question-badge-right">richtige Antwort</span></p><p>Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.</p></li>
+<li class="question-info" data-option="3"><p class="question-info-head"><strong>f(x) = 4x</strong></p><p>Bei x = 1 käme 4 heraus, nicht 2.</p></li>
+</ul>
+<p class="question-explanation">Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.</p>
+</details>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"selbsttest-funktionen-darstellung","text":"Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?","explanation":"Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.","links":[],"type":"single-choice","options":[{"text":"f(x) = 2x","correct":false,"info":"Bei x = 2 käme 4 heraus, nicht 8."},{"text":"f(x) = x³","correct":false,"info":"Bei x = 1 käme 1 heraus, nicht 2."},{"text":"f(x) = 2x²","correct":true,"info":"Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8."},{"text":"f(x) = 4x","correct":false,"info":"Bei x = 1 käme 4 heraus, nicht 2."}]},"rendered":{}}</script>
+</div>
 </div>
 </section>
 <section class="explainer-section">
@@ -150,7 +204,7 @@ f(x) = 4x (bei x = 1 käme 4), f(x) = 2x (bei x = 2 käme 4) und f(x) = x³ (bei
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"18fda53","page":{"title":"Das brauchst du für dieses Kapitel","order":12}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-funktionsfamilien","app":"Funktionsfamilien mit Schiebereglern","root":"../../","repository":"lernapps/mathe-funktionsfamilien","revision":"4358339","page":{"title":"Das brauchst du für dieses Kapitel","order":12}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../wachstum/logarithmen/">Zurück: Logarithmen</a><a rel="next" href="../../sinus/sinus-kosinus/">Weiter: Sinus und Kosinus am Einheitskreis</a></nav>

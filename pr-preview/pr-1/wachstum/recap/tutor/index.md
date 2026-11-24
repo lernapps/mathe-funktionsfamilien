@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=selbsttest-prozent-veraenderung`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/wachstum/recap/?via=tutor#selbsttest-prozent-veraenderung`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -44,8 +46,7 @@ Vier Bausteine für Wachstum und Zerfall: Zinsrechnung, prozentuale Zu- und Abna
 ### Wofür diese Seite ist
 
 Das brauchst du für dieses Kapitel: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die
-Darstellungen einer Funktion. Jeder Baustein hat eine kurze Auffrischung und einen Kurztest mit sofortiger
-Rückmeldung. Es wird nichts gezählt und nichts gespeichert.
+Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
 
 ### Zinsrechnung
 
@@ -56,9 +57,7 @@ das pro Jahr sind. Jahreszinsen sind Kapital mal Zinssatz geteilt durch 100. Fü
 
 Die Zinsen für ein Jahr sind $800 \cdot 3 : 100 = 24$ €.
 
-Interaktiv: Kurztest: Wie viel Zinsen bringen 2400 € bei 2,5 % in einem Jahr? Antwort: 60 €, denn 2400 · 2,5 : 100 = 60. Falsch sind 6 € (durch 1000 geteilt), 2402,50 € (2,5 € statt 2,5 %) und 600 € (das wären 25 %).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Zinsrechnung“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/zinsrechnung/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Zinsrechnung“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/zinsrechnung/).
 
 - **Zinssatz**: Der Prozentsatz, der angibt, wie viel Prozent des Kapitals pro Jahr als Zinsen dazukommen. Bei 3 % auf 800 € sind es 24 €.
 
@@ -71,9 +70,7 @@ $1 - \frac{p}{100}$. Den neuen Wert bekommst du, indem du den alten Wert mit dem
 
 Der Faktor ist 1,20, der neue Preis ist $50 \cdot 1,20 = 60$ €.
 
-Interaktiv: Kurztest: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis? Antwort: 68 €, denn der Faktor ist 0,85 und 80 · 0,85 = 68. Falsch sind 65 € (15 € statt 15 %), 12 € (das ist die Ersparnis) und 92 € (das wäre eine Zunahme).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Prozentuale Zu- und Abnahme“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/prozent-veraenderung/).
 
 - **Wachstumsfaktor**: Die Zahl, mit der du einen Wert malnimmst, um ihn um einen Prozentsatz zu ändern. Bei 20 % Zunahme ist er 1,20, bei 20 % Abnahme 0,80.
 
@@ -82,18 +79,22 @@ Wenn du unsicher warst: Wiederhole den Baustein „Prozentuale Zu- und Abnahme�
 Gleiche Basen lassen sich beim Teilen und Malnehmen zusammenfassen: $a^m \cdot a^n = a^{m+n}$ und
 $a^m : a^n = a^{m-n}$. Für ein Produkt in der Basis gilt $(a \cdot b)^n = a^n \cdot b^n$.
 
-Interaktiv: Kurztest: Was ergibt 5⁴ : 5²? Antwort: 25, denn die Exponenten werden abgezogen: 5⁴ : 5² = 5² = 25. Falsch sind 5⁶ (Exponenten addiert), 1 (nur zwei Faktoren heben sich weg) und 5⁸ (Exponenten multipliziert).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/).
 
 ### Darstellungen von Funktionen
 
 Eine Funktion zeigst du als Gleichung, Tabelle oder Graph. Aus der Tabelle erkennst du die Art der Funktion:
 Wächst der Wert bei jedem Schritt um dieselbe Zahl, ist sie linear.
 
-Interaktiv: Kurztest: Eine Tabelle zeigt f(0) = 100, f(1) = 110 und f(2) = 120. Welcher Term passt? Antwort: f(x) = 100 + 10x. Der Wert wächst bei jedem Schritt um 10. Falsch sind f(x) = 100 · 1,1ˣ (das ergibt f(2) = 121), f(x) = 110x (bei x = 0 käme 0) und f(x) = 100x + 10 (bei x = 0 käme 10).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/).
 
-Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/).
+### Kannst du das?
+
+Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt und nichts gespeichert.
+
+- Aufgabe `selbsttest-prozent-veraenderung` (unten)
+
+- Aufgabe `selbsttest-potenzgesetze` (unten)
 
 ### Du bist bereit, wenn du …
 
@@ -101,3 +102,29 @@ Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen�
 - neue und alte Werte nach einer prozentualen Zunahme oder Abnahme berechnen kannst,
 - die Potenzgesetze für natürliche Exponenten anwenden kannst,
 - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.
+
+### Aufgabe selbsttest-prozent-veraenderung
+
+- Aufgabe: Ein Preis von 80 € sinkt um 15 %. Wie lautet der neue Preis?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ 12 € – Das ist die Ersparnis, nicht der neue Preis.
+  - ✓ 68 € – Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.
+  - ✗ 65 € – Du hast 15 € abgezogen. 15 % von 80 € sind aber 12 €.
+  - ✗ 92 € – Das wäre eine Zunahme um 15 %. Bei einer Abnahme wird der Faktor kleiner als 1.
+- Lösung: 68 €
+- Erklärung: Faktor 1 − 0,15 = 0,85, und 80 · 0,85 = 68.
+- Link: [../?via=tutor#selbsttest-prozent-veraenderung](../?via=tutor#selbsttest-prozent-veraenderung)
+
+### Aufgabe selbsttest-potenzgesetze
+
+- Aufgabe: Was ergibt 5⁴ : 5²?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ 5⁶ – Exponenten addieren gilt beim Malnehmen gleicher Basen, nicht beim Teilen.
+  - ✓ 25 – Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.
+  - ✗ 1 – Die Basen 5 und 5 sind gleich, aber es heben sich nur zwei der vier Faktoren weg.
+  - ✗ 5⁸ – Exponenten multiplizieren gilt beim Potenzieren einer Potenz, nicht beim Teilen.
+- Lösung: 25
+- Erklärung: Beim Teilen gleicher Basen werden die Exponenten abgezogen: 5⁴ : 5² = 5² = 25.
+- Link: [../?via=tutor#selbsttest-potenzgesetze](../?via=tutor#selbsttest-potenzgesetze)

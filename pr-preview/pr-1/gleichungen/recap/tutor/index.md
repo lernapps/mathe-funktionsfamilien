@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=selbsttest-klammern-binome`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/gleichungen/recap/?via=tutor#selbsttest-klammern-binome`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,8 +45,7 @@ Drei Bausteine für quadratische Gleichungen: binomische Formeln rückwärts, Qu
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen.
-Zu jedem Baustein steht eine kurze Auffrischung und ein Kurztest mit sofortiger Rückmeldung. Es wird nichts
+Das brauchst du für dieses Kapitel: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
 gezählt und nichts gespeichert.
 
 ### Klammern und binomische Formeln
@@ -53,9 +54,7 @@ Du kennst die binomischen Formeln vorwärts. Hier brauchst du sie rückwärts: E
 lässt sich als Quadrat einer Klammer schreiben, $(x + 3)^2$. Das nennt man **Faktorisieren**. Du erkennst es
 an drei Dingen: ein $x^2$, ein Mittelterm und eine Quadratzahl am Ende, die zur Hälfte des Mittelterms passt.
 
-Interaktiv: Kurztest: Welche Klammer gehört zu x² + 10x + 25? Antwort: (x + 5)². Die Hälfte von 10 ist 5 und 5² = 25. Falsch sind (x + 25)² (Mittelterm 50x), (x − 5)² (Mittelterm −10x) und (x + 10)² (Mittelterm 20x).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/).
 
 ### Quadratwurzeln
 
@@ -63,9 +62,7 @@ Die **Quadratwurzel** $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ 
 $7^2 = 49$. Weil auch $(−7)^2 = 49$ ist, hat die Gleichung $x^2 = 49$ zwei Lösungen: 7 und −7. Bei Zahlen
 wie $\sqrt{2}$ bestimmst du einen Näherungswert, etwa √2 ≈ 1,41.
 
-Interaktiv: Kurztest: Welche Zahlen x erfüllen x² = 81? Antwort: 9 und −9, denn 9² = 81 und (−9)² = 81. Falsch sind nur 9 (−9 geht auch), 40,5 (die Hälfte) und 6561 (das ist 81²).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Quadratwurzeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/quadratwurzeln/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Quadratwurzeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/quadratwurzeln/).
 
 - **Quadratwurzel**: Die Quadratwurzel $\sqrt{a}$ ist die nicht negative Zahl, deren Quadrat $a$ ist. Zum Beispiel ist $\sqrt{36} = 6$.
 
@@ -74,14 +71,46 @@ Wenn du unsicher warst: Wiederhole den Baustein „Quadratwurzeln“ auf seiner 
 Eine lineare Gleichung löst du mit **Äquivalenzumformungen**: Du tust auf beiden Seiten dasselbe, bis $x$
 allein steht. Zum Beispiel: $3x - 7 = 2x + 5$ wird mit $-2x$ zu $x - 7 = 5$ und mit $+7$ zu $x = 12$.
 
-Interaktiv: Kurztest: Löse 4x − 9 = 2x + 7. Antwort: x = 8. Auf beiden Seiten −2x und +9 ergibt 2x = 16. Falsch sind −1 (9 wurde abgezogen statt addiert), 4 (durch 4 statt durch 2 geteilt) und 16 (der letzte Schritt fehlt).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Lineare Gleichungen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Lineare Gleichungen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/).
 
 - **Äquivalenzumformung**: Eine Umformung einer Gleichung, die ihre Lösung nicht ändert, etwa auf beiden Seiten dasselbe addieren oder durch dieselbe Zahl teilen. Aus $x + 3 = 5$ wird mit $-3$ die Gleichung $x = 2$.
+
+### Kannst du das?
+
+Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt und nichts gespeichert.
+
+- Aufgabe `selbsttest-klammern-binome` (unten)
+
+- Aufgabe `selbsttest-quadratwurzeln` (unten)
 
 ### Du bist bereit, wenn du …
 
 - Klammern auflösen und die binomischen Formeln vorwärts und rückwärts anwenden kannst,
 - Quadratwurzeln erklären und Näherungswerte bestimmen kannst,
 - lineare Gleichungen lösen und die Lösungsverfahren vergleichen kannst.
+
+### Aufgabe selbsttest-klammern-binome
+
+- Aufgabe: Welche Klammer gehört zu x² + 10x + 25?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ (x − 5)² – Dann wäre der Mittelterm −10x. Hier steht +10x.
+  - ✓ (x + 5)² – Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².
+  - ✗ (x + 10)² – Dann wäre der Mittelterm 20x und das letzte Glied 100.
+  - ✗ (x + 25)² – Dann wäre der Mittelterm 50x und das letzte Glied 625.
+- Lösung: (x + 5)²
+- Erklärung: Die Hälfte von 10 ist 5, und 5² = 25. Es ist x² + 2 · 5 · x + 5².
+- Link: [../?via=tutor#selbsttest-klammern-binome](../?via=tutor#selbsttest-klammern-binome)
+
+### Aufgabe selbsttest-quadratwurzeln
+
+- Aufgabe: Welche Zahlen x erfüllen x² = 81?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ nur 9 – Auch −9 hat das Quadrat 81, denn minus mal minus ist plus.
+  - ✓ 9 und −9 – 9² = 81 und auch (−9)² = 81.
+  - ✗ 40,5 – Das ist die Hälfte von 81. Gesucht ist die Zahl, die mit sich selbst malgenommen 81 ergibt.
+  - ✗ 6561 – Das ist 81², also die Zahl zum Quadrat. Gesucht ist die Wurzel.
+- Lösung: 9 und −9
+- Erklärung: 9² = 81 und auch (−9)² = 81.
+- Link: [../?via=tutor#selbsttest-quadratwurzeln](../?via=tutor#selbsttest-quadratwurzeln)

@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=selbsttest-bogenmass-grad`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/sinus/recap/?via=tutor#selbsttest-bogenmass-grad`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -43,8 +45,7 @@ Zwei Bausteine für Sinus und Kosinus: das Bogenmaß und die Darstellungen einer
 
 ### Wofür diese Seite ist
 
-Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Jeder Baustein hat
-eine kurze Auffrischung und einen Kurztest mit sofortiger Rückmeldung. Es wird nichts gezählt und nichts
+Das brauchst du für dieses Kapitel: das Bogenmaß und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts
 gespeichert.
 
 ### Bogenmaß
@@ -57,11 +58,7 @@ $360° = 2\pi$. Aus einem Winkel in Grad wird das Bogenmaß, indem du ihn mit $\
 
 Ein Viertelkreis ist $90 \cdot \frac{\pi}{180} = \frac{\pi}{2}$, also etwa 1,57.
 
-Interaktiv: Kurztest: Wie groß ist 60° im Bogenmaß? Antwort: π/3, denn 60 : 180 = 1 : 3. Falsch sind π/6 (das sind 30°), 2π/3 (das sind 120°) und 60π (es fehlt das Teilen durch 180).
-
-Interaktiv: Kurztest: Wie viel Grad sind 3π/4? Antwort: 135°, denn π/4 sind 45° und 3 mal 45° sind 135°. Falsch sind 270° (das wäre 3π/2), 45° (das ist π/4) und 60° (das ist π/3).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Bogenmaß“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/bogenmass/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Bogenmaß“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/bogenmass/).
 
 - **Bogenmaß**: Das Maß eines Winkels als Länge des Bogens am Einheitskreis. Ein rechter Winkel (90°) hat das Bogenmaß π/2.
 
@@ -70,11 +67,43 @@ Wenn du unsicher warst: Wiederhole den Baustein „Bogenmaß“ auf seiner [Kart
 Eine Funktion kannst du als Gleichung, Wertetabelle und Graph darstellen. Aus einem Term wird eine Tabelle,
 indem du Werte für $x$ einsetzt, und aus der Tabelle einen Term findest du durch Prüfen der Zeilen.
 
-Interaktiv: Kurztest: Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt? Antwort: f(x) = 2x². Falsch sind f(x) = 4x (bei x = 1 käme 4), f(x) = 2x (bei x = 2 käme 4) und f(x) = x³ (bei x = 1 käme 1).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/).
 
-Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/).
+### Kannst du das?
+
+Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt und nichts gespeichert.
+
+- Aufgabe `selbsttest-bogenmass-grad` (unten)
+
+- Aufgabe `selbsttest-funktionen-darstellung` (unten)
 
 ### Du bist bereit, wenn du …
 
 - Winkel im Bogenmaß angeben und zwischen Grad- und Bogenmaß wechseln kannst,
 - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.
+
+### Aufgabe selbsttest-bogenmass-grad
+
+- Aufgabe: Wie groß ist 60° im Bogenmaß?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ π/6 – Das sind 30°, denn π/6 ist ein Sechstel von 180°.
+  - ✓ π/3 – 60 : 180 = 1 : 3, also ist 60° ein Drittel von π.
+  - ✗ 2π/3 – Das sind 120°, doppelt so viel wie 60°.
+  - ✗ 60π – Du hast die Gradzahl mit π malgenommen. Du musst auch durch 180 teilen.
+- Lösung: π/3
+- Erklärung: 60 : 180 = 1 : 3, also ist 60° ein Drittel von π.
+- Link: [../?via=tutor#selbsttest-bogenmass-grad](../?via=tutor#selbsttest-bogenmass-grad)
+
+### Aufgabe selbsttest-funktionen-darstellung
+
+- Aufgabe: Eine Tabelle zeigt f(0) = 0, f(1) = 2 und f(2) = 8. Welcher Term passt?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ f(x) = 2x – Bei x = 2 käme 4 heraus, nicht 8.
+  - ✗ f(x) = x³ – Bei x = 1 käme 1 heraus, nicht 2.
+  - ✓ f(x) = 2x² – Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.
+  - ✗ f(x) = 4x – Bei x = 1 käme 4 heraus, nicht 2.
+- Lösung: f(x) = 2x²
+- Erklärung: Bei x = 1 ist 2 · 1 = 2, bei x = 2 ist 2 · 4 = 8.
+- Link: [../?via=tutor#selbsttest-funktionen-darstellung](../?via=tutor#selbsttest-funktionen-darstellung)

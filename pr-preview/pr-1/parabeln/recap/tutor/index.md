@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=selbsttest-lineare-funktionen`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/parabeln/recap/?via=tutor#selbsttest-lineare-funktionen`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -44,8 +46,7 @@ Vier Bausteine, die du für Parabeln und Potenzfunktionen brauchst: lineare Funk
 ### Wofür diese Seite ist
 
 Das brauchst du für dieses Kapitel: lineare Funktionen, Klammern und binomische Formeln, Potenzgesetze und
-die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung und ein Kurztest. Er zeigt
-dir sofort, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
+die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben sofort, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
 
 ### Lineare Funktionen
 
@@ -58,9 +59,7 @@ schneidet der Graph die y-Achse.
 Bei $x = 0$ ist $f(0) = −3$, bei $x = 1$ ist $f(1) = −1$, bei $x = 4$ ist $f(4) = 5$. Mit jedem Schritt
 nach rechts steigt der Wert um die Steigung 2.
 
-Interaktiv: Kurztest: Eine Gerade geht durch (0 | 4) und (3 | −2). Wie lautet ihr Term? Antwort: f(x) = −2x + 4. Der Achsenabschnitt ist 4, der Wert sinkt von x = 0 bis x = 3 um 6, also um 2 je Schritt. Falsch wären f(x) = 2x + 4 (Steigung hat das falsche Vorzeichen), f(x) = −6x + 4 (6 ist die Änderung über drei Schritte) und f(x) = −2x − 4 (der Achsenabschnitt ist +4).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Lineare Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Lineare Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/lineare-funktionen/).
 
 - **Steigung**: Die Steigung $m$ einer linearen Funktion sagt, um wie viel der Funktionswert wächst, wenn $x$ um 1 größer wird. Bei $f(x) = 2x - 3$ ist sie 2.
 
@@ -80,9 +79,7 @@ $(a - b)^2 = a^2 - 2ab + b^2$
 Mit $a = x$ und $b = 3$ ist $(x - 3)^2 = x^2 - 2 \cdot x \cdot 3 + 3^2$, also $x^2 - 6x + 9$. Der mittlere
 Summand heißt Mittelterm.
 
-Interaktiv: Kurztest: Welcher Term entsteht beim Ausmultiplizieren von (x − 4)²? Antwort: x² − 8x + 16. Es ist x² − 2 · x · 4 + 4². Falsch sind x² − 16 (so sieht (x − 4)(x + 4) aus), x² + 16 (der Mittelterm fehlt) und x² − 8x − 16 (das letzte Glied ist +16).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Klammern und binomische Formeln“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/klammern-binome/).
 
 - **Binomische Formeln**: Feste Regeln für Klammern: $(a + b)^2$, $(a - b)^2$ und $(a + b)(a - b)$. Zum Beispiel ist $(x + 2)^2 = x^2 + 4x + 4$.
 
@@ -102,9 +99,7 @@ $(a \cdot b)^n = a^n \cdot b^n$
 Es ist $2^3 \cdot 2^4 = 2^{3+4} = 2^7 = 128$. Beim Malnehmen gleicher Basen werden die Exponenten
 addiert.
 
-Interaktiv: Kurztest: Was ist (3²)³? Antwort: 3⁶ = 729. Beim Potenzieren einer Potenz werden die Exponenten multipliziert: 2 · 3 = 6. Falsch sind 3⁵ (das wäre 3² · 3³), 3⁸ (der Exponent wird nicht potenziert) und 9⁵ (9³ = 729 wäre richtig).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Potenzgesetze“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/potenzgesetze/).
 
 - **Potenz**: Die Kurzschreibweise $a^n$ für $n$ gleiche Faktoren $a$. Zum Beispiel ist $2^4 = 2 \cdot 2 \cdot 2 \cdot 2 = 16$.
 
@@ -119,11 +114,17 @@ den Graphen.
 Für $x = −1, 0, 1, 2$ ergeben sich die Werte 2, 1, 2 und 5. Die Punkte (−1 | 2), (0 | 1), (1 | 2) und
 (2 | 5) liegen auf dem Graphen.
 
-Interaktiv: Kurztest: Eine Wertetabelle zeigt f(−2) = 7, f(0) = 3 und f(2) = 7. Welcher Term passt? Antwort: f(x) = x² + 3. Bei x = 0 ist der Wert 3, bei −2 und 2 ist 4 + 3 = 7. Falsch sind f(x) = 2x + 3 (bei x = −2 kommt −1 heraus), f(x) = 3x + 1 (bei x = 0 kommt 1 heraus) und f(x) = x² + 7 (bei x = 0 kommt 7 heraus).
-
-Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/).
+Wenn dir das noch nicht sicher ist: Wiederhole den Baustein „Darstellungen von Funktionen“ auf seiner [Kartenseite](https://lernapps.net/apps/map/mathematik/c/funktionen-darstellung/).
 
 - **Wertetabelle**: Eine Tabelle mit Zahlen $x$ und den zugehörigen Funktionswerten $f(x)$. Zum Beispiel gehört zu $f(x) = x^2$ die Zeile $x = 3$ und $f(x) = 9$.
+
+### Kannst du das?
+
+Zwei Aufgaben zeigen dir, ob du die Voraussetzungen für dieses Kapitel kannst. Es wird nichts gezählt und nichts gespeichert.
+
+- Aufgabe `selbsttest-lineare-funktionen` (unten)
+
+- Aufgabe `selbsttest-klammern-binome` (unten)
 
 ### Du bist bereit, wenn du …
 
@@ -131,3 +132,29 @@ Wenn du unsicher warst: Wiederhole den Baustein „Darstellungen von Funktionen�
 - Klammern auflösen und die binomischen Formeln vorwärts und rückwärts anwenden kannst,
 - die Potenzgesetze für natürliche Exponenten anwenden kannst,
 - zwischen Funktionsgleichung, Wertetabelle und Graph wechseln kannst.
+
+### Aufgabe selbsttest-lineare-funktionen
+
+- Aufgabe: Eine Gerade geht durch die Punkte (0 | 4) und (3 | −2). Wie lautet ihr Term?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ f(x) = 2x + 4 – Der Wert sinkt von 4 auf −2, die Steigung ist also negativ.
+  - ✓ f(x) = −2x + 4 – Der Achsenabschnitt ist 4. Von x = 0 bis x = 3 sinkt der Wert um 6, also um 2 je Schritt: Steigung −2.
+  - ✗ f(x) = −6x + 4 – 6 ist die Änderung über drei Schritte. Die Steigung gilt für einen Schritt: 6 geteilt durch 3.
+  - ✗ f(x) = −2x − 4 – Der Achsenabschnitt ist der Wert bei x = 0, also +4.
+- Lösung: f(x) = −2x + 4
+- Erklärung: Der Achsenabschnitt ist 4. Von x = 0 bis x = 3 sinkt der Wert um 6, also um 2 je Schritt: Steigung −2.
+- Link: [../?via=tutor#selbsttest-lineare-funktionen](../?via=tutor#selbsttest-lineare-funktionen)
+
+### Aufgabe selbsttest-klammern-binome
+
+- Aufgabe: Welcher Term entsteht beim Ausmultiplizieren von (x − 4)²?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ x² − 16 – So sieht (x − 4)(x + 4) aus. Beim Quadrat fehlt hier der Mittelterm.
+  - ✓ x² − 8x + 16 – x² − 2 · x · 4 + 4²: Der Mittelterm ist −8x, das letzte Glied (−4)² ist +16.
+  - ✗ x² − 8x − 16 – Das letzte Glied ist (−4)² = +16, nicht −16.
+  - ✗ x² + 16 – Es fehlt der Mittelterm: (x − 4)² ist nicht x² + 4².
+- Lösung: x² − 8x + 16
+- Erklärung: x² − 2 · x · 4 + 4²: Der Mittelterm ist −8x, das letzte Glied (−4)² ist +16.
+- Link: [../?via=tutor#selbsttest-klammern-binome](../?via=tutor#selbsttest-klammern-binome)
