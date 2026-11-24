@@ -12,7 +12,7 @@ blocks:
           Wenn du wissen willst, wie viel Geld du nach mehreren Jahren auf dem Konto hast, reicht die Rechnung für ein Jahr nicht mehr.
 
           Du kannst danach das Guthaben auf einem Sparkonto nach mehreren Jahren berechnen, wenn die Zinsen mitverzinst
-          werden. Bisher hast du die Zinsen für ein Jahr ausgerechnet. Hier legst du das Geld mehrere Jahre an.
+          werden. Hier legst du das Geld mehrere Jahre an.
       - type: text
         text: |
           **Versuche es zuerst von Hand.** 1000 € werden zu 3 % angelegt, die Zinsen bleiben auf dem Konto. Nach dem
@@ -61,7 +61,7 @@ blocks:
     title: Was beim Zinseszins passiert
     blocks:
       - type: text
-        text: "Wenn du dem Zinseszins nicht traust, vergleiche ihn mit einfachen Zinsen."
+        text: "Wenn du wissen willst, was der Zinseszins bringt, vergleiche ihn mit einfachen Zinsen."
       - type: example
         title: 1000 € bei 3 % in drei Jahren
         blocks:
@@ -81,39 +81,38 @@ blocks:
         term: Zinseszins
         explanation: Zinsen, die im nächsten Jahr mitverzinst werden. Auf 1000 € bei 3 % sind das nach zwei Jahren 1060,90 € statt 1060 €.
       - type: single-choice
-        id: faktor-erkennen
-        text: Welcher Wachstumsfaktor gehört zu 4 % Zinsen pro Jahr?
+        id: zinseszins-idee
+        text: Auf einem Konto liegen 1000 €, die Zinsen bleiben auf dem Konto. Welche Aussage über das zweite Jahr stimmt?
         options:
-          - text: "4"
+          - text: Die Zinsen sind genauso hoch wie im ersten Jahr.
             correct: false
-            info: Das wäre eine Vervierfachung (300 % Zuwachs).
-          - text: "1,04"
+            info: So wäre es ohne Zinseszins. Dann würden die Zinsen nur auf die ersten 1000 € gerechnet.
+          - text: Es gibt Zinsen auf das Guthaben vom Ende des ersten Jahres.
             correct: true
-            info: "Das Guthaben bleibt (100 %) und 4 % kommen dazu: 1 + 0,04 = 1,04."
-          - text: "0,04"
+            info: Das Guthaben ist nach dem ersten Jahr größer als 1000 €. Auch die Zinsen aus dem ersten Jahr werden verzinst.
+          - text: Der Zinssatz steigt im zweiten Jahr.
             correct: false
-            info: Das ist nur der Zinssatz als Dezimalzahl. Mit 0,04 würde das Guthaben fast verschwinden.
-          - text: "1,4"
+            info: Der Zinssatz bleibt gleich. Größer wird das Guthaben, auf das er angewendet wird.
+          - text: Das Guthaben wächst um denselben Euro-Betrag wie im ersten Jahr.
             correct: false
-            info: Das wären 40 % Zuwachs. 4 % sind 0,04, nicht 0,4.
-        explanation: Der Wachstumsfaktor ist 1 plus der Zinssatz als Dezimalzahl.
+            info: Der Zuwachs in Euro ist im zweiten Jahr etwas größer, weil das Guthaben größer ist.
+        explanation: Zinseszins heißt, dass jedes Jahr auf das gesamte Guthaben Zinsen gerechnet werden, auch auf die Zinsen der Vorjahre.
       - type: generated
-        id: wachstumsfaktor
+        id: zinsen-zweites-jahr
         given:
-          p: { int: [2, 9] }
+          r: { pick: 1, from: { data: zinseszins } }
         task:
-          text: "Ein Konto wird mit {{p}} % pro Jahr verzinst. Wie lautet der Wachstumsfaktor? Gib ihn als Dezimalzahl an."
-        answer: { value: "1 + p / 100", compare: { number: { format: decimal, decimals: 2 } } }
+          text: "Auf ein Konto werden {{r.k0}} € zu {{r.p}} % pro Jahr angelegt, die Zinsen bleiben auf dem Konto. Wie viel Euro Zinsen gibt es im zweiten Jahr? Runde auf Cent."
+        answer: { value: "r.zinsen2", compare: { number: { format: money } } }
         mistakes:
           - {
-              value: "p / 100",
-              message: "Das ist nur der Zinssatz als Dezimalzahl. Das alte Guthaben bleibt ja, es kommt etwas dazu: Der Faktor ist 1 plus dieser Wert.",
+              value: "r.zinsen1",
+              message: "Das sind die Zinsen des ersten Jahres, gerechnet auf das Startkapital. Im zweiten Jahr zählt das Guthaben nach dem ersten Jahr.",
             }
-          - { value: "p", message: "Das ist die Prozentzahl, kein Faktor. Teile durch 100 und rechne 1 dazu." }
-        hint: "Zinssatz als Dezimalzahl schreiben und 1 addieren."
+        hint: "Rechne erst das Guthaben nach dem ersten Jahr aus. Davon sind dann die Zinsen im zweiten Jahr zu berechnen."
         steps:
-          - "{{p}} % sind {{p}} : 100 als Dezimalzahl."
-          - "Der Faktor ist 1 plus diese Zahl: {{answer}}."
+          - "Guthaben nach einem Jahr: {{r.k0}} € mal {{r.q}} sind {{r.jahr1text}} €."
+          - "Zinsen im zweiten Jahr: {{r.jahr1text}} € mal {{r.p}} : 100 sind {{r.zinsen2text}} €."
       - type: generated
         id: endkapital
         given:

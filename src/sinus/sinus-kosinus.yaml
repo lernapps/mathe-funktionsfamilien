@@ -45,7 +45,7 @@ blocks:
       - type: text
         text: |
           **Probiere es aus** (mit Regler, dafür brauchst du JavaScript). Drehe den Winkel langsam von 0° bis 360° und
-          beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist. Für Winkel über 90° stellst du den Winkel mit dem Regler ein und liest die Höhe oder den Abstand ab.
+          beobachte, wann der Punkt am höchsten und am tiefsten ist und wann die Höhe null ist. Für Winkel über 90° gilt dasselbe: Stelle den Winkel am Regler ein und lies beim Sinus die Höhe, beim Kosinus den waagerechten Abstand ab.
       - type: text
         text: |
           Der waagerechte Abstand des Punkts von der senkrechten Achse, rechts positiv und links negativ, ist der **Kosinus**. Seine Kurve beginnt oben bei 1, denn
@@ -71,7 +71,7 @@ blocks:
     title: Eigenschaften von Sinus und Kosinus
     blocks:
       - type: text
-        text: "Wenn du Sinus und Kosinus anwenden willst, musst du ihre Eigenschaften kennen."
+        text: "Wenn du mit Sinus und Kosinus rechnen willst, hilft es zu wissen, wie sich beide Kurven verhalten: wie groß ihre Werte werden und wann sie sich wiederholen."
       - type: table
         caption: Was für beide Funktionen gilt
         header: [Eigenschaft, Sinus, Kosinus]

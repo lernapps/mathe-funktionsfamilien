@@ -5,7 +5,7 @@ pages: [recap, zinseszins, exponentialfunktionen, logarithmen]
 selfAssessment:
   pages:
     - exercises:
-        - /wachstum/zinseszins/#wachstumsfaktor
+        - /wachstum/zinseszins/#zinsen-zweites-jahr
         - /wachstum/zinseszins/#endkapital
         - /wachstum/zinseszins/#endkapital
     - exercises:

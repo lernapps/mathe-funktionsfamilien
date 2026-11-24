@@ -14,8 +14,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Das brauchst du für dieses Kapitel: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die
-          Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
+          Diese Seite frischt vier Bausteine auf: Zinsrechnung, prozentuale Zu- und Abnahme, Potenzgesetze und die Darstellungen einer Funktion. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts gezählt und nichts gespeichert.
   - type: section
     id: zinsrechnung
     title: Zinsrechnung

@@ -13,7 +13,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Das brauchst du für dieses Kapitel: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
+          Diese Seite frischt drei Bausteine auf: binomische Formeln rückwärts, Quadratwurzeln und lineare Gleichungen. Zu jedem Baustein steht eine kurze Auffrischung. Am Ende zeigen dir zwei Aufgaben mit sofortiger Rückmeldung, ob du es kannst. Es wird nichts
           gezählt und nichts gespeichert.
   - type: section
     id: klammern-binome

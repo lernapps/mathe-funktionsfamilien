@@ -63,21 +63,21 @@ blocks:
       - type: text
         text: "Wenn du wissen willst, wo eine Parabel die x-Achse schneidet, suchst du eine Nullstelle. Alle drei Wege haben gemeinsam, dass man überlegt, wann eine Seite der Gleichung null werden kann."
       - type: example
-        title: Wurzelziehen
+        title: Wurzelziehen, wenn nur x² und eine Zahl dastehen
         blocks:
           - type: formula
             formula: 'x^2 - 9 = 0 \quad \Rightarrow \quad x^2 = 9'
           - type: text
             text: Dann ziehst du auf beiden Seiten die Wurzel und denkst an beide Vorzeichen, $x = 3$ oder $x = −3$.
       - type: example
-        title: Ausklammern
+        title: Ausklammern, wenn jeder Summand ein x enthält
         blocks:
           - type: formula
             formula: 'x^2 - 4x = 0 \quad \Rightarrow \quad x \cdot (x - 4) = 0'
           - type: text
             text: Ein Produkt ist null, wenn ein Faktor null ist. Also gilt $x = 0$ oder $x - 4 = 0$, das heißt $x = 0$ oder $x = 4$.
       - type: example
-        title: Produkt gleich null
+        title: Produkt gleich null, wenn die Gleichung schon als Produkt dasteht
         blocks:
           - type: formula
             formula: '(x - 2) \cdot (x + 5) = 0'
